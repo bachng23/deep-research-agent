@@ -1,9 +1,3 @@
-"""Node registry: the single place where graph nodes are declared.
-
-To add a pipeline step, implement its node in features/<name>/node.py
-and append a NodeSpec here — graph.py picks it up automatically.
-"""
-
 from __future__ import annotations
 
 from collections.abc import Callable
