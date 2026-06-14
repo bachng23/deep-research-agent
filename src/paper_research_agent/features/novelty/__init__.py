@@ -1,8 +1,3 @@
-"""Novelty feature (not implemented yet).
+from paper_research_agent.features.novelty.node import score_novelty
 
-Scores the user's idea (0-100) against the gaps found by contrast.
-Will expose a `score_novelty` node (reasoning tier) that fills
-`ResearchState.novelty_score`, `novelty_reasoning`, `overlapping_papers`.
-
-Planned layout: node.py, prompts.py, schemas.py.
-"""
+__all__ = ["score_novelty"]
