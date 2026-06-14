@@ -4,6 +4,7 @@ from collections.abc import Callable
 from dataclasses import dataclass
 
 from paper_research_agent.core.state import ResearchState
+from paper_research_agent.features.contrast import find_gaps
 from paper_research_agent.features.fetching import fetch_papers
 from paper_research_agent.features.planning import plan_queries
 
@@ -20,6 +21,5 @@ def default_nodes() -> list[NodeSpec]:
     return [
         NodeSpec("plan_queries", plan_queries),
         NodeSpec("fetch_papers", fetch_papers),
-        # Upcoming, in order: find_gaps (contrast), score_novelty (novelty),
-        # write_report (writing).
+        NodeSpec("find_gaps", find_gaps),
     ]
