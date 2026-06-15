@@ -1,3 +1,4 @@
+import time
 from typing import Literal
 
 from pydantic import BaseModel, Field
@@ -46,6 +47,8 @@ class ResearchState(BaseModel):
     # research loop memory
     iteration: int = 0
     max_iterations: int = 3
+    timeout_seconds: float | None = None
+    started_at: float = Field(default_factory=time.monotonic)
     seen_paper_ids: list[str] = Field(default_factory=list)
     open_gaps: list[str] = Field(default_factory=list)
     round_logs: list[RoundLog] = Field(default_factory=list)

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import time
+
 from paper_research_agent.core.state import ResearchState, RoundLog
 
 
@@ -27,4 +29,15 @@ def assess_coverage(state: ResearchState) -> ResearchState:
 
 def should_continue(state: ResearchState) -> bool:
     "Stop criteria: loop only while gaps remain open AND under the ceiling."
-    return bool(state.open_gaps) and state.iteration < state.max_iterations
+    if not state.open_gaps:
+        return False
+
+    if state.iteration >= state.max_iterations:
+        return False
+
+    if state.timeout_seconds is not None:
+        elapsed = time.monotonic() - state.started_at
+        if elapsed >= state.timeout_seconds:
+            return False
+
+    return True

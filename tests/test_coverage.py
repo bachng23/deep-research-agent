@@ -1,3 +1,5 @@
+import time
+
 from paper_research_agent.core.state import ResearchGap, ResearchState
 from paper_research_agent.features.coverage import assess_coverage, should_continue
 
@@ -71,3 +73,21 @@ def test_should_stop_when_no_open_gaps():
     state.iteration = 1
 
     assert should_continue(state) is False
+
+
+def test_should_stop_when_timeout_exceeded():
+    state = ResearchState(topic="t", max_iterations=3, timeout_seconds=10.0)
+    state.open_gaps = ["gap-1"]
+    state.iteration = 1
+    state.started_at = time.monotonic() - 11  # 11s elapsed > 10s budget
+
+    assert should_continue(state) is False
+
+
+def test_timeout_disabled_by_default():
+    state = ResearchState(topic="t", max_iterations=3)  # timeout_seconds is None
+    state.open_gaps = ["gap-1"]
+    state.iteration = 1
+    state.started_at = time.monotonic() - 9999  # would trip if timeout were set
+
+    assert should_continue(state) is True
