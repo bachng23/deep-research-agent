@@ -31,3 +31,23 @@ Papers (title, year, abstract):
 
 Identify the research gaps across these papers.
 """
+
+
+CONTRAST_UPDATE_USER_PROMPT = """
+Research Topic:
+    {topic}
+
+You previously identified these research gap (with current confidence):
+    {gaps}
+
+New papers found since then (title, year, abstract)
+    {papers}
+
+Update the gap list using ONLY these new papers as additional evidence:
+    - If a new paper strenthens a gap, raise its confidence (up to "high") and add the supporting verbatim quote to that gap.
+    - If a new paper shows a gap is actually already addressed, remove that gap.
+    - Otherwise keep the gap unchanged.
+    - You MAY add at most 1-2 genuinely new gaps revealed by these new papers.
+
+Return the FULL, updated list of gaps (kept + updated + any new).
+"""

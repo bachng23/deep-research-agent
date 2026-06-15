@@ -21,6 +21,8 @@ def fetch_papers(state: ResearchState) -> ResearchState:
 
     new_papers = _select_unseen(result.papers, state.seen_paper_ids)
 
+    state.recent_paper_ids = [paper_id(p) for p in new_papers]
+
     # Accumulate across rounds, then re-rank the combined set.
     state.papers = rank_papers(state.papers + new_papers)
     state.seen_paper_ids.extend(paper_id(p) for p in new_papers)

@@ -50,6 +50,7 @@ class ResearchState(BaseModel):
     timeout_seconds: float | None = None
     started_at: float = Field(default_factory=time.monotonic)
     seen_paper_ids: list[str] = Field(default_factory=list)
+    recent_paper_ids: list[str] = Field(default_factory=list)
     open_gaps: list[str] = Field(default_factory=list)
     round_logs: list[RoundLog] = Field(default_factory=list)
 
