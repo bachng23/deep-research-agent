@@ -1,8 +1,3 @@
-"""Writing feature (not implemented yet).
+from paper_research_agent.features.writing.node import write_report
 
-Synthesizes the final research report with citations. Will expose a
-`write_report` node (balanced tier) that fills
-`ResearchState.report_markdown`.
-
-Planned layout: node.py, prompts.py.
-"""
+__all__ = ["write_report"]

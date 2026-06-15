@@ -7,6 +7,7 @@ from paper_research_agent.core.state import ResearchState
 from paper_research_agent.features.contrast import find_gaps
 from paper_research_agent.features.fetching import fetch_papers
 from paper_research_agent.features.planning import plan_queries
+from paper_research_agent.features.writing import write_report
 
 NodeFn = Callable[[ResearchState], ResearchState]
 
@@ -22,4 +23,5 @@ def default_nodes() -> list[NodeSpec]:
         NodeSpec("plan_queries", plan_queries),
         NodeSpec("fetch_papers", fetch_papers),
         NodeSpec("find_gaps", find_gaps),
+        NodeSpec("write_report", write_report),
     ]

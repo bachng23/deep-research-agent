@@ -1,3 +1,5 @@
+import pytest
+
 from paper_research_agent.agent.graph import run_research
 from paper_research_agent.core.models import Paper
 from paper_research_agent.features.fetching import node as fetching_node
@@ -17,6 +19,7 @@ class StubProvider:
         ]
 
 
+@pytest.mark.integration
 def test_run_research_end_to_end_with_stub_provider(monkeypatch):
     monkeypatch.setattr(
         fetching_node, "default_providers", lambda: [StubProvider()]
@@ -24,7 +27,10 @@ def test_run_research_end_to_end_with_stub_provider(monkeypatch):
 
     state = run_research(topic="retrieval augmented generation")
 
-    assert state.search_queries == ["retrieval augmented generation"]
-    assert len(state.papers) == 1
-    assert state.papers[0].title == "Paper about retrieval augmented generation"
-    assert state.tool_call_count == 1
+    # Planner produced at least one query (real LLM output varies)
+    assert state.search_queries
+    # Fetch ran through the stub provider
+    assert state.papers
+    assert state.tool_call_count >= 1
+    # Writer closed the loop
+    assert state.report_markdown is not None

@@ -10,6 +10,10 @@ Confidence = Literal["low", "medium", "high"]
 class ResearchGap(BaseModel):
     description: str
     supporting_papers: list[str] = Field(default_factory=list)
+    evidence_quotes: list[str] = Field(
+        default_factory=list,
+        description="Verbatim sentences copied exactly from the abstracts that justify this gap. No paraphrasing.",
+    )
     confidence: Confidence = "medium"
 
 
