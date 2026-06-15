@@ -31,5 +31,12 @@ def is_duplicate(paper: Paper, existing_papers: list[Paper]) -> bool:
     return False
 
 
+def paper_id(paper: Paper) -> str:
+    "Stable identity for cross-round dedup: prefer URL, fall back to title."
+    if paper.url:
+        return paper.url.strip().lower()
+    return normalize_title(paper.title)
+
+
 def normalize_title(title: str) -> str:
     return " ".join(title.lower().strip().split())

@@ -17,6 +17,17 @@ class ResearchGap(BaseModel):
     confidence: Confidence = "medium"
 
 
+class RoundLog(BaseModel):
+    "One interation of the research loop, for inspection."
+
+    iteration: int
+    queries: list[str] = Field(default_factory=list)
+    new_papers: int = 0
+    total_papers: int = 0
+    open_gaps: int = 0
+    closed_gaps: int = 0
+
+
 class ResearchState(BaseModel):
     topic: str
     user_idea: str | None = None
@@ -31,6 +42,13 @@ class ResearchState(BaseModel):
     overlapping_papers: list[str] = Field(default_factory=list)
 
     report_markdown: str | None = None
+
+    # research loop memory
+    iteration: int = 0
+    max_iterations: int = 3
+    seen_paper_ids: list[str] = Field(default_factory=list)
+    open_gaps: list[str] = Field(default_factory=list)
+    round_logs: list[RoundLog] = Field(default_factory=list)
 
     errors: list[str] = Field(default_factory=list)
     tool_call_count: int = 0
