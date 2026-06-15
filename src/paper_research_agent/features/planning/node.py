@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from paper_research_agent.core.state import ResearchState
 from paper_research_agent.features.planning.prompts import (
+    FOLLOWUP_USER_PROMPT,
     PLANNER_SYSTEM_PROMPT,
     PLANNER_USER_PROMPT,
 )
@@ -10,7 +11,8 @@ from paper_research_agent.llm import chat_model_for_tier
 
 
 def plan_queries(state: ResearchState) -> ResearchState:
-    if state.search_queries:
+    # no queries yet -> plan from topic
+    if state.search_queries and not state.open_gaps:
         return state
 
     try:
@@ -26,9 +28,16 @@ def _plan_queries_with_llm(state: ResearchState) -> list[str]:
     model = chat_model_for_tier("fast")
     structured_model = model.with_structured_output(QueryPlan)
 
-    user_idea = state.user_idea or "Not provided"
-
-    prompt = PLANNER_USER_PROMPT.format(topic=state.topic, user_idea=user_idea)
+    if state.open_gaps:
+        prompt = FOLLOWUP_USER_PROMPT.format(
+            topic=state.topic,
+            open_gaps="\n".join(f"- {gap}" for gap in state.open_gaps),
+        )
+    else:
+        prompt = PLANNER_USER_PROMPT.format(
+            topic=state.topic,
+            user_idea=state.user_idea or "Not provided",
+        )
 
     result = structured_model.invoke(
         [("system", PLANNER_SYSTEM_PROMPT), ("user", prompt)]
