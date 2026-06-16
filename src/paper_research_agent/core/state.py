@@ -54,5 +54,9 @@ class ResearchState(BaseModel):
     open_gaps: list[str] = Field(default_factory=list)
     round_logs: list[RoundLog] = Field(default_factory=list)
 
+    use_llm_judge: bool = True
+    coverage_sufficient: bool = False
+    coverage_reasoning: str | None = None
+
     errors: list[str] = Field(default_factory=list)
     tool_call_count: int = 0

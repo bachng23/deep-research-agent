@@ -6,6 +6,7 @@ the reporting tail runs).
 """
 
 import paper_research_agent.features.contrast.node as contrast_node
+import paper_research_agent.features.coverage.node as coverage_node
 import paper_research_agent.features.novelty.node as novelty_node
 import paper_research_agent.features.planning.node as planning_node
 import paper_research_agent.features.writing.node as writing_node
@@ -13,6 +14,7 @@ from paper_research_agent.agent.graph import run_research
 from paper_research_agent.core.models import Paper
 from paper_research_agent.core.state import ResearchGap
 from paper_research_agent.features.contrast.schemas import GapAnalysis
+from paper_research_agent.features.coverage.schemas import CoverageJudgment
 from paper_research_agent.features.fetching import node as fetching_node
 from paper_research_agent.features.novelty.schemas import NoveltyAssessment
 from paper_research_agent.features.planning.schemas import QueryPlan
@@ -110,6 +112,16 @@ def test_loop_runs_two_rounds_then_reports(monkeypatch):
         writing_node,
         "chat_model_for_tier",
         _sequencing_factory([_Message("## Overview\nReport body [1].")]),
+    )
+
+    # Coverage judge always says "not sufficient" so the deterministic open-gap
+    # signal drives the loop (keeps this test focused on loop mechanics).
+    monkeypatch.setattr(
+        coverage_node,
+        "chat_model_for_tier",
+        _sequencing_factory(
+            [CoverageJudgment(sufficient=False, reasoning="keep going")]
+        ),
     )
 
     state = run_research(topic="long-document RAG", user_idea="hierarchical chunking")

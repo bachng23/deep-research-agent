@@ -4,7 +4,11 @@ from langgraph.graph import END, StateGraph
 
 from paper_research_agent.core.state import ResearchState
 from paper_research_agent.features.contrast import find_gaps
-from paper_research_agent.features.coverage import assess_coverage, should_continue
+from paper_research_agent.features.coverage import (
+    assess_coverage,
+    judge_coverage,
+    should_continue,
+)
 from paper_research_agent.features.fetching import fetch_papers
 from paper_research_agent.features.novelty import score_novelty
 from paper_research_agent.features.planning import plan_queries
@@ -23,6 +27,7 @@ def build_graph():
     graph.add_node("fetch_papers", fetch_papers)
     graph.add_node("find_gaps", find_gaps)
     graph.add_node("assess_coverage", assess_coverage)
+    graph.add_node("judge_coverage", judge_coverage)
     graph.add_node("score_novelty", score_novelty)
     graph.add_node("write_report", write_report)
 
@@ -32,10 +37,11 @@ def build_graph():
     graph.add_edge("plan_queries", "fetch_papers")
     graph.add_edge("fetch_papers", "find_gaps")
     graph.add_edge("find_gaps", "assess_coverage")
+    graph.add_edge("assess_coverage", "judge_coverage")
 
     # Decision point: keep searching or finish
     graph.add_conditional_edges(
-        "assess_coverage",
+        "judge_coverage",
         _route_after_assessment,
         {
             "continue": "plan_queries",  # loop back to plan_queries

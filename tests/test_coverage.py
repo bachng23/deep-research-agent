@@ -1,7 +1,41 @@
 import time
 
+import paper_research_agent.features.coverage.node as coverage_node
 from paper_research_agent.core.state import ResearchGap, ResearchState
-from paper_research_agent.features.coverage import assess_coverage, should_continue
+from paper_research_agent.features.coverage import (
+    assess_coverage,
+    judge_coverage,
+    should_continue,
+)
+from paper_research_agent.features.coverage.schemas import CoverageJudgment
+
+
+class _FakeStructured:
+    def __init__(self, result=None, error=None):
+        self._result = result
+        self._error = error
+
+    def invoke(self, messages):
+        if self._error is not None:
+            raise self._error
+        return self._result
+
+
+class _FakeModel:
+    def __init__(self, result=None, error=None):
+        self._result = result
+        self._error = error
+
+    def with_structured_output(self, schema):
+        return _FakeStructured(result=self._result, error=self._error)
+
+
+def _patch_judge(monkeypatch, *, result=None, error=None):
+    monkeypatch.setattr(
+        coverage_node,
+        "chat_model_for_tier",
+        lambda tier, temperature=0.0: _FakeModel(result=result, error=error),
+    )
 
 
 def _state_with_gaps(confidences, **kwargs) -> ResearchState:
@@ -91,3 +125,58 @@ def test_timeout_disabled_by_default():
     state.started_at = time.monotonic() - 9999  # would trip if timeout were set
 
     assert should_continue(state) is True
+
+
+def test_judge_sets_sufficient_from_llm(monkeypatch):
+    _patch_judge(
+        monkeypatch,
+        result=CoverageJudgment(sufficient=True, reasoning="central gap is solid"),
+    )
+
+    state = ResearchState(topic="t")
+    state.gaps = [ResearchGap(description="g1", confidence="high")]
+    judge_coverage(state)
+
+    assert state.coverage_sufficient is True
+    assert state.coverage_reasoning == "central gap is solid"
+    assert state.errors == []
+
+
+def test_judge_skipped_when_disabled(monkeypatch):
+    _patch_judge(monkeypatch, error=AssertionError("LLM should not be called"))
+
+    state = ResearchState(topic="t", use_llm_judge=False)
+    state.gaps = [ResearchGap(description="g1", confidence="high")]
+    judge_coverage(state)
+
+    assert state.coverage_sufficient is False
+
+
+def test_judge_skipped_when_no_gaps(monkeypatch):
+    _patch_judge(monkeypatch, error=AssertionError("LLM should not be called"))
+
+    state = ResearchState(topic="t")  # no gaps
+    judge_coverage(state)
+
+    assert state.coverage_sufficient is False
+
+
+def test_judge_records_error_on_failure(monkeypatch):
+    _patch_judge(monkeypatch, error=RuntimeError("boom"))
+
+    state = ResearchState(topic="t")
+    state.gaps = [ResearchGap(description="g1", confidence="medium")]
+    judge_coverage(state)
+
+    assert state.coverage_sufficient is False
+    assert len(state.errors) == 1
+    assert state.errors[0].startswith("coverage judge failed:")
+
+
+def test_should_stop_when_judge_says_sufficient():
+    state = ResearchState(topic="t", max_iterations=3)
+    state.open_gaps = ["gap-1"]
+    state.iteration = 1
+    state.coverage_sufficient = True
+
+    assert should_continue(state) is False
