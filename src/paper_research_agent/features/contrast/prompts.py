@@ -37,17 +37,21 @@ CONTRAST_UPDATE_USER_PROMPT = """
 Research Topic:
     {topic}
 
-You previously identified these research gap (with current confidence):
+You previously identified these research gaps (with current confidence):
     {gaps}
 
-New papers found since then (title, year, abstract)
+New papers found since then (title, year, abstract):
     {papers}
 
-Update the gap list using ONLY these new papers as additional evidence:
-    - If a new paper strenthens a gap, raise its confidence (up to "high") and add the supporting verbatim quote to that gap.
-    - If a new paper shows a gap is actually already addressed, remove that gap.
+Your job is to UPDATE confidence, not to re-discover. Default to KEEPING every
+existing gap. Using ONLY these new papers as extra evidence:
+    - If a new paper reinforces that the gap is real and unaddressed, RAISE its
+      confidence (up to "high") and add the supporting verbatim quote.
+    - Remove a gap ONLY if a specific new paper EXPLICITLY does the exact thing
+      the gap says is missing. Being on the same topic is NOT enough — papers
+      about the area do not close the gap.
     - Otherwise keep the gap unchanged.
-    - You MAY add at most 1-2 genuinely new gaps revealed by these new papers.
+    - You MAY add at most 1-2 genuinely new gaps.
 
-Return the FULL, updated list of gaps (kept + updated + any new).
+Return the FULL updated list. NEVER return an empty list if you were given gaps.
 """

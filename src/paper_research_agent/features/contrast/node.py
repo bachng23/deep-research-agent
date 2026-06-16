@@ -60,7 +60,9 @@ def _update_gaps_with_llm(state: ResearchState) -> list[ResearchGap]:
         ]
     )
 
-    return result.gaps
+    updated = result.gaps
+
+    return updated or state.gaps
 
 
 def _structured_model():

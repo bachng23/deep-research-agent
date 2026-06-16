@@ -72,6 +72,22 @@ def test_update_mode_refines_existing_gaps_with_new_papers(monkeypatch):
     assert [(g.description, g.confidence) for g in state.gaps] == [("g1", "high")]
 
 
+def test_update_mode_keeps_existing_gaps_when_llm_returns_empty(monkeypatch):
+    # Safety net: a too-aggressive update must not wipe the gap list.
+    _patch_llm(monkeypatch, result=GapAnalysis(gaps=[]))
+
+    state = ResearchState(
+        topic="t",
+        papers=[_paper("P1", "http://1"), _paper("P2", "http://2")],
+        gaps=[ResearchGap(description="g1", confidence="medium")],
+        recent_paper_ids=["http://2"],
+    )
+    find_gaps(state)
+
+    assert [(g.description, g.confidence) for g in state.gaps] == [("g1", "medium")]
+    assert state.errors == []
+
+
 def test_update_mode_skips_llm_when_no_new_papers(monkeypatch):
     # If the LLM is called this raises; the no-new-papers shortcut must avoid it.
     _patch_llm(monkeypatch, error=AssertionError("LLM should not be called"))
