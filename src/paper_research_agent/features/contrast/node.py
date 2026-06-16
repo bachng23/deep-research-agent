@@ -38,6 +38,7 @@ def _discover_gaps_with_llm(state: ResearchState) -> list[ResearchGap]:
             ("system", CONTRAST_SYSTEM_PROMPT),
             ("user", prompt),
         ],
+        is_valid=lambda r: bool(r.gaps),
     )
 
     return result.gaps

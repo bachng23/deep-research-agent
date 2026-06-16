@@ -23,20 +23,28 @@ def chat_model_for_tier(tier: ModelTier, temperature: float = 0.0) -> ChatOpenAI
     )
 
 
-def invoke_with_retry(structured_model, messages, *, retries: int = 2):
+def invoke_with_retry(structured_model, messages, *, retries: int = 2, is_valid=None):
     last_error: Exception | None = None
 
     for attempt in range(retries + 1):
         try:
-            return structured_model.invoke(messages)
+            result = structured_model.invoke(messages)
         except Exception as e:
             last_error = e
             logger.warning(
-                "structured ouput failed (attempt %d/%d): %s",
+                "structured output failed (attempt %d/%d): %s",
                 attempt + 1,
                 retries + 1,
                 e,
             )
+            continue
+        if is_valid is not None and not is_valid(result):
+            last_error = ValueError("structured output failed validation (empty?)")
+            logger.warning(
+                "structured output invalid (attempt %d/%d)", attempt + 1, retries + 1
+            )
+            continue
+        return result
 
     assert last_error is not None
     raise last_error
