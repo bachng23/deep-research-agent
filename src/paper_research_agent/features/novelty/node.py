@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import stat
-
 from paper_research_agent.core.models import Paper
 from paper_research_agent.core.state import ResearchGap, ResearchState
 from paper_research_agent.features.novelty.prompts import (
@@ -9,7 +7,7 @@ from paper_research_agent.features.novelty.prompts import (
     NOVELTY_USER_PROMPT,
 )
 from paper_research_agent.features.novelty.schemas import NoveltyAssessment
-from paper_research_agent.llm import chat_model_for_tier
+from paper_research_agent.llm import chat_model_for_tier, invoke_with_retry
 
 
 def score_novelty(state: ResearchState) -> ResearchState:
@@ -38,11 +36,12 @@ def _score_novelty_with_llm(state: ResearchState) -> NoveltyAssessment:
         papers=_format_papers(state.papers),
     )
 
-    return structured_model.invoke(
+    return invoke_with_retry(
+        structured_model,
         [
             ("system", NOVELTY_SYSTEM_PROMPT),
             ("user", prompt),
-        ]
+        ],
     )
 
 

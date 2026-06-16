@@ -7,7 +7,7 @@ from paper_research_agent.features.planning.prompts import (
     PLANNER_USER_PROMPT,
 )
 from paper_research_agent.features.planning.schemas import QueryPlan
-from paper_research_agent.llm import chat_model_for_tier
+from paper_research_agent.llm import chat_model_for_tier, invoke_with_retry
 
 
 def plan_queries(state: ResearchState) -> ResearchState:
@@ -39,8 +39,8 @@ def _plan_queries_with_llm(state: ResearchState) -> list[str]:
             user_idea=state.user_idea or "Not provided",
         )
 
-    result = structured_model.invoke(
-        [("system", PLANNER_SYSTEM_PROMPT), ("user", prompt)]
+    result = invoke_with_retry(
+        structured_model, [("system", PLANNER_SYSTEM_PROMPT), ("user", prompt)]
     )
 
     return _clean_queries(result.queries, fallback=state.topic)

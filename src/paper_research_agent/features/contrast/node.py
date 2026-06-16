@@ -7,7 +7,7 @@ from paper_research_agent.features.contrast.prompts import (
 )
 from paper_research_agent.features.contrast.schemas import GapAnalysis
 from paper_research_agent.features.fetching.dedup import paper_id
-from paper_research_agent.llm import chat_model_for_tier
+from paper_research_agent.llm import chat_model_for_tier, invoke_with_retry
 
 
 def find_gaps(state: ResearchState) -> ResearchState:
@@ -32,11 +32,12 @@ def _discover_gaps_with_llm(state: ResearchState) -> list[ResearchGap]:
         papers=_format_papers(state.papers),
     )
 
-    result = _structured_model().invoke(
+    result = invoke_with_retry(
+        _structured_model(),
         [
             ("system", CONTRAST_SYSTEM_PROMPT),
             ("user", prompt),
-        ]
+        ],
     )
 
     return result.gaps
@@ -53,11 +54,12 @@ def _update_gaps_with_llm(state: ResearchState) -> list[ResearchGap]:
         papers=_format_papers(new_papers),
     )
 
-    result = _structured_model().invoke(
+    result = invoke_with_retry(
+        _structured_model(),
         [
             ("system", CONTRAST_SYSTEM_PROMPT),
             ("user", prompt),
-        ]
+        ],
     )
 
     updated = result.gaps
