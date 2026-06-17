@@ -62,3 +62,68 @@ async def test_rate_limit_becomes_prompt_friendly_tool_error(monkeypatch):
     async with Client(server.mcp) as client:
         with pytest.raises(ToolError, match="OPENALEX_API_KEY"):
             await client.call_tool("openalex_search", {"query": "q"})
+
+
+# --- tool-agent fetch path (LLM chooses + calls MCP tools) ---------------------
+
+import paper_research_agent.features.fetching.mcp_search as mcp_search
+
+
+class _FakeMessage:
+    def __init__(self, tool_calls):
+        self.tool_calls = tool_calls
+
+
+class _FakeBound:
+    def __init__(self, tool_calls):
+        self._tool_calls = tool_calls
+
+    async def ainvoke(self, messages):
+        return _FakeMessage(self._tool_calls)
+
+
+class _FakeModel:
+    def __init__(self, tool_calls):
+        self._tool_calls = tool_calls
+
+    def bind_tools(self, tools):
+        return _FakeBound(self._tool_calls)
+
+
+def test_tool_agent_executes_the_tool_the_llm_chose(monkeypatch):
+    paper = Paper(
+        title="Picked", authors=["A"], year=2024, abstract="x",
+        url="http://p", source="arxiv",
+    )
+    # Stub the provider behind the MCP server's arxiv_search tool.
+    monkeypatch.setattr(server, "ArxivProvider", lambda: _StubProvider([paper]))
+    # LLM "chooses" arxiv_search.
+    monkeypatch.setattr(
+        mcp_search,
+        "chat_model_for_tier",
+        lambda tier, temperature=0.0: _FakeModel(
+            [{"name": "arxiv_search", "args": {"query": "q"}, "id": "1"}]
+        ),
+    )
+
+    papers, n_calls = mcp_search.search_via_tool_agent(["q"])
+
+    assert n_calls == 1
+    assert [p.title for p in papers] == ["Picked"]
+    assert papers[0].source == "arxiv"
+
+
+def test_tool_agent_ignores_hallucinated_tool_name(monkeypatch):
+    monkeypatch.setattr(server, "ArxivProvider", lambda: _StubProvider([]))
+    monkeypatch.setattr(
+        mcp_search,
+        "chat_model_for_tier",
+        lambda tier, temperature=0.0: _FakeModel(
+            [{"name": "google_search", "args": {"query": "q"}, "id": "1"}]
+        ),
+    )
+
+    papers, n_calls = mcp_search.search_via_tool_agent(["q"])
+
+    assert papers == []
+    assert n_calls == 0  # unknown tool skipped, no crash
