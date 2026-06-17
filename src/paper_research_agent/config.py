@@ -35,6 +35,7 @@ class Settings(BaseSettings):
     arxiv_max_results: int = 8
     openalex_max_results: int = 8
     request_timeout_seconds: int = 20
+    max_new_papers_per_round: int = 25
 
 
 @lru_cache
