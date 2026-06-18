@@ -2,3 +2,4 @@
 test/
 .env
 __pycache__
+ROADMAP.md
