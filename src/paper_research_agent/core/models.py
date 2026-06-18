@@ -13,3 +13,5 @@ class Paper(BaseModel):
     url: str | None = None
     source: PaperSource
     citation_count: int | None = None
+    pdf_url: str | None = None
+    full_text_excerpt: str | None = None

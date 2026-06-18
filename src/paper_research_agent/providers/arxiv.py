@@ -35,6 +35,7 @@ class ArxivProvider:
                     url=result.entry_id,
                     source="arxiv",
                     citation_count=None,
+                    pdf_url=result.pdf_url,
                 )
             )
 
