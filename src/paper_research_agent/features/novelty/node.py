@@ -58,7 +58,9 @@ def _format_papers(papers: list[Paper]) -> str:
     blocks: list[str] = []
 
     for i, paper in enumerate(papers, start=1):
-        abstract = (paper.abstract or "No abstract available.").strip()
-        blocks.append(f"[{i}] {paper.title} ({paper.year})\n{abstract}")
+        body = (
+            paper.full_text_excerpt or paper.abstract or "No text available."
+        ).strip()
+        blocks.append(f"[{i}] {paper.title} ({paper.year})\n{body}")
 
     return "\n\n".join(blocks)

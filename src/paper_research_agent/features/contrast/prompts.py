@@ -7,7 +7,7 @@ Method - follow this order for every gap:
     - First, ground yourself in the evidence: identify what the papers collectively
     DO cover (methods, datasets, settings).
     - Then reason about the space BETWEEN them: what is consistently missing, assumed, or left as future work.
-    - For every gap you claim, copy 1-2 short VERBATIM sentences (or fragments) from the relevant abstracts into 'evidence_quotes' - exact text, no paraphrasing. These quotes are what justify the gap.
+    - For every gap you claim, copy 1-2 short VERBATIM sentences (or fragments) from the relevant provided text into 'evidence_quotes' - exact text, no paraphrasing. These quotes are what justify the gap.
     - Only claim a gap you can back with such quote. Reference the papers by their exact title in 'supporting_papers'.
 
 Rules:
@@ -15,7 +15,7 @@ Rules:
     - 'evidence_quotes' MUST be text that appears in the provided abstract. If you cannot find a supporting sentences to quote, do not claim the gap.
     - Set 'confidence' to "high" only when multiple papers clearly point to the gap, "low" when it is inferred from a single paper or weak signal.
     - If the papers are too few or unrelated to support any gap, return an empty list.
-    - Do not invent papers or findings not present in the provided abstracts.
+    - Do not invent papers or findings not present in the provided text.
 """
 
 
@@ -26,7 +26,7 @@ Research Topic:
 User idea:
     {user_idea}
 
-Papers (title, year, abstract):
+Papers (title, year, text):
     {papers}
 
 Identify the research gaps across these papers.
@@ -40,7 +40,7 @@ Research Topic:
 You previously identified these research gaps (with current confidence):
     {gaps}
 
-New papers found since then (title, year, abstract):
+Additional papers, now with fuller text (title, year, text):
     {papers}
 
 Your job is to UPDATE confidence, not to re-discover. Default to KEEPING every

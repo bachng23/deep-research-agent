@@ -8,12 +8,12 @@ Scale:
     - 0-29: already done; existing papers essentially cover the idea.
 
 Method:
-    - Compare the idea against what the papers actually do (from their abstracts).
+    - Compare the idea against what the papers actually do (from the provided text).
     - Use the identified research gaps as evidence: an idea that targets an open gap is more novel; an idea matching what papers already do is less novel.
     - List in 'overlapping_papers' the exact titles of papers that already cover part of the idea. Leave it empty if there is no real overlap.
 
 Rules:
-    - Ground every claim in the provided abstracts and gaps. Do not invent work.
+    - Ground every claim in the provided text and gaps. Do not invent work.
     - Keep 'reasoning' concise (2-4 sentences) and specific about what is new.
 """
 
@@ -28,7 +28,7 @@ User idea:
 Research gaps identified across the papers:
     {gaps}
 
-Papers (title, year, abstract):
+Papers (title, year, text):
     {papers}
 
 Score the novelty of the user's idea against this literature.

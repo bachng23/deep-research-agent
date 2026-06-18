@@ -16,11 +16,30 @@ def find_gaps(state: ResearchState) -> ResearchState:
 
     try:
         if state.gaps:
-            state.gaps = _update_gaps_with_llm(state)  # round 2+: refine
+            state.gaps = _update_gaps_with_llm(
+                state, _recent_papers(state)
+            )  # round 2+: refine
         else:
             state.gaps = _discover_gaps_with_llm(state)  # round 1: discover
     except Exception as e:
         state.errors.append(f"contrast failed: {e}")
+
+    return state
+
+
+def refine_gaps(state: ResearchState) -> ResearchState:
+    """
+    Finish-path: re-examine gaps using the full-text excerpts just read.
+    Prunes false gaps and strengthens/adds gaps grounded in Results/Limitations.
+    """
+    read = [p for p in state.papers if p.full_text_excerpt]
+    if not state.gaps or not read:
+        return state
+
+    try:
+        state.gaps = _update_gaps_with_llm(state, read)
+    except Exception as e:
+        state.errors.append(f"refine gaps failed: {e}")
 
     return state
 
@@ -44,15 +63,16 @@ def _discover_gaps_with_llm(state: ResearchState) -> list[ResearchGap]:
     return result.gaps
 
 
-def _update_gaps_with_llm(state: ResearchState) -> list[ResearchGap]:
-    new_papers = _recent_papers(state)
-    if not new_papers:
-        return state.gaps  # nothing new, then keep gaps unchanged
+def _update_gaps_with_llm(
+    state: ResearchState, papers: list[Paper]
+) -> list[ResearchGap]:
+    if not papers:
+        return state.gaps
 
     prompt = CONTRAST_UPDATE_USER_PROMPT.format(
         topic=state.topic,
         gaps=_format_gaps(state.gaps),
-        papers=_format_papers(new_papers),
+        papers=_format_papers(papers),
     )
 
     result = invoke_with_retry(
@@ -88,7 +108,9 @@ def _format_papers(papers: list[Paper]) -> str:
     blocks: list[str] = []
 
     for i, paper in enumerate(papers, start=1):
-        abstract = (paper.abstract or "No abstract available.").strip()
-        blocks.append(f"[{i}] {paper.title} ({paper.year})\n{abstract}")
+        body = (
+            paper.full_text_excerpt or paper.abstract or "No abstract available."
+        ).strip()
+        blocks.append(f"[{i}] {paper.title} ({paper.year})\n{body}")
 
     return "\n\n".join(blocks)
