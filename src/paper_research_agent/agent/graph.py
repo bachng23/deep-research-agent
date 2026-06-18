@@ -4,7 +4,7 @@ from langgraph.graph import END, StateGraph
 
 from paper_research_agent.core.state import ResearchState
 from paper_research_agent.features.conflicts import find_conflicts
-from paper_research_agent.features.contrast import find_gaps, rank_gaps
+from paper_research_agent.features.contrast import find_gaps, rank_gaps, refine_gaps
 from paper_research_agent.features.coverage import (
     assess_coverage,
     judge_coverage,
@@ -13,6 +13,7 @@ from paper_research_agent.features.coverage import (
 from paper_research_agent.features.fetching import fetch_papers
 from paper_research_agent.features.novelty import score_novelty
 from paper_research_agent.features.planning import plan_queries
+from paper_research_agent.features.reading import read_papers
 from paper_research_agent.features.writing import write_report
 
 
@@ -33,6 +34,8 @@ def build_graph():
     graph.add_node("judge_coverage", judge_coverage)
     graph.add_node("score_novelty", score_novelty)
     graph.add_node("write_report", write_report)
+    graph.add_node("read_papers", read_papers)
+    graph.add_node("refine_gaps", refine_gaps)
 
     graph.set_entry_point("plan_queries")
 
@@ -48,10 +51,12 @@ def build_graph():
         _route_after_assessment,
         {
             "continue": "plan_queries",  # loop back to plan_queries
-            "finish": "rank_gaps",
+            "finish": "read_papers",
         },
     )
 
+    graph.add_edge("read_papers", "refine_gaps")
+    graph.add_edge("refine_gaps", "rank_gaps")
     graph.add_edge("rank_gaps", "find_conflicts")
     graph.add_edge("find_conflicts", "score_novelty")
     graph.add_edge("score_novelty", "write_report")
