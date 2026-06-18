@@ -13,7 +13,7 @@ class ResearchGap(BaseModel):
     supporting_papers: list[str] = Field(default_factory=list)
     evidence_quotes: list[str] = Field(
         default_factory=list,
-        description="Verbatim sentences copied exactly from the abstracts that justify this gap. No paraphrasing.",
+        description="Verbatim sentences copied exactly from the provided text that justify this gap. No paraphrasing.",
     )
     confidence: Confidence = "medium"
 
@@ -72,6 +72,7 @@ class ResearchState(BaseModel):
     coverage_reasoning: str | None = None
 
     use_tool_agent: bool = True
+    read_full_text: bool = False
 
     errors: list[str] = Field(default_factory=list)
     tool_call_count: int = 0

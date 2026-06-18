@@ -32,6 +32,17 @@ class Settings(BaseSettings):
     balanced_model: str = "deepseek/deepseek-v4-pro"
     reasoning_model: str = "deepseek/deepseek-v4-pro"
 
+    embedding_model: str = "openai/text-embedding-3-small"
+
+    # paper
+    read_max_papers: int = 5
+
+    # chunk
+    fulltext_chunk_chars: int = 1500
+    fulltext_chunk_overlap: int = 200
+    fulltext_top_k: int = 5
+    fulltext_excerpt_max_chars: int = 4000
+
     arxiv_max_results: int = 8
     openalex_max_results: int = 8
     request_timeout_seconds: int = 20

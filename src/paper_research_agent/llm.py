@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 from functools import lru_cache
 
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
 from paper_research_agent.config import ModelTier, get_settings, model_for_tier
 
@@ -48,3 +48,14 @@ def invoke_with_retry(structured_model, messages, *, retries: int = 2, is_valid=
 
     assert last_error is not None
     raise last_error
+
+
+@lru_cache
+def embeddings_model() -> OpenAIEmbeddings:
+    settings = get_settings()
+
+    return OpenAIEmbeddings(
+        model=settings.embedding_model,
+        api_key=settings.api_key,
+        base_url=settings.llm_base_url,
+    )
