@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from collections.abc import Iterator
+
 from langgraph.graph import END, StateGraph
 
 from paper_research_agent.core.state import ResearchState
@@ -65,10 +67,57 @@ def build_graph():
     return graph.compile()
 
 
-def run_research(topic: str, user_idea: str | None = None) -> ResearchState:
+def run_research(
+    topic: str,
+    user_idea: str | None = None,
+    *,
+    read_full_text: bool = False,
+    max_iterations: int = 3,
+) -> ResearchState:
     app = build_graph()
 
-    initial_state = ResearchState(topic=topic, user_idea=user_idea)
+    initial_state = ResearchState(
+        topic=topic,
+        user_idea=user_idea,
+        read_full_text=read_full_text,
+        max_iterations=max_iterations,
+    )
 
     result = app.invoke(initial_state)
     return ResearchState.model_validate(result)
+
+
+def stream_research(
+    topic: str,
+    user_idea: str | None = None,
+    *,
+    read_full_text: bool = False,
+    max_iterations: int = 3,
+) -> Iterator[tuple[str, object]]:
+    """Stream a research run for a live UI.
+
+    Yields ("node", <node_name>, <ResearchState after that node>) per step,
+    then ("done", <final ResearchState>). Nodes return the whole state, so the
+    "updates" delta is the full state -- handy for showing live counts."""
+    app = build_graph()
+
+    initial_state = ResearchState(
+        topic=topic,
+        user_idea=user_idea,
+        read_full_text=read_full_text,
+        max_iterations=max_iterations,
+    )
+
+    final: ResearchState | None = None
+    for chunk in app.stream(initial_state, stream_mode="updates"):
+        for node_name, node_state in chunk.items():
+            state = (
+                node_state
+                if isinstance(node_state, ResearchState)
+                else ResearchState.model_validate(node_state)
+            )
+            final = state
+            yield ("node", node_name, state)
+
+    if final is not None:
+        yield ("done", final)

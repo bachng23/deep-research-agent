@@ -21,16 +21,19 @@ dependencies = [
     "openai>=2.41.0",
     "pydantic>=2.13.4",
     "pydantic-settings>=2.14.1",
+    "pyfiglet>=1.0.4",
     "pymupdf>=1.27.2.3",
     "python-dotenv>=1.2.2",
     "qdrant-client>=1.18.0",
     "requests>=2.33.1",
+    "rich>=15.0.0",
+    "textual>=8.2.7",
     "trafilatura>=2.1.0",
     "uvicorn>=0.49.0",
 ]
 
 [project.scripts]
-paper-research = "paper_research_agent.cli:main"
+paper-research = "paper_research_agent.tui:main"
 
 [build-system]
 requires = ["hatchling"]
