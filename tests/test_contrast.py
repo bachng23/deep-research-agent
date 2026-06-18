@@ -1,7 +1,7 @@
 import paper_research_agent.features.contrast.node as contrast_node
 from paper_research_agent.core.models import Paper
 from paper_research_agent.core.state import ResearchGap, ResearchState
-from paper_research_agent.features.contrast.node import find_gaps
+from paper_research_agent.features.contrast.node import find_gaps, refine_gaps
 from paper_research_agent.features.contrast.schemas import GapAnalysis
 
 
@@ -124,3 +124,44 @@ def test_no_papers_returns_unchanged(monkeypatch):
 
     assert state.gaps == []
     assert state.errors == []
+
+
+def test_refine_gaps_noop_without_excerpt(monkeypatch):
+    _patch_llm(monkeypatch, error=AssertionError("LLM should not be called"))
+    state = ResearchState(
+        topic="t",
+        papers=[_paper("P1", "http://1")],
+        gaps=[ResearchGap(description="g1", confidence="medium")],
+    )
+    refine_gaps(state)
+
+    assert [g.description for g in state.gaps] == ["g1"]
+    assert state.errors == []
+
+
+def test_refine_gaps_noop_without_gaps(monkeypatch):
+    _patch_llm(monkeypatch, error=AssertionError("LLM should not be called"))
+    p = _paper("P1", "http://1")
+    p.full_text_excerpt = "full text"
+    state = ResearchState(topic="t", papers=[p])
+    refine_gaps(state)
+
+    assert state.gaps == []
+    assert state.errors == []
+
+
+def test_refine_gaps_updates_using_excerpt(monkeypatch):
+    _patch_llm(
+        monkeypatch,
+        result=GapAnalysis(gaps=[ResearchGap(description="g1", confidence="high")]),
+    )
+    p = _paper("P1", "http://1")
+    p.full_text_excerpt = "full text with evidence"
+    state = ResearchState(
+        topic="t",
+        papers=[p],
+        gaps=[ResearchGap(description="g1", confidence="medium")],
+    )
+    refine_gaps(state)
+
+    assert [(g.description, g.confidence) for g in state.gaps] == [("g1", "high")]
