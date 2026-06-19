@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import tempfile
+import random
 
 import pyfiglet
 from rich.console import Group
@@ -16,7 +16,7 @@ from textual.widgets import Footer, Input, Static
 
 from paper_research_agent.agent.graph import stream_research
 from paper_research_agent.config import get_settings
-from paper_research_agent.features.qa import answer_question
+from paper_research_agent.features.qa import stream_answer
 
 # friendly labels for the graph nodes as they stream past
 _NODE_LABELS = {
@@ -35,6 +35,46 @@ _NODE_LABELS = {
 
 _MAX_REFERENCES_SHOWN = 5
 _EXIT = {"exit", "quit", ":q"}
+
+# little bits of personality, picked at random for variety
+_SAY = {
+    "new_research": [
+        "Hmm, I don't have anything on this yet — let me go dig.",
+        "New territory for me. Off to the literature.",
+        "Haven't looked into this one. Let me find out.",
+        "Don't know this one yet — give me a moment to research it.",
+        "Fresh topic. Pulling up papers now.",
+    ],
+    "cached": [
+        "Oh, I've researched this before — pulling it from memory.",
+        "I remember this one. Here's what I found last time.",
+        "Seen this already — loading the previous findings.",
+        "No need to redo this; I've got it saved.",
+    ],
+    "recall": [
+        "This rings a bell — I'll build on related work I've seen.",
+        "I've looked at something close before; using it as a head start.",
+        "Related to past research — reusing what I learned there.",
+        "I already have some relevant notes; building on them.",
+    ],
+    "qa_thinking": [
+        "Let me check what I've read.",
+        "Digging through my notes.",
+        "Looking that up in what I've gathered.",
+        "One sec — searching my memory.",
+    ],
+}
+
+
+def _say(kind: str) -> str:
+    return random.choice(_SAY[kind])
+
+
+_MODE_LABELS = {
+    "auto": "auto (router decides)",
+    "research": "deep research",
+    "qa": "Q&A · memory",
+}
 
 _ASCII = pyfiglet.figlet_format("re-search", font="ansi_shadow").rstrip("\n")
 
@@ -71,7 +111,7 @@ def _welcome() -> Panel:
     right: list[Text] = [Text("Tips for getting started", style="bold")]
     for tip in (
         "1. Deep research: type a topic → fetch + analyze.",
-        "2. Ctrl+T → Q&A over this session's papers.",
+        "2. Ctrl+T → Q&A over all researched papers.",
         "3. Cited report (top-5 refs).",
         "4. exit / quit / Ctrl-C to leave.",
     ):
@@ -140,19 +180,18 @@ class ResearchTUI(App):
     }
     """
 
-    BINDINGS = [("ctrl+t", "toggle_mode", "research ⇄ Q&A")]
+    BINDINGS = [("ctrl+t", "toggle_mode", "mode: auto/research/Q&A")]
 
     def on_mount(self) -> None:
         self._busy = False
-        self._deep_research = True
+        self._mode = "auto"  # auto | research | qa
+        self._report: Static | None = None
         self._entries: list[tuple[str, str]] = []  # (kind, text); kind: step|note
         # one persistent Spinner -> its start_time is kept, so it actually animates
         self._spinner = Spinner("dots", text=Text(" working…", style="cyan"))
 
-        # session-scoped memory: this session's research writes here, Q&A reads it
-        settings = get_settings()
-        settings.memory_dir = tempfile.mkdtemp(prefix="research_session_")
-        settings.use_memory = True  # whole TUI session runs with memory on
+        # persistent cross-session memory: research accumulates, Q&A reads it all
+        get_settings().use_memory = True
 
         self.query_one("#log", VerticalScroll).mount(Static(_welcome()))
         self._update_mode_label()
@@ -160,12 +199,13 @@ class ResearchTUI(App):
         self.query_one("#ask", Input).focus()
 
     def action_toggle_mode(self) -> None:
-        self._deep_research = not self._deep_research
+        self._mode = {"auto": "research", "research": "qa", "qa": "auto"}[self._mode]
         self._update_mode_label()
 
     def _update_mode_label(self) -> None:
-        mode = "deep research" if self._deep_research else "Q&A · this session"
-        self.query_one("#ask", Input).border_title = f"{mode}   (ctrl+t to switch)"
+        self.query_one("#ask", Input).border_title = (
+            f"{_MODE_LABELS[self._mode]}   (ctrl+t to switch)"
+        )
 
     def compose(self) -> ComposeResult:
         yield VerticalScroll(id="log")
@@ -187,19 +227,35 @@ class ResearchTUI(App):
             Static(Text("you ▸ ", style="bold cyan") + Text(text, style="bold"))
         )
 
-        if self._deep_research:
+        if self._mode == "auto":
+            self._route(text)               # worker: classify -> _start
+        else:
+            await self._start(self._mode, text)
+
+    @work(thread=True)
+    def _route(self, text: str) -> None:
+        "Classify intent off the UI thread, then dispatch on the main thread."
+        from paper_research_agent.agent.router import route
+
+        mode = route(text)
+        self.call_from_thread(self._start, mode, text)
+
+    async def _start(self, mode: str, text: str) -> None:
+        log = self.query_one("#log", VerticalScroll)
+        if mode == "qa":
+            placeholder = Static(Text(f"⠋ {_say('qa_thinking')}", style="cyan"))
+            await log.mount(placeholder)
+            log.scroll_end()
+            self._answer(text, placeholder)
+        else:
             self._entries = []
             self._plan_seen = 0
+            self._report = None
             self._steps = Static()
             await log.mount(self._steps)
             self._busy = True
             log.scroll_end()
             self._research(text)
-        else:
-            placeholder = Static(Text("⠋ thinking…", style="cyan"))
-            await log.mount(placeholder)
-            log.scroll_end()
-            self._answer(text, placeholder)
 
     def _tick(self) -> None:
         if self._busy and hasattr(self, "_steps"):  # animate the active step
@@ -211,7 +267,9 @@ class ResearchTUI(App):
         )
         rows: list = []
         for i, (kind, text) in enumerate(self._entries):
-            if kind == "note":
+            if kind == "say":
+                rows.append(Text(f"  {text}", style="bold cyan"))
+            elif kind == "note":
                 rows.append(Text(f"  {text}", style="yellow"))
             elif i == last_step and self._busy:
                 rows.append(self._spinner)  # reused -> animates across ticks
@@ -222,6 +280,7 @@ class ResearchTUI(App):
     @work(thread=True)
     def _research(self, topic: str) -> None:
         final = None
+        opened = False
         try:
             for event in stream_research(
                 topic, read_full_text=True, max_iterations=2, use_memory=True
@@ -229,21 +288,33 @@ class ResearchTUI(App):
                 if event[0] == "node":
                     _, node, state = event
 
+                    if not opened:  # first words: new vs. recalled
+                        opened = True
+                        kind = "recall" if state.recalled_gaps else "new_research"
+                        self.call_from_thread(self._add, "say", _say(kind))
+
                     if node == "plan_queries":
                         self._plan_seen += 1
-                        if self._plan_seen > 1:  # looped back: coverage thin
-                            self.call_from_thread(
-                                self._add,
-                                "note",
-                                f"↻ coverage still thin — digging deeper "
-                                f"(round {self._plan_seen}, "
-                                f"{len(state.open_gaps)} open gaps)…",
-                            )
+                        if self._plan_seen > 1:  # new round -> wipe the old round's steps
+                            self.call_from_thread(self._new_round, len(state.open_gaps))
 
                     label = _NODE_LABELS.get(node, str(node))
                     count = _node_count(node, state)
                     suffix = f"  [{count}]" if count is not None else ""
                     self.call_from_thread(self._add, "step", f"{label}{suffix}")
+                elif event[0] == "cached":
+                    cached = event[1]
+                    if not opened:
+                        opened = True
+                        self.call_from_thread(self._add, "say", _say("cached"))
+                    self.call_from_thread(
+                        self._add, "note",
+                        f"loaded from memory — researched before "
+                        f"({len(cached.papers)} papers, <= "
+                        f"{get_settings().research_ttl_days}d old)",
+                    )
+                elif event[0] == "token":
+                    self.call_from_thread(self._stream_report, event[1])
                 else:
                     final = event[1]
             self.call_from_thread(self._show_report, final)
@@ -254,13 +325,26 @@ class ResearchTUI(App):
 
     @work(thread=True)
     def _answer(self, question: str, placeholder: Static) -> None:
-        "Q&A over this session's papers (memory.relevant + LLM), replacing the placeholder."
+        "Stream a Q&A answer token-by-token into the placeholder (typing effect)."
+        acc = ""
         try:
-            ans = answer_question(question)
+            for token in stream_answer(question):
+                acc += token
+                self.call_from_thread(placeholder.update, Text(acc))  # plain while typing
         except Exception as e:  # never let a failure kill the UI
-            ans = f"error: {e}"
-        self.call_from_thread(placeholder.update, Markdown(ans))
+            acc = f"error: {e}"
+        # final pass: render the whole answer as markdown
+        self.call_from_thread(placeholder.update, Markdown(acc) if acc else Text(""))
         self.call_from_thread(self._finish_run)
+
+    def _new_round(self, open_gaps: int) -> None:
+        "Start a fresh round: clear the previous round's step lines."
+        self._entries = [(
+            "note",
+            f"↻ coverage still thin — digging deeper "
+            f"(round {self._plan_seen}, {open_gaps} open gaps)…",
+        )]
+        self._steps.update(self._render_steps())
 
     def _add(self, kind: str, text: str) -> None:
         self._entries.append((kind, text))
@@ -269,21 +353,36 @@ class ResearchTUI(App):
         self._steps.update(self._render_steps())
         self.query_one("#log", VerticalScroll).scroll_end()
 
+    def _stream_report(self, token: str) -> None:
+        "Type the report out as the writer streams it."
+        if self._report is None:  # first token -> mount a live report widget
+            self._report = Static()
+            self.query_one("#log", VerticalScroll).mount(self._report)
+            self._report_text = ""
+        self._report_text += token
+        self._report.update(Text(self._report_text))  # plain text while typing
+
     def _show_report(self, final) -> None:
         log = self.query_one("#log", VerticalScroll)
         if final is None:
             log.mount(Static(Text("No result.", style="red")))
             return
 
-        if final.report_markdown:
-            log.mount(Static(Markdown(_truncate_references(final.report_markdown))))
+        rendered = (
+            Markdown(_truncate_references(final.report_markdown))
+            if final.report_markdown
+            else Text("No report generated.", style="yellow")
+        )
+        if self._report is not None:  # replace the streamed body with the full render
+            self._report.update(rendered)
         else:
-            log.mount(Static(Text("No report generated.", style="yellow")))
+            log.mount(Static(rendered))
 
         log.mount(
             Static(
                 Panel.fit(
                     f"rounds={final.iteration}   papers={len(final.papers)}   "
+                    f"read={sum(1 for p in final.papers if p.full_text_excerpt)}   "
                     f"gaps={len(final.gaps)}   conflicts={len(final.conflicts)}   "
                     f"novelty={final.novelty_score}",
                     title="summary",
