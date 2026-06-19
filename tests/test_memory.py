@@ -1,10 +1,28 @@
+import string
+
+import pytest
+
 import paper_research_agent.features.reading.node as rnode
 import paper_research_agent.memory.nodes as mnodes
+import paper_research_agent.memory.results as results_mod
 from paper_research_agent.core.models import Paper
 from paper_research_agent.core.state import ResearchGap, ResearchState
 from paper_research_agent.features.reading import read_papers
 from paper_research_agent.memory.nodes import recall_prior, remember_result
 from paper_research_agent.memory.results import ResultMemory
+
+
+@pytest.fixture(autouse=True)
+def _fake_topic_embeddings(monkeypatch):
+    "Offline topic embeddings: char-presence vector (same topic -> identical)."
+
+    class _FakeEmb:
+        def embed_query(self, text: str):
+            t = text.lower()
+            return [1.0 if c in t else 0.0 for c in string.ascii_lowercase]
+
+    monkeypatch.setattr(results_mod, "embeddings_model", lambda: _FakeEmb())
+    monkeypatch.setattr(results_mod, "_normalize_topic", lambda topic: topic)
 
 
 def _result_state(topic, gap_descriptions):
@@ -117,3 +135,46 @@ def test_nodes_remember_then_recall(monkeypatch, tmp_path):
     remember_result(_result_state("retrieval augmented generation chunking", ["table eval gap"]))
     out = recall_prior(ResearchState(topic="retrieval augmented generation documents"))
     assert "table eval gap" in out.recalled_gaps
+
+
+# ---------------- TTL result-cache (fresh + short-circuit) ----------------
+
+def test_fresh_within_and_outside_ttl(tmp_path):
+    mem = ResultMemory(str(tmp_path / "results.db"))
+    mem.remember(_result_state("topic A", ["g1"]))
+
+    got = mem.fresh("topic A", 7)
+    assert got is not None and got.topic == "topic A"
+    assert [g.description for g in got.gaps] == ["g1"]
+    assert mem.fresh("topic A", 0) is None      # ttl 0 -> never reuse
+    assert mem.fresh("zzz qqq", 7) is None       # dissimilar topic
+
+
+def test_fresh_fuzzy_topic_match(tmp_path):
+    mem = ResultMemory(str(tmp_path / "results.db"))
+    mem.remember(_result_state("retrieval augmented generation", ["g"]))
+    # lexically different phrasing of the same topic still hits (semantic-ish)
+    assert mem.fresh("retrieval augmented generation systems", 7) is not None
+
+
+def test_fresh_expired(tmp_path):
+    import time
+
+    mem = ResultMemory(str(tmp_path / "results.db"))
+    mem.remember(_result_state("old topic", ["g"]))
+    mem._conn.execute("UPDATE runs SET created = ?", (time.time() - 10 * 86400,))
+    mem._conn.commit()
+    assert mem.fresh("old topic", 7) is None     # researched 10d ago, TTL 7d
+
+
+def test_run_research_short_circuits_on_cache(monkeypatch):
+    import paper_research_agent.agent.graph as graph_mod
+
+    cached = ResearchState(topic="x", report_markdown="cached")
+    monkeypatch.setattr(graph_mod, "_cached_result", lambda topic, use_memory: cached)
+    monkeypatch.setattr(
+        graph_mod, "build_graph",
+        lambda: (_ for _ in ()).throw(AssertionError("graph built despite cache")),
+    )
+    out = graph_mod.run_research("x", use_memory=True)
+    assert out is cached
