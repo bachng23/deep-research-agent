@@ -19,3 +19,6 @@ class PaperMemory:
 
     def relevant(self, focus: str, *, paper_id: str | None = None, top_k: int = 5):
         return self._index.search(focus, paper_id=paper_id, top_k=top_k)
+
+    def close(self) -> None:
+        self._index.close()

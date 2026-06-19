@@ -4,6 +4,7 @@ from collections.abc import Iterator
 
 from langgraph.graph import END, StateGraph
 
+from paper_research_agent.config import get_settings
 from paper_research_agent.core.state import ResearchState
 from paper_research_agent.features.conflicts import find_conflicts
 from paper_research_agent.features.contrast import find_gaps, rank_gaps, refine_gaps
@@ -78,7 +79,11 @@ def run_research(
     *,
     read_full_text: bool = False,
     max_iterations: int = 3,
+    use_memory=None,
 ) -> ResearchState:
+    if use_memory is None:
+        use_memory = get_settings().use_memory
+
     app = build_graph()
 
     initial_state = ResearchState(
@@ -86,6 +91,7 @@ def run_research(
         user_idea=user_idea,
         read_full_text=read_full_text,
         max_iterations=max_iterations,
+        use_memory=use_memory,
     )
 
     result = app.invoke(initial_state)
@@ -98,6 +104,7 @@ def stream_research(
     *,
     read_full_text: bool = False,
     max_iterations: int = 3,
+    use_memory=None,
 ) -> Iterator[tuple[str, object]]:
     """Stream a research run for a live UI.
 
@@ -106,11 +113,15 @@ def stream_research(
     "updates" delta is the full state -- handy for showing live counts."""
     app = build_graph()
 
+    if use_memory is None:
+        use_memory = get_settings().use_memory
+
     initial_state = ResearchState(
         topic=topic,
         user_idea=user_idea,
         read_full_text=read_full_text,
         max_iterations=max_iterations,
+        use_memory=use_memory,
     )
 
     final: ResearchState | None = None

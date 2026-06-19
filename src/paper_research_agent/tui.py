@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import tempfile
+
 import pyfiglet
 from rich.console import Group
 from rich.markdown import Markdown
@@ -14,6 +16,7 @@ from textual.widgets import Footer, Input, Static
 
 from paper_research_agent.agent.graph import stream_research
 from paper_research_agent.config import get_settings
+from paper_research_agent.features.qa import answer_question
 
 # friendly labels for the graph nodes as they stream past
 _NODE_LABELS = {
@@ -67,9 +70,9 @@ def _welcome() -> Panel:
     # right side: tips, then the model block below (kept short to avoid wrapping)
     right: list[Text] = [Text("Tips for getting started", style="bold")]
     for tip in (
-        "1. Type a research topic and press Enter.",
-        "2. Searches arXiv + OpenAlex, reads full text.",
-        "3. Finds gaps & conflicts → cited report (top-5).",
+        "1. Deep research: type a topic → fetch + analyze.",
+        "2. Ctrl+T → Q&A over this session's papers.",
+        "3. Cited report (top-5 refs).",
         "4. exit / quit / Ctrl-C to leave.",
     ):
         right.append(Text(f"  {tip}", style="dim"))
@@ -137,15 +140,32 @@ class ResearchTUI(App):
     }
     """
 
+    BINDINGS = [("ctrl+t", "toggle_mode", "research ⇄ Q&A")]
+
     def on_mount(self) -> None:
         self._busy = False
+        self._deep_research = True
         self._entries: list[tuple[str, str]] = []  # (kind, text); kind: step|note
         # one persistent Spinner -> its start_time is kept, so it actually animates
         self._spinner = Spinner("dots", text=Text(" working…", style="cyan"))
-        self.query_one("#ask", Input).border_title = "ask"
+
+        # session-scoped memory: this session's research writes here, Q&A reads it
+        settings = get_settings()
+        settings.memory_dir = tempfile.mkdtemp(prefix="research_session_")
+        settings.use_memory = True  # whole TUI session runs with memory on
+
         self.query_one("#log", VerticalScroll).mount(Static(_welcome()))
+        self._update_mode_label()
         self.set_interval(1 / 12, self._tick)
         self.query_one("#ask", Input).focus()
+
+    def action_toggle_mode(self) -> None:
+        self._deep_research = not self._deep_research
+        self._update_mode_label()
+
+    def _update_mode_label(self) -> None:
+        mode = "deep research" if self._deep_research else "Q&A · this session"
+        self.query_one("#ask", Input).border_title = f"{mode}   (ctrl+t to switch)"
 
     def compose(self) -> ComposeResult:
         yield VerticalScroll(id="log")
@@ -153,30 +173,36 @@ class ResearchTUI(App):
         yield Footer()
 
     async def on_input_submitted(self, event: Input.Submitted) -> None:
-        topic = event.value.strip()
-        if not topic:
+        text = event.value.strip()
+        if not text:
             return
-        if topic.lower() in _EXIT:
+        if text.lower() in _EXIT:
             self.exit()
             return
 
         event.input.value = ""
         event.input.disabled = True
         log = self.query_one("#log", VerticalScroll)
-
         await log.mount(
-            Static(Text("you ▸ ", style="bold cyan") + Text(topic, style="bold"))
+            Static(Text("you ▸ ", style="bold cyan") + Text(text, style="bold"))
         )
-        self._entries = []
-        self._plan_seen = 0
-        self._steps = Static()
-        await log.mount(self._steps)
-        self._busy = True
-        log.scroll_end()
-        self._research(topic)
+
+        if self._deep_research:
+            self._entries = []
+            self._plan_seen = 0
+            self._steps = Static()
+            await log.mount(self._steps)
+            self._busy = True
+            log.scroll_end()
+            self._research(text)
+        else:
+            placeholder = Static(Text("⠋ thinking…", style="cyan"))
+            await log.mount(placeholder)
+            log.scroll_end()
+            self._answer(text, placeholder)
 
     def _tick(self) -> None:
-        if self._busy:  # re-rendering animates the active step's spinner
+        if self._busy and hasattr(self, "_steps"):  # animate the active step
             self._steps.update(self._render_steps())
 
     def _render_steps(self) -> Group:
@@ -197,7 +223,9 @@ class ResearchTUI(App):
     def _research(self, topic: str) -> None:
         final = None
         try:
-            for event in stream_research(topic, read_full_text=True, max_iterations=2):
+            for event in stream_research(
+                topic, read_full_text=True, max_iterations=2, use_memory=True
+            ):
                 if event[0] == "node":
                     _, node, state = event
 
@@ -223,6 +251,16 @@ class ResearchTUI(App):
             self.call_from_thread(self._add, "note", f"error: {e}")
         finally:
             self.call_from_thread(self._finish_run)
+
+    @work(thread=True)
+    def _answer(self, question: str, placeholder: Static) -> None:
+        "Q&A over this session's papers (memory.relevant + LLM), replacing the placeholder."
+        try:
+            ans = answer_question(question)
+        except Exception as e:  # never let a failure kill the UI
+            ans = f"error: {e}"
+        self.call_from_thread(placeholder.update, Markdown(ans))
+        self.call_from_thread(self._finish_run)
 
     def _add(self, kind: str, text: str) -> None:
         self._entries.append((kind, text))
@@ -255,13 +293,17 @@ class ResearchTUI(App):
         )
         if final.errors:
             log.mount(
-                Static(Text(f"{len(final.errors)} error(s): {final.errors}", style="red"))
+                Static(
+                    Text(f"{len(final.errors)} error(s): {final.errors}", style="red")
+                )
             )
         log.scroll_end()
 
     def _finish_run(self) -> None:
         self._busy = False
-        self._steps.update(self._render_steps())  # active step settles to ✓
+        if hasattr(self, "_steps"):
+            self._steps.update(self._render_steps())  # active step settles to ✓
+        self.query_one("#log", VerticalScroll).scroll_end()
         inp = self.query_one("#ask", Input)
         inp.disabled = False
         inp.focus()

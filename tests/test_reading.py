@@ -140,6 +140,34 @@ def test_index_search_empty_before_add(monkeypatch):
     assert FullTextIndexing().search("x") == []
 
 
+def test_index_persists_across_instances(monkeypatch, tmp_path):
+    "On-disk index survives a new FullTextIndexing (i.e. a new run/process)."
+    monkeypatch.setattr(indexing, "embeddings_model", lambda: _FakeEmb())
+    path = str(tmp_path / "qdrant")
+
+    idx = FullTextIndexing(path=path)
+    idx.add("p1", [Chunk(text="cat sits", section="A")])
+    idx._client.close()  # release the on-disk lock (simulate the run ending)
+
+    reopened = FullTextIndexing(path=path)
+    assert reopened.has_paper("p1")  # persisted across instances
+    assert reopened.search("cat", paper_id="p1")
+    reopened._client.close()
+
+
+def test_index_idempotent_on_reindex(monkeypatch, tmp_path):
+    "Re-indexing the same paper overwrites (deterministic ids) -> no duplicates."
+    monkeypatch.setattr(indexing, "embeddings_model", lambda: _FakeEmb())
+    path = str(tmp_path / "qdrant")
+
+    idx = FullTextIndexing(path=path)
+    idx.add("p1", [Chunk(text="cat sits", section="A")])
+    idx.add("p1", [Chunk(text="cat sits", section="A")])  # same chunk again
+    hits = idx.search("cat", paper_id="p1", top_k=10)
+    assert len(hits) == 1
+    idx._client.close()
+
+
 # ---------------- node ----------------
 
 def test_read_papers_gate_off_is_noop():
@@ -152,14 +180,23 @@ def test_read_papers_populates_excerpt(monkeypatch):
     monkeypatch.setattr(rnode, "fetch_full_text",
                         lambda p: "## Results\ncats are great")
 
-    class _Idx:
-        def add(self, pid, chunks):
+    class _Mem:
+        def __init__(self, path=None):
             pass
 
-        def search(self, focus, paper_id=None, top_k=5):
+        def knows(self, pid):
+            return False
+
+        def remember(self, pid, chunks):
+            pass
+
+        def relevant(self, focus, paper_id=None, top_k=5):
             return [{"section": "Results", "text": "cats are great"}]
 
-    monkeypatch.setattr(rnode, "FullTextIndexing", _Idx)
+        def close(self):
+            pass
+
+    monkeypatch.setattr(rnode, "PaperMemory", _Mem)
     p = Paper(title="P", source="arxiv", url="u")
     out = read_papers(ResearchState(topic="t", papers=[p], read_full_text=True))
     assert "cats are great" in out.papers[0].full_text_excerpt

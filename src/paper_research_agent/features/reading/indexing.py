@@ -8,18 +8,24 @@ from paper_research_agent.features.reading.chunking import Chunk
 from paper_research_agent.llm import embeddings_model
 
 
+def _point_id(paper_id: str, index: int) -> str:
+    return str(uuid.uuid5(uuid.NAMESPACE_URL, f"paper-research:{paper_id}:{index}"))
+
+
 class FullTextIndexing:
     """
-    In-memory Qdrant index of full-text chunks across ALL paper.
-    One collection; every chunk carries 'paper_id' in its payload, so it is possible to retrieve per-paper (filter) or cross-paper (no filter) from the same store.
+    Qdrant index of full-text chunks across ALL papers.
+    path=None -> in-memory (per run); path=<dir> -> on-disk (persists across runs).
+    One collection; every chunk carries 'paper_id' in its payload, so it is possible
+    to retrieve per-paper (filter) or cross-paper (no filter) from the same store.
     """
 
     COLLECTION = "papers"
 
-    def __init__(self):
-        self._client = QdrantClient(":memory:")
+    def __init__(self, path: str | None = None) -> None:
+        self._client = QdrantClient(path=path) if path else QdrantClient(":memory:")
         self._emb = embeddings_model()
-        self._ready = False
+        self._ready = self._client.collection_exists(self.COLLECTION)
 
     def add(self, paper_id: str, chunks: list[Chunk]) -> None:
         if not chunks:
@@ -31,7 +37,7 @@ class FullTextIndexing:
             self.COLLECTION,
             points=[
                 models.PointStruct(
-                    id=str(uuid.uuid4()),
+                    id=_point_id(paper_id, i),
                     vector=vec,
                     payload={
                         "paper_id": paper_id,
@@ -40,9 +46,26 @@ class FullTextIndexing:
                         "text": c.text,
                     },
                 )
-                for c, vec in zip(chunks, vectors)
+                for i, (c, vec) in enumerate(zip(chunks, vectors))
             ],
         )
+
+    def has_paper(self, paper_id: str) -> bool:
+        "If already indexed, skipping re-reading or re-embedding."
+        if not self._ready:
+            return False
+        points, _ = self._client.scroll(
+            self.COLLECTION,
+            scroll_filter=models.Filter(
+                must=[
+                    models.FieldCondition(
+                        key="paper_id", match=models.MatchValue(value=paper_id)
+                    )
+                ]
+            ),
+            limit=1,
+        )
+        return bool(points)
 
     def search(
         self, focus: str, *, paper_id: str | None = None, top_k: int = 5
@@ -80,3 +103,6 @@ class FullTextIndexing:
             ),
         )
         self._ready = True
+
+    def close(self) -> None:
+        self._client.close()

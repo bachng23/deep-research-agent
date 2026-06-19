@@ -6,7 +6,7 @@ from paper_research_agent.core.state import ResearchState
 from paper_research_agent.features.fetching.dedup import paper_id
 from paper_research_agent.features.reading import build_excerpt, fetch_full_text
 from paper_research_agent.features.reading.chunking import chunk_text
-from paper_research_agent.features.reading.indexing import FullTextIndexing
+from paper_research_agent.memory import PaperMemory
 
 
 def read_papers(state: ResearchState) -> ResearchState:
@@ -24,52 +24,61 @@ def read_papers(state: ResearchState) -> ResearchState:
     if not targets:
         return state
 
-    index = FullTextIndexing()
-    indexed: set[str] = set()
+    path = settings.memory_dir if settings.use_memory else None
+    memory = PaperMemory(path)
 
-    # read + chunk + index selected papers
-    for paper in targets:
-        try:
-            text = fetch_full_text(paper)
-        except Exception as e:
-            state.errors.append(f"read failed ({paper.title[:40]}): {e}")
-            continue
-        if not text:
-            continue
+    try:
+        indexed: set[str] = set()
 
-        chunks = chunk_text(
-            text,
-            max_chars=settings.fulltext_chunk_chars,
-            overlap=settings.fulltext_chunk_overlap,
-        )
-        if not chunks:
-            continue
+        # read + chunk + index selected papers
+        for paper in targets:
+            pid = paper_id(paper)
+            if memory.knows(pid):  # memory hit -> already embedded, reuse
+                indexed.add(pid)
+                continue
+            try:
+                text = fetch_full_text(paper)
+            except Exception as e:
+                state.errors.append(f"read failed ({paper.title[:40]}): {e}")
+                continue
+            if not text:
+                continue
 
-        pid = paper_id(paper)
-        try:
-            index.add(pid, chunks)
-            indexed.add(pid)
-        except Exception as e:
-            state.errors.append(f"index failed ({paper.title[:40]}): {e}")
+            chunks = chunk_text(
+                text,
+                max_chars=settings.fulltext_chunk_chars,
+                overlap=settings.fulltext_chunk_overlap,
+            )
+            if not chunks:
+                continue
 
-    if not indexed:
-        return state
+            try:
+                memory.remember(pid, chunks)
+                indexed.add(pid)
+            except Exception as e:
+                state.errors.append(f"index failed ({paper.title[:40]}): {e}")
 
-    # retrieve focus-relevant excerpts per paper
-    focus = _focus(state)
-    for paper in targets:
-        pid = paper_id(paper)
-        if pid not in indexed:
-            continue
-        try:
-            hits = index.search(focus, paper_id=pid, top_k=settings.fulltext_top_k)
-        except Exception as e:
-            state.errors.append(f"search failed ({paper.title[:40]}): {e}")
-            continue
-        paper.full_text_excerpt = build_excerpt(
-            hits, max_chars=settings.fulltext_excerpt_max_chars
-        )
+        if not indexed:
+            return state
 
+        # retrieve focus-relevant excerpts per paper
+        focus = _focus(state)
+        for paper in targets:
+            pid = paper_id(paper)
+            if pid not in indexed:
+                continue
+            try:
+                hits = memory.relevant(
+                    focus, paper_id=pid, top_k=settings.fulltext_top_k
+                )
+            except Exception as e:
+                state.errors.append(f"search failed ({paper.title[:40]}): {e}")
+                continue
+            paper.full_text_excerpt = build_excerpt(
+                hits, max_chars=settings.fulltext_excerpt_max_chars
+            )
+    finally:
+        memory.close()
     return state
 
 

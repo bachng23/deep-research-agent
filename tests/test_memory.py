@@ -29,6 +29,9 @@ class _FakeMemory:
     def relevant(self, focus, *, paper_id=None, top_k=5):
         return [{"section": "Results", "text": "cached finding"}]
 
+    def close(self):
+        pass
+
 
 def _state():
     return ResearchState(
@@ -103,14 +106,14 @@ def test_result_memory_noop_without_path():
 
 
 def test_nodes_gate_off(monkeypatch):
-    monkeypatch.setattr(mnodes, "_result_path", lambda: None)
+    monkeypatch.setattr(mnodes, "_result_path", lambda state: None)
     out = recall_prior(ResearchState(topic="t"))
     assert out.recalled_gaps == []
     remember_result(_result_state("t", ["g"]))  # no-op, no error
 
 
 def test_nodes_remember_then_recall(monkeypatch, tmp_path):
-    monkeypatch.setattr(mnodes, "_result_path", lambda: str(tmp_path / "results.db"))
+    monkeypatch.setattr(mnodes, "_result_path", lambda state: str(tmp_path / "results.db"))
     remember_result(_result_state("retrieval augmented generation chunking", ["table eval gap"]))
     out = recall_prior(ResearchState(topic="retrieval augmented generation documents"))
     assert "table eval gap" in out.recalled_gaps
