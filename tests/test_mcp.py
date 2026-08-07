@@ -2,6 +2,7 @@ import pytest
 from fastmcp import Client
 from fastmcp.exceptions import ToolError
 
+import paper_research_agent.features.fetching.mcp_search as mcp_search
 import paper_research_agent.mcp.server as server
 from paper_research_agent.core.errors import RateLimitError
 from paper_research_agent.core.models import Paper
@@ -65,8 +66,6 @@ async def test_rate_limit_becomes_prompt_friendly_tool_error(monkeypatch):
 
 
 # --- tool-agent fetch path (LLM chooses + calls MCP tools) ---------------------
-
-import paper_research_agent.features.fetching.mcp_search as mcp_search
 
 
 class _FakeMessage:

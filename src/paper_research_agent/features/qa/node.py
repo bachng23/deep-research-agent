@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from paper_research_agent.config import get_settings
-from paper_research_agent.core import Paper
 from paper_research_agent.features.qa.prompts import QA_SYSTEM_PROMPT
 from paper_research_agent.llm import chat_model_for_tier
 from paper_research_agent.memory import PaperMemory

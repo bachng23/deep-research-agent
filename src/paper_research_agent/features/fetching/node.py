@@ -42,7 +42,7 @@ def _fetch_deterministic(
     state: ResearchState, queries: list[str]
 ) -> tuple[list[Paper], int]:
     result = fetch_papers_for_queries(queries, providers=default_providers())
-    state.errors.extend(state.errors)
+    state.errors.extend(result.errors)
 
     return result.papers, result.successful_calls
 

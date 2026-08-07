@@ -19,6 +19,7 @@ from paper_research_agent.features.planning import plan_queries
 from paper_research_agent.features.reading import read_papers
 from paper_research_agent.features.writing import write_report
 from paper_research_agent.memory import recall_prior, remember_result
+from paper_research_agent.memory.results import ResultMemory
 
 
 def _route_after_assessment(state: ResearchState) -> str:
@@ -73,6 +74,16 @@ def build_graph():
     return graph.compile()
 
 
+def _cached_result(topic: str, use_memory: bool) -> ResearchState | None:
+    "A recent run on a semantically equivalent topic, or None."
+    if not use_memory:
+        return None
+    settings = get_settings()
+    return ResultMemory(f"{settings.memory_dir}/results.db").fresh(
+        topic, settings.result_cache_ttl_days
+    )
+
+
 def run_research(
     topic: str,
     user_idea: str | None = None,
@@ -83,6 +94,10 @@ def run_research(
 ) -> ResearchState:
     if use_memory is None:
         use_memory = get_settings().use_memory
+
+    cached = _cached_result(topic, use_memory)
+    if cached is not None:
+        return cached
 
     app = build_graph()
 

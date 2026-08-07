@@ -1,4 +1,3 @@
-from attr.validators import max_len
 from pydantic import BaseModel, Field
 
 from paper_research_agent.core.state import Conflict

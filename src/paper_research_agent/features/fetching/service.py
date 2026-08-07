@@ -3,7 +3,6 @@ from __future__ import annotations
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 
-from pydantic import dataclasses
 
 from paper_research_agent.core.models import Paper
 from paper_research_agent.features.fetching.dedup import deduplicate_papers

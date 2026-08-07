@@ -48,6 +48,12 @@ class Settings(BaseSettings):
     request_timeout_seconds: int = 20
     max_new_papers_per_round: int = 25
 
+    # cross-run memory: full-text index + prior-gap recall. Off by default so a
+    # plain run stays ephemeral; the TUI turns it on.
+    use_memory: bool = Field(default=False, alias="USE_MEMORY")
+    memory_dir: str = Field(default=".paper_research_memory", alias="MEMORY_DIR")
+    result_cache_ttl_days: int = Field(default=7, alias="RESULT_CACHE_TTL_DAYS")
+
 
 @lru_cache
 def get_settings() -> Settings:
