@@ -66,5 +66,5 @@ def test_missing_conflict_is_a_finding_only_on_contested_topics():
     settled = GoldenCase(topic="t", min_gaps=1, expects_conflict=False)
     contested = GoldenCase(topic="t", min_gaps=1, expects_conflict=True)
 
-    assert not any("conflict" in f for f in analyze(state, settled))
-    assert any("conflict" in f for f in analyze(state, contested))
+    assert "missed_conflict" not in {f.category for f in analyze(state, settled)}
+    assert "missed_conflict" in {f.category for f in analyze(state, contested)}

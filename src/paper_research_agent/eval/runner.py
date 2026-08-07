@@ -17,7 +17,7 @@ from rich.table import Table
 from paper_research_agent.agent.graph import run_research
 from paper_research_agent.config import get_settings
 from paper_research_agent.core.state import ResearchState
-from paper_research_agent.eval.failure import analyze
+from paper_research_agent.eval.failure import analyze, distribution, runs_affected
 from paper_research_agent.eval.golden import GOLDEN, GoldenCase
 from paper_research_agent.eval.metrics import score_case
 
@@ -151,7 +151,7 @@ def run_one(
     row.update(score_case(state, case))
     row["difficulty"] = case.difficulty
     row["gap_source"] = case.provenance.granularity if case.provenance else "unknown"
-    row["findings"] = analyze(state, case)
+    row["findings"] = [f.model_dump() for f in analyze(state, case)]
     return row, state
 
 
@@ -247,6 +247,8 @@ def summarise(rows: list[dict]) -> dict:
         "runs_crashed": len(rows) - len(ok),
         "meets_min_gaps": sum(1 for r in ok if r.get("meets_min_gaps")),
         "runs_with_findings": sum(1 for r in ok if r.get("findings")),
+        "failure_distribution": distribution(ok),
+        "failure_runs_affected": runs_affected(ok),
         "overall": aggregate(rows),
         "by_gap_source": aggregate_by(ok, "gap_source"),
         "by_difficulty": aggregate_by(ok, "difficulty"),
@@ -288,8 +290,22 @@ def _breakdown_table(summary: dict, key: str, title: str) -> Table:
     return t
 
 
+def _failure_table(summary: dict, n_runs: int) -> Table:
+    t = Table(title="failure distribution")
+    t.add_column("category")
+    t.add_column("findings", justify="right")
+    t.add_column("runs hit", justify="right")
+    t.add_column("% of runs", justify="right")
+    affected = summary["failure_runs_affected"]
+    for category, count in summary["failure_distribution"].items():
+        hit = affected.get(category, 0)
+        share = f"{hit / n_runs:.0%}" if n_runs else "—"
+        t.add_row(category, str(count), str(hit), share)
+    return t
+
+
 def _print_failures(rows: list[dict]) -> None:
-    console.rule("failure analysis")
+    console.rule("findings per run")
     any_findings = False
     for r in rows:
         if r.get("findings") or r.get("crashed"):
@@ -298,7 +314,7 @@ def _print_failures(rows: list[dict]) -> None:
             if r.get("crashed"):
                 console.print(f"  [red]•[/] crashed: {r['crashed']}")
             for f in r.get("findings", []):
-                console.print(f"  [red]•[/] {f}")
+                console.print(f"  [red]•[/] [yellow]{f['category']}[/] {f['detail'][:110]}")
     if not any_findings:
         console.print("[green]no findings — all cases within thresholds[/]")
 
@@ -365,6 +381,7 @@ def main() -> None:
     console.print(_summary_table(summary))
     console.print(_breakdown_table(summary, "by_gap_source", "by ground-truth strength"))
     console.print(_breakdown_table(summary, "by_difficulty", "by topic difficulty"))
+    console.print(_failure_table(summary, summary["runs_total"] - summary["runs_crashed"]))
     _print_failures(rows)
 
     (run_dir / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
