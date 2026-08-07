@@ -9,7 +9,7 @@ class GoldenCase(BaseModel):
 
     expected_gap_keywords: list[str] = Field(default_factory=list)
     expected_papers: list[str] = Field(default_factory=list)
-    min_gaps: int = Field(defaul=1, ge=0)
+    min_gaps: int = Field(default=1, ge=0)
 
 
 GOLDEN: list[GoldenCase] = [

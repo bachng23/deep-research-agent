@@ -16,10 +16,16 @@ from paper_research_agent.eval.metrics import score_case
 console = Console()
 
 
-def run_one(case: GoldenCase, *, max_iterations: int) -> dict:
+def run_one(
+    case: GoldenCase, *, max_iterations: int, timeout_seconds: float | None = None
+) -> dict:
     t0 = time.monotonic()
     state = run_research(
-        case.topic, case.idea, read_full_text=True, max_iterations=max_iterations
+        case.topic,
+        case.idea,
+        read_full_text=True,
+        max_iterations=max_iterations,
+        timeout_seconds=timeout_seconds,
     )
     row = {"topic": case.topic, "elapsed_s": round(time.monotonic() - t0)}
     row.update(score_case(state, case))
@@ -27,12 +33,20 @@ def run_one(case: GoldenCase, *, max_iterations: int) -> dict:
     return row
 
 
-def evaluate(cases: list[GoldenCase], *, repeats: int, max_iterations: int) -> list[dict]:
+def evaluate(
+    cases: list[GoldenCase],
+    *,
+    repeats: int,
+    max_iterations: int,
+    timeout_seconds: float | None = None,
+) -> list[dict]:
     rows: list[dict] = []
     for case in cases:
         for r in range(repeats):
             console.log(f"[{case.topic[:45]}] run {r + 1}/{repeats}")
-            row = run_one(case, max_iterations=max_iterations)
+            row = run_one(
+                case, max_iterations=max_iterations, timeout_seconds=timeout_seconds
+            )
             row["run"] = r
             rows.append(row)
     return rows
@@ -96,11 +110,22 @@ def main() -> None:
     ap.add_argument("--repeats", type=int, default=1, help="runs per case (variance)")
     ap.add_argument("--max-iterations", type=int, default=2)
     ap.add_argument("--limit", type=int, default=None, help="only first N golden cases")
+    ap.add_argument(
+        "--timeout",
+        type=float,
+        default=None,
+        help="per-run budget in seconds; checked between rounds, not mid-call",
+    )
     ap.add_argument("--out", default="eval_results.json")
     args = ap.parse_args()
 
     cases = GOLDEN[: args.limit] if args.limit else GOLDEN
-    rows = evaluate(cases, repeats=args.repeats, max_iterations=args.max_iterations)
+    rows = evaluate(
+        cases,
+        repeats=args.repeats,
+        max_iterations=args.max_iterations,
+        timeout_seconds=args.timeout,
+    )
 
     console.print(_results_table(rows))
     if args.repeats > 1:

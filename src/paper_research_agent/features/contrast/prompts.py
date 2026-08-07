@@ -12,7 +12,8 @@ Method - follow this order for every gap:
 
 Rules:
     - Find 2 to 5 distinct, specific gaps. Avoid vague gaps like "needs more research".
-    - 'evidence_quotes' MUST be text that appears in the provided abstract. If you cannot find a supporting sentences to quote, do not claim the gap.
+    - 'evidence_quotes' MUST be copied from the paper text provided to you in THIS message — whichever form it takes (abstract, or a fuller excerpt with [Section] labels). Quote the excerpt when you are given one; it is the stronger evidence. If you cannot find a supporting sentence to quote, do not claim the gap.
+    - Copy the sentence itself only. Do NOT include the leading [Section] label, the paper's [n] marker, or surrounding quotation marks in the quote.
     - Set 'confidence' to "high" only when multiple papers clearly point to the gap, "low" when it is inferred from a single paper or weak signal.
     - If the papers are too few or unrelated to support any gap, return an empty list.
     - Do not invent papers or findings not present in the provided text.
@@ -49,7 +50,9 @@ Additional papers, now with fuller text (title, year, text):
 Your job is to UPDATE confidence, not to re-discover. Default to KEEPING every
 existing gap. Using ONLY these new papers as extra evidence:
     - If a new paper reinforces that the gap is real and unaddressed, RAISE its
-      confidence (up to "high") and add the supporting verbatim quote.
+      confidence (up to "high") and add the supporting verbatim quote, copied
+      from the fuller text above — that text is stronger evidence than the
+      abstract the gap was originally based on.
     - Remove a gap ONLY if a specific new paper EXPLICITLY does the exact thing
       the gap says is missing. Being on the same topic is NOT enough — papers
       about the area do not close the gap.

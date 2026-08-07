@@ -91,6 +91,7 @@ def run_research(
     read_full_text: bool = False,
     max_iterations: int = 3,
     use_memory=None,
+    timeout_seconds: float | None = None,
 ) -> ResearchState:
     if use_memory is None:
         use_memory = get_settings().use_memory
@@ -107,6 +108,7 @@ def run_research(
         read_full_text=read_full_text,
         max_iterations=max_iterations,
         use_memory=use_memory,
+        timeout_seconds=timeout_seconds,
     )
 
     result = app.invoke(initial_state)

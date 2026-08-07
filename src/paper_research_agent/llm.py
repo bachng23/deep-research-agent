@@ -19,7 +19,7 @@ def chat_model_for_tier(tier: ModelTier, temperature: float = 0.0) -> ChatOpenAI
         api_key=settings.api_key,
         base_url=settings.llm_base_url,
         temperature=temperature,
-        timeout=settings.request_timeout_seconds,
+        timeout=settings.llm_timeout_seconds,
     )
 
 

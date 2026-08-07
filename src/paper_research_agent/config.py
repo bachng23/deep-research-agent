@@ -45,8 +45,14 @@ class Settings(BaseSettings):
 
     arxiv_max_results: int = 8
     openalex_max_results: int = 8
+    # HTTP calls to paper providers -- short, they either answer or they don't.
     request_timeout_seconds: int = 20
     max_new_papers_per_round: int = 25
+
+    # LLM calls are a different beast: a reasoning-tier gap analysis emitting
+    # verbatim quotes routinely runs past a provider HTTP timeout, and every
+    # timeout costs 3 attempts via invoke_with_retry before surfacing.
+    llm_timeout_seconds: int = Field(default=180, alias="LLM_TIMEOUT_SECONDS")
 
     # cross-run memory: full-text index + prior-gap recall. Off by default so a
     # plain run stays ephemeral; the TUI turns it on.

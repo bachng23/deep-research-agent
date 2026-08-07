@@ -19,7 +19,7 @@ def analyze(state: ResearchState, case: GoldenCase) -> list[str]:
 
     if state.gaps:
         g = metrics.grounded_in_fulltext(state)
-        if g < 0.5:
+        if g is not None and g < 0.5:
             findings.append(
                 f"low full-text grounding ({g:.0%} of quoted gaps trace to an excerpt)"
             )
