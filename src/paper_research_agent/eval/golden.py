@@ -1,6 +1,38 @@
 from __future__ import annotations
 
+import json
+from functools import lru_cache
+from pathlib import Path
+from typing import Literal
+
 from pydantic import BaseModel, Field
+
+_DATA_FILE = Path(__file__).parent / "data" / "golden_set.json"
+
+GapSource = Literal["section", "abstract", "debate"]
+
+
+class Provenance(BaseModel):
+    """Where a case's ground truth came from, so a reader can check it.
+
+    Kept alongside the labels rather than in a separate doc: ground truth whose
+    origin is not auditable is not ground truth.
+    """
+
+    survey_title: str
+    arxiv_id: str
+    gap_source: str
+    gap_note: str = ""
+    paper_source: str = ""
+
+    @property
+    def granularity(self) -> GapSource:
+        "How strong the gap labels are: an enumerated section beats an abstract."
+        if self.gap_source.startswith("section"):
+            return "section"
+        if self.gap_source.startswith("debate"):
+            return "debate"
+        return "abstract"
 
 
 class GoldenCase(BaseModel):
@@ -11,56 +43,18 @@ class GoldenCase(BaseModel):
     expected_papers: list[str] = Field(default_factory=list)
     min_gaps: int = Field(default=1, ge=0)
 
+    difficulty: Literal["narrow", "broad"] = "broad"
+    # True only where the literature genuinely disagrees, so "no conflicts
+    # found" is a real miss rather than a correct answer on a settled topic.
+    expects_conflict: bool = False
 
-GOLDEN: list[GoldenCase] = [
-    GoldenCase(
-        topic="hierarchical chunking for retrieval augmented generation over long scientific documents",
-        idea="use document structure (sections, tables) to build hierarchical chunks",
-        expected_gap_keywords=["table", "structure", "evaluation", "long document"],
-        expected_papers=["RAPTOR", "dense passage"],
-        min_gaps=2,
-    ),
-    GoldenCase(
-        topic="retrieval-augmented generation versus long-context language models",
-        idea="use retrieval to pre-filter passages before a long-context model",
-        expected_gap_keywords=["long context", "retrieval", "evaluation", "cost"],
-        expected_papers=["Lost in the Middle", "Retrieval meets Long Context"],
-        min_gaps=2,
-    ),
-    GoldenCase(
-        topic="parameter-efficient fine-tuning of large language models",
-        idea="combine low-rank adapters with quantization for cheaper fine-tuning",
-        expected_gap_keywords=[
-            "memory",
-            "catastrophic forgetting",
-            "evaluation",
-            "task",
-        ],
-        expected_papers=["LoRA", "QLoRA", "Prefix-Tuning"],
-        min_gaps=2,
-    ),
-    GoldenCase(
-        topic="tool use and function calling in large language model agents",
-        idea="let the agent learn when NOT to call a tool to reduce error cascades",
-        expected_gap_keywords=["reliability", "error", "planning", "benchmark"],
-        expected_papers=["Toolformer", "ReAct"],
-        min_gaps=2,
-    ),
-    GoldenCase(
-        topic="hallucination detection and mitigation in large language models",
-        idea="use retrieval grounding signals to flag likely hallucinations at decode time",
-        expected_gap_keywords=["factuality", "detection", "evaluation", "retrieval"],
-        expected_papers=["SelfCheckGPT", "Survey of Hallucination"],
-        min_gaps=2,
-    ),
-    GoldenCase(
-        topic="preference optimization methods for aligning language models",
-        idea="reduce the reward-model dependence of RLHF with direct preference signals",
-        expected_gap_keywords=["reward", "stability", "data", "evaluation"],
-        expected_papers=[
-            "Direct Preference Optimization",
-            "Proximal Policy Optimization",
-        ],
-        min_gaps=2,
-    ),
-]
+    provenance: Provenance | None = None
+
+
+@lru_cache
+def load_golden(path: Path | None = None) -> tuple[GoldenCase, ...]:
+    raw = json.loads((path or _DATA_FILE).read_text(encoding="utf-8"))
+    return tuple(GoldenCase.model_validate(c) for c in raw["cases"])
+
+
+GOLDEN: list[GoldenCase] = list(load_golden())

@@ -1,0 +1,233 @@
+{
+  "_readme": [
+    "Ground truth for the eval golden set. Every entry is derived from published",
+    "literature, NOT from this agent's output. Do not edit an expected value",
+    "because the agent missed it -- a miss is a result, not a labelling error.",
+    "",
+    "provenance.gap_source records the granularity actually verified:",
+    "  'section: <heading>'  the survey's own future-work section was retrieved",
+    "                        and the keywords come from the directions it names.",
+    "  'abstract'            only the abstract/table of contents was retrieved;",
+    "                        keywords are the survey's stated scope, which is",
+    "                        weaker ground truth. Reported as a limitation.",
+    "  'debate'              contested topic: ground truth is the pair of papers",
+    "                        that disagree, not a survey's future-work section.",
+    "",
+    "Every arxiv_id below was verified by fetching its arXiv abstract page on",
+    "2026-08-07 and checking the title matched. Expected paper titles are stored",
+    "as lowercase-able substrings; matching is substring, case-insensitive."
+  ],
+
+  "cases": [
+    {
+      "topic": "retrieval-augmented generation for knowledge-intensive NLP tasks",
+      "idea": "use document structure to build hierarchical chunks before retrieval",
+      "difficulty": "broad",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["long context", "robustness", "scaling law", "multimodal", "production"],
+      "expected_papers": ["retrieval-augmented generation for knowledge-intensive", "dense passage retrieval", "lost in the middle"],
+      "provenance": {
+        "survey_title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+        "arxiv_id": "2312.10997",
+        "gap_source": "section: VII Discussion and Future Prospects",
+        "gap_note": "Section names RAG vs Long Context, RAG Robustness, Hybrid Approaches, Scaling Laws of RAG, Production-Ready RAG, Multi-modal RAG.",
+        "paper_source": "landmark works of the area the survey is built on; titles verified on arXiv (2005.11401, 2004.04906, 2307.03172)"
+      }
+    },
+    {
+      "topic": "parameter-efficient fine-tuning of large language models",
+      "idea": "combine low-rank adapters with quantization for cheaper fine-tuning",
+      "difficulty": "narrow",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["hyperparameter", "benchmark", "training efficiency", "scaling law", "privacy", "compression"],
+      "expected_papers": ["lora", "qlora"],
+      "provenance": {
+        "survey_title": "Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey",
+        "arxiv_id": "2403.14608",
+        "gap_source": "section: VII Conclusion and Future Directions",
+        "gap_note": "Subsections VII-A..VII-G: simplify hyperparameter tuning, unified benchmark, training efficiency, scaling laws, more models and tasks, data privacy, PEFT with model compression.",
+        "paper_source": "titles verified on arXiv (2106.09685, 2305.14314)"
+      }
+    },
+    {
+      "topic": "tool use and function calling in large language model agents",
+      "idea": "let the agent learn when NOT to call a tool to reduce error cascades",
+      "difficulty": "narrow",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["latency", "evaluation", "benchmark", "safety", "robust", "multi-modal"],
+      "expected_papers": ["toolformer", "react"],
+      "provenance": {
+        "survey_title": "Tool Learning with Large Language Models: A Survey",
+        "arxiv_id": "2405.17935",
+        "gap_source": "section: 6 Challenges and Future Directions",
+        "gap_note": "Section names high latency, rigorous and comprehensive evaluation, comprehensive and accessible tools, safe and robust tool learning, unified framework, real-world benchmarks, multi-modal capabilities.",
+        "paper_source": "titles verified on arXiv (2302.04761, 2210.03629)"
+      }
+    },
+    {
+      "topic": "hallucination detection and mitigation in large language models",
+      "idea": "use retrieval grounding signals to flag likely hallucinations at decode time",
+      "difficulty": "broad",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["retrieval", "knowledge boundary", "vision-language", "detection"],
+      "expected_papers": ["selfcheckgpt"],
+      "provenance": {
+        "survey_title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+        "arxiv_id": "2311.05232",
+        "gap_source": "section: 6 Hallucinations in Retrieval Augmented Generation + 7 Future discussion",
+        "gap_note": "Section 6 names retrieval failure and generation bottleneck; section 7 names hallucination in large vision-language models and understanding knowledge boundary in LLMs.",
+        "paper_source": "title verified on arXiv (2303.08896)"
+      }
+    },
+
+    {
+      "topic": "retrieval-augmented generation versus long-context language models",
+      "idea": "use retrieval to pre-filter passages before a long-context model",
+      "difficulty": "narrow",
+      "expects_conflict": true,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["long context", "retrieval", "cost", "position"],
+      "expected_papers": ["retrieval meets long context", "lost in the middle"],
+      "provenance": {
+        "survey_title": "(contested) Retrieval meets Long Context Large Language Models vs Lost in the Middle: How Language Models Use Long Contexts",
+        "arxiv_id": "2310.03025 vs 2307.03172",
+        "gap_source": "debate",
+        "gap_note": "2310.03025 reports retrieval augmentation matching or beating a much longer context window; 2307.03172 reports degradation for information in the middle of long contexts. The RAG survey (2312.10997 section VII) names 'RAG vs Long Context' as an explicit open question.",
+        "paper_source": "both sides of the disagreement; titles verified on arXiv"
+      }
+    },
+    {
+      "topic": "emergent abilities of large language models at scale",
+      "idea": "test whether an ability appears smoothly under a continuous metric",
+      "difficulty": "narrow",
+      "expects_conflict": true,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["metric", "scale", "emergent", "evaluation"],
+      "expected_papers": ["emergent abilities of large language models", "mirage"],
+      "provenance": {
+        "survey_title": "(contested) Emergent Abilities of Large Language Models vs Are Emergent Abilities of Large Language Models a Mirage?",
+        "arxiv_id": "2206.07682 vs 2304.15004",
+        "gap_source": "debate",
+        "gap_note": "2206.07682 reports abilities appearing sharply past a scale threshold; 2304.15004 argues the sharpness is an artefact of discontinuous metrics rather than a property of the model.",
+        "paper_source": "both sides of the disagreement; titles verified on arXiv"
+      }
+    },
+    {
+      "topic": "self-correction and self-refinement in large language model reasoning",
+      "idea": "give the model an external verifier instead of asking it to self-critique",
+      "difficulty": "narrow",
+      "expects_conflict": true,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["feedback", "verifier", "reasoning", "external"],
+      "expected_papers": ["self-refine", "cannot self-correct"],
+      "provenance": {
+        "survey_title": "(contested) Self-Refine: Iterative Refinement with Self-Feedback vs Large Language Models Cannot Self-Correct Reasoning Yet",
+        "arxiv_id": "2303.17651 vs 2310.01798",
+        "gap_source": "debate",
+        "gap_note": "2303.17651 reports gains from iterative self-feedback without extra training; 2310.01798 reports that without external feedback, self-correction degrades reasoning performance.",
+        "paper_source": "both sides of the disagreement; titles verified on arXiv"
+      }
+    },
+    {
+      "topic": "transformer architectures for long-term time series forecasting",
+      "idea": "compare against a linear baseline before claiming architectural gains",
+      "difficulty": "narrow",
+      "expects_conflict": true,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["baseline", "benchmark", "evaluation", "linear"],
+      "expected_papers": ["are transformers effective for time series", "transformers in time series"],
+      "provenance": {
+        "survey_title": "(contested) Are Transformers Effective for Time Series Forecasting? vs Transformers in Time Series: A Survey",
+        "arxiv_id": "2205.13504 vs 2202.07125",
+        "gap_source": "debate",
+        "gap_note": "2205.13504 reports a simple linear model beating transformer forecasters on long-horizon benchmarks; 2202.07125 surveys the transformer line as a productive direction. Included partly for non-LLM domain coverage.",
+        "paper_source": "both sides of the disagreement; titles verified on arXiv"
+      }
+    },
+
+    {
+      "topic": "preference optimization methods for aligning language models",
+      "idea": "reduce the reward-model dependence of RLHF with direct preference signals",
+      "difficulty": "broad",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["reward", "feedback", "evaluation", "data"],
+      "expected_papers": ["direct preference optimization"],
+      "provenance": {
+        "survey_title": "A Survey of Reinforcement Learning from Human Feedback",
+        "arxiv_id": "2312.14925",
+        "gap_source": "abstract",
+        "gap_note": "WEAKER GROUND TRUTH: the survey's section 9 (Discussion and Conclusion) could not be retrieved; keywords reflect the survey's stated scope, not an enumerated future-work list.",
+        "paper_source": "title verified on arXiv (2305.18290)"
+      }
+    },
+    {
+      "topic": "transformer architectures for long-context language modelling",
+      "idea": "combine sparse attention with a retrieval-based cache",
+      "difficulty": "broad",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["attention", "memory", "evaluation", "efficiency"],
+      "expected_papers": ["lost in the middle"],
+      "provenance": {
+        "survey_title": "Advancing Transformer Architecture in Long-Context Large Language Models: A Comprehensive Survey",
+        "arxiv_id": "2311.12351",
+        "gap_source": "abstract",
+        "gap_note": "WEAKER GROUND TRUTH: the survey's section 9 could not be retrieved; keywords reflect the survey's stated taxonomy, not an enumerated future-work list.",
+        "paper_source": "title verified on arXiv (2307.03172)"
+      }
+    },
+    {
+      "topic": "model compression and quantization for large language model inference",
+      "idea": "combine quantization with structured pruning under one calibration pass",
+      "difficulty": "broad",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["quantization", "pruning", "distillation", "benchmark"],
+      "expected_papers": ["qlora"],
+      "provenance": {
+        "survey_title": "A Survey on Model Compression for Large Language Models",
+        "arxiv_id": "2308.07633",
+        "gap_source": "abstract",
+        "gap_note": "WEAKER GROUND TRUTH: keywords are the compression families the survey's abstract names as its taxonomy, not an enumerated future-work list.",
+        "paper_source": "title verified on arXiv (2305.14314)"
+      }
+    },
+    {
+      "topic": "federated learning under client heterogeneity",
+      "idea": "adapt aggregation weights to per-client drift instead of dataset size",
+      "difficulty": "broad",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["privacy", "communication", "heterogeneity", "fairness"],
+      "expected_papers": ["advances and open problems in federated learning"],
+      "provenance": {
+        "survey_title": "Advances and Open Problems in Federated Learning",
+        "arxiv_id": "1912.04977",
+        "gap_source": "abstract",
+        "gap_note": "WEAKER GROUND TRUTH: keywords reflect the open-problem areas named in the abstract of a survey whose stated purpose is open problems. Included for non-LLM domain coverage; also the oldest survey in the set, so recency bias cuts the other way here.",
+        "paper_source": "title verified on arXiv (1912.04977)"
+      }
+    },
+    {
+      "topic": "continual learning without catastrophic forgetting",
+      "idea": "use a replay buffer selected by gradient conflict rather than by recency",
+      "difficulty": "broad",
+      "expects_conflict": false,
+      "min_gaps": 2,
+      "expected_gap_keywords": ["forgetting", "replay", "regularization", "evaluation"],
+      "expected_papers": ["a comprehensive survey of continual learning"],
+      "provenance": {
+        "survey_title": "A Comprehensive Survey of Continual Learning: Theory, Method and Application",
+        "arxiv_id": "2302.00487",
+        "gap_source": "abstract",
+        "gap_note": "WEAKER GROUND TRUTH: keywords reflect the method families the abstract names, not an enumerated future-work list. Included for non-LLM domain coverage.",
+        "paper_source": "title verified on arXiv (2302.00487)"
+      }
+    }
+  ]
+}

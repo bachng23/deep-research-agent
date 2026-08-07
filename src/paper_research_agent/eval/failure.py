@@ -35,8 +35,10 @@ def analyze(state: ResearchState, case: GoldenCase) -> list[str]:
         if missing:
             findings.append(f"expected papers not found: {missing}")
 
-    if not state.conflicts:
-        findings.append("no conflicts (ok if undisputed; suspicious on debated topics)")
+    # Only a finding where the golden set records a real disagreement in the
+    # literature; firing on every settled topic made this pure noise.
+    if case.expects_conflict and not state.conflicts:
+        findings.append("no conflicts found on a topic where the literature disagrees")
 
     if state.errors:
         findings.append(f"provider errors: {state.errors}")
