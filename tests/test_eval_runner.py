@@ -77,6 +77,7 @@ def test_metadata_records_what_produced_the_numbers(monkeypatch):
         "read_full_text": True,
         "use_memory": False,
         "with_idea": True,
+        "deadline_seconds": None,
     }
     # the arm is recorded, because it changes what the recall metrics mean
     assert runner.run_metadata(
@@ -95,3 +96,75 @@ def test_metadata_is_json_serialisable():
 
 def test_slug_is_filesystem_safe():
     assert runner._slug("RAG vs. long-context LMs!") == "rag-vs-long-context-lms"
+
+
+# --- hard deadline -------------------------------------------------------------
+
+
+def test_hard_deadline_interrupts_a_blocked_call():
+    "A socket that stays open and silent must not stall the whole eval."
+    import time as _time
+
+    with pytest.raises(TimeoutError):
+        with runner.hard_deadline(1):
+            _time.sleep(5)
+
+
+def test_hard_deadline_is_cleared_after_a_fast_run():
+    import time as _time
+
+    with runner.hard_deadline(5):
+        pass
+    # no alarm should fire afterwards
+    _time.sleep(0.1)
+
+
+def test_hard_deadline_disabled_when_none():
+    with runner.hard_deadline(None):
+        pass
+
+
+# --- resume --------------------------------------------------------------------
+
+
+def _saved_state(tmp_path, case, run: int):
+    from paper_research_agent.core.models import Paper
+    from paper_research_agent.core.state import ResearchGap, ResearchState
+
+    state = ResearchState(
+        topic=case.topic,
+        papers=[Paper(title="LoRA: Low-Rank Adaptation", authors=["A"], source="arxiv")],
+        gaps=[ResearchGap(description="a gap about benchmark coverage")],
+    )
+    runner._write_state(tmp_path, case, run, state)
+    return state
+
+
+def test_reuse_rescores_a_saved_state(tmp_path):
+    from paper_research_agent.eval.golden import GoldenCase
+
+    case = GoldenCase(topic="t", expected_papers=["lora"], min_gaps=1)
+    _saved_state(tmp_path, case, 0)
+
+    state = runner._reuse(tmp_path, case, 0)
+    assert state is not None
+    row = runner._score(state, case)
+    assert row["paper_recall"] == 1.0  # recomputed by current metric code
+    assert row["papers"] == 1
+
+
+def test_reuse_returns_none_for_a_run_not_saved(tmp_path):
+    from paper_research_agent.eval.golden import GoldenCase
+
+    case = GoldenCase(topic="t", min_gaps=1)
+    _saved_state(tmp_path, case, 0)
+    assert runner._reuse(tmp_path, case, 1) is None
+    assert runner._reuse(None, case, 0) is None
+
+
+def test_reuse_survives_a_corrupt_state_file(tmp_path):
+    from paper_research_agent.eval.golden import GoldenCase
+
+    case = GoldenCase(topic="t", min_gaps=1)
+    runner._state_path(tmp_path, case, 0).write_text("{not json", encoding="utf-8")
+    assert runner._reuse(tmp_path, case, 0) is None

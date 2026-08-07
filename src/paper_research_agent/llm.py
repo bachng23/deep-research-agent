@@ -20,6 +20,9 @@ def chat_model_for_tier(tier: ModelTier, temperature: float = 0.0) -> ChatOpenAI
         base_url=settings.llm_base_url,
         temperature=temperature,
         timeout=settings.llm_timeout_seconds,
+        # invoke_with_retry already retries; letting the client retry too
+        # multiplies the worst case instead of bounding it.
+        max_retries=0,
     )
 
 
@@ -58,4 +61,9 @@ def embeddings_model() -> OpenAIEmbeddings:
         model=settings.embedding_model,
         api_key=settings.api_key,
         base_url=settings.llm_base_url,
+        # Without this the client waits forever: an embedding call that stops
+        # responding mid-stream stalled a 39-run eval for 68 minutes with the
+        # socket still open.
+        timeout=settings.llm_timeout_seconds,
+        max_retries=2,
     )

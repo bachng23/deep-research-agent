@@ -1,0 +1,988 @@
+{
+  "topic": "tool use and function calling in large language model agents",
+  "user_idea": null,
+  "search_queries": [
+    "indirect prompt injection LLM agents tool use security",
+    "LLM agents multi-step scientific workflow heterogeneous tools evaluation",
+    "LLM tool use clinical decision making diagnostic reasoning impact",
+    "LLM function calling mental health prediction intervention tools",
+    "LLM agents tool chaining planning complex tasks security"
+  ],
+  "papers": [
+    {
+      "title": "R: A Language and Environment for Statistical Computing",
+      "authors": [
+        "R Core Team"
+      ],
+      "year": 2000,
+      "abstract": "Most R novices will start with Appendix A [A sample session], page 80.This should give some familiarity with the style of R sessions and more importantly some instant feedback on what actually happens.Many users will come to R mainly for its graphical facilities.",
+      "url": "https://doi.org/10.32614/r.manuals",
+      "source": "openalex",
+      "citation_count": 353209,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Gradient-based learning applied to document recognition",
+      "authors": [
+        "Yann LeCun",
+        "Léon Bottou",
+        "Yoshua Bengio",
+        "Patrick Haffner"
+      ],
+      "year": 1998,
+      "abstract": "Multilayer neural networks trained with the back-propagation algorithm constitute the best example of a successful gradient based learning technique. Given an appropriate network architecture, gradient-based learning algorithms can be used to synthesize a complex decision surface that can classify high-dimensional patterns, such as handwritten characters, with minimal preprocessing. This paper reviews various methods applied to handwritten character recognition and compares them on a standard handwritten digit recognition task. Convolutional neural networks, which are specifically designed to ...[truncated]",
+      "url": "https://hal.science/hal-03926082",
+      "source": "openalex",
+      "citation_count": 58873,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Situated Cognition and the Culture of Learning",
+      "authors": [
+        "John Seely Brown",
+        "Allan Collins",
+        "Paul Duguid"
+      ],
+      "year": 1989,
+      "abstract": "Many teaching practices implicitly assume that conceptual knowledge can be abstracted from the situations in which it is learned and used. This article argues that this assumption inevitably limits the effectiveness of such practices. Drawing on recent research into cognition as it is manifest in everyday activity, the authors argue that knowledge is situated, being in part a product of the activity, context, and culture in which it is developed and used. They discuss how this view of knowledge affects our understanding of learning, and they note that conventional schooling too often ignores t ...[truncated]",
+      "url": "http://hdl.handle.net/2142/17979",
+      "source": "openalex",
+      "citation_count": 13042,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A survey on Image Data Augmentation for Deep Learning",
+      "authors": [
+        "Connor Shorten",
+        "Taghi M. Khoshgoftaar"
+      ],
+      "year": 2019,
+      "abstract": "Deep convolutional neural networks have performed remarkably well on many Computer Vision tasks. However, these networks are heavily reliant on big data to avoid overfitting. Overfitting refers to the phenomenon when a network learns a function with very high variance such as to perfectly model the training data. Unfortunately, many application domains do not have access to big data, such as medical image analysis. This survey focuses on Data Augmentation, a data-space solution to the problem of limited data. Data Augmentation encompasses a suite of techniques that enhance the size and quality ...[truncated]",
+      "url": "https://doi.org/10.1186/s40537-019-0197-0",
+      "source": "openalex",
+      "citation_count": 12722,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales",
+      "authors": [
+        "Aidan P. Thompson",
+        "Hasan Metin Aktulga",
+        "Richard A. Berger",
+        "Dan Bolintineanu",
+        "William M. Brown"
+      ],
+      "year": 2021,
+      "abstract": "Since the classical molecular dynamics simulator LAMMPS was released as an open source code in 2004, it has become a widely-used tool for particle-based modeling of materials at length scales ranging from atomic to mesoscale to continuum. Reasons for its popularity are that it provides a wide variety of particle interaction models for different materials, that it runs on any platform from a single CPU core to the largest supercomputers with accelerators, and that it gives users control over simulation details, either via the input script or by adding code for new interatomic potentials, constr ...[truncated]",
+      "url": "https://doi.org/10.1016/j.cpc.2021.108171",
+      "source": "openalex",
+      "citation_count": 11997,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+      "authors": [
+        "Enkelejda Kasneci",
+        "Kathrin Seßler",
+        "Stefan Küchemann",
+        "Maria Bannert",
+        "Daryna Dementieva"
+      ],
+      "year": 2023,
+      "abstract": "",
+      "url": "http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3",
+      "source": "openalex",
+      "citation_count": 5702,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Training language models to follow instructions with human feedback",
+      "authors": [
+        "Long Ouyang",
+        "Jeff Wu",
+        "Xu Jiang",
+        "Diogo Almeida",
+        "Carroll L. Wainwright"
+      ],
+      "year": 2022,
+      "abstract": "Making language models bigger does not inherently make them better at following a user's intent. For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user. In other words, these models are not aligned with their users. In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback. Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we u ...[truncated]",
+      "url": "http://arxiv.org/abs/2203.02155",
+      "source": "openalex",
+      "citation_count": 4319,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Performance of ChatGPT on USMLE: Potential for AI-assisted medical education using large language models",
+      "authors": [
+        "Tiffany H. Kung",
+        "Morgan Cheatham",
+        "Arielle Medenilla",
+        "Czarina Sillos",
+        "Lorie De Leon"
+      ],
+      "year": 2023,
+      "abstract": "We evaluated the performance of a large language model called ChatGPT on the United States Medical Licensing Exam (USMLE), which consists of three exams: Step 1, Step 2CK, and Step 3. ChatGPT performed at or near the passing threshold for all three exams without any specialized training or reinforcement. Additionally, ChatGPT demonstrated a high level of concordance and insight in its explanations. These results suggest that large language models may have the potential to assist with medical education, and potentially, clinical decision-making.",
+      "url": "https://doi.org/10.1371/journal.pdig.0000198",
+      "source": "openalex",
+      "citation_count": 3689,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large language models encode clinical knowledge",
+      "authors": [
+        "Karan Singhal",
+        "Shekoofeh Azizi",
+        "Tao Tu",
+        "S. Sara Mahdavi",
+        "Jason Lee"
+      ],
+      "year": 2023,
+      "abstract": "Abstract Large language models (LLMs) have demonstrated impressive capabilities, but the bar for clinical applications is high. Attempts to assess the clinical knowledge of models typically rely on automated evaluations based on limited benchmarks. Here, to address these limitations, we present MultiMedQA, a benchmark combining six existing medical question answering datasets spanning professional medicine, research and consumer queries and a new dataset of medical questions searched online, HealthSearchQA. We propose a human evaluation framework for model answers along multiple axes including ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-023-06291-2",
+      "source": "openalex",
+      "citation_count": 3457,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Revolutionizing healthcare: the role of artificial intelligence in clinical practice",
+      "authors": [
+        "Shuroug A. Alowais",
+        "Sahar S. Alghamdi",
+        "Nada Alsuhebany",
+        "Tariq Alqahtani",
+        "Abdulrahman Alshaya"
+      ],
+      "year": 2023,
+      "abstract": "INTRODUCTION: Healthcare systems are complex and challenging for all stakeholders, but artificial intelligence (AI) has transformed various fields, including healthcare, with the potential to improve patient care and quality of life. Rapid AI advancements can revolutionize healthcare by integrating it into clinical practice. Reporting AI's role in clinical practice is crucial for successful implementation by equipping healthcare providers with essential knowledge and tools. RESEARCH SIGNIFICANCE: This review article provides a comprehensive and up-to-date overview of the current state of AI in ...[truncated]",
+      "url": "https://doi.org/10.1186/s12909-023-04698-z",
+      "source": "openalex",
+      "citation_count": 2935,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "GPT-4 Technical Report",
+      "authors": [
+        "OpenAI",
+        "Achiam, Josh",
+        "Adler, Steven",
+        "Agarwal, Sandhini",
+        "Ahmad, Lama"
+      ],
+      "year": 2023,
+      "abstract": "Abstract—Large Language Models (LLMs) suffer from inherent stochasticity, limiting their utility in high-stakes enterprise environments where determinism and auditability are required. This paper introduces the MFOUR Vibe Framework (MVF), a platform-agnostic architectural standard that transforms probabilistic natural language intent into deterministic software artifacts. We define a five-layer topology, comprising the Kernel Identity, Synaptic Routing, Interface Contracts, Context Anchoring, and the Mirror Test. Furthermore, we introduce The Vibe Integrity Score (VIS), a quantitative metric f ...[truncated]",
+      "url": "http://arxiv.org/abs/2303.08774",
+      "source": "openalex",
+      "citation_count": 2443,
+      "pdf_url": null,
+      "full_text_excerpt": "[6 Risks & mitigations] del-level interventions increase the difficulty of eliciting bad behavior but doing so is still possible. For example, there still exist “jailbreaks” (e.g., adversarial system messages, see Figure 10 in the System Card for more details) to generate content which violate our usage guidelines. So long as these limitations exist, it’s important to complement them with deployment-time safety techniques like monitoring for abuse as well as a pipeline for fast iterative model improvement.\n\nGPT-4 and successor models have the potential to significantly influence society in both beneficial and harmful ways. We are collaborating with external researchers to improve how we understand and assess potential impacts, as well as to build evaluations for dangerous capabilities that may emerge in future systems. We will soon publish recommendations on steps society can take to prepare for AI’s effects and initial ideas for projecting AI’s possible economic impacts.\n\n[4 Capabilities] x (see Appendix E for details). We use chain-of-thought prompting [11] when evaluating.\n\nGPT-4 considerably outperforms existing language models, as well as previously state-of-the-art (SOTA) systems which often have benchmark-specific crafting or additional training protocols (Table 2).\n\nGPT-4\n\nGPT-3.5\n\nLM SOTA\n\nSOTA\n\nEvaluated few-shot\n\nEvaluated few-shot\n\nBest external LM evaluated few-shot\n\nBest external model (incl. benchmark-specific tuning)\n\nMMLU [49]\n\n86.4%\n\n70.0%\n\n70.7%\n\n75.2%\n\nMultiple-choice questions in 57 subjects (professional & academic)\n\n5-shot\n\n5-shot\n\n5-shot U-PaLM [50]\n\n5-shot Flan-PaLM [51]\n\nHellaSwag [52]\n\n95.3%\n\n85.5%\n\n84.2%\n\n85.6\n\nCommonsense reasoning around everyday events\n\n10-shot\n\n10-shot\n\nLLaMA (validation set) [28]\n\nALUM [53]\n\nAI2 Reasoning Challenge (ARC) [54]\n\n96.3%\n\n85.2%\n\n85.2%\n\n86.5%\n\nGrade-school multiple choice science questions. Challenge-set.\n\n25-shot\n\n25-shot\n\n8-shot PaLM [55]\n\nST-MOE [18]\n\nWinoGrande [56]\n\n87.5%\n\n81.6%\n\n85.1%\n\n85.1%\n\nCommonsense reasoning around pronoun resolution\n\n5-shot\n\n5-shot\n\n5-shot PaLM [3]\n\n5-shot PaLM [3]\n\nHumanEval [43]\n\n67.0%\n\n48.1%\n\n26.2%\n\n65.8%\n\nPython coding tasks\n\n0-shot\n\n0-shot\n\n0-shot PaLM [3]\n\nCodeT + GPT-3.5 [57]\n\nDROP [58] (F1 score)\n\n80.9\n\n64.1\n\n70.8\n\n88.4\n\nReading comprehension & arithmetic.\n\n3-shot\n\n3-shot\n\n1-shot PaLM [3]\n\nQDGAT [59]\n\nGSM-8K [60]\n\n92.0%∗\n\n57.1%\n\n58.8%\n\n87.3%\n\nGrade-school mathematics questions\n\n5-shot chain-of-thought\n\n5-shot\n\n8-shot Minerva [61]\n\nChinchilla + SFT+ORM-RL, ORM rera"
+    },
+    {
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "authors": [
+        "Joon Sung Park",
+        "Joseph O’Brien",
+        "Carrie J. Cai",
+        "Meredith Ringel Morris",
+        "Percy Liang"
+      ],
+      "year": 2023,
+      "abstract": "Believable proxies of human behavior can empower interactive applications ranging from immersive environments to rehearsal spaces for interpersonal communication to prototyping tools. In this paper, we introduce generative agents: computational software agents that simulate believable human behavior. Generative agents wake up, cook breakfast, and head to work; artists paint, while authors write; they form opinions, notice each other, and initiate conversations; they remember and reflect on days past as they plan the next day. To enable generative agents, we describe an architecture that extend ...[truncated]",
+      "url": "https://doi.org/10.1145/3586183.3606763",
+      "source": "openalex",
+      "citation_count": 1609,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Evaluating Large Language Models Trained on Code",
+      "authors": [
+        "Mark Chen",
+        "Jerry Tworek",
+        "Heewoo Jun",
+        "Qiming Yuan",
+        "Henrique Pondé de Oliveira Pinto"
+      ],
+      "year": 2021,
+      "abstract": "I created a basic proof of concept of LMVM (Language Model Virtual Machine), a command line toolchain that English instructions into native binaries without intermediary high-level language compilation. The command line uses a large language model (LLM) as IR generation backend, producing LLVM Intermediate Representation (IR) directly from user instructions coding. The IR is compiled and linked to machine code (-o files) via `clang` (with an `llc`/`lld` fallback on POSIX hosts) and executed on bare metal, within Docker sandboxes, on AWS Lambda, or as standalone HTTP servers. How It Works (5 St ...[truncated]",
+      "url": "http://arxiv.org/abs/2107.03374",
+      "source": "openalex",
+      "citation_count": 1457,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A survey on large language model based autonomous agents",
+      "authors": [
+        "Lei Wang",
+        "Chen Ma",
+        "Xueyang Feng",
+        "Zeyu Zhang",
+        "Hao Yang"
+      ],
+      "year": 2024,
+      "abstract": "Abstract Autonomous agents have long been a research focus in academic and industry communities. Previous research often focuses on training agents with limited knowledge within isolated environments, which diverges significantly from human learning processes, and makes the agents hard to achieve human-like decisions. Recently, through the acquisition of vast amounts of Web knowledge, large language models (LLMs) have shown potential in human-level intelligence, leading to a surge in research on LLM-based autonomous agents. In this paper, we present a comprehensive survey of these studies, del ...[truncated]",
+      "url": "https://doi.org/10.1007/s11704-024-40231-1",
+      "source": "openalex",
+      "citation_count": 1321,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning",
+      "authors": [
+        "Daya Guo",
+        "Dejian Yang",
+        "Haowei Zhang",
+        "Junxiao Song",
+        "Peiyi Wang"
+      ],
+      "year": 2025,
+      "abstract": "Abstract General reasoning represents a long-standing and formidable challenge in artificial intelligence (AI). Recent breakthroughs, exemplified by large language models (LLMs) 1,2 and chain-of-thought (CoT) prompting 3 , have achieved considerable success on foundational reasoning tasks. However, this success is heavily contingent on extensive human-annotated demonstrations and the capabilities of models are still insufficient for more complex problems. Here we show that the reasoning abilities of LLMs can be incentivized through pure reinforcement learning (RL), obviating the need for human ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-025-09422-z",
+      "source": "openalex",
+      "citation_count": 743,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "authors": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of exte ...[truncated]",
+      "url": "http://arxiv.org/abs/2312.10997",
+      "source": "openalex",
+      "citation_count": 694,
+      "pdf_url": null,
+      "full_text_excerpt": "[I Introduction] Large language models (LLMs) have achieved remarkable success, though they still face significant limitations, especially in domain-specific or knowledge-intensive tasks [1], notably producing “hallucinations” [2] when handling queries beyond their training data or requiring current information. To overcome challenges, Retrieval-Augmented Generation (RAG) enhances LLMs by retrieving relevant document chunks from external knowledge base through semantic similarity calculation. By referencing external knowledge, RAG effectively reduces the problem of generating factually incorrect content. Its integration into LLMs has resulted in widespread adoption, establishing RAG as a key technology in advancing chatbots and enhancing the suitability of LLMs for real-world applications.\n\nRAG technology has rapidly developed in recent years, and the technology tree summarizing related research is shown in Figure 1. The development trajectory of RAG in the era of large models exhibits several distinct stage characteristics. Initially, RAG’s inception coincided with the rise of the Transformer architecture, focusing on enhancing language models by incorporating additional knowledge through Pre-Training Models (PTM). This early stage was characterized by foundational work aimed at refining pre-training techniques[3, 4, 5].The subsequent arrival of ChatGPT [6] marked a pivotal moment, with LLM demonstrating powerful in context learning (ICL) capabilities. RAG research shifted towards providing\n\n[Abstract] Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs’ intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development 111Resources are available at https://github.com/Tongji-KGLLM/RAG-Survey ."
+    },
+    {
+      "title": "Structured information extraction from scientific text with large language models",
+      "authors": [
+        "John Dagdelen",
+        "Alexander Dunn",
+        "Sang‐Hoon Lee",
+        "Nicholas Walker",
+        "Andrew Rosen"
+      ],
+      "year": 2024,
+      "abstract": "Extracting structured knowledge from scientific text remains a challenging task for machine learning models. Here, we present a simple approach to joint named entity recognition and relation extraction and demonstrate how pretrained large language models (GPT-3, Llama-2) can be fine-tuned to extract useful records of complex scientific knowledge. We test three representative tasks in materials chemistry: linking dopants and host materials, cataloging metal-organic frameworks, and general composition/phase/morphology/application information extraction. Records are extracted from single sentence ...[truncated]",
+      "url": "https://doi.org/10.1038/s41467-024-45563-x",
+      "source": "openalex",
+      "citation_count": 647,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Augmenting large language models with chemistry tools",
+      "authors": [
+        "Andres M. Bran",
+        "Sam Cox",
+        "Oliver Schilter",
+        "Carlo Baldassari",
+        "Andrew Dickson White"
+      ],
+      "year": 2024,
+      "abstract": "Large language models (LLMs) have shown strong performance in tasks across domains but struggle with chemistry-related problems. These models also lack access to external knowledge sources, limiting their usefulness in scientific applications. We introduce ChemCrow, an LLM chemistry agent designed to accomplish tasks across organic synthesis, drug discovery and materials design. By integrating 18 expert-designed tools and using GPT-4 as the LLM, ChemCrow augments the LLM performance in chemistry, and new capabilities emerge. Our agent autonomously planned and executed the syntheses of an insec ...[truncated]",
+      "url": "https://doi.org/10.1038/s42256-024-00832-8",
+      "source": "openalex",
+      "citation_count": 643,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "authors": [
+        "Wenqi Fan",
+        "Yujuan Ding",
+        "Liangbo Ning",
+        "Shijie Wang",
+        "Hengyun Li"
+      ],
+      "year": 2024,
+      "abstract": "As one of the most advanced techniques in AI, Retrieval-Augmented Generation (RAG) can offer reliable and up-to-date external knowledge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capacity of retrieval in providing additional knowledge enables RAG to assist existing generative AI in producing high-quality outputs. Recently, Large Language Models (LLMs) have demonstrated revolutionary abilities in language understanding and generation, while still facing inherent limitations such as hallucinations and out-of-date internal ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671470",
+      "source": "openalex",
+      "citation_count": 640,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Evaluation and mitigation of the limitations of large language models in clinical decision-making",
+      "authors": [
+        "Paul Hager",
+        "Friederike Jungmann",
+        "Robbie Holland",
+        "Kunal Bhagat",
+        "Inga Hubrecht"
+      ],
+      "year": 2024,
+      "abstract": "Clinical decision-making is one of the most impactful parts of a physician's responsibilities and stands to benefit greatly from artificial intelligence solutions and large language models (LLMs) in particular. However, while LLMs have achieved excellent performance on medical licensing exams, these tests fail to assess many skills necessary for deployment in a realistic clinical decision-making environment, including gathering information, adhering to guidelines, and integrating into clinical workflows. Here we have created a curated dataset based on the Medical Information Mart for Intensive ...[truncated]",
+      "url": "https://doi.org/10.1038/s41591-024-03097-1",
+      "source": "openalex",
+      "citation_count": 614,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large Language Model Influence on Diagnostic Reasoning",
+      "authors": [
+        "Ethan Goh",
+        "Robert Gallo",
+        "Jason Hom",
+        "Eric Strong",
+        "Yingjie Weng"
+      ],
+      "year": 2024,
+      "abstract": "Importance: Large language models (LLMs) have shown promise in their performance on both multiple-choice and open-ended medical reasoning examinations, but it remains unknown whether the use of such tools improves physician diagnostic reasoning. Objective: To assess the effect of an LLM on physicians' diagnostic reasoning compared with conventional resources. Design, Setting, and Participants: A single-blind randomized clinical trial was conducted from November 29 to December 29, 2023. Using remote video conferencing and in-person participation across multiple academic medical institutions, ph ...[truncated]",
+      "url": "https://doi.org/10.1001/jamanetworkopen.2024.40969",
+      "source": "openalex",
+      "citation_count": 595,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "authors": [
+        "Tim Dettmers",
+        "Artidoro Pagnoni",
+        "Ari Holtzman",
+        "Luke Zettlemoyer"
+      ],
+      "year": 2023,
+      "abstract": "We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters~(LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save m ...[truncated]",
+      "url": "http://arxiv.org/abs/2305.14314",
+      "source": "openalex",
+      "citation_count": 503,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: a model evaluation study",
+      "authors": [
+        "Travis Zack",
+        "Eric Lehman",
+        "Mirac Süzgün",
+        "Jorge A. Rodriguez",
+        "Leo Anthony Celi"
+      ],
+      "year": 2023,
+      "abstract": "BACKGROUND: Large language models (LLMs) such as GPT-4 hold great promise as transformative tools in health care, ranging from automating administrative tasks to augmenting clinical decision making. However, these models also pose a danger of perpetuating biases and delivering incorrect medical diagnoses, which can have a direct, harmful impact on medical care. We aimed to assess whether GPT-4 encodes racial and gender biases that impact its use in health care. METHODS: Using the Azure OpenAI application interface, this model evaluation study tested whether GPT-4 encodes racial and gender bias ...[truncated]",
+      "url": "https://doi.org/10.1016/s2589-7500(23)00225-x",
+      "source": "openalex",
+      "citation_count": 481,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+      "authors": [
+        "Jingfeng Yang",
+        "Hongye Jin",
+        "Ruixiang Tang",
+        "Xiaotian Han",
+        "Qizhang Feng"
+      ],
+      "year": 2024,
+      "abstract": "This article presents a comprehensive and practical guide for practitioners and end-users working with Large Language Models (LLMs) in their downstream Natural Language Processing (NLP) tasks. We provide discussions and insights into the usage of LLMs from the perspectives of models, data, and downstream tasks. First, we offer an introduction and brief summary of current language models. Then, we discuss the influence of pre-training data, training data, and test data. Most importantly, we provide a detailed discussion about the use and non-use cases of large language models for various natura ...[truncated]",
+      "url": "https://doi.org/10.1145/3649506",
+      "source": "openalex",
+      "citation_count": 475,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Bias in medical AI: Implications for clinical decision-making",
+      "authors": [
+        "James M. Cross",
+        "Michael A. Choma",
+        "John A. Onofrey"
+      ],
+      "year": 2024,
+      "abstract": "Biases in medical artificial intelligence (AI) arise and compound throughout the AI lifecycle. These biases can have significant clinical consequences, especially in applications that involve clinical decision-making. Left unaddressed, biased medical AI can lead to substandard clinical decisions and the perpetuation and exacerbation of longstanding healthcare disparities. We discuss potential biases that can arise at different stages in the AI development pipeline and how they can affect AI algorithms and clinical decision-making. Bias can occur in data features and labels, model development a ...[truncated]",
+      "url": "https://doi.org/10.1371/journal.pdig.0000651",
+      "source": "openalex",
+      "citation_count": 469,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+      "authors": [
+        "Kai Greshake",
+        "Sahar Abdelnabi",
+        "Shailesh Mishra",
+        "Christoph Endres",
+        "Thorsten Holz"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) are increasingly being integrated into applications, with versatile functionalities that can be easily modulated via natural language prompts. So far, it was assumed that the user is directly prompting the LLM. But, what if it is not the user prompting? We show that LLM-Integrated Applications blur the line between data and instructions and reveal several new attack vectors, using Indirect Prompt Injection, that enable adversaries to remotely (i.e., without a direct interface) exploit LLM-integrated applications by strategically injecting prompts into data likely t ...[truncated]",
+      "url": "https://doi.org/10.1145/3605764.3623985",
+      "source": "openalex",
+      "citation_count": 415,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large language models (LLMs): survey, technical frameworks, and future challenges",
+      "authors": [
+        "Pranjal Kumar"
+      ],
+      "year": 2024,
+      "abstract": "Artificial intelligence (AI) has significantly impacted various fields. Large language models (LLMs) like GPT-4, BARD, PaLM, Megatron-Turing NLG, Jurassic-1 Jumbo etc., have contributed to our understanding and application of AI in these domains, along with natural language processing (NLP) techniques. This work provides a comprehensive overview of LLMs in the context of language modeling, word embeddings, and deep learning. It examines the application of LLMs in diverse fields including text generation, vision-language models, personalized learning, biomedicine, and code generation. The paper ...[truncated]",
+      "url": "https://doi.org/10.1007/s10462-024-10888-y",
+      "source": "openalex",
+      "citation_count": 331,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
+      "authors": [
+        "Zhiheng Xi",
+        "Wen-Xiang Chen",
+        "Xin Guo",
+        "Wei He",
+        "Yiwen Ding"
+      ],
+      "year": 2023,
+      "abstract": "For a long time, humanity has pursued artificial intelligence (AI) equivalent to or surpassing the human level, with AI agents considered a promising vehicle for this pursuit. AI agents are artificial entities that sense their environment, make decisions, and take actions. Many efforts have been made to develop intelligent agents, but they mainly focus on advancement in algorithms or training strategies to enhance specific capabilities or performance on particular tasks. Actually, what the community lacks is a general and powerful model to serve as a starting point for designing AI agents that ...[truncated]",
+      "url": "http://arxiv.org/abs/2309.07864",
+      "source": "openalex",
+      "citation_count": 256,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "The evolving field of digital mental health: current evidence and implementation issues for smartphone apps, generative artificial intelligence, and virtual reality",
+      "authors": [
+        "John Torous",
+        "Jake Linardon",
+        "Simon B. Goldberg",
+        "Shufang Sun",
+        "Imogen Bell"
+      ],
+      "year": 2025,
+      "abstract": "The expanding domain of digital mental health is transitioning beyond traditional telehealth to incorporate smartphone apps, virtual reality, and generative artificial intelligence, including large language models. While industry setbacks and methodological critiques have highlighted gaps in evidence and challenges in scaling these technologies, emerging solutions rooted in co-design, rigorous evaluation, and implementation science offer promising pathways forward. This paper underscores the dual necessity of advancing the scientific foundations of digital mental health and increasing its real ...[truncated]",
+      "url": "https://doi.org/10.1002/wps.21299",
+      "source": "openalex",
+      "citation_count": 249,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A review of large language models and autonomous agents in chemistry",
+      "authors": [
+        "Mayk Caldas Ramos",
+        "Christopher J. Collison",
+        "Andrew Dickson White"
+      ],
+      "year": 2024,
+      "abstract": "Large language models (LLMs) have emerged as powerful tools in chemistry, significantly impacting molecule design, property prediction, and synthesis optimization. This review highlights LLM capabilities in these domains and their potential to accelerate scientific discovery through automation. We also review LLM-based autonomous agents: LLMs with a broader set of tools to interact with their surrounding environment. These agents perform diverse tasks such as paper scraping, interfacing with automated laboratories, and synthesis planning. As agents are an emerging topic, we extend the scope of ...[truncated]",
+      "url": "https://doi.org/10.1039/d4sc03921a",
+      "source": "openalex",
+      "citation_count": 221,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Java-based mobile agents",
+      "authors": [
+        "David Chi-Leung Wong",
+        "Noemi Paciorek",
+        "Dana Moore"
+      ],
+      "year": 1999,
+      "abstract": "The article discusses why Java is such an effective implementation language for mobile agents in e-commerce. Java is the language of choice for mobile agent systems. Multiplatform support and the promise of write-once, run-anywhere operation make Java extremely well suited for mobile agent technology. Java has several features not found in any other language that directly support implementation of mobile agents. Java object serialization accomplishes the conversion and reconstruction of an agent and its state almost transparently for agent mobility. Some Java-based and other mobile agent syste ...[truncated]",
+      "url": "https://doi.org/10.1145/295685.295717",
+      "source": "openalex",
+      "citation_count": 219,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Mental-LLM",
+      "authors": [
+        "Xuhai Xu",
+        "Bingsheng Yao",
+        "Yuanzhe Dong",
+        "Saadia Gabriel",
+        "Hong Yu"
+      ],
+      "year": 2024,
+      "abstract": "Advances in large language models (LLMs) have empowered a variety of applications. However, there is still a significant gap in research when it comes to understanding and enhancing the capabilities of LLMs in the field of mental health. In this work, we present a comprehensive evaluation of multiple LLMs on various mental health prediction tasks via online text data, including Alpaca, Alpaca-LoRA, FLAN-T5, GPT-3.5, and GPT-4. We conduct a broad range of experiments, covering zero-shot prompting, few-shot prompting, and instruction fine-tuning. The results indicate a promising yet limited perf ...[truncated]",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11806945",
+      "source": "openalex",
+      "citation_count": 189,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges",
+      "authors": [
+        "Ranjan Sapkota",
+        "Konstantinos I. Roumeliotis",
+        "Manoj Karkee"
+      ],
+      "year": 2025,
+      "abstract": "This review critically distinguishes between AI Agents and Agentic AI, offering a structured, conceptual taxonomy, application mapping, and analysis of opportunities and challenges to clarify their divergent design philosophies and capabilities. We begin by outlining the search strategy and foundational definitions, characterizing AI Agents as modular systems driven and enabled by LLMs and LIMs for taskspecific automation. Generative AI is positioned as a precursor providing the foundation, with AI agents advancing through tool integration, prompt engineering, and reasoning enhancements. We th ...[truncated]",
+      "url": "https://doi.org/10.70777/si.v2i3.15161",
+      "source": "openalex",
+      "citation_count": 146,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Character-LLM: A Trainable Agent for Role-Playing",
+      "authors": [
+        "Yunfan Shao",
+        "Linyang Li",
+        "Junqi Dai",
+        "Xipeng Qiu"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (LLMs) can be used to serve as agents to simulate human behaviors, given the powerful ability to understand human instructions and provide high-quality generated texts. Such ability stimulates us to wonder whether LLMs can simulate a person in a higher form than simple human behaviors. Therefore, we aim to train an agent with the profile, experience, and emotional states of a specific person instead of using limited prompts to instruct ChatGPT API. In this work, we introduce Character-LLM that teach LLMs to act as specific people such as Beethoven, Queen Cleopatra, Julius ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.814",
+      "source": "openalex",
+      "citation_count": 114,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "The Rise of Agentic AI: A Review of Definitions, Frameworks, Architectures, Applications, Evaluation Metrics, and Challenges",
+      "authors": [
+        "Ajay Bandi",
+        "Bhavani Kongari",
+        "Roshini Naguru",
+        "Sahitya Pasnoor",
+        "Sri Vidya Vilipala"
+      ],
+      "year": 2025,
+      "abstract": "Agentic AI systems are a recently emerged and important approach that goes beyond traditional AI, generative AI, and autonomous systems by focusing on autonomy, adaptability, and goal-driven reasoning. This study provides a clear review of agentic AI systems by bringing together their definitions, frameworks, and architectures, and by comparing them with related areas like generative AI, autonomic computing, and multi-agent systems. To do this, we reviewed 143 primary studies on current LLM-based and non-LLM-driven agentic systems and examined how they support planning, memory, reflection, and ...[truncated]",
+      "url": "https://doi.org/10.3390/fi17090404",
+      "source": "openalex",
+      "citation_count": 109,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Prompt Injection attack against LLM-integrated Applications",
+      "authors": [
+        "Yi Liu",
+        "Gelei Deng",
+        "Yuekang Li",
+        "Kailong Wang",
+        "Wang, Zihao"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs), renowned for their superior proficiency in language comprehension and generation, stimulate a vibrant ecosystem of applications around them. However, their extensive assimilation into various services introduces significant security risks. This study deconstructs the complexities and implications of prompt injection attacks on actual LLM-integrated applications. Initially, we conduct an exploratory analysis on ten commercial applications, highlighting the constraints of current attack strategies in practice. Prompted by these limitations, we subsequently formulate ...[truncated]",
+      "url": "http://arxiv.org/abs/2306.05499",
+      "source": "openalex",
+      "citation_count": 80,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Designing Heterogeneous LLM Agents for Financial Sentiment Analysis",
+      "authors": [
+        "Frank Xing"
+      ],
+      "year": 2024,
+      "abstract": "Large language models (LLMs) have drastically changed the possible ways to design intelligent systems, shifting the focus from massive data acquisition and new model training to human alignment and strategic elicitation of the full potential of existing pre-trained models. This paradigm shift, however, is not fully realized in financial sentiment analysis (FSA) due to the discriminative nature of this task and a lack of prescriptive knowledge of how to leverage existing generative models in such a context. This study investigates the effectiveness of the new paradigm, that is, using LLMs witho ...[truncated]",
+      "url": "https://doi.org/10.1145/3688399",
+      "source": "openalex",
+      "citation_count": 76,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents",
+      "authors": [
+        "Qiusi Zhan",
+        "Zhixiang Liang",
+        "Zifan Ying",
+        "Daniel Kang"
+      ],
+      "year": 2024,
+      "abstract": "Recent work has embodied LLMs as agents, allowing them to access tools, perform actions, and interact with external content (e.g., emails or websites).However, external content introduces the risk of indirect prompt injection (IPI) attacks, where malicious instructions are embedded within the content processed by LLMs, aiming to manipulate these agents into executing detrimental actions against users.Given the potentially severe consequences of such attacks, establishing benchmarks to assess and mitigate these risks is imperative.In this work, we introduce INJECAGENT, a benchmark designed to a ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2024.findings-acl.624",
+      "source": "openalex",
+      "citation_count": 66,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Mental-LLM: Leveraging Large Language Models for Mental Health Prediction via Online Text Data",
+      "authors": [
+        "Xuhai Xu",
+        "Bingsheng Yao",
+        "Yuanzhe Dong",
+        "Saadia Gabriel",
+        "Hong Yu"
+      ],
+      "year": 2023,
+      "abstract": "Advances in large language models (LLMs) have empowered a variety of applications. However, there is still a significant gap in research when it comes to understanding and enhancing the capabilities of LLMs in the field of mental health. In this work, we present a comprehensive evaluation of multiple LLMs on various mental health prediction tasks via online text data, including Alpaca, Alpaca-LoRA, FLAN-T5, GPT-3.5, and GPT-4. We conduct a broad range of experiments, covering zero-shot prompting, few-shot prompting, and instruction fine-tuning. The results indicate a promising yet limited perf ...[truncated]",
+      "url": "http://arxiv.org/abs/2307.14385",
+      "source": "openalex",
+      "citation_count": 59,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Optimization-based Prompt Injection Attack to LLM-as-a-Judge",
+      "authors": [
+        "Jiawen Shi",
+        "Zenghui Yuan",
+        "Yinuo Liu",
+        "Yue Huang",
+        "Pan Zhou"
+      ],
+      "year": 2024,
+      "abstract": "LLM-as-a-Judge uses a large language model (LLM) to select the best response from a set of candidates for a given question. LLM-as-a-Judge has many applications such as LLM-powered search, reinforcement learning with AI feedback (RLAIF), and tool selection. In this work, we propose JudgeDeceiver, an optimization-based prompt injection attack to LLM-as-a-Judge. JudgeDeceiver injects a carefully crafted sequence into an attacker-controlled candidate response such that LLM-as-a-Judge selects the candidate response for an attacker-chosen question no matter what other candidate responses are. Speci ...[truncated]",
+      "url": "https://doi.org/10.1145/3658644.3690291",
+      "source": "openalex",
+      "citation_count": 55,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLM Agents for Smart City Management: Enhancing Decision Support Through Multi-Agent AI Systems",
+      "authors": [
+        "Anna V. Kalyuzhnaya",
+        "Sergey Mityagin",
+        "Elizaveta Lutsenko",
+        "Andrey Getmanov",
+        "Yaroslav Aksenkin"
+      ],
+      "year": 2025,
+      "abstract": "This study investigates the implementation of LLM agents in smart city management, leveraging both the inherent language processing abilities of LLMs and the distributed problem solving capabilities of multi-agent systems for the improvement of urban decision making processes. A multi-agent system architecture combines LLMs with existing urban information systems to process complex queries and generate contextually relevant responses for urban planning and management. The research is focused on three main hypotheses testing: (1) LLM agents’ capability for effective routing and processing diver ...[truncated]",
+      "url": "https://doi.org/10.3390/smartcities8010019",
+      "source": "openalex",
+      "citation_count": 48,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "How LLM Counselors Violate Ethical Standards in Mental Health Practice: A Practitioner-Informed Framework",
+      "authors": [
+        "Zainab Iftikhar",
+        "Amy Wei Xiao",
+        "Sean Ransom",
+        "Jeff Huang",
+        "Harini Suresh"
+      ],
+      "year": 2025,
+      "abstract": "Large language models (LLMs) were not designed to replace healthcare workers, but they are being used in ways that can lead users to overestimate the types of roles that these systems can assume. While prompt engineering has been shown to improve LLMs' clinical effectiveness in mental health applications, little is known about whether such strategies help models adhere to ethical principles for real-world deployment. In this study, we conducted an 18-month ethnographic collaboration with mental health practitioners (three clinically licensed psychologists and seven trained peer counselors) to ...[truncated]",
+      "url": "https://doi.org/10.1609/aies.v8i2.36632",
+      "source": "openalex",
+      "citation_count": 45,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Caging the Agents: A Zero Trust Security Architecture for Autonomous AI in Healthcare",
+      "authors": [
+        "Saikat Maiti"
+      ],
+      "year": 2026,
+      "abstract": "Autonomous AI agents powered by large language models are being deployed in production with capabilities including shell execution, file system access, database queries, and multi-party communication. Recent red teaming research demonstrates that these agents exhibit critical vulnerabilities in realistic settings: unauthorized compliance with non-owner instructions, sensitive information disclosure, identity spoofing, cross-agent propagation of unsafe practices, and indirect prompt injection through external resources [7]. In healthcare environments processing Protected Health Information, eve ...[truncated]",
+      "url": "http://arxiv.org/abs/2603.17419v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.17419v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "ClawGuard: A Runtime Security Framework for Tool-Augmented LLM Agents Against Indirect Prompt Injection",
+      "authors": [
+        "Wei Zhao",
+        "Zhe Li",
+        "Peixin Zhang",
+        "Jun Sun"
+      ],
+      "year": 2026,
+      "abstract": "Tool-augmented Large Language Model (LLM) agents have demonstrated impressive capabilities in automating complex, multi-step real-world tasks, yet remain vulnerable to indirect prompt injection. Adversaries exploit this weakness by embedding malicious instructions within tool-returned content, which agents directly incorporate into their conversation history as trusted observations. To address these vulnerabilities, we introduce \\textsc{ClawGuard}, a novel runtime security framework that enforces a user-confirmed rule set at every tool-call boundary, transforming unreliable alignment-dependent ...[truncated]",
+      "url": "http://arxiv.org/abs/2604.11790v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2604.11790v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AttriGuard: Defeating Indirect Prompt Injection in LLM Agents via Causal Attribution of Tool Invocations",
+      "authors": [
+        "Yu He",
+        "Haozhe Zhu",
+        "Yiming Li",
+        "Shuo Shao",
+        "Hongwei Yao"
+      ],
+      "year": 2026,
+      "abstract": "LLM agents are highly vulnerable to Indirect Prompt Injection (IPI), where adversaries embed malicious directives in untrusted tool outputs to hijack execution. Most existing defenses treat IPI as an input-level semantic discrimination problem, which often fails to generalize to unseen payloads. We propose a new paradigm, action-level causal attribution, which secures agents by asking why a particular tool call is produced. The central goal is to distinguish tool calls supported by the user's intent from those causally driven by untrusted observations. We instantiate this paradigm with AttriGu ...[truncated]",
+      "url": "http://arxiv.org/abs/2603.10749v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.10749v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Can LLM Agents Respond to Disasters? Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations",
+      "authors": [
+        "Junjue Wang",
+        "Weihao Xuan",
+        "Heli Qi",
+        "Pengyu Dai",
+        "Kunyi Liu"
+      ],
+      "year": 2026,
+      "abstract": "Operational disaster response goes beyond damage assessment, requiring responders to integrate multi-sensor signals, reason over road networks, populations and key facilities, plan evacuations, and produce actionable reports. However, prior work largely isolates remote-sensing perception or evaluates generic tool use, leaving the end-to-end workflows of emergency operations underexplored. In this paper, we introduce Disaster Operational Response Agent benchmark (DORA), the first agentic benchmark for end-to-end disaster response: 515 expert-authored tasks across 45 real-world disaster events s ...[truncated]",
+      "url": "http://arxiv.org/abs/2605.11633v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.11633v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AEMA: Verifiable Evaluation Framework for Trustworthy and Controlled Agentic LLM Systems",
+      "authors": [
+        "YenTing Lee",
+        "Keerthi Koneru",
+        "Zahra Moslemi",
+        "Sheethal Kumar",
+        "Ramesh Radhakrishnan"
+      ],
+      "year": 2026,
+      "abstract": "Evaluating large language model (LLM)-based multi-agent systems remains a critical challenge, as these systems must exhibit reliable coordination, transparent decision-making, and verifiable performance across evolving tasks. Existing evaluation approaches often limit themselves to single-response scoring or narrow benchmarks, which lack stability, extensibility, and automation when deployed in enterprise settings at multi-agent scale. We present AEMA (Adaptive Evaluation Multi-Agent), a process-aware and auditable framework that plans, executes, and aggregates multi-step evaluations across he ...[truncated]",
+      "url": "http://arxiv.org/abs/2601.11903v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.11903v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "TREK: A Travel Reasoning and Evaluation Kit for LLM Agents in Complex Trip Planning",
+      "authors": [
+        "Jinhu Qi",
+        "Wentao Zhang",
+        "Siu Man Ng",
+        "Feiyang Xu",
+        "Yanyu Chen"
+      ],
+      "year": 2026,
+      "abstract": "Travel planning is a demanding stress test for tool-using LLM agents: a usable itinerary is a single artifact that must be right along many axes at once - every flight, hotel, and attraction must exist and be bookable, the days must be physically traversable, the total must clear a budget, and the plan must serve a traveler whose needs are only partly stated. Existing agent benchmarks reward these properties one at a time and grade the final output with soft or LLM-judged rubrics, which cannot certify that a returned plan is executable and are neither reproducible nor auditable. We introduce T ...[truncated]",
+      "url": "http://arxiv.org/abs/2607.26977v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2607.26977v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Agents at Risk: How Users Unwittingly Undermine LLM Safety",
+      "authors": [
+        "Fengchao Chen",
+        "Tingmin Wu",
+        "Van Nguyen",
+        "Surya. Nepal",
+        "Carsten Rudolph"
+      ],
+      "year": 2026,
+      "abstract": "Large language model (LLM)-based agents are increasingly deployed in applications, such as trip-planning agents and web-use agents, to perform complex planning and execution tasks. Prior work has shown that LLM-based agents are vulnerable to context confusion, where external adversarial content incorporated into the agent's reasoning context may be treated as task-relevant constraints. However, external malicious content can enter the agent context via channels beyond retrieval. In this work, we introduce the User-Relayed Context Manipulation (UReCoM) attack, in which attackers manipulate beni ...[truncated]",
+      "url": "http://arxiv.org/abs/2601.10758v3",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.10758v3",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLM Agents for Interactive Workflow Provenance: Reference Architecture and Evaluation Methodology",
+      "authors": [
+        "Renan Souza",
+        "Timothy Poteet",
+        "Brian Etz",
+        "Daniel Rosendo",
+        "Amal Gueroudji"
+      ],
+      "year": 2025,
+      "abstract": "Modern scientific discovery increasingly relies on workflows that process data across the Edge, Cloud, and High Performance Computing (HPC) continuum. Comprehensive and in-depth analyses of these data are critical for hypothesis validation, anomaly detection, reproducibility, and impactful findings. Although workflow provenance techniques support such analyses, at large scale, the provenance data become complex and difficult to analyze. Existing systems depend on custom scripts, structured queries, or static dashboards, limiting data interaction. In this work, we introduce an evaluation method ...[truncated]",
+      "url": "http://arxiv.org/abs/2509.13978v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2509.13978v2",
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "There is a lack of research on how large language model agents use tools and function calling within real-time, interactive, and embodied simulation environments, as opposed to static, single-turn tasks.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    },
+    {
+      "description": "The security implications of tool use in LLM agents, specifically the vulnerability to indirect prompt injection through data ingested by tools, are underexplored.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    },
+    {
+      "description": "A systematic evaluation of LLM agents' ability to chain multiple heterogeneous tools (e.g., a chemistry model, a web scraper, and a code executor) to autonomously plan and execute complex, multi-step scientific workflows is missing.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    },
+    {
+      "description": "The impact of LLM-based tool use and function calling on human decision-making in high-stakes domains, such as clinical diagnostic reasoning, is not well understood.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    },
+    {
+      "description": "There is a gap in understanding and enhancing the capabilities of LLMs to use tools for mental health prediction and intervention tasks.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    }
+  ],
+  "conflicts": [],
+  "recalled_gaps": [],
+  "novelty_score": null,
+  "novelty_reasoning": null,
+  "overlapping_papers": [],
+  "report_markdown": "## Overview\nLarge language model (LLM) agents are increasingly equipped with tools and function-calling capabilities to perform complex, multi‑step tasks. While recent work demonstrates impressive autonomy in chemistry, code generation, and planning, critical gaps remain in understanding their use in real‑time interactive environments, their security vulnerabilities, and their impact on human decision‑making in high‑stakes domains.\n\n## Landscape\nLLM‑based autonomous agents have been surveyed extensively, highlighting architectures that integrate tools, memory, and planning [14, 28, 35]. Tool‑augmented LLMs have been applied to scientific workflows: ChemCrow chains 18 chemistry‑specific tools for synthesis and drug discovery [18, 30], and LMVM compiles natural‑language instructions directly to native code [13]. Benchmarks like DORA [46] and TREK [48] stress‑test tool‑using agents in disaster response and travel planning, while workflow‑provenance systems explore interactive tool use in scientific pipelines [50].  \n\nSecurity research has exposed indirect prompt injection (IPI) attacks, where adversarial content in tool‑returned data can manipulate agent behavior [26, 38]. Defenses such as ClawGuard [44] and AttriGuard [45] address IPI at runtime, and zero‑trust architectures are proposed for healthcare agents [43].  \n\nIn medicine, LLMs have been evaluated on licensing exams [8, 9] and as diagnostic aids [20, 21], but these studies do not involve tool‑calling. Mental‑health LLM evaluations remain limited to text‑based prediction without tool integration [32, 39, 29]. Overall, the field has mapped the potential of tool‑augmented agents but has not yet closed several foundational gaps.\n\n## Research gaps\n- **Real‑time, embodied tool use:** Most evaluations of tool‑using LLM agents rely on static, single‑turn tasks. The DORA benchmark [46] begins to address end‑to‑end disaster response, but systematic studies of agents that use tools in dynamic, interactive, embodied simulations (e.g., extending generative agents [12]) are lacking.  \n- **Security of tool‑mediated data flows:** While IPI attacks on tool‑integrated LLM agents have been demonstrated [26, 38] and initial defenses exist [44, 45], the full attack surface—including user‑relayed context manipulation [49]—is underexplored. Comprehensive security frameworks for tool‑augmented agents remain nascent [43].  \n- **Heterogeneous tool chaining in scientific workflows:** ChemCrow [18] shows that an LLM can orchestrate a suite of chemistry tools, but no systematic benchmark evaluates the ability of agents to autonomously chain arbitrary heterogeneous tools (e.g., a chemistry model, a web scraper, and a code executor) to plan and execute complex multi‑step scientific workflows.  \n- **Impact on high‑stakes human decision‑making:** Randomized trials of LLM assistance in clinical diagnosis have not yet studied tool‑augmented agents [21]. It is unknown how the use of tool‑calling LLM agents influences physician reasoning, trust, and decision quality in real‑world clinical settings.  \n- **Tool use for mental health:** LLMs have shown limited performance on mental‑health prediction tasks using only text prompts [32, 39]. The potential of equipping LLMs with tools (e.g., screening instruments, data retrieval, or therapy‑planning modules) for mental‑health prediction and intervention remains entirely unexplored.\n\n## References\n\n[1] [R: A Language and Environment for Statistical Computing (2000)](https://doi.org/10.32614/r.manuals) — R Core Team  \n[2] [Gradient-based learning applied to document recognition (1998)](https://hal.science/hal-03926082) — Yann LeCun, Léon Bottou, Yoshua Bengio et al.  \n[3] [Situated Cognition and the Culture of Learning (1989)](http://hdl.handle.net/2142/17979) — John Seely Brown, Allan Collins, Paul Duguid  \n[4] [A survey on Image Data Augmentation for Deep Learning (2019)](https://doi.org/10.1186/s40537-019-0197-0) — Connor Shorten, Taghi M. Khoshgoftaar  \n[5] [LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales (2021)](https://doi.org/10.1016/j.cpc.2021.108171) — Aidan P. Thompson, Hasan Metin Aktulga, Richard A. Berger et al.  \n[6] [ChatGPT for good? On opportunities and challenges of large language models for education (2023)](http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3) — Enkelejda Kasneci, Kathrin Seßler, Stefan Küchemann et al.  \n[7] [Training language models to follow instructions with human feedback (2022)](http://arxiv.org/abs/2203.02155) — Long Ouyang, Jeff Wu, Xu Jiang et al.  \n[8] [Performance of ChatGPT on USMLE: Potential for AI-assisted medical education using large language models (2023)](https://doi.org/10.1371/journal.pdig.0000198) — Tiffany H. Kung, Morgan Cheatham, Arielle Medenilla et al.  \n[9] [Large language models encode clinical knowledge (2023)](https://doi.org/10.1038/s41586-023-06291-2) — Karan Singhal, Shekoofeh Azizi, Tao Tu et al.  \n[10] [Revolutionizing healthcare: the role of artificial intelligence in clinical practice (2023)](https://doi.org/10.1186/s12909-023-04698-z) — Shuroug A. Alowais, Sahar S. Alghamdi, Nada Alsuhebany et al.  \n[11] [GPT-4 Technical Report (2023)](http://arxiv.org/abs/2303.08774) — OpenAI, Achiam, Josh, Adler, Steven et al.  \n[12] [Generative Agents: Interactive Simulacra of Human Behavior (2023)](https://doi.org/10.1145/3586183.3606763) — Joon Sung Park, Joseph O’Brien, Carrie J. Cai et al.  \n[13] [Evaluating Large Language Models Trained on Code (2021)](http://arxiv.org/abs/2107.03374) — Mark Chen, Jerry Tworek, Heewoo Jun et al.  \n[14] [A survey on large language model based autonomous agents (2024)](https://doi.org/10.1007/s11704-024-40231-1) — Lei Wang, Chen Ma, Xueyang Feng et al.  \n[15] [DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning (2025)](https://doi.org/10.1038/s41586-025-09422-z) — Daya Guo, Dejian Yang, Haowei Zhang et al.  \n[16] [Retrieval-Augmented Generation for Large Language Models: A Survey (2023)](http://arxiv.org/abs/2312.10997) — Yunfan Gao, Yun Xiong, Xinyu Gao et al.  \n[17] [Structured information extraction from scientific text with large language models (2024)](https://doi.org/10.1038/s41467-024-45563-x) — John Dagdelen, Alexander Dunn, Sang‐Hoon Lee et al.  \n[18] [Augmenting large language models with chemistry tools (2024)](https://doi.org/10.1038/s42256-024-00832-8) — Andres M. Bran, Sam Cox, Oliver Schilter et al.  \n[19] [A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models (2024)](https://doi.org/10.1145/3637528.3671470) — Wenqi Fan, Yujuan Ding, Liangbo Ning et al.  \n[20] [Evaluation and mitigation of the limitations of large language models in clinical decision-making (2024)](https://doi.org/10.1038/s41591-024-03097-1) — Paul Hager, Friederike Jungmann, Robbie Holland et al.  \n[21] [Large Language Model Influence on Diagnostic Reasoning (2024)](https://doi.org/10.1001/jamanetworkopen.2024.40969) — Ethan Goh, Robert Gallo, Jason Hom et al.  \n[22] [QLoRA: Efficient Finetuning of Quantized LLMs (2023)](http://arxiv.org/abs/2305.14314) — Tim Dettmers, Artidoro Pagnoni, Ari Holtzman et al.  \n[23] [Assessing the potential of GPT-4 to perpetuate racial and gender biases in health care: a model evaluation study (2023)](https://doi.org/10.1016/s2589-7500(23)00225-x) — Travis Zack, Eric Lehman, Mirac Süzgün et al.  \n[24] [Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond (2024)](https://doi.org/10.1145/3649506) — Jingfeng Yang, Hongye Jin, Ruixiang Tang et al.  \n[25] [Bias in medical AI: Implications for clinical decision-making (2024)](https://doi.org/10.1371/journal.pdig.0000651) — James M. Cross, Michael A. Choma, John A. Onofrey  \n[26] [Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection (2023)](https://doi.org/10.1145/3605764.3623985) — Kai Greshake, Sahar Abdelnabi, Shailesh Mishra et al.  \n[27] [Large language models (LLMs): survey, technical frameworks, and future challenges (2024)](https://doi.org/10.1007/s10462-024-10888-y) — Pranjal Kumar  \n[28] [The Rise and Potential of Large Language Model Based Agents: A Survey (2023)](http://arxiv.org/abs/2309.07864) — Zhiheng Xi, Wen-Xiang Chen, Xin Guo et al.  \n[29] [The evolving field of digital mental health: current evidence and implementation issues for smartphone apps, generative artificial intelligence, and virtual reality (2025)](https://doi.org/10.1002/wps.21299) — John Torous, Jake Linardon, Simon B. Goldberg et al.  \n[30] [A review of large language models and autonomous agents in chemistry (2024)](https://doi.org/10.1039/d4sc03921a) — Mayk Caldas Ramos, Christopher J. Collison, Andrew Dickson White  \n[31] [Java-based mobile agents (1999)](https://doi.org/10.1145/295685.295717) — David Chi-Leung Wong, Noemi Paciorek, Dana Moore  \n[32] [Mental-LLM (2024)](https://www.ncbi.nlm.nih.gov/pmc/articles/11806945) — Xuhai Xu, Bingsheng Yao, Yuanzhe Dong et al.  \n[33] [AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges (2025)](https://doi.org/10.70777/si.v2i3.15161) — Ranjan Sapkota, Konstantinos I. Roumeliotis, Manoj Karkee  \n[34] [Character-LLM: A Trainable Agent for Role-Playing (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.814) — Yunfan Shao, Linyang Li, Junqi Dai et al.  \n[35] [The Rise of Agentic AI: A Review of Definitions, Frameworks, Architectures, Applications, Evaluation Metrics, and Challenges (2025)](https://doi.org/10.3390/fi17090404) — Ajay Bandi, Bhavani Kongari, Roshini Naguru et al.  \n[36] [Prompt Injection attack against LLM-integrated Applications (2023)](http://arxiv.org/abs/2306.05499) — Yi Liu, Gelei Deng, Yuekang Li et al.  \n[37] [Designing Heterogeneous LLM Agents for Financial Sentiment Analysis (2024)](https://doi.org/10.1145/3688399) — Frank Xing  \n[38] [InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents (2024)](https://doi.org/10.18653/v1/2024.findings-acl.624) — Qiusi Zhan, Zhixiang Liang, Zifan Ying et al.  \n[39] [Mental-LLM: Leveraging Large Language Models for Mental Health Prediction via Online Text Data (2023)](http://arxiv.org/abs/2307.14385) — Xuhai Xu, Bingsheng Yao, Yuanzhe Dong et al.  \n[40] [Optimization-based Prompt Injection Attack to LLM-as-a-Judge (2024)](https://doi.org/10.1145/3658644.3690291) — Jiawen Shi, Zenghui Yuan, Yinuo Liu et al.  \n[41] [LLM Agents for Smart City Management: Enhancing Decision Support Through Multi-Agent AI Systems (2025)](https://doi.org/10.3390/smartcities8010019) — Anna V. Kalyuzhnaya, Sergey Mityagin, Elizaveta Lutsenko et al.  \n[42] [How LLM Counselors Violate Ethical Standards in Mental Health Practice: A Practitioner-Informed Framework (2025)](https://doi.org/10.1609/aies.v8i2.36632) — Zainab Iftikhar, Amy Wei Xiao, Sean Ransom et al.  \n[43] [Caging the Agents: A Zero Trust Security Architecture for Autonomous AI in Healthcare (2026)](http://arxiv.org/abs/2603.17419v1) — Saikat Maiti  \n[44] [ClawGuard: A Runtime Security Framework for Tool-Augmented LLM Agents Against Indirect Prompt Injection (2026)](http://arxiv.org/abs/2604.11790v2) — Wei Zhao, Zhe Li, Peixin Zhang et al.  \n[45] [AttriGuard: Defeating Indirect Prompt Injection in LLM Agents via Causal Attribution of Tool Invocations (2026)](http://arxiv.org/abs/2603.10749v2) — Yu He, Haozhe Zhu, Yiming Li et al.  \n[46] [Can LLM Agents Respond to Disasters? Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations (2026)](http://arxiv.org/abs/2605.11633v1) — Junjue Wang, Weihao Xuan, Heli Qi et al.  \n[47] [AEMA: Verifiable Evaluation Framework for Trustworthy and Controlled Agentic LLM Systems (2026)](http://arxiv.org/abs/2601.11903v1) — YenTing Lee, Keerthi Koneru, Zahra Moslemi et al.  \n[48] [TREK: A Travel Reasoning and Evaluation Kit for LLM Agents in Complex Trip Planning (2026)](http://arxiv.org/abs/2607.26977v1) — Jinhu Qi, Wentao Zhang, Siu Man Ng et al.  \n[49] [Agents at Risk: How Users Unwittingly Undermine LLM Safety (2026)](http://arxiv.org/abs/2601.10758v3) — Fengchao Chen, Tingmin Wu, Van Nguyen et al.  \n[50] [LLM Agents for Interactive Workflow Provenance: Reference Architecture and Evaluation Methodology (2025)](http://arxiv.org/abs/2509.13978v2) — Renan Souza, Timothy Poteet, Brian Etz et al.",
+  "iteration": 2,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "https://doi.org/10.32614/r.manuals",
+    "https://hal.science/hal-03926082",
+    "http://hdl.handle.net/2142/17979",
+    "https://doi.org/10.1186/s40537-019-0197-0",
+    "https://doi.org/10.1016/j.cpc.2021.108171",
+    "http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3",
+    "http://arxiv.org/abs/2203.02155",
+    "https://doi.org/10.1371/journal.pdig.0000198",
+    "https://doi.org/10.1038/s41586-023-06291-2",
+    "https://doi.org/10.1145/3586183.3606763",
+    "http://arxiv.org/abs/2107.03374",
+    "https://doi.org/10.1007/s11704-024-40231-1",
+    "https://doi.org/10.1038/s41586-025-09422-z",
+    "http://arxiv.org/abs/2312.10997",
+    "https://doi.org/10.1038/s42256-024-00832-8",
+    "https://doi.org/10.1145/3637528.3671470",
+    "https://doi.org/10.1001/jamanetworkopen.2024.40969",
+    "http://arxiv.org/abs/2305.14314",
+    "https://doi.org/10.1145/3649506",
+    "https://doi.org/10.1145/3605764.3623985",
+    "http://arxiv.org/abs/2309.07864",
+    "https://doi.org/10.1039/d4sc03921a",
+    "https://doi.org/10.1145/295685.295717",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/11806945",
+    "https://doi.org/10.70777/si.v2i3.15161",
+    "https://doi.org/10.1186/s12909-023-04698-z",
+    "http://arxiv.org/abs/2303.08774",
+    "https://doi.org/10.1038/s41467-024-45563-x",
+    "https://doi.org/10.1038/s41591-024-03097-1",
+    "https://doi.org/10.1016/s2589-7500(23)00225-x",
+    "https://doi.org/10.1371/journal.pdig.0000651",
+    "https://doi.org/10.1007/s10462-024-10888-y",
+    "https://doi.org/10.1002/wps.21299",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.814",
+    "https://doi.org/10.3390/fi17090404",
+    "http://arxiv.org/abs/2306.05499",
+    "https://doi.org/10.1145/3688399",
+    "https://doi.org/10.18653/v1/2024.findings-acl.624",
+    "http://arxiv.org/abs/2307.14385",
+    "https://doi.org/10.1145/3658644.3690291",
+    "https://doi.org/10.3390/smartcities8010019",
+    "https://doi.org/10.1609/aies.v8i2.36632",
+    "http://arxiv.org/abs/2603.17419v1",
+    "http://arxiv.org/abs/2604.11790v2",
+    "http://arxiv.org/abs/2603.10749v2",
+    "http://arxiv.org/abs/2605.11633v1",
+    "http://arxiv.org/abs/2601.11903v1",
+    "http://arxiv.org/abs/2607.26977v1",
+    "http://arxiv.org/abs/2601.10758v3",
+    "http://arxiv.org/abs/2509.13978v2"
+  ],
+  "recent_paper_ids": [
+    "https://doi.org/10.1186/s12909-023-04698-z",
+    "http://arxiv.org/abs/2303.08774",
+    "https://doi.org/10.1038/s41467-024-45563-x",
+    "https://doi.org/10.1038/s41591-024-03097-1",
+    "https://doi.org/10.1016/s2589-7500(23)00225-x",
+    "https://doi.org/10.1371/journal.pdig.0000651",
+    "https://doi.org/10.1007/s10462-024-10888-y",
+    "https://doi.org/10.1002/wps.21299",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.814",
+    "https://doi.org/10.3390/fi17090404",
+    "http://arxiv.org/abs/2306.05499",
+    "https://doi.org/10.1145/3688399",
+    "https://doi.org/10.18653/v1/2024.findings-acl.624",
+    "http://arxiv.org/abs/2307.14385",
+    "https://doi.org/10.1145/3658644.3690291",
+    "https://doi.org/10.3390/smartcities8010019",
+    "https://doi.org/10.1609/aies.v8i2.36632",
+    "http://arxiv.org/abs/2603.17419v1",
+    "http://arxiv.org/abs/2604.11790v2",
+    "http://arxiv.org/abs/2603.10749v2",
+    "http://arxiv.org/abs/2605.11633v1",
+    "http://arxiv.org/abs/2601.11903v1",
+    "http://arxiv.org/abs/2607.26977v1",
+    "http://arxiv.org/abs/2601.10758v3",
+    "http://arxiv.org/abs/2509.13978v2"
+  ],
+  "open_gaps": [],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "tool use large language model agents",
+        "function calling LLM agent",
+        "LLM tool-augmented reasoning",
+        "tool learning language model evaluation",
+        "API calling autonomous agent"
+      ],
+      "new_papers": 25,
+      "total_papers": 25,
+      "open_gaps": 4,
+      "closed_gaps": 1
+    },
+    {
+      "iteration": 2,
+      "queries": [
+        "indirect prompt injection LLM agents tool use security",
+        "LLM agents multi-step scientific workflow heterogeneous tools evaluation",
+        "LLM tool use clinical decision making diagnostic reasoning impact",
+        "LLM function calling mental health prediction intervention tools",
+        "LLM agents tool chaining planning complex tasks security"
+      ],
+      "new_papers": 25,
+      "total_papers": 50,
+      "open_gaps": 0,
+      "closed_gaps": 5
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": false,
+  "coverage_reasoning": "The user's idea is not provided, so the most relevant gap cannot be identified. However, among the high-confidence gaps, the one most central to the core topic of 'tool use and function calling in LLM agents' is the gap on chaining multiple heterogeneous tools for complex workflows, which is supported by only 1 paper. According to the stopping rule, a high-confidence gap that is most relevant to the user's idea must be supported by at least two papers. Since this gap has only one paper, coverage is not sufficient. Additionally, the gap on real-time interactive environments is also supported by a single paper. To ensure robust coverage for any potential user idea, another search round is recommended.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [],
+  "tool_call_count": 20
+}

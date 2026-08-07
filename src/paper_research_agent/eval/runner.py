@@ -4,9 +4,11 @@ import argparse
 import json
 import platform
 import re
+import signal
 import statistics
 import subprocess
 import time
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
@@ -82,7 +84,12 @@ def _package_version() -> str | None:
 
 
 def run_metadata(
-    *, repeats: int, max_iterations: int, n_cases: int, with_idea: bool = True
+    *,
+    repeats: int,
+    max_iterations: int,
+    n_cases: int,
+    with_idea: bool = True,
+    deadline_seconds: float | None = None,
 ) -> dict:
     """Everything needed to say what produced a number.
 
@@ -131,8 +138,34 @@ def run_metadata(
             # narrow idea makes the planner chase the idea instead of the
             # topic, so recall would score a question the labels do not ask.
             "with_idea": with_idea,
+            "deadline_seconds": deadline_seconds,
         },
     }
+
+
+@contextmanager
+def hard_deadline(seconds: float | None):
+    """Abort a run that blows its wall-clock budget.
+
+    state.timeout_seconds is only checked between rounds, and client-side
+    timeouts only cover calls that fail cleanly. Neither stops a socket that
+    stays open and silent, which is what stalled a full run for 68 minutes.
+    SIGALRM interrupts the interpreter wherever it is waiting.
+    """
+    if not seconds or not hasattr(signal, "SIGALRM"):
+        yield
+        return
+
+    def _fire(_signum, _frame):
+        raise TimeoutError(f"run exceeded hard deadline of {seconds:.0f}s")
+
+    previous = signal.signal(signal.SIGALRM, _fire)
+    signal.setitimer(signal.ITIMER_REAL, seconds)
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous)
 
 
 def _slug(topic: str) -> str:
@@ -145,23 +178,22 @@ def run_one(
     max_iterations: int,
     timeout_seconds: float | None = None,
     with_idea: bool = True,
+    deadline_seconds: float | None = None,
 ) -> tuple[dict, ResearchState]:
     t0 = time.monotonic()
-    state = run_research(
-        case.topic,
-        case.idea if with_idea else None,
-        read_full_text=True,
-        max_iterations=max_iterations,
-        # Memory off: a cached or recalled result would make run 2 and 3 of the
-        # same topic depend on run 1, which destroys the variance measurement.
-        use_memory=False,
-        timeout_seconds=timeout_seconds,
-    )
-    row: dict = {"topic": case.topic, "elapsed_s": round(time.monotonic() - t0)}
-    row.update(score_case(state, case))
-    row["difficulty"] = case.difficulty
-    row["gap_source"] = case.provenance.granularity if case.provenance else "unknown"
-    row["findings"] = [f.model_dump() for f in analyze(state, case)]
+    with hard_deadline(deadline_seconds):
+        state = run_research(
+            case.topic,
+            case.idea if with_idea else None,
+            read_full_text=True,
+            max_iterations=max_iterations,
+            # Memory off: a cached or recalled result would make run 2 and 3 of
+            # the same topic depend on run 1, destroying the variance measure.
+            use_memory=False,
+            timeout_seconds=timeout_seconds,
+        )
+    row = _score(state, case)
+    row["elapsed_s"] = round(time.monotonic() - t0)
     return row, state
 
 
@@ -173,6 +205,8 @@ def evaluate(
     timeout_seconds: float | None = None,
     states_dir: Path | None = None,
     with_idea: bool = True,
+    deadline_seconds: float | None = None,
+    resume_from: Path | None = None,
 ) -> list[dict]:
     rows: list[dict] = []
     total = len(cases) * repeats
@@ -182,12 +216,25 @@ def evaluate(
         for r in range(repeats):
             done += 1
             console.log(f"({done}/{total}) [{case.topic[:45]}] run {r + 1}/{repeats}")
+
+            cached = _reuse(resume_from, case, r)
+            if cached is not None:
+                console.log("  [dim]reusing saved state[/]")
+                row = _score(cached, case)
+                row["run"] = r
+                row["reused"] = True
+                rows.append(row)
+                if states_dir is not None:
+                    _write_state(states_dir, case, r, cached)
+                continue
+
             try:
                 row, state = run_one(
                     case,
                     max_iterations=max_iterations,
                     timeout_seconds=timeout_seconds,
                     with_idea=with_idea,
+                    deadline_seconds=deadline_seconds,
                 )
             except Exception as e:
                 # A crashed run is a data point, not a reason to lose the ones
@@ -202,12 +249,45 @@ def evaluate(
             rows.append(row)
 
             if states_dir is not None:
-                path = states_dir / f"{_slug(case.topic)}--run{r}.json"
-                path.write_text(
-                    state.model_dump_json(indent=2, exclude={"started_at"}),
-                    encoding="utf-8",
-                )
+                _write_state(states_dir, case, r, state)
     return rows
+
+
+def _state_path(directory: Path, case: GoldenCase, run: int) -> Path:
+    return directory / f"{_slug(case.topic)}--run{run}.json"
+
+
+def _write_state(directory: Path, case: GoldenCase, run: int, state: ResearchState) -> None:
+    _state_path(directory, case, run).write_text(
+        state.model_dump_json(indent=2, exclude={"started_at"}), encoding="utf-8"
+    )
+
+
+def _reuse(resume_from: Path | None, case: GoldenCase, run: int) -> ResearchState | None:
+    """A previously persisted run of this exact case, if one exists.
+
+    Metrics are recomputed from the state rather than copied, so a reused run
+    is scored by the current metric code -- otherwise a resumed eval would mix
+    two definitions of the same number.
+    """
+    if resume_from is None:
+        return None
+    path = _state_path(resume_from, case, run)
+    if not path.exists():
+        return None
+    try:
+        return ResearchState.model_validate_json(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def _score(state: ResearchState, case: GoldenCase) -> dict:
+    row: dict = {"topic": case.topic, "elapsed_s": None}
+    row.update(score_case(state, case))
+    row["difficulty"] = case.difficulty
+    row["gap_source"] = case.provenance.granularity if case.provenance else "unknown"
+    row["findings"] = [f.model_dump() for f in analyze(state, case)]
+    return row
 
 
 # --- aggregation ---------------------------------------------------------------
@@ -357,6 +437,17 @@ def main() -> None:
         action="store_true",
         help="research the topic only; the golden labels are topic-level",
     )
+    ap.add_argument(
+        "--deadline",
+        type=float,
+        default=720.0,
+        help="hard wall-clock cap per run in seconds (0 disables)",
+    )
+    ap.add_argument(
+        "--resume-from",
+        default=None,
+        help="a previous states/ directory; matching runs are rescored, not re-run",
+    )
     ap.add_argument("--tag", default=None, help="label for this run directory")
     ap.add_argument("--out", default="eval/results", help="results root directory")
     args = ap.parse_args()
@@ -382,6 +473,7 @@ def main() -> None:
         max_iterations=args.max_iterations,
         n_cases=len(cases),
         with_idea=with_idea,
+        deadline_seconds=args.deadline or None,
     )
     stamp = meta["timestamp_utc"].replace(":", "").replace("-", "")
     run_dir = Path(args.out) / (f"{stamp}-{args.tag}" if args.tag else stamp)
@@ -401,6 +493,8 @@ def main() -> None:
         timeout_seconds=args.timeout,
         states_dir=states_dir,
         with_idea=with_idea,
+        deadline_seconds=args.deadline or None,
+        resume_from=Path(args.resume_from) if args.resume_from else None,
     )
     summary = summarise(rows)
 

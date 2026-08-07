@@ -1,0 +1,1061 @@
+{
+  "topic": "retrieval-augmented generation for knowledge-intensive NLP tasks",
+  "user_idea": null,
+  "search_queries": [
+    "capability bottlenecks RAG different LLMs systematic evaluation",
+    "RAG hallucination abstention insufficient evidence evaluation beyond MCQ MRC",
+    "visual RAG modality gap image query text knowledge base multi-hop reasoning",
+    "multi-step reasoning evidence aggregation multi-hop queries RAG pipeline",
+    "domain-specific RAG healthcare news knowledge base optimization"
+  ],
+  "papers": [
+    {
+      "title": "QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of materials",
+      "authors": [
+        "Paolo Giannozzi",
+        "Stefano Baroni",
+        "Nicola Bonini",
+        "Matteo Calandra",
+        "Roberto Car"
+      ],
+      "year": 2009,
+      "abstract": "QUANTUM ESPRESSO is an integrated suite of computer codes for electronic-structure calculations and materials modeling, based on density-functional theory, plane waves, and pseudopotentials (norm-conserving, ultrasoft, and projector-augmented wave). The acronym ESPRESSO stands for opEn Source Package for Research in Electronic Structure, Simulation, and Optimization. It is freely available to researchers around the world under the terms of the GNU General Public License. QUANTUM ESPRESSO builds upon newly-restructured electronic-structure codes that have been developed and tested by some of th ...[truncated]",
+      "url": "https://doi.org/10.1088/0953-8984/21/39/395502",
+      "source": "openalex",
+      "citation_count": 29061,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "CloudSim: a toolkit for modeling and simulation of cloud computing environments and evaluation of resource provisioning algorithms",
+      "authors": [
+        "Rodrigo N. Calheiros",
+        "Rajiv Ranjan",
+        "Anton Beloglazov",
+        "César A. F. De Rose",
+        "Rajkumar Buyya"
+      ],
+      "year": 2010,
+      "abstract": "Abstract Cloud computing is a recent advancement wherein IT infrastructure and applications are provided as ‘services’ to end‐users under a usage‐based payment model. It can leverage virtualized services even on the fly based on requirements (workload patterns and QoS) varying with time. The application services hosted under Cloud computing model have complex provisioning, composition, configuration, and deployment requirements. Evaluating the performance of Cloud provisioning policies, application workload models, and resources performance models in a repeatable manner under varying system an ...[truncated]",
+      "url": "https://doi.org/10.1002/spe.995",
+      "source": "openalex",
+      "citation_count": 4940,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Natural Language Processing (almost) from Scratch",
+      "authors": [
+        "Ronan Collobert",
+        "Jason Weston",
+        "Léon Bottou",
+        "Michael Karlen",
+        "Koray Kavukcuoglu"
+      ],
+      "year": 2011,
+      "abstract": "Editor: We propose a unified neural network architecture and learning algorithm that can be applied to various natural language processing tasks including: part-of-speech tagging, chunking, named entity recognition, and semantic role labeling, achieving or exceeding state-of-theart performance in each on four benchmark tasks. Our goal was to design a flexible architecture that can learn representations useful for the tasks, thus avoiding excessive taskspecific feature engineering (and therefore disregarding a lot of prior knowledge). Instead of exploiting man-made input features carefully opti ...[truncated]",
+      "url": "http://infoscience.epfl.ch/record/192375",
+      "source": "openalex",
+      "citation_count": 3995,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing",
+      "authors": [
+        "Pengfei Liu",
+        "Weizhe Yuan",
+        "Jinlan Fu",
+        "Zhengbao Jiang",
+        "Hiroaki Hayashi"
+      ],
+      "year": 2022,
+      "abstract": "This article surveys and organizes research works in a new paradigm in natural language processing, which we dub “prompt-based learning.” Unlike traditional supervised learning, which trains a model to take in an input x and predict an output y as P ( y|x ), prompt-based learning is based on language models that model the probability of text directly. To use these models to perform prediction tasks, the original input x is modified using a template into a textual string prompt x′ that has some unfilled slots, and then the language model is used to probabilistically fill the unfilled informatio ...[truncated]",
+      "url": "https://doi.org/10.1145/3560815",
+      "source": "openalex",
+      "citation_count": 3701,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large language models encode clinical knowledge",
+      "authors": [
+        "Karan Singhal",
+        "Shekoofeh Azizi",
+        "Tao Tu",
+        "S. Sara Mahdavi",
+        "Jason Lee"
+      ],
+      "year": 2023,
+      "abstract": "Abstract Large language models (LLMs) have demonstrated impressive capabilities, but the bar for clinical applications is high. Attempts to assess the clinical knowledge of models typically rely on automated evaluations based on limited benchmarks. Here, to address these limitations, we present MultiMedQA, a benchmark combining six existing medical question answering datasets spanning professional medicine, research and consumer queries and a new dataset of medical questions searched online, HealthSearchQA. We propose a human evaluation framework for model answers along multiple axes including ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-023-06291-2",
+      "source": "openalex",
+      "citation_count": 3457,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Affordance-Compiled Intelligence: Observable-Only Cognitive Impedance Matching for No-Meta LLM-Integrated Systems",
+      "authors": [
+        "Patrick Lewis",
+        "Ethan Perez",
+        "Aleksandara Piktus",
+        "Fabio Petroni",
+        "Vladimir Karpukhin"
+      ],
+      "year": 2026,
+      "abstract": "Affordance-Compiled Intelligence develops Cognitive Impedance Matching Theory (CIMT), an observable-only and no-meta protected compiler theory for LLM-integrated systems. The paper studies how a fixed model-policy can exhibit different operational capability when the surrounding world is redesigned through observations, typed action handles, validators, repair paths, rollback modes, authority scopes, context summaries, and auditable receipts. CIMT treats system-level capability amplification as a world-side compilation problem rather than a model-weight improvement problem. It defines operatio ...[truncated]",
+      "url": "http://arxiv.org/abs/2005.11401",
+      "source": "openalex",
+      "citation_count": 3037,
+      "pdf_url": null,
+      "full_text_excerpt": "[1 Introduction] o access knowledge is present without additional training.\n\nOur results highlight the benefits of combining parametric and non-parametric memory with generation for knowledge-intensive tasks—tasks that humans could not reasonably be expected to perform without access to an external knowledge source. Our RAG models achieve state-of-the-art results on open Natural Questions [29], WebQuestions [3] and CuratedTrec [2] and strongly outperform recent approaches that use specialised pre-training objectives on TriviaQA [24]. Despite these being extractive tasks, we find that unconstrained generation outperforms previous extractive approaches. For knowledge-intensive generation, we experiment with MS-MARCO [1] and Jeopardy question generation, and we find that our models generate responses that are more factual, specific, and diverse than a BART baseline. For FEVER [56] fact verification, we achieve results within 4.3% of state-of-the-art pipeline models which use strong retrieval supervision. Finally, we demonstrate that the non-parametric memory can be replaced to update the models’ knowledge as the world changes.111Code to run experiments with RAG has been open-sourced as part of the HuggingFace Transformers Library [66] and can be found at https://github.com/huggingface/transformers/blob/master/examples/rag/. An interactive demo of RAG models can be found at https://huggingface.co/rag/\n\n[Abstract] Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, and another which can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state of the art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models ge\n\n[6 Discussion] In this work, we presented hybrid generation models with access to parametric and non-parametric memory. We showed that our RAG models obtain state of the art results on open-domain QA. We found that people prefer RAG’s generation over purely parametric BART, finding RAG more factual and specific. We conducted an thorough investigation of the learned retrieval component, validating its effectiveness, and we illustrated how the retrieval index can be hot-swapped to update the model without requiring any retraining. In future work, it may be fruitful to investigate if the two components can be jointly pre-trained from scratch, either with a denoising objective similar to BART or some another objective. Our work opens up new research directions on how parametric and non-parametric memories interact and how to most effectively combine them, showing promise in being applied to a wide variety of NLP tasks."
+    },
+    {
+      "title": "A Survey on Knowledge Graphs: Representation, Acquisition, and Applications",
+      "authors": [
+        "Shaoxiong Ji",
+        "Shirui Pan",
+        "Erik Cambria",
+        "Pekka Marttinen",
+        "Philip S. Yu"
+      ],
+      "year": 2021,
+      "abstract": "Human knowledge provides a formal understanding of the world. Knowledge graphs that represent structural relations between entities have become an increasingly popular research direction toward cognition and human-level intelligence. In this survey, we provide a comprehensive review of the knowledge graph covering overall research topics about: 1) knowledge graph representation learning; 2) knowledge acquisition and completion; 3) temporal knowledge graph; and 4) knowledge-aware applications and summarize recent breakthroughs and perspective directions to facilitate future research. We propose ...[truncated]",
+      "url": "http://arxiv.org/abs/2002.00388",
+      "source": "openalex",
+      "citation_count": 2768,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Automation and New Tasks: How Technology Displaces and Reinstates Labor",
+      "authors": [
+        "Daron Acemoğlu",
+        "Pascual Restrepo"
+      ],
+      "year": 2019,
+      "abstract": "We present a framework for understanding the effects of automation and other types of technological changes on labor demand, and use it to interpret changes in US employment over the recent past. At the center of our framework is the allocation of tasks to capital and labor—the task content of production. Automation, which enables capital to replace labor in tasks it was previously engaged in, shifts the task content of production against labor because of a displacement effect. As a result, automation always reduces the labor share in value added and may reduce labor demand even as it raises p ...[truncated]",
+      "url": "https://doi.org/10.1257/jep.33.2.3",
+      "source": "openalex",
+      "citation_count": 2308,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Embedding Entities and Relations for Learning and Inference in Knowledge Bases",
+      "authors": [
+        "Wu, Hong",
+        "Wang, Zhe",
+        "Wang, Kewen",
+        "Omran, Pouya Ghiasnezhad",
+        "Li, Jiangmeng"
+      ],
+      "year": 2014,
+      "abstract": "Compared to black-box neural networks, logic rules express explicit knowledge, can provide human-understandable explanations for reasoning processes, and have found their wide application in knowledge graphs and other downstream tasks. As extracting rules manually from large knowledge graphs is labour-intensive and often infeasible, automated rule learning has recently attracted significant interest, and a number of approaches to rule learning for knowledge graphs have been proposed. This survey aims to provide a review of approaches and a classification of state-of-the-art systems for learnin ...[truncated]",
+      "url": "http://arxiv.org/abs/1412.6575",
+      "source": "openalex",
+      "citation_count": 2053,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey of Large Language Models",
+      "authors": [
+        "Wayne Xin Zhao",
+        "Kun Zhou",
+        "Junyi Li",
+        "Tianyi Tang",
+        "Zican Dong"
+      ],
+      "year": 2026,
+      "abstract": "Abstract The rapid evolution of large language models (LLMs) has driven a transformative shift in artificial intelligence (AI), reshaping both research paradigms and practical applications. Distinguished from their predecessors by unprecedented scale and advanced capabilities, LLMs necessitate new frameworks for understanding their development, behavior, and societal impact. This survey systematically reviews recent advancements in LLM techniques across four key dimensions: (1) pre-training methodologies, which establish core model capabilities through large-scale self-supervised training, arc ...[truncated]",
+      "url": "https://doi.org/10.1007/s11704-026-60308-3",
+      "source": "openalex",
+      "citation_count": 1428,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "authors": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of exte ...[truncated]",
+      "url": "http://arxiv.org/abs/2312.10997",
+      "source": "openalex",
+      "citation_count": 694,
+      "pdf_url": null,
+      "full_text_excerpt": "[Abstract] Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs’ intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development 111Resources are available at https://github.com/Tongji-KGLLM/RAG-Survey .\n\n[I Introduction] Large language models (LLMs) have achieved remarkable success, though they still face significant limitations, especially in domain-specific or knowledge-intensive tasks [1], notably producing “hallucinations” [2] when handling queries beyond their training data or requiring current information. To overcome challenges, Retrieval-Augmented Generation (RAG) enhances LLMs by retrieving relevant document chunks from external knowledge base through semantic similarity calculation. By referencing external knowledge, RAG effectively reduces the problem of generating factually incorrect content. Its integration into LLMs has resulted in widespread adoption, establishing RAG as a key technology in advancing chatbots and enhancing the suitability of LLMs for real-world applications.\n\nRAG technology has rapidly developed in recent years, and the technology tree summarizing related research is shown in Figure 1. The development trajectory of RAG in the era of large models exhibits several distinct stage characteristics. Initially, RAG’s inception coincided with the rise of the Transformer architecture, focusing on enhancing language models by incorporating additional knowledge through Pre-Training Models (PTM). This early stage was characterized by foundational work aimed at refining pre-training techniques[3, 4, 5].The subsequent arrival of ChatGPT [6] marked a pivotal moment, with LLM demonstrating powerful in context learning (ICL) capabilities. RAG research shifted towards providing"
+    },
+    {
+      "title": "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering",
+      "authors": [
+        "Todor Mihaylov",
+        "Peter E. Clark",
+        "Tushar Khot",
+        "Ashish Sabharwal"
+      ],
+      "year": 2018,
+      "abstract": "We present a new kind of question answering dataset, OpenBookQA, modeled after open book exams for assessing human understanding of a subject. The open book that comes with our questions is a set of 1326 elementary level science facts. Roughly 6000 questions probe an understanding of these facts and their application to novel situations. This requires combining an open book fact (e.g., metals conduct electricity) with broad common knowledge (e.g., a suit of armor is made of metal) obtained from other sources. While existing QA datasets over documents or knowledge bases, being generally self-co ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/d18-1260",
+      "source": "openalex",
+      "citation_count": 659,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "authors": [
+        "Wenqi Fan",
+        "Yujuan Ding",
+        "Liangbo Ning",
+        "Shijie Wang",
+        "Hengyun Li"
+      ],
+      "year": 2024,
+      "abstract": "As one of the most advanced techniques in AI, Retrieval-Augmented Generation (RAG) can offer reliable and up-to-date external knowledge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capacity of retrieval in providing additional knowledge enables RAG to assist existing generative AI in producing high-quality outputs. Recently, Large Language Models (LLMs) have demonstrated revolutionary abilities in language understanding and generation, while still facing inherent limitations such as hallucinations and out-of-date internal ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671470",
+      "source": "openalex",
+      "citation_count": 640,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Open Domain Question Answering Using Early Fusion of Knowledge Bases and Text",
+      "authors": [
+        "Haitian Sun",
+        "Bhuwan Dhingra",
+        "Manzil Zaheer",
+        "Kathryn Mazaitis",
+        "Ruslan Salakhutdinov"
+      ],
+      "year": 2018,
+      "abstract": "Open Domain Question Answering (QA) is evolving from complex pipelined systems to end-to-end deep neural networks. Specialized neural models have been developed for extracting answers from either text alone or Knowledge Bases (KBs) alone. In this paper we look at a more practical setting, namely QA over the combination of a KB and entitylinked text, which is appropriate when an incomplete KB is available with a large text corpus. Building on recent advances in graph representation learning we propose a novel model, GRAFT-Net, for extracting answers from a question-specific subgraph containing ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/d18-1455",
+      "source": "openalex",
+      "citation_count": 460,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Active Retrieval Augmented Generation",
+      "authors": [
+        "Zhengbao Jiang",
+        "Frank F. Xu",
+        "Luyu Gao",
+        "Zhiqing Sun",
+        "Qian Liu"
+      ],
+      "year": 2023,
+      "abstract": "Zhengbao Jiang, Frank Xu, Luyu Gao, Zhiqing Sun, Qian Liu, Jane Dwivedi-Yu, Yiming Yang, Jamie Callan, Graham Neubig. Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. 2023.",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.495",
+      "source": "openalex",
+      "citation_count": 394,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+      "authors": [
+        "Jiawei Chen",
+        "Hongyu Lin",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "year": 2024,
+      "abstract": "Retrieval-Augmented Generation (RAG) is a promising approach for mitigating the hallucination of large language models (LLMs). However, existing research lacks rigorous evaluation of the impact of retrieval-augmented generation on different large language models, which make it challenging to identify the potential bottlenecks in the capabilities of RAG for different LLMs. In this paper, we systematically investigate the impact of Retrieval-Augmented Generation on large language models. We analyze the performance of different large language models in 4 fundamental abilities required for RAG, in ...[truncated]",
+      "url": "https://doi.org/10.1609/aaai.v38i16.29728",
+      "source": "openalex",
+      "citation_count": 340,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "PullNet: Open Domain Question Answering with Iterative Retrieval on Knowledge Bases and Text",
+      "authors": [
+        "Haitian Sun",
+        "Tania Bedrax-Weiss",
+        "William W. Cohen"
+      ],
+      "year": 2019,
+      "abstract": "Haitian Sun, Tania Bedrax-Weiss, William Cohen. Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019.",
+      "url": "https://doi.org/10.18653/v1/d19-1242",
+      "source": "openalex",
+      "citation_count": 326,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
+      "authors": [
+        "Sewon Min",
+        "Kalpesh Krishna",
+        "Xinxi Lyu",
+        "Mike Lewis",
+        "Wen-tau Yih"
+      ],
+      "year": 2023,
+      "abstract": "Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Koh, Mohit Iyyer, Luke Zettlemoyer, Hannaneh Hajishirzi. Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. 2023.",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.741",
+      "source": "openalex",
+      "citation_count": 297,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question Answering",
+      "authors": [
+        "Yanlin Feng",
+        "Xinyue Chen",
+        "Bill Yuchen Lin",
+        "Peifeng Wang",
+        "Jun Yan"
+      ],
+      "year": 2020,
+      "abstract": "Existing work that augment question answering (QA) models with external knowledge (e.g., knowledge graphs) either struggle to model multi-hop relations efficiently, or lack transparency into the model's prediction rationale. In this paper, we propose a novel knowledge-aware approach that equips pretrained language models (PTLMs) with a multi-hop relational reasoning module, named multi-hop graph relation network (MHGRN). It performs multi-hop, multi-relational reasoning over subgraphs extracted from external knowledge graphs. The proposed reasoning module unifies path-based reasoning methods a ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2020.emnlp-main.99",
+      "source": "openalex",
+      "citation_count": 212,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Query Graph Generation for Answering Multi-hop Complex Questions from Knowledge Bases",
+      "authors": [
+        "Yunshi Lan",
+        "Jing Jiang"
+      ],
+      "year": 2020,
+      "abstract": "Previous work on answering complex questions from knowledge bases usually separately addresses two types of complexity: questions with constraints and questions with multiple hops of relations. In this paper, we handle both types of complexity at the same time. Motivated by the observation that early incorporation of constraints into query graphs can more effectively prune the search space, we propose a modified staged query graph generation method with more flexible ways to generate query graphs. Our experiments clearly show that our method achieves the state of the art on three benchmark KBQ ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2020.acl-main.91",
+      "source": "openalex",
+      "citation_count": 202,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "HybridQA: A Dataset of Multi-Hop Question Answering over Tabular and Textual Data",
+      "authors": [
+        "Wenhu Chen",
+        "Hanwen Zha",
+        "Zhiyu Chen",
+        "Wenhan Xiong",
+        "Hong Wang"
+      ],
+      "year": 2020,
+      "abstract": "Existing question answering datasets focus on dealing with homogeneous information, based either only on text or KB/Table information alone. However, as human knowledge is distributed over heterogeneous forms, using homogeneous information alone might lead to severe coverage problems. To fill in the gap, we present HybridQA 1 , a new large-scale question-answering dataset that requires reasoning on heterogeneous information. Each question is aligned with a Wikipedia table and multiple free-form corpora linked with the entities in the table. The questions are designed to aggregate both tabular ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2020.findings-emnlp.91",
+      "source": "openalex",
+      "citation_count": 195,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity",
+      "authors": [
+        "Soyeong Jeong",
+        "Jinheon Baek",
+        "Sukmin Cho",
+        "Sung Ju Hwang",
+        "Jong Moon Park"
+      ],
+      "year": 2024,
+      "abstract": "Soyeong Jeong, Jinheon Baek, Sukmin Cho, Sung Ju Hwang, Jong Park. Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers). 2024.",
+      "url": "https://doi.org/10.18653/v1/2024.naacl-long.389",
+      "source": "openalex",
+      "citation_count": 182,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Generation-Augmented Retrieval for Open-Domain Question Answering",
+      "authors": [
+        "Yuning Mao",
+        "Pengcheng He",
+        "Xiaodong Liu",
+        "Yelong Shen",
+        "Jianfeng Gao"
+      ],
+      "year": 2021,
+      "abstract": "Yuning Mao, Pengcheng He, Xiaodong Liu, Yelong Shen, Jianfeng Gao, Jiawei Han, Weizhu Chen. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). 2021.",
+      "url": "https://doi.org/10.18653/v1/2021.acl-long.316",
+      "source": "openalex",
+      "citation_count": 144,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "CBR-RAG: Case-Based Reasoning for Retrieval Augmented Generation in LLMs for Legal Question Answering",
+      "authors": [
+        "Nirmalie Wiratunga",
+        "Ramitha Abeyratne",
+        "Lasal Jayawardena",
+        "Kyle Martin",
+        "Stewart Massie"
+      ],
+      "year": 2024,
+      "abstract": "",
+      "url": "https://rgu-repository.worktribe.com/output/2383595",
+      "source": "openalex",
+      "citation_count": 100,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Answering while Summarizing: Multi-task Learning for Multi-hop QA with Evidence Extraction",
+      "authors": [
+        "Kosuke Nishida",
+        "Kyosuke Nishida",
+        "Masaaki Nagata",
+        "Atsushi Otsuka",
+        "Itsumi Saito"
+      ],
+      "year": 2019,
+      "abstract": "Kosuke Nishida, Kyosuke Nishida, Masaaki Nagata, Atsushi Otsuka, Itsumi Saito, Hisako Asano, Junji Tomita. Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics. 2019.",
+      "url": "https://doi.org/10.18653/v1/p19-1225",
+      "source": "openalex",
+      "citation_count": 97,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Multi-Hop Paragraph Retrieval for Open-Domain Question Answering",
+      "authors": [
+        "Yair Feldman",
+        "Ran El‐Yaniv"
+      ],
+      "year": 2019,
+      "abstract": "This paper is concerned with the task of multi-hop open-domain Question Answering (QA). This task is particularly challenging since it requires the simultaneous performance of textual reasoning and efficient searching. We present a method for retrieving multiple supporting paragraphs, nested amidst a large knowledge base, which contain the necessary evidence to answer a given question. Our method iteratively retrieves supporting paragraphs by forming a joint vector representation of both a question and a paragraph. The retrieval is performed by considering contextualized sentence-level represe ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/p19-1222",
+      "source": "openalex",
+      "citation_count": 94,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges",
+      "authors": [
+        "Andrew Brown",
+        "Muhammad Roman",
+        "Barry Devereux"
+      ],
+      "year": 2025,
+      "abstract": "Background: Retrieval-augmented generation (RAG) aims to reduce hallucinations and outdated knowledge by grounding LLM outputs in retrieved evidence, but empirical results are scattered across tasks, systems, and metrics, limiting cumulative insight. Objective: We aimed to synthesise empirical evidence on RAG effectiveness versus parametric-only baselines, map datasets/architectures/evaluation practices, and surface limitations and research gaps. Methods: This systematic review was conducted and reported in accordance with PRISMA 2020. We searched the ACM Digital Library, IEEE Xplore, Scopus, ...[truncated]",
+      "url": "https://doi.org/10.3390/bdcc9120320",
+      "source": "openalex",
+      "citation_count": 28,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "HalluLens: LLM Hallucination Benchmark",
+      "authors": [
+        "Yejin Bang",
+        "Ziwei Ji",
+        "Alan Schelten",
+        "Anthony S. Hartshorn",
+        "Tara Fowler"
+      ],
+      "year": 2025,
+      "abstract": "Yejin Bang, Ziwei Ji, Alan Schelten, Anthony Hartshorn, Tara Fowler, Cheng Zhang, Nicola Cancedda, Pascale Fung. Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2025.",
+      "url": "https://doi.org/10.18653/v1/2025.acl-long.1176",
+      "source": "openalex",
+      "citation_count": 27,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "MedHallu: A Comprehensive Benchmark for Detecting Medical Hallucinations in Large Language Models",
+      "authors": [
+        "Shrey Pandit",
+        "Jiawei Xu",
+        "Junyuan Hong",
+        "Zhangyang Wang",
+        "Tianlong Chen"
+      ],
+      "year": 2025,
+      "abstract": "Advancements in Large Language Models (LLMs) and their increasing use in medical question-answering necessitate rigorous evaluation of their reliability.A critical challenge lies in hallucination, where models generate plausible yet factually incorrect outputs.In the medical domain, this poses serious risks to patient safety and clinical decision-making.To address this, we introduce MedHallu, one of the first benchmark specifically designed for medical hallucination detection.Med-Hallu comprises 10,000 high-quality questionanswer pairs derived from PubMedQA, with hallucinated answers systemati ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2025.emnlp-main.143",
+      "source": "openalex",
+      "citation_count": 17,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Evaluating Retrieval-Augmented Generation Variants for Clinical Decision Support: Hallucination Mitigation and Secure On-Premises Deployment",
+      "authors": [
+        "Krzysztof Wołk"
+      ],
+      "year": 2025,
+      "abstract": "For clinical decision support to work, medical knowledge needs to be easy to find quickly and accurately. Retrieval-Augmented Generation (RAG) systems use big language models and document retrieval to help with diagnostic reasoning, but they could cause hallucinations and have strict privacy rules in healthcare. We tested twelve different types of RAG, such as dense, sparse, hybrid, graph-based, multimodal, self-reflective, adaptive, and security-focused pipelines, on 250 de-identified patient vignettes. We used Precision@5, Mean Reciprocal Rank, nDCG@10, hallucination rate, and latency to see ...[truncated]",
+      "url": "https://doi.org/10.3390/electronics14214227",
+      "source": "openalex",
+      "citation_count": 9,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Synchronous Faithfulness Monitoring for Trustworthy Retrieval-Augmented Generation",
+      "authors": [
+        "Di Wu",
+        "Jia-Chen Gu",
+        "Fan Yin",
+        "Nanyun Peng",
+        "Kai-Wei Chang"
+      ],
+      "year": 2024,
+      "abstract": "",
+      "url": "https://doi.org/10.18653/v1/2024.emnlp-main.527",
+      "source": "openalex",
+      "citation_count": 8,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Systematic Evaluation of Large Language Models and Retrieval-Augmented Generation for the Task of Kazakh Question Answering",
+      "authors": [
+        "Aigerim Mansurova",
+        "Arailym Tleubayeva",
+        "Aliya Nugumanova",
+        "Adai Shomanov",
+        "Şadi Evren Şeker"
+      ],
+      "year": 2025,
+      "abstract": "This paper presents a systematic evaluation of large language models (LLMs) and retrieval-augmented generation (RAG) approaches for question answering (QA) in the low-resource Kazakh language. We assess the performance of existing proprietary (GPT-4o, Gemini 2.5-flash) and open-source Kazakh-oriented models (KazLLM-8B, Sherkala-8B, Irbis-7B) across closed-book and RAG settings. Within a three-stage evaluation framework we benchmark retriever quality, examine LLM abilities such as knowledge-gap detection, external truth integration and context grounding, and measures gains from realistic end-to ...[truncated]",
+      "url": "https://doi.org/10.3390/info16110943",
+      "source": "openalex",
+      "citation_count": 5,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "From RAG to Agentic RAG for Faithful Islamic Question Answering",
+      "authors": [
+        "Gagan Bhatia",
+        "Hamdy Mubarak",
+        "Mustafa Jarrar",
+        "George Mikros",
+        "Fadi Zaraket"
+      ],
+      "year": 2026,
+      "abstract": "Large Language Models (LLMs) are increasingly used for Islamic question answering, where ungrounded responses may carry serious religious consequences. Yet standard MCQ/MRC-style evaluations (MCQ: Multiple choice questions, MRC: Machine Reading Comprehension) do not capture key real-world failure modes, notably free-form hallucinations and the ability to abstain when evidence is insufficient. To address this gap, we introduce IslamicFaithQA, a 3,810-item bilingual (Arabic/English) generative benchmark with atomic single-gold answers, which enables direct measurement of hallucination and absten ...[truncated]",
+      "url": "http://arxiv.org/abs/2601.07528v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.07528v2",
+      "full_text_excerpt": "[Body] r than\nisolating the retrieval engine in a separate bench-\nmark. To better contextualize the retrieval compo-\nnent used in our RAG and Agentic RAG settings,\nwe conducted a preliminary retrieval-side compari-\nson between our dense multilingual retriever and a\nsparse lexical baseline.\nSpecifically, we compare mE5-base, the dense\nencoder used in our retrieval-augmented experi-\nments, against BM25 on the IslamicEval 2025\nShared Task 2 dataset (Mubarak et al., 2025).\nWe report Mean Average Precision at rank 5\n(MAP_Q@5). The results show that mE5-base\noutperforms BM25 by a clear margin, achieving\n0.138 compared with 0.094.\nThis result supports our choice of dense retrieval\nfor two reasons. First, the task is bilingual (Ara-\nbic/English), and dense multilingual embeddings\nbetter align semantically equivalent queries across\nlanguages. Second, Quranic question answering of-\nten depends on theological and paraphrastic phras-\ning that is not always well matched by pure lex-\nical overlap. At the same time, the absolute re-\ntrieval scores remain modest, suggesting that stan-\ndard RAG based retrieval is still insufficient for\nmany questions. This observation is consistent with\nour main findings. Standard RAG improves cor-\nrectness, but Agentic RAG yields further gains by\nturning retrieval into an iterative evidence-seeking\nprocess rather than a one-pass preprocessing step.\nWe note that this comparison serves only as a\npreliminary sanity check on retrieval quality, not a\nfull benchmark. A b\n\n[Body] ng: We develop and evaluate an agen-\ntic RAG setup that turns retrieval into an explicit\ndecision process through structured tool calls (se-\nmantic search, verse reading, metadata lookup).\nAcross all backbones, ISLAMICFAITHQA ex-\nposes a substantial reliability gap between general\ninstruction-following fluency and text-grounded\nIslamic correctness. Most off-the-shelf multilin-\ngual LLMs remain below 30% accuracy under\nstrict LLM-as-Judge grading (Table 3). Retrieval\naugmentation is the most consistently effective in-\ntervention, improving performance across mod-\nels by anchoring generations to canonical evi-\ndence (Table 4).\nMost notably, agentic RAG\nyields the largest gains beyond standard RAG, en-\nabling strong bilingual robustness by forcing it-\nerative evidence seeking and verse inspection be-\nfore answering. For Qwen3-4B-2507, accuracy\nimproves from 21.85 (base) to 38.85 (+RAG) and\nto 48.90 (+Agentic RAG), while also narrowing\nthe Arabic–English gap (Table 4). Finally, com-\nbining a strong in-domain backbone with agentic\ngrounding achieves the best overall performance,\nwith Fanar-2-27B + Agentic RAG reaching 57.30\naverage accuracy (Table 4).\n2\nRelated Work\n2.1\nBenchmarking in Islamic Domain\nGeneral-purpose evaluations of moral and trust-\nworthiness show that LLM behavior is highly\nsensitive to framing and may appear competent\nwhile remaining unreliable, motivating the need\nfor domain-grounded assessment beyond generic\nscenarios (Al-Khalifa et al., 2025; Abhishek et al.,"
+    },
+    {
+      "title": "KIRA: Knowledge-Intensive Image Retrieval and Reasoning Architecture for Specialized Visual Domains",
+      "authors": [
+        "Parthaw Goswami",
+        "Jaynto Goswami Deep"
+      ],
+      "year": 2026,
+      "abstract": "Retrieval augmented generation (RAG) has transformed text based question answering, yet its extension to visual domains remains hindered by fundamental challenges: bridging the modality gap between image queries and text heavy knowledge bases, constructing semantically meaningful visual knowledge bases, performing multihop reasoning over retrieved images, and verifying that generated answers are faithfully grounded in visual evidence. We present KIRA (Knowledge Intensive Image Retrieval and Reasoning Architecture), a unified five stage framework that addresses ten core problems in visual RAG f ...[truncated]",
+      "url": "http://arxiv.org/abs/2604.16915v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2604.16915v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records",
+      "authors": [
+        "Saeed Shurrab",
+        "Mariam Al-Omari",
+        "Dana El Samad",
+        "Farah E. Shamout"
+      ],
+      "year": 2026,
+      "abstract": "Electronic Health Records (EHR) contain rich longitudinal patient information and are widely used in predictive modeling applications. However, effectively leveraging historical data remains challenging due to long trajectories, heterogeneous events, temporal irregularity, and the varying relevance of past clinical context. Existing approaches often rely on fixed windows or uniform aggregation, which can obscure clinically important signals. In this work, we introduce EHR-RAGp, a retrieval-augmented foundation model that dynamically integrates the most relevant patient history across diverse c ...[truncated]",
+      "url": "http://arxiv.org/abs/2605.12335v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.12335v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector",
+      "authors": [
+        "Diego Ezequiel Cervera"
+      ],
+      "year": 2026,
+      "abstract": "The departure of subject-matter experts from industrial organizations results in the irreversible loss of tacit knowledge that is rarely captured through conventional documentation practices. This paper proposes Expert Mind, an experimental system that leverages Retrieval-Augmented Generation (RAG), large language models (LLMs), and multimodal capture techniques to preserve, structure, and make queryable the deep expertise of organizational knowledge holders. Drawing on the specific context of the energy sector, where decades of operational experience risk being lost to an aging workforce, we ...[truncated]",
+      "url": "http://arxiv.org/abs/2603.14541v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.14541v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Citation-Enforced RAG for Fiscal Document Intelligence: Cited, Explainable Knowledge Retrieval in Tax Compliance",
+      "authors": [
+        "Akhil Chandra Shanivendra"
+      ],
+      "year": 2026,
+      "abstract": "Tax authorities and public-sector financial agencies rely on large volumes of unstructured and semi-structured fiscal documents - including tax forms, instructions, publications, and jurisdiction-specific guidance - to support compliance analysis and audit workflows. While recent advances in generative AI and retrieval-augmented generation (RAG) have shown promise for document-centric question answering, existing approaches often lack the transparency, citation fidelity, and conservative behaviour required in high-stakes regulatory domains. This paper presents a multimodal, citation-enforced R ...[truncated]",
+      "url": "http://arxiv.org/abs/2603.14170v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.14170v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Facet-Level Tracing of Evidence Uncertainty and Hallucination in RAG",
+      "authors": [
+        "Passant Elchafei",
+        "Monorama Swain",
+        "Shahed Masoudian",
+        "Markus Schedl"
+      ],
+      "year": 2026,
+      "abstract": "Retrieval-Augmented Generation (RAG) aims to reduce hallucination by grounding answers in retrieved evidence, yet hallucinated answers remain common even when relevant documents are available. Existing evaluations focus on answer-level or passage-level accuracy, offering limited insight into how evidence is used during generation. In this work, we introduce a facet-level diagnostics framework for QA that decomposes each input question into atomic reasoning facets. For each facet, we assess evidence sufficiency and grounding using a structured Facet x Chunk matrix that combines retrieval releva ...[truncated]",
+      "url": "http://arxiv.org/abs/2604.09174v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2604.09174v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Reasoning in Trees: Improving Retrieval-Augmented Generation for Multi-Hop Question Answering",
+      "authors": [
+        "Yuling Shi",
+        "Maolin Sun",
+        "Zijun Liu",
+        "Mo Yang",
+        "Yixiong Fang"
+      ],
+      "year": 2026,
+      "abstract": "Retrieval-Augmented Generation (RAG) has demonstrated significant effectiveness in enhancing large language models (LLMs) for complex multi-hop question answering (QA). For multi-hop QA tasks, current iterative approaches predominantly rely on LLMs to self-guide and plan multi-step exploration paths during retrieval, leading to substantial challenges in maintaining reasoning coherence across steps from inaccurate query decomposition and error propagation. To address these issues, we introduce Reasoning Tree Guided RAG (RT-RAG), a novel hierarchical framework for complex multi-hop QA. RT-RAG sy ...[truncated]",
+      "url": "http://arxiv.org/abs/2601.11255v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.11255v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AgenticRAGTracer: A Hop-Aware Benchmark for Diagnosing Multi-Step Retrieval Reasoning in Agentic RAG",
+      "authors": [
+        "Qijie You",
+        "Wenkai Yu",
+        "Wentao Zhang"
+      ],
+      "year": 2026,
+      "abstract": "With the rapid advancement of agent-based methods in recent years, Agentic RAG has undoubtedly become an important research direction. Multi-hop reasoning, which requires models to engage in deliberate thinking and multi-step interaction, serves as a critical testbed for assessing such capabilities. However, existing benchmarks typically provide only final questions and answers, while lacking the intermediate hop-level questions that gradually connect atomic questions to the final multi-hop query. This limitation prevents researchers from analyzing at which step an agent fails and restricts mo ...[truncated]",
+      "url": "http://arxiv.org/abs/2602.19127v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2602.19127v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "MEGRAG: Multi-Granular Evidence Graphs for Answer-Aware Multi-Hop RAG",
+      "authors": [
+        "Weidong Bao",
+        "Yingying Sun",
+        "Jun Yang",
+        "Yilin Wang",
+        "Zili Wei"
+      ],
+      "year": 2026,
+      "abstract": "Multi-hop question answering is a fundamental challenge in retrieval-augmented generation (RAG), because deriving an answer requires integrating dispersed evidence. Iterative RAG (iRAG) is widely used for this challenge, but existing methods have two limitations. First, most methods still support each reasoning step with single-granularity evidence, making it difficult to balance information density and contextual noise. Second, existing methods often answer the original question only after aggregating evidence retrieved across intermediate steps, so redundant evidence and intermediate retriev ...[truncated]",
+      "url": "http://arxiv.org/abs/2608.02195v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2608.02195v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+      "authors": [
+        "Jingyuan Qi",
+        "Zhiyang Xu",
+        "Qifan Wang",
+        "Lifu Huang"
+      ],
+      "year": 2025,
+      "abstract": "We introduce Autoregressive Retrieval Augmentation (AR-RAG), a novel paradigm that enhances image generation by autoregressively incorporating knearest neighbor retrievals at the patch level. Unlike prior methods that perform a single, static retrieval before generation and condition the entire generation on fixed reference images, AR-RAG performs context-aware retrievals at each generation step, using prior-generated patches as queries to retrieve and incorporate the most relevant patch-level visual references, enabling the model to respond to evolving generation needs while avoiding limitati ...[truncated]",
+      "url": "http://arxiv.org/abs/2506.06962v3",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.06962v3",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "FARSIQA: Faithful and Advanced RAG System for Islamic Question Answering",
+      "authors": [
+        "Mohammad Aghajani Asl",
+        "Behrooz Minaei Bidgoli"
+      ],
+      "year": 2025,
+      "abstract": "The advent of Large Language Models (LLMs) has revolutionized Natural Language Processing, yet their application in high-stakes, specialized domains like religious question answering is hindered by challenges like hallucination and unfaithfulness to authoritative sources. This issue is particularly critical for the Persian-speaking Muslim community, where accuracy and trustworthiness are paramount. Existing Retrieval-Augmented Generation (RAG) systems, relying on simplistic single-pass pipelines, fall short on complex, multi-hop queries requiring multi-step reasoning and evidence aggregation. ...[truncated]",
+      "url": "http://arxiv.org/abs/2510.25621v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2510.25621v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Intelligent Interaction Strategies for Context-Aware Cognitive Augmentation",
+      "authors": [
+        " Xiangrong",
+        " Zhu",
+        "Yuan Xu",
+        "Tianjian Liu",
+        "Jingwei Sun"
+      ],
+      "year": 2025,
+      "abstract": "Human cognition is constrained by processing limitations, leading to cognitive overload and inefficiencies in knowledge synthesis and decision-making. Large Language Models (LLMs) present an opportunity for cognitive augmentation, but their current reactive nature limits their real-world applicability. This position paper explores the potential of context-aware cognitive augmentation, where LLMs dynamically adapt to users' cognitive states and task environments to provide appropriate support. Through a think-aloud study in an exhibition setting, we examine how individuals interact with multi-m ...[truncated]",
+      "url": "http://arxiv.org/abs/2504.13684v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2504.13684v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+      "authors": [
+        "Nurshat Fateh Ali",
+        "Md. Mahdi Mohtasim",
+        "Shakil Mosharrof",
+        "T. Gopi Krishna"
+      ],
+      "year": 2024,
+      "abstract": "This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). The ever-increasing number of research articles provides a huge challenge for manual literature review. It has resulted in an increased demand for automation. Developing a system capable of automatically generating the literature reviews from only the PDF files as input is the primary objective of this research work. The effectiveness of several Natural Lang ...[truncated]",
+      "url": "http://arxiv.org/abs/2411.18583v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2411.18583v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "EVOR: Evolving Retrieval for Code Generation",
+      "authors": [
+        "Hongjin Su",
+        "Shuyang Jiang",
+        "Yuhang Lai",
+        "Haoyuan Wu",
+        "Boao Shi"
+      ],
+      "year": 2024,
+      "abstract": "Recently the retrieval-augmented generation (RAG) has been successfully applied in code generation. However, existing pipelines for retrieval-augmented code generation (RACG) employ static knowledge bases with a single source, limiting the adaptation capabilities of Large Language Models (LLMs) to domains they have insufficient knowledge of. In this work, we develop a novel pipeline, EVOR, that employs the synchronous evolution of both queries and diverse knowledge bases. On two realistic settings where the external knowledge is required to solve code generation tasks, we compile four new data ...[truncated]",
+      "url": "http://arxiv.org/abs/2402.12317v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2402.12317v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+      "authors": [
+        "Shahul Es",
+        "Jithin James",
+        "Luis Espinosa-Anke",
+        "Steven Schockaert"
+      ],
+      "year": 2023,
+      "abstract": "We introduce Ragas (Retrieval Augmented Generation Assessment), a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines. RAG systems are composed of a retrieval and an LLM based generation module, and provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ability of the retrieval system to identify relevant and focuse ...[truncated]",
+      "url": "http://arxiv.org/abs/2309.15217v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2309.15217v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Multi-Task Retrieval-Augmented Text Generation with Relevance Sampling",
+      "authors": [
+        "Sebastian Hofstätter",
+        "Jiecao Chen",
+        "Karthik Raman",
+        "Hamed Zamani"
+      ],
+      "year": 2022,
+      "abstract": "This paper studies multi-task training of retrieval-augmented generation models for knowledge-intensive tasks. We propose to clean the training set by utilizing a distinct property of knowledge-intensive generation: The connection of query-answer pairs to items in the knowledge base. We filter training examples via a threshold of confidence on the relevance labels, whether a pair is answerable by the knowledge base or not. We train a single Fusion-in-Decoder (FiD) generator on seven combined tasks of the KILT benchmark. The experimental results suggest that our simple yet effective approach su ...[truncated]",
+      "url": "http://arxiv.org/abs/2207.03030v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2207.03030v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering",
+      "authors": [
+        "Shamane Siriwardhana",
+        "Rivindu Weerasekera",
+        "Elliott Wen",
+        "Tharindu Kaluarachchi",
+        "Rajib Rana"
+      ],
+      "year": 2022,
+      "abstract": "Retrieval Augment Generation (RAG) is a recent advancement in Open-Domain Question Answering (ODQA). RAG has only been trained and explored with a Wikipedia-based external knowledge base and is not optimized for use in other specialized domains such as healthcare and news. In this paper, we evaluate the impact of joint training of the retriever and generator components of RAG for the task of domain adaptation in ODQA. We propose \\textit{RAG-end2end}, an extension to RAG, that can adapt to a domain-specific knowledge base by updating all components of the external knowledge base during training ...[truncated]",
+      "url": "http://arxiv.org/abs/2210.02627v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2210.02627v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": [
+        "Patrick Lewis",
+        "Ethan Perez",
+        "Aleksandra Piktus",
+        "Fabio Petroni",
+        "Vladimir Karpukhin"
+      ],
+      "year": 2020,
+      "abstract": "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, b ...[truncated]",
+      "url": "http://arxiv.org/abs/2005.11401v4",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2005.11401v4",
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "There is a lack of rigorous, systematic evaluation of how retrieval-augmented generation impacts different large language models, making it difficult to identify capability bottlenecks.",
+      "supporting_papers": [
+        "From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)"
+      ],
+      "evidence_quotes": [
+        "Across all backbones, ISLAMICFAITHQA exposes a substantial reliability gap between general instruction-following fluency and text-grounded Islamic correctness. Most off-the-shelf multilingual LLMs remain below 30% accuracy under strict LLM-as-Judge grading (Table 3).",
+        "Retrieval augmentation is the most consistently effective intervention, improving performance across models by anchoring generations to canonical evidence (Table 4)."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Standard MCQ/MRC-style evaluations fail to capture critical real-world failure modes of RAG systems, such as free-form hallucinations and the ability to abstain when evidence is insufficient.",
+      "supporting_papers": [
+        "From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)"
+      ],
+      "evidence_quotes": [
+        "General-purpose evaluations of moral and trustworthiness show that LLM behavior is highly sensitive to framing and may appear competent while remaining unreliable, motivating the need for domain-grounded assessment beyond generic scenarios (Al-Khalifa et al., 2025; Abhishek et al.,"
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Existing RAG systems relying on simplistic single-pass pipelines are insufficient for complex, multi-hop queries that require multi-step reasoning and evidence aggregation.",
+      "supporting_papers": [
+        "From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)"
+      ],
+      "evidence_quotes": [
+        "Standard RAG improves correctness, but Agentic RAG yields further gains by turning retrieval into an iterative evidence-seeking process rather than a one-pass preprocessing step.",
+        "Most notably, agentic RAG yields the largest gains beyond standard RAG, enabling strong bilingual robustness by forcing iterative evidence seeking and verse inspection before answering."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Existing benchmarks for multi-hop reasoning in RAG lack intermediate hop-level diagnostic information, preventing fine-grained analysis of where and why agentic retrieval fails.",
+      "supporting_papers": [
+        "From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)"
+      ],
+      "evidence_quotes": [
+        "At the same time, the absolute retrieval scores remain modest, suggesting that standard RAG based retrieval is still insufficient for many questions."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "RAG systems often lack the transparency, citation fidelity, and conservative behaviour required for high-stakes regulatory domains.",
+      "supporting_papers": [
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020)"
+      ],
+      "evidence_quotes": [
+        "Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "The interaction between parametric and non-parametric memory in RAG systems is not well understood, and joint pre-training strategies for the retriever and generator remain unexplored.",
+      "supporting_papers": [
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020)"
+      ],
+      "evidence_quotes": [
+        "In future work, it may be fruitful to investigate if the two components can be jointly pre-trained from scratch, either with a denoising objective similar to BART or some another objective. Our work opens up new research directions on how parametric and non-parametric memories interact and how to most effectively combine them, showing promise in being applied to a wide variety of NLP tasks."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Extending RAG to visual domains is hindered by fundamental challenges including bridging the modality gap between image queries and text-heavy knowledge bases, constructing semantically meaningful visual knowledge bases, and performing multi-hop reasoning over retrieved images.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Whether RAG effectively reduces hallucinations in generated text.",
+      "position_a": "RAG effectively reduces hallucinations.",
+      "position_a_papers": [
+        "Retrieval-Augmented Generation for Large Language Models: A Survey (2023)"
+      ],
+      "position_a_quote": "By referencing external knowledge, RAG effectively reduces the problem of generating factually incorrect content.",
+      "position_b": "Hallucinated answers remain common in RAG even when relevant documents are available.",
+      "position_b_papers": [
+        "Facet-Level Tracing of Evidence Uncertainty and Hallucination in RAG (2026)"
+      ],
+      "position_b_quote": "Retrieval-Augmented Generation (RAG) aims to reduce hallucination by grounding answers in retrieved evidence, yet hallucinated answers remain common even when relevant documents are available."
+    },
+    {
+      "topic": "Whether iterative retrieval in RAG is beneficial or introduces harmful error propagation for multi-hop QA.",
+      "position_a": "Iterative (agentic) retrieval yields significant gains over standard RAG.",
+      "position_a_papers": [
+        "From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)"
+      ],
+      "position_a_quote": "Agentic RAG yields the largest gains beyond standard RAG, enabling strong bilingual robustness by forcing iterative evidence seeking and verse inspection before answering.",
+      "position_b": "Current iterative retrieval approaches lead to substantial challenges in reasoning coherence due to error propagation.",
+      "position_b_papers": [
+        "Reasoning in Trees: Improving Retrieval-Augmented Generation for Multi-Hop Question Answering (2026)"
+      ],
+      "position_b_quote": "For multi-hop QA tasks, current iterative approaches predominantly rely on LLMs to self-guide and plan multi-step exploration paths during retrieval, leading to substantial challenges in maintaining reasoning coherence across steps from inaccurate query decomposition and error propagation."
+    },
+    {
+      "topic": "Whether hot-swapping the retrieval index alone is sufficient for updating a RAG model's knowledge, or full retraining/updating of all components is necessary.",
+      "position_a": "The retrieval index can be hot-swapped to update the model without retraining.",
+      "position_a_papers": [
+        "Affordance-Compiled Intelligence: Observable-Only Cognitive Impedance Matching for No-Meta LLM-Integrated Systems (2026)"
+      ],
+      "position_a_quote": "we illustrated how the retrieval index can be hot-swapped to update the model without requiring any retraining.",
+      "position_b": "Domain adaptation requires updating all components (retriever and generator) of the RAG model.",
+      "position_b_papers": [
+        "Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering (2022)"
+      ],
+      "position_b_quote": "We propose RAG-end2end, an extension to RAG, that can adapt to a domain-specific knowledge base by updating all components of the external knowledge base during training."
+    }
+  ],
+  "recalled_gaps": [],
+  "novelty_score": null,
+  "novelty_reasoning": null,
+  "overlapping_papers": [],
+  "report_markdown": "## Overview\nRetrieval-Augmented Generation (RAG) has emerged as a key paradigm for improving the factual accuracy and knowledge grounding of large language models (LLMs) on knowledge-intensive NLP tasks [11, 13]. By retrieving relevant information from external knowledge sources, RAG systems aim to mitigate hallucinations and provide verifiable provenance, though significant research gaps remain in evaluation, reasoning, and cross-domain generalization [5, 27, 33].\n\n## Landscape\nThe provided papers collectively survey RAG architectures, benchmarks, and evaluations for knowledge-intensive tasks. Foundational work establishes RAG as a hybrid parametric/non-parametric approach that can outperform task-specific architectures while providing provenance [50]. Survey papers comprehensively catalogue RAG techniques, including retrieval methods, generation strategies, and downstream applications [11, 13], with systematic reviews identifying scattered empirical evidence and inconsistent evaluation practices [27].\n\nBenchmarking efforts evaluate RAG's impact across LLMs on four fundamental abilities (noise robustness, negative rejection, information integration, and counterfactual robustness) [16], while domain-specific evaluations address clinical knowledge [5], medical hallucination detection [29], multilingual Islamic QA [33, 43], and low-resource languages like Kazakh [32]. Specialized RAG variants target multi-hop reasoning via iterative retrieval [39, 41], agentic pipelines [33, 40], citation enforcement for fiscal documents [37], and knowledge preservation for energy sector expertise [36]. Evaluation frameworks such as Ragas provide reference-free automated assessment of RAG pipelines across retrieval and generation dimensions [47].\n\n## Research gaps\n- **Systematic evaluation across LLMs is lacking**, making it difficult to identify capability bottlenecks [16]. While RAG consistently improves performance, most LLMs remain below 30% accuracy on strict grading in specialized domains like Islamic QA [33], revealing substantial reliability gaps between fluency and factual correctness.\n- **Standard MCQ/MRC evaluations miss critical failure modes** such as free-form hallucinations and abstention behavior when evidence is insufficient [33]. Domain-grounded assessments beyond generic scenarios are needed to capture real-world unreliability [33, 5].\n- **Single-pass RAG pipelines are insufficient for complex multi-hop queries** requiring multi-step reasoning and evidence aggregation [33, 43]. Agentic RAG yields further gains by enabling iterative evidence seeking, but absolute retrieval scores remain modest [33, 40].\n- **Intermediate hop-level diagnostics are absent** from existing multi-hop reasoning benchmarks, preventing fine-grained analysis of where and why agentic retrieval fails [40]. Current benchmarks provide only final questions and answers without gradual connection steps.\n- **Transparency and citation fidelity remain inadequate** for high-stakes regulatory domains [37]. Existing approaches lack the conservative behavior and provenance guarantees required in tax compliance and similar applications [37, 50].\n- **The interaction between parametric and non-parametric memory is poorly understood**, and joint pre-training strategies for retrievers and generators remain unexplored [50]. End-to-end domain adaptation studies suggest potential but limited systematic investigation [49].\n- **Extending RAG to visual domains faces fundamental challenges** including modality gaps between image queries and text-heavy knowledge bases, construction of semantically meaningful visual knowledge bases, and multi-hop reasoning over retrieved images [34].\n\n## Conflicting Evidence\n- **Whether RAG effectively reduces hallucinations in generated text.**\n - RAG effectively reduces hallucinations. (Retrieval-Augmented Generation for Large Language Models: A Survey (2023)) - 'By referencing external knowledge, RAG effectively reduces the problem of generating factually incorrect content.'\n - Hallucinated answers remain common in RAG even when relevant documents are available. (Facet-Level Tracing of Evidence Uncertainty and Hallucination in RAG (2026)) - 'Retrieval-Augmented Generation (RAG) aims to reduce hallucination by grounding answers in retrieved evidence, yet hallucinated answers remain common even when relevant documents are available.'\n- **Whether iterative retrieval in RAG is beneficial or introduces harmful error propagation for multi-hop QA.**\n - Iterative (agentic) retrieval yields significant gains over standard RAG. (From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)) - 'Agentic RAG yields the largest gains beyond standard RAG, enabling strong bilingual robustness by forcing iterative evidence seeking and verse inspection before answering.'\n - Current iterative retrieval approaches lead to substantial challenges in reasoning coherence due to error propagation. (Reasoning in Trees: Improving Retrieval-Augmented Generation for Multi-Hop Question Answering (2026)) - 'For multi-hop QA tasks, current iterative approaches predominantly rely on LLMs to self-guide and plan multi-step exploration paths during retrieval, leading to substantial challenges in maintaining reasoning coherence across steps from inaccurate query decomposition and error propagation.'\n- **Whether hot-swapping the retrieval index alone is sufficient for updating a RAG model's knowledge, or full retraining/updating of all components is necessary.**\n - The retrieval index can be hot-swapped to update the model without retraining. (Affordance-Compiled Intelligence: Observable-Only Cognitive Impedance Matching for No-Meta LLM-Integrated Systems (2026)) - 'we illustrated how the retrieval index can be hot-swapped to update the model without requiring any retraining.'\n - Domain adaptation requires updating all components (retriever and generator) of the RAG model. (Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering (2022)) - 'We propose RAG-end2end, an extension to RAG, that can adapt to a domain-specific knowledge base by updating all components of the external knowledge base during training.'\n\n## References\n\n[1] [QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of materials (2009)](https://doi.org/10.1088/0953-8984/21/39/395502) — Paolo Giannozzi, Stefano Baroni, Nicola Bonini et al.  \n[2] [CloudSim: a toolkit for modeling and simulation of cloud computing environments and evaluation of resource provisioning algorithms (2010)](https://doi.org/10.1002/spe.995) — Rodrigo N. Calheiros, Rajiv Ranjan, Anton Beloglazov et al.  \n[3] [Natural Language Processing (almost) from Scratch (2011)](http://infoscience.epfl.ch/record/192375) — Ronan Collobert, Jason Weston, Léon Bottou et al.  \n[4] [Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing (2022)](https://doi.org/10.1145/3560815) — Pengfei Liu, Weizhe Yuan, Jinlan Fu et al.  \n[5] [Large language models encode clinical knowledge (2023)](https://doi.org/10.1038/s41586-023-06291-2) — Karan Singhal, Shekoofeh Azizi, Tao Tu et al.  \n[6] [Affordance-Compiled Intelligence: Observable-Only Cognitive Impedance Matching for No-Meta LLM-Integrated Systems (2026)](http://arxiv.org/abs/2005.11401) — Patrick Lewis, Ethan Perez, Aleksandara Piktus et al.  \n[7] [A Survey on Knowledge Graphs: Representation, Acquisition, and Applications (2021)](http://arxiv.org/abs/2002.00388) — Shaoxiong Ji, Shirui Pan, Erik Cambria et al.  \n[8] [Automation and New Tasks: How Technology Displaces and Reinstates Labor (2019)](https://doi.org/10.1257/jep.33.2.3) — Daron Acemoğlu, Pascual Restrepo  \n[9] [Embedding Entities and Relations for Learning and Inference in Knowledge Bases (2014)](http://arxiv.org/abs/1412.6575) — Wu, Hong, Wang, Zhe, Wang, Kewen et al.  \n[10] [A Survey of Large Language Models (2026)](https://doi.org/10.1007/s11704-026-60308-3) — Wayne Xin Zhao, Kun Zhou, Junyi Li et al.  \n[11] [Retrieval-Augmented Generation for Large Language Models: A Survey (2023)](http://arxiv.org/abs/2312.10997) — Yunfan Gao, Yun Xiong, Xinyu Gao et al.  \n[12] [Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering (2018)](https://doi.org/10.18653/v1/d18-1260) — Todor Mihaylov, Peter E. Clark, Tushar Khot et al.  \n[13] [A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models (2024)](https://doi.org/10.1145/3637528.3671470) — Wenqi Fan, Yujuan Ding, Liangbo Ning et al.  \n[14] [Open Domain Question Answering Using Early Fusion of Knowledge Bases and Text (2018)](https://doi.org/10.18653/v1/d18-1455) — Haitian Sun, Bhuwan Dhingra, Manzil Zaheer et al.  \n[15] [Active Retrieval Augmented Generation (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.495) — Zhengbao Jiang, Frank F. Xu, Luyu Gao et al.  \n[16] [Benchmarking Large Language Models in Retrieval-Augmented Generation (2024)](https://doi.org/10.1609/aaai.v38i16.29728) — Jiawei Chen, Hongyu Lin, Xianpei Han et al.  \n[17] [PullNet: Open Domain Question Answering with Iterative Retrieval on Knowledge Bases and Text (2019)](https://doi.org/10.18653/v1/d19-1242) — Haitian Sun, Tania Bedrax-Weiss, William W. Cohen  \n[18] [FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.741) — Sewon Min, Kalpesh Krishna, Xinxi Lyu et al.  \n[19] [Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question Answering (2020)](https://doi.org/10.18653/v1/2020.emnlp-main.99) — Yanlin Feng, Xinyue Chen, Bill Yuchen Lin et al.  \n[20] [Query Graph Generation for Answering Multi-hop Complex Questions from Knowledge Bases (2020)](https://doi.org/10.18653/v1/2020.acl-main.91) — Yunshi Lan, Jing Jiang  \n[21] [HybridQA: A Dataset of Multi-Hop Question Answering over Tabular and Textual Data (2020)](https://doi.org/10.18653/v1/2020.findings-emnlp.91) — Wenhu Chen, Hanwen Zha, Zhiyu Chen et al.  \n[22] [Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity (2024)](https://doi.org/10.18653/v1/2024.naacl-long.389) — Soyeong Jeong, Jinheon Baek, Sukmin Cho et al.  \n[23] [Generation-Augmented Retrieval for Open-Domain Question Answering (2021)](https://doi.org/10.18653/v1/2021.acl-long.316) — Yuning Mao, Pengcheng He, Xiaodong Liu et al.  \n[24] [CBR-RAG: Case-Based Reasoning for Retrieval Augmented Generation in LLMs for Legal Question Answering (2024)](https://rgu-repository.worktribe.com/output/2383595) — Nirmalie Wiratunga, Ramitha Abeyratne, Lasal Jayawardena et al.  \n[25] [Answering while Summarizing: Multi-task Learning for Multi-hop QA with Evidence Extraction (2019)](https://doi.org/10.18653/v1/p19-1225) — Kosuke Nishida, Kyosuke Nishida, Masaaki Nagata et al.  \n[26] [Multi-Hop Paragraph Retrieval for Open-Domain Question Answering (2019)](https://doi.org/10.18653/v1/p19-1222) — Yair Feldman, Ran El‐Yaniv  \n[27] [A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges (2025)](https://doi.org/10.3390/bdcc9120320) — Andrew Brown, Muhammad Roman, Barry Devereux  \n[28] [HalluLens: LLM Hallucination Benchmark (2025)](https://doi.org/10.18653/v1/2025.acl-long.1176) — Yejin Bang, Ziwei Ji, Alan Schelten et al.  \n[29] [MedHallu: A Comprehensive Benchmark for Detecting Medical Hallucinations in Large Language Models (2025)](https://doi.org/10.18653/v1/2025.emnlp-main.143) — Shrey Pandit, Jiawei Xu, Junyuan Hong et al.  \n[30] [Evaluating Retrieval-Augmented Generation Variants for Clinical Decision Support: Hallucination Mitigation and Secure On-Premises Deployment (2025)](https://doi.org/10.3390/electronics14214227) — Krzysztof Wołk  \n[31] [Synchronous Faithfulness Monitoring for Trustworthy Retrieval-Augmented Generation (2024)](https://doi.org/10.18653/v1/2024.emnlp-main.527) — Di Wu, Jia-Chen Gu, Fan Yin et al.  \n[32] [A Systematic Evaluation of Large Language Models and Retrieval-Augmented Generation for the Task of Kazakh Question Answering (2025)](https://doi.org/10.3390/info16110943) — Aigerim Mansurova, Arailym Tleubayeva, Aliya Nugumanova et al.  \n[33] [From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)](http://arxiv.org/abs/2601.07528v2) — Gagan Bhatia, Hamdy Mubarak, Mustafa Jarrar et al.  \n[34] [KIRA: Knowledge-Intensive Image Retrieval and Reasoning Architecture for Specialized Visual Domains (2026)](http://arxiv.org/abs/2604.16915v1) — Parthaw Goswami, Jaynto Goswami Deep  \n[35] [EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records (2026)](http://arxiv.org/abs/2605.12335v1) — Saeed Shurrab, Mariam Al-Omari, Dana El Samad et al.  \n[36] [Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector (2026)](http://arxiv.org/abs/2603.14541v1) — Diego Ezequiel Cervera  \n[37] [Citation-Enforced RAG for Fiscal Document Intelligence: Cited, Explainable Knowledge Retrieval in Tax Compliance (2026)](http://arxiv.org/abs/2603.14170v1) — Akhil Chandra Shanivendra  \n[38] [Facet-Level Tracing of Evidence Uncertainty and Hallucination in RAG (2026)](http://arxiv.org/abs/2604.09174v2) — Passant Elchafei, Monorama Swain, Shahed Masoudian et al.  \n[39] [Reasoning in Trees: Improving Retrieval-Augmented Generation for Multi-Hop Question Answering (2026)](http://arxiv.org/abs/2601.11255v1) — Yuling Shi, Maolin Sun, Zijun Liu et al.  \n[40] [AgenticRAGTracer: A Hop-Aware Benchmark for Diagnosing Multi-Step Retrieval Reasoning in Agentic RAG (2026)](http://arxiv.org/abs/2602.19127v2) — Qijie You, Wenkai Yu, Wentao Zhang  \n[41] [MEGRAG: Multi-Granular Evidence Graphs for Answer-Aware Multi-Hop RAG (2026)](http://arxiv.org/abs/2608.02195v1) — Weidong Bao, Yingying Sun, Jun Yang et al.  \n[42] [AR-RAG: Autoregressive Retrieval Augmentation for Image Generation (2025)](http://arxiv.org/abs/2506.06962v3) — Jingyuan Qi, Zhiyang Xu, Qifan Wang et al.  \n[43] [FARSIQA: Faithful and Advanced RAG System for Islamic Question Answering (2025)](http://arxiv.org/abs/2510.25621v1) — Mohammad Aghajani Asl, Behrooz Minaei Bidgoli  \n[44] [Intelligent Interaction Strategies for Context-Aware Cognitive Augmentation (2025)](http://arxiv.org/abs/2504.13684v1) —  Xiangrong,  Zhu, Yuan Xu et al.  \n[45] [Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation (2024)](http://arxiv.org/abs/2411.18583v1) — Nurshat Fateh Ali, Md. Mahdi Mohtasim, Shakil Mosharrof et al.  \n[46] [EVOR: Evolving Retrieval for Code Generation (2024)](http://arxiv.org/abs/2402.12317v2) — Hongjin Su, Shuyang Jiang, Yuhang Lai et al.  \n[47] [Ragas: Automated Evaluation of Retrieval Augmented Generation (2023)](http://arxiv.org/abs/2309.15217v2) — Shahul Es, Jithin James, Luis Espinosa-Anke et al.  \n[48] [Multi-Task Retrieval-Augmented Text Generation with Relevance Sampling (2022)](http://arxiv.org/abs/2207.03030v1) — Sebastian Hofstätter, Jiecao Chen, Karthik Raman et al.  \n[49] [Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering (2022)](http://arxiv.org/abs/2210.02627v1) — Shamane Siriwardhana, Rivindu Weerasekera, Elliott Wen et al.  \n[50] [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020)](http://arxiv.org/abs/2005.11401v4) — Patrick Lewis, Ethan Perez, Aleksandra Piktus et al.",
+  "iteration": 2,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "https://doi.org/10.1002/spe.995",
+    "http://arxiv.org/abs/2005.11401",
+    "http://arxiv.org/abs/2002.00388",
+    "https://doi.org/10.1257/jep.33.2.3",
+    "http://arxiv.org/abs/1412.6575",
+    "http://arxiv.org/abs/2312.10997",
+    "https://doi.org/10.1145/3637528.3671470",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.495",
+    "https://doi.org/10.1609/aaai.v38i16.29728",
+    "https://doi.org/10.18653/v1/2024.naacl-long.389",
+    "https://doi.org/10.18653/v1/2021.acl-long.316",
+    "https://rgu-repository.worktribe.com/output/2383595",
+    "http://arxiv.org/abs/2601.07528v2",
+    "http://arxiv.org/abs/2604.16915v1",
+    "http://arxiv.org/abs/2605.12335v1",
+    "http://arxiv.org/abs/2603.14541v1",
+    "http://arxiv.org/abs/2506.06962v3",
+    "http://arxiv.org/abs/2510.25621v1",
+    "http://arxiv.org/abs/2504.13684v1",
+    "http://arxiv.org/abs/2411.18583v1",
+    "http://arxiv.org/abs/2402.12317v2",
+    "http://arxiv.org/abs/2309.15217v2",
+    "http://arxiv.org/abs/2207.03030v1",
+    "http://arxiv.org/abs/2210.02627v1",
+    "http://arxiv.org/abs/2005.11401v4",
+    "https://doi.org/10.1088/0953-8984/21/39/395502",
+    "http://infoscience.epfl.ch/record/192375",
+    "https://doi.org/10.1145/3560815",
+    "https://doi.org/10.1038/s41586-023-06291-2",
+    "https://doi.org/10.1007/s11704-026-60308-3",
+    "https://doi.org/10.18653/v1/d18-1260",
+    "https://doi.org/10.18653/v1/d18-1455",
+    "https://doi.org/10.18653/v1/d19-1242",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.741",
+    "https://doi.org/10.18653/v1/2020.emnlp-main.99",
+    "https://doi.org/10.18653/v1/2020.acl-main.91",
+    "https://doi.org/10.18653/v1/2020.findings-emnlp.91",
+    "https://doi.org/10.18653/v1/p19-1225",
+    "https://doi.org/10.18653/v1/p19-1222",
+    "https://doi.org/10.3390/bdcc9120320",
+    "https://doi.org/10.18653/v1/2025.acl-long.1176",
+    "https://doi.org/10.18653/v1/2025.emnlp-main.143",
+    "https://doi.org/10.3390/electronics14214227",
+    "https://doi.org/10.18653/v1/2024.emnlp-main.527",
+    "https://doi.org/10.3390/info16110943",
+    "http://arxiv.org/abs/2603.14170v1",
+    "http://arxiv.org/abs/2604.09174v2",
+    "http://arxiv.org/abs/2601.11255v1",
+    "http://arxiv.org/abs/2602.19127v2",
+    "http://arxiv.org/abs/2608.02195v1"
+  ],
+  "recent_paper_ids": [
+    "https://doi.org/10.1088/0953-8984/21/39/395502",
+    "http://infoscience.epfl.ch/record/192375",
+    "https://doi.org/10.1145/3560815",
+    "https://doi.org/10.1038/s41586-023-06291-2",
+    "https://doi.org/10.1007/s11704-026-60308-3",
+    "https://doi.org/10.18653/v1/d18-1260",
+    "https://doi.org/10.18653/v1/d18-1455",
+    "https://doi.org/10.18653/v1/d19-1242",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.741",
+    "https://doi.org/10.18653/v1/2020.emnlp-main.99",
+    "https://doi.org/10.18653/v1/2020.acl-main.91",
+    "https://doi.org/10.18653/v1/2020.findings-emnlp.91",
+    "https://doi.org/10.18653/v1/p19-1225",
+    "https://doi.org/10.18653/v1/p19-1222",
+    "https://doi.org/10.3390/bdcc9120320",
+    "https://doi.org/10.18653/v1/2025.acl-long.1176",
+    "https://doi.org/10.18653/v1/2025.emnlp-main.143",
+    "https://doi.org/10.3390/electronics14214227",
+    "https://doi.org/10.18653/v1/2024.emnlp-main.527",
+    "https://doi.org/10.3390/info16110943",
+    "http://arxiv.org/abs/2603.14170v1",
+    "http://arxiv.org/abs/2604.09174v2",
+    "http://arxiv.org/abs/2601.11255v1",
+    "http://arxiv.org/abs/2602.19127v2",
+    "http://arxiv.org/abs/2608.02195v1"
+  ],
+  "open_gaps": [
+    "Extending RAG to visual domains is hindered by fundamental challenges including bridging the modality gap between image queries and text-heavy knowledge bases, constructing semantically meaningful visual knowledge bases, and performing multi-hop reasoning over retrieved images."
+  ],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "retrieval-augmented generation knowledge-intensive NLP tasks",
+        "RAG open domain question answering fact verification",
+        "combining retrieval and generation for knowledge intensive tasks",
+        "evaluation of retrieval augmented generation models",
+        "retrieval augmented generation for knowledge base tasks"
+      ],
+      "new_papers": 25,
+      "total_papers": 25,
+      "open_gaps": 5,
+      "closed_gaps": 0
+    },
+    {
+      "iteration": 2,
+      "queries": [
+        "capability bottlenecks RAG different LLMs systematic evaluation",
+        "RAG hallucination abstention insufficient evidence evaluation beyond MCQ MRC",
+        "visual RAG modality gap image query text knowledge base multi-hop reasoning",
+        "multi-step reasoning evidence aggregation multi-hop queries RAG pipeline",
+        "domain-specific RAG healthcare news knowledge base optimization"
+      ],
+      "new_papers": 25,
+      "total_papers": 50,
+      "open_gaps": 1,
+      "closed_gaps": 5
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": false,
+  "coverage_reasoning": "The user's idea is not provided, so we must evaluate based on the gaps themselves. All high-confidence gaps are supported by only one paper each, falling short of the two-paper requirement. According to the guidelines, sufficiency is only achieved when the most idea-relevant gap(s) have high confidence and at least two supporting papers. Since this condition is not met, and the instruction advises conservatism, another literature-search round is recommended to strengthen the evidence.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [],
+  "tool_call_count": 18
+}

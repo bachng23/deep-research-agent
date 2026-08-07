@@ -1,0 +1,899 @@
+{
+  "topic": "hallucination detection and mitigation in large language models",
+  "user_idea": null,
+  "search_queries": [
+    "clinical safety framework hallucination detection medical text summarization real-world harm assessment",
+    "evaluating hallucination risk in clinical NLP summarization deployment safety metrics",
+    "hallucination causes retrieval-augmented generation sub-task analysis retrieval generation attribution",
+    "mitigating hallucinations in RAG pipeline components retrieval quality generation grounding",
+    "attribution errors in retrieval-augmented generation sub-tasks hallucination mitigation strategies"
+  ],
+  "papers": [
+    {
+      "title": "Training language models to follow instructions with human feedback",
+      "authors": [
+        "Long Ouyang",
+        "Jeff Wu",
+        "Xu Jiang",
+        "Diogo Almeida",
+        "Carroll L. Wainwright"
+      ],
+      "year": 2022,
+      "abstract": "Making language models bigger does not inherently make them better at following a user's intent. For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user. In other words, these models are not aligned with their users. In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback. Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we u ...[truncated]",
+      "url": "http://arxiv.org/abs/2203.02155",
+      "source": "openalex",
+      "citation_count": 4319,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Evaluating non-randomised intervention studies",
+      "authors": [
+        "Jonathan J Deeks",
+        "Jacqueline Dinnes",
+        "Roberto D’Amico",
+        "Amanda Sowden",
+        "C Sakarovitch"
+      ],
+      "year": 2003,
+      "abstract": "OBJECTIVES: To consider methods and related evidence for evaluating bias in non-randomised intervention studies. DATA SOURCES: Systematic reviews and methodological papers were identified from a search of electronic databases; handsearches of key medical journals and contact with experts working in the field. New empirical studies were conducted using data from two large randomised clinical trials. METHODS: Three systematic reviews and new empirical investigations were conducted. The reviews considered, in regard to non-randomised studies, (1) the existing evidence of bias, (2) the content of ...[truncated]",
+      "url": "https://doi.org/10.3310/hta7270",
+      "source": "openalex",
+      "citation_count": 2932,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning",
+      "authors": [
+        "Piyush Sharma",
+        "Nan Ding",
+        "Sebastian Goodman",
+        "Radu Soricut"
+      ],
+      "year": 2018,
+      "abstract": "We present a new dataset of image caption annotations, Conceptual Captions, which contains an order of magnitude more images than the MS-COCO dataset We achieve this by extracting and filtering image caption annotations from billions of webpages. We also present quantitative evaluations of a number of image captioning models and show that a model architecture based on Inception- ResNet-v2 (Szegedy et al., 2016) for image-feature extraction and Transformer",
+      "url": "https://doi.org/10.18653/v1/p18-1238",
+      "source": "openalex",
+      "citation_count": 1833,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+      "authors": [
+        "Lei Huang",
+        "Weijiang Yu",
+        "Weitao Ma",
+        "Weihong Zhong",
+        "Zhangyin Feng"
+      ],
+      "year": 2024,
+      "abstract": "The emergence of large language models (LLMs) has marked a significant breakthrough in natural language processing (NLP), fueling a paradigm shift in information acquisition. Nevertheless, LLMs are prone to hallucination, generating plausible yet nonfactual content. This phenomenon raises significant concerns over the reliability of LLMs in real-world information retrieval (IR) systems and has attracted intensive research to detect and mitigate such hallucinations. Given the open-ended general-purpose attributes inherent to LLMs, LLM hallucinations present distinct challenges that diverge from ...[truncated]",
+      "url": "https://doi.org/10.1145/3703155",
+      "source": "openalex",
+      "citation_count": 1764,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Text Data Augmentation for Deep Learning",
+      "authors": [
+        "Connor Shorten",
+        "Taghi M. Khoshgoftaar",
+        "Borko Furht"
+      ],
+      "year": 2021,
+      "abstract": "Natural Language Processing (NLP) is one of the most captivating applications of Deep Learning. In this survey, we consider how the Data Augmentation training strategy can aid in its development. We begin with the major motifs of Data Augmentation summarized into strengthening local decision boundaries, brute force training, causality and counterfactual examples, and the distinction between meaning and form. We follow these motifs with a concrete list of augmentation frameworks that have been developed for text data. Deep Learning generally struggles with the measurement of generalization and ...[truncated]",
+      "url": "https://doi.org/10.1186/s40537-021-00492-0",
+      "source": "openalex",
+      "citation_count": 1690,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey of Large Language Models",
+      "authors": [
+        "Wayne Xin Zhao",
+        "Kun Zhou",
+        "Junyi Li",
+        "Tianyi Tang",
+        "Zican Dong"
+      ],
+      "year": 2026,
+      "abstract": "Abstract The rapid evolution of large language models (LLMs) has driven a transformative shift in artificial intelligence (AI), reshaping both research paradigms and practical applications. Distinguished from their predecessors by unprecedented scale and advanced capabilities, LLMs necessitate new frameworks for understanding their development, behavior, and societal impact. This survey systematically reviews recent advancements in LLM techniques across four key dimensions: (1) pre-training methodologies, which establish core model capabilities through large-scale self-supervised training, arc ...[truncated]",
+      "url": "https://doi.org/10.1007/s11704-026-60308-3",
+      "source": "openalex",
+      "citation_count": 1428,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Detecting hallucinations in large language models using semantic entropy",
+      "authors": [
+        "Sebastian Farquhar",
+        "Jannik Kossen",
+        "Lorenz Kuhn",
+        "Yarin Gal"
+      ],
+      "year": 2024,
+      "abstract": "Abstract Large language model (LLM) systems, such as ChatGPT 1 or Gemini 2 , can show impressive reasoning and question-answering capabilities but often ‘hallucinate’ false outputs and unsubstantiated answers 3,4 . Answering unreliably or without the necessary information prevents adoption in diverse fields, with problems including fabrication of legal precedents 5 or untrue facts in news articles 6 and even posing a risk to human life in medical domains such as radiology 7 . Encouraging truthfulness through supervision or reinforcement has been only partially successful 8 . Researchers need a ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-024-07421-0",
+      "source": "openalex",
+      "citation_count": 705,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "authors": [
+        "Wenqi Fan",
+        "Yujuan Ding",
+        "Liangbo Ning",
+        "Shijie Wang",
+        "Hengyun Li"
+      ],
+      "year": 2024,
+      "abstract": "As one of the most advanced techniques in AI, Retrieval-Augmented Generation (RAG) can offer reliable and up-to-date external knowledge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capacity of retrieval in providing additional knowledge enables RAG to assist existing generative AI in producing high-quality outputs. Recently, Large Language Models (LLMs) have demonstrated revolutionary abilities in language understanding and generation, while still facing inherent limitations such as hallucinations and out-of-date internal ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671470",
+      "source": "openalex",
+      "citation_count": 640,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Multitask, Multilingual, Multimodal Evaluation of ChatGPT on Reasoning, Hallucination, and Interactivity",
+      "authors": [
+        "Yejin Bang",
+        "Samuel Cahyawijaya",
+        "Nayeon Lee",
+        "Wenliang Dai",
+        "Dan Su"
+      ],
+      "year": 2023,
+      "abstract": "Yejin Bang, Samuel Cahyawijaya, Nayeon Lee, Wenliang Dai, Dan Su, Bryan Wilie, Holy Lovenia, Ziwei Ji, Tiezheng Yu, Willy Chung, Quyet V. Do, Yan Xu, Pascale Fung. Proceedings of the 13th International Joint Conference on Natural Language Processing and the 3rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (Volume 1: Long Papers). 2023.",
+      "url": "https://doi.org/10.18653/v1/2023.ijcnlp-main.45",
+      "source": "openalex",
+      "citation_count": 631,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+      "authors": [
+        "Jingfeng Yang",
+        "Hongye Jin",
+        "Ruixiang Tang",
+        "Xiaotian Han",
+        "Qizhang Feng"
+      ],
+      "year": 2024,
+      "abstract": "This article presents a comprehensive and practical guide for practitioners and end-users working with Large Language Models (LLMs) in their downstream Natural Language Processing (NLP) tasks. We provide discussions and insights into the usage of LLMs from the perspectives of models, data, and downstream tasks. First, we offer an introduction and brief summary of current language models. Then, we discuss the influence of pre-training data, training data, and test data. Most importantly, we provide a detailed discussion about the use and non-use cases of large language models for various natura ...[truncated]",
+      "url": "https://doi.org/10.1145/3649506",
+      "source": "openalex",
+      "citation_count": 475,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+      "authors": [
+        "Potsawee Manakul",
+        "Adian Liusie",
+        "Mark Gales"
+      ],
+      "year": 2023,
+      "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose “SelfCheckGPT”, a simple sampling-based approach that can be used to fact-check the ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.557",
+      "source": "openalex",
+      "citation_count": 397,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Asking and Answering Questions to Evaluate the Factual Consistency of Summaries",
+      "authors": [
+        "Alex Wang",
+        "Kyunghyun Cho",
+        "Mike Lewis"
+      ],
+      "year": 2020,
+      "abstract": "Practical applications of abstractive summarization models are limited by frequent factual inconsistencies with respect to their input. Existing automatic evaluation metrics for summarization are largely insensitive to such errors. We propose QAGS, 1 an automatic evaluation protocol that is designed to identify factual inconsistencies in a generated summary. QAGS is based on the intuition that if we ask questions about a summary and its source, we will receive similar answers if the summary is factually consistent with the source. To evaluate QAGS, we collect human judgments of factual consist ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2020.acl-main.450",
+      "source": "openalex",
+      "citation_count": 327,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
+      "authors": [
+        "Sewon Min",
+        "Kalpesh Krishna",
+        "Xinxi Lyu",
+        "Mike Lewis",
+        "Wen-tau Yih"
+      ],
+      "year": 2023,
+      "abstract": "Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Koh, Mohit Iyyer, Luke Zettlemoyer, Hannaneh Hajishirzi. Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. 2023.",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.741",
+      "source": "openalex",
+      "citation_count": 297,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A framework to assess clinical safety and hallucination rates of LLMs for medical text summarisation",
+      "authors": [
+        "Elham Asgari",
+        "Nina Montaña-Brown",
+        "Magda Dubois",
+        "Saleh Khalil",
+        "Jasmine Balloch"
+      ],
+      "year": 2025,
+      "abstract": "Integrating large language models (LLMs) into healthcare can enhance workflow efficiency and patient care by automating tasks such as summarising consultations. However, the fidelity between LLM outputs and ground truth information is vital to prevent miscommunication that could lead to compromise in patient safety. We propose a framework comprising (1) an error taxonomy for classifying LLM outputs, (2) an experimental structure for iterative comparisons in our LLM document generation pipeline, (3) a clinical safety framework to evaluate the harms of errors, and (4) a graphical user interface, ...[truncated]",
+      "url": "https://doi.org/10.1038/s41746-025-01670-7",
+      "source": "openalex",
+      "citation_count": 273,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Towards Mitigating LLM Hallucination via Self Reflection",
+      "authors": [
+        "Ziwei Ji",
+        "Tiezheng Yu",
+        "Yan Xu",
+        "Nayeon Lee",
+        "Etsuko Ishii"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (LLMs) have shown promise for generative and knowledge-intensive tasks including question-answering (QA) tasks. However, the practical deployment still faces challenges, notably the issue of \"hallucination\", where models generate plausible-sounding but unfaithful or nonsensical information. This issue becomes particularly critical in the medical domain due to the uncommon professional concepts and potential social risks involved. This paper analyses the phenomenon of hallucination in medical generative QA systems using widely adopted LLMs and datasets. Our investigation c ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.123",
+      "source": "openalex",
+      "citation_count": 222,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Improving Factual Completeness and Consistency of Image-to-Text Radiology Report Generation",
+      "authors": [
+        "Yasuhide Miura",
+        "Yuhao Zhang",
+        "Emily B. Tsai",
+        "Curtis P. Langlotz",
+        "Dan Jurafsky"
+      ],
+      "year": 2021,
+      "abstract": "Yasuhide Miura, Yuhao Zhang, Emily Tsai, Curtis Langlotz, Dan Jurafsky. Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2021.",
+      "url": "https://doi.org/10.18653/v1/2021.naacl-main.416",
+      "source": "openalex",
+      "citation_count": 130,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models",
+      "authors": [
+        "S. M Towhidul Islam Tonmoy",
+        "S M Mehedi Zaman",
+        "Vinija Jain",
+        "Anku Rani",
+        "Vipula Rawte"
+      ],
+      "year": 2024,
+      "abstract": "As Large Language Models (LLMs) continue to advance in their ability to write human-like text, a key challenge remains around their tendency to hallucinate generating content that appears factual but is ungrounded. This issue of hallucination is arguably the biggest hindrance to safely deploying these powerful LLMs into real-world production systems that impact people's lives. The journey toward widespread adoption of LLMs in practical settings heavily relies on addressing and mitigating hallucinations. Unlike traditional AI systems focused on limited tasks, LLMs have been exposed to vast amou ...[truncated]",
+      "url": "http://arxiv.org/abs/2401.01313",
+      "source": "openalex",
+      "citation_count": 121,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Bias and Unfairness in Information Retrieval Systems: New Challenges in the LLM Era",
+      "authors": [
+        "Sunhao Dai",
+        "Xu Chen",
+        "Shicheng Xu",
+        "Liang Pang",
+        "Zhenhua Dong"
+      ],
+      "year": 2024,
+      "abstract": "With the rapid advancements of large language models (LLMs), information retrieval (IR) systems, such as search engines and recommender systems, have undergone a significant paradigm shift. This evolution, while heralding new opportunities, introduces emerging challenges, particularly in terms of biases and unfairness, which may threaten the information ecosystem. In this paper, we present a comprehensive survey of existing works on emerging and pressing bias and unfairness issues in IR systems when the integration of LLMs. We first unify bias and unfairness issues as distribution mismatch pro ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671458",
+      "source": "openalex",
+      "citation_count": 114,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Q2: : Evaluating Factual Consistency in Knowledge-Grounded Dialogues via Question Generation and Question Answering",
+      "authors": [
+        "Or Honovich",
+        "Leshem Choshen",
+        "Roee Aharoni",
+        "Ella Neeman",
+        "Idan Szpektor"
+      ],
+      "year": 2021,
+      "abstract": "Neural knowledge-grounded generative models for dialogue often produce content that is factually inconsistent with the knowledge they rely on, making them unreliable and limiting their applicability. Inspired by recent work on evaluating factual consistency in abstractive summarization, we propose an automatic evaluation metric for factual consistency in knowledge-grounded dialogue using automatic question generation and question answering. Our metric, denoted Q 2 , compares answer spans using natural language inference (NLI), instead of token-based matching as done in previous work. To foster ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2021.emnlp-main.619",
+      "source": "openalex",
+      "citation_count": 106,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Hallucination Mitigation for Retrieval-Augmented Large Language Models: A Review",
+      "authors": [
+        "Wan Zhang",
+        "Jing Zhang"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-augmented generation (RAG) leverages the strengths of information retrieval and generative models to enhance the handling of real-time and domain-specific knowledge. Despite its advantages, limitations within RAG components may cause hallucinations, or more precisely termed confabulations in generated outputs, driving extensive research to address these limitations and mitigate hallucinations. This review focuses on hallucination in retrieval-augmented large language models (LLMs). We first examine the causes of hallucinations from different sub-tasks in the retrieval and generation ...[truncated]",
+      "url": "https://doi.org/10.3390/math13050856",
+      "source": "openalex",
+      "citation_count": 98,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Hallucination Detection: Robustly Discerning Reliable Answers in Large Language Models",
+      "authors": [
+        "Yuyan Chen",
+        "Qiang Fu",
+        "Yichen Yuan",
+        "Zhihao Wen",
+        "Ge Fan"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (LLMs) have gained widespread adoption in various natural language processing tasks, including question answering and dialogue systems. However, a major drawback of LLMs is the issue of hallucination, where they generate unfaithful or inconsistent content that deviates from the input source, leading to severe consequences. In this paper, we propose a robust discriminator named RelD to effectively detect hallucination in LLMs' generated answers. RelD is trained on the constructed RelQA, a bilingual question-answering dialogue dataset along with answers generated by LLMs an ...[truncated]",
+      "url": "https://doi.org/10.1145/3583780.3614905",
+      "source": "openalex",
+      "citation_count": 91,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Evaluating ChatGPT's Information Extraction Capabilities: An Assessment of Performance, Explainability, Calibration, and Faithfulness",
+      "authors": [
+        "Bo Li",
+        "Gexiang Fang",
+        "Yang Yang",
+        "Quansen Wang",
+        "Wei Ye"
+      ],
+      "year": 2023,
+      "abstract": "The capability of Large Language Models (LLMs) like ChatGPT to comprehend user intent and provide reasonable responses has made them extremely popular lately. In this paper, we focus on assessing the overall ability of ChatGPT using 7 fine-grained information extraction (IE) tasks. Specially, we present the systematically analysis by measuring ChatGPT's performance, explainability, calibration, and faithfulness, and resulting in 15 keys from either the ChatGPT or domain experts. Our findings reveal that ChatGPT's performance in Standard-IE setting is poor, but it surprisingly exhibits excellen ...[truncated]",
+      "url": "http://arxiv.org/abs/2304.11633",
+      "source": "openalex",
+      "citation_count": 59,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "OpenHalDet: A Unified Benchmark for Hallucination Detection across Diverse Generation Scenarios",
+      "authors": [
+        "Xinyi Li",
+        "Zhen Fang",
+        "Yongxin Deng",
+        "Jinyuan Luo",
+        "Hongnan Ma"
+      ],
+      "year": 2026,
+      "abstract": "Hallucination detection is essential for the reliable deployment of large language models (LLMs). However, existing evaluations face two core challenges: inconsistent inference configuration and evaluation, and limited coverage of downstream domains and tasks. Consequently, reported detector performance is often difficult to compare, reproduce, and generalize beyond specific experimental settings. We introduce OpenHalDet, a unified benchmark for hallucination detection across diverse generation scenarios. OpenHalDet standardizes the evaluation pipeline, from prompt construction and response ge ...[truncated]",
+      "url": "http://arxiv.org/abs/2606.06959v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2606.06959v1",
+      "full_text_excerpt": "[1 Introduction] Large language models (LLMs) have demonstrated strong potential across a wide range of real-world applications [63, 34]. Despite these advances, hallucination in generated text remains a critical challenge, where LLMs produce outputs that are grammatically and logically coherent but lack factual accuracy or verifiable evidence [42, 21, 32]. This issue is particularly consequential in high-risk domains such as healthcare, law, and finance [18, 48, 27], where the dissemination of incorrect information may lead to serious consequences. Unfortunately, LLMs trained via likelihood-based next-token prediction are inherently prone to hallucination [37, 25, 5, 23], and zero-hallucination guarantees are unattainable in general without additional structural assumptions [24, 26]. Therefore, effectively detecting hallucinations in model outputs, known as hallucination detection [46, 30, 36, 17], has become a promising research direction for improving the reliability and safety of LLMs.\n\nPrior work [19, 61] has proposed a wide range of hallucination detection methods, which can be broadly grouped according to their model-access requirements into black-box, gray-box, and white-box methods. 1) Black-box methods rely only on externally observable token-space signals, such as consistency patterns across generated outputs [31, 36, 33]. 2) Gray-box methods further exploit probability-based signals exposed during generation, including token probabilities, sequence likelihoods, or entropy-based un\n\n[Abstract] Hallucination detection is essential for the reliable deployment of large language models (LLMs). However, existing evaluations face two core challenges: inconsistent inference configuration and evaluation, and limited coverage of downstream domains and tasks. Consequently, reported detector performance is often difficult to compare, reproduce, and generalize beyond specific experimental settings. We introduce OpenHalDet, a unified benchmark for hallucination detection across diverse generation scenarios. OpenHalDet standardizes the evaluation pipeline, from prompt construction and response generation to truthfulness annotation, detector scoring, and metric computation. It supports heterogeneous detector families under different access settings, including black-box methods that use only generated outputs, gray-box methods that rely on probability-based signals, and white-box methods that exploit internal model signals. By bringing diverse tasks, models, and detectors into a shared framework, OpenHalDet enables controlled comparison and provides a systematic view of how different detection paradigms behave in LLM applications. We release OpenHalDet as an open and extensible codebase to facilitate reproducible evaluation and future development of hallucination detection methods. The code and datasets are available at https://github.com/Nellie179/Hallucination-Detection."
+    },
+    {
+      "title": "Mitigating Multimodal Hallucination via Phase-wise Self-reward",
+      "authors": [
+        "Yu Zhang",
+        "Chuyang Sun",
+        "Kehai Chen",
+        "Xuefeng Bai",
+        "Yang Xiang"
+      ],
+      "year": 2026,
+      "abstract": "Large Vision-Language Models (LVLMs) still struggle with vision hallucination, where generated responses are inconsistent with the visual input. Existing methods either rely on large-scale annotated data for fine-tuning, which incurs massive computational overhead, or employ static post-hoc strategies that overlook the dynamic nature of hallucination emergence. To address these, we introduce a new self-rewarding framework, enabling dynamic hallucination mitigation at inference time without external supervision. On the empirical side, we reveal that visual hallucination exhibits phase-wise dyna ...[truncated]",
+      "url": "http://arxiv.org/abs/2604.17982v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2604.17982v1",
+      "full_text_excerpt": "[Benchmarks & Metrics] We conduct generative and discriminative hallucination mitigation experiments following established evaluation protocols (Wang et al., 2023; Suo et al., 2025). For generative tasks, we evaluate Object HalBench (Rohrbach et al., 2018) (CHAIRi\\text{CHAIR}_{i}, CHAIRs\\text{CHAIR}_{s}), AMBER (Wang et al., 2023) (CHAIR, Cover, Hal and Cog), and MMHal-Bench (Sun et al., 2023) (Overall and Hal). For discriminative tasks, we evaluate POPE (Li et al., 2023) and AMBER (Wang et al., 2023) using Accuracy and F1-score. Besides, we validate the performance of the reward model on sentence-level hallucination classification tasks across AMBER HalDet (Wang et al., 2023) and MHal-detect (Gunjal et al., 2024), measured by Accuracy, Precision, Recall, and F1-score.\n\n[Abstract.] Large Vision-Language Models (LVLMs) still struggle with vision hallucination, where generated responses are inconsistent with the visual input. Existing methods either rely on large-scale annotated data for fine-tuning, which incurs massive computational overhead, or employ static post-hoc strategies that overlook the dynamic nature of hallucination emergence. To address these, we introduce a new self-rewarding framework, enabling dynamic hallucination mitigation at inference time without external supervision. On the empirical side, we reveal that visual hallucination exhibits phase-wise dynamic patterns, peaking at the onset of each semantic phase. Drawing on these insights, we propose PSRD (Phase-wise Self-Reward Decoding) for online hallucination correction guided by phase-wise self-reward signals. To reduce the cost of repeated self-evaluation during decoding, we distill the hallucination guidance signal from LVLMs into a lightweight reward model. The reward model subsequently provides on-the-fly guidance for targeted intervention during the decoding process, enabling precise hallucination suppression. The proposed PSRD significantly reduces the hallucination rate of LLaVA-1.5-7B by 50.0%50.0\\% and consistently outperforms existing post-hoc methods across five hallucination evaluation benchmarks for four LVLMs. Further analysis confirms that PSRD effectively mitigates hallucination propagation and achieves a highly controllable trade-off between strong performance and in\n\n[4.2. Main Results] The results of generative hallucination mitigation are in Table 3.1 and 3.1. PSRD significantly reduces the hallucination of LLaVA-1.5-7B by 50.0%50.0\\%, as measured by the CHAIR metric on AMBER and outperforms existing post-hoc methods across all metrics on the MMHal-Bench and Object HalBench. For the AMBER dataset, PSRD achieves lower hallucination compared to baselines measured by CHAIR, Hal, and Cog metrics, while maintaining a high object cover rate.\n\nNotably, our method operates without fine-tuning base LVLMs or requiring external annotated data; the reliability of the self-evaluation signals used as weak supervision is further analyzed in Appendix D.5. PSRD outperforms existing self-improvement methods that rely on fine-tuning base LVLMs with self-supervision signals on AMBER and MMHal-Bench datasets.\n\nFor discriminative hallucination mitigation tasks, PSRD significantly improves the performance of LLaVA-1.5-7B by 13.9 and 5.4 percentage points in terms of F1-score on the AMBER and the full POPE benchmark in Table 3 and consistently surpasses other post-hoc baselines for nearly all evaluation metrics on both datasets. These results show that the proposed method can effectively mitigate hallucination across diverse settings, achieving performance comparable to methods trained with costly annotated data."
+    },
+    {
+      "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition",
+      "authors": [
+        " PSBC LLM Team",
+        " Huawei LLM Team",
+        "Ruihan Long",
+        "Junjie Wu",
+        "Tianan Zhang"
+      ],
+      "year": 2026,
+      "abstract": "Large language models (LLMs) drive significant financial innovations, yet their high-concurrency deployment is severely bottlenecked by KV cache memory overhead, which inflates infrastructure costs and throttles scalability. To address this, we propose YouZhi-LLM, a highly efficient financial LLM empowered by a comprehensive structural transition and training pipeline natively built on the Huawei Ascend ecosystem. At its algorithmic core, YouZhi-LLM features a layer-adaptive GQA-to-MLA transition framework that dynamically assigns per-layer FreqFold sizes, maximizing KV-cache compression while ...[truncated]",
+      "url": "http://arxiv.org/abs/2606.05868v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2606.05868v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Empathy Is Not What Changed: Clinical Assessment of Psychological Safety Across GPT Model Generations",
+      "authors": [
+        "Michael Keeman",
+        "Anastasia Keeman"
+      ],
+      "year": 2026,
+      "abstract": "When OpenAI deprecated GPT-4o in early 2026, thousands of users protested under #keep4o, claiming newer models had \"lost their empathy.\" No published study has tested this claim. We conducted the first clinical measurement, evaluating three OpenAI model generations (GPT-4o, o4-mini, GPT-5-mini) across 14 emotionally challenging conversational scenarios in mental health and AI companion domains, producing 2,100 scored AI responses assessed on six psychological safety dimensions using clinically-grounded rubrics.\n  Empathy scores are statistically indistinguishable across all three models (Kruskal-Wallis H=4.33, p=0.115). What changed is the safety posture: crisis detection improved monotonically from GPT-4o to GPT-5-mini (H=13.88, p=0.001), while advice safety declined (H=16.63, p<0.001). Per-turn trajectory analysis -- a novel methodological contribution -- reveals these shifts are sharpest during mid-conversation crisis moments invisible to aggregate scoring. In a self-harm scenario involving a minor, GPT-4o scored 3.6/10 on crisis detection during early disclosure turns; GPT-5-mini never dropped below 7.8.\n  What users perceived as \"lost empathy\" was a shift from a cautious model that missed crises to an alert model that sometimes says too much -- a trade-off with real consequences for vulnerable users, currently invisible to both the people who feel it and the developers who create it.",
+      "url": "http://arxiv.org/abs/2603.09997v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.09997v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Hallucination Detection-Guided Preference Optimization for Clinical Summarization",
+      "authors": [
+        "Shamanth Kuthpadi Seethakantha",
+        "Dung Ngoc Thai",
+        "Vara Prasad Gudi",
+        "Simran Tiwari",
+        "Rami Matar",
+        "Avijit Mitra",
+        "Wenlong Zhao",
+        "Andrew McCallum",
+        "Wael Salloum"
+      ],
+      "year": 2026,
+      "abstract": "Large language models (LLMs) have shown promise on summarization tasks, but they often produce hallucinations, which are unsupported or incorrect statements that limit their reliability in specialized healthcare applications. We introduce Hallucination Detection Guided Self-Refinement (HDSR), an inference-time method that leverages hallucination detectors to guide iterative summary revisions toward factual corrections. Building on this, we propose HDSR for Preference Learning (HDSR-PL), which converts detector-guided refinement trajectories into preference pairs for model finetuning. Extensive experiments show that our methods substantially reduce hallucinations for Llama and Gemma models in summarizing real-world clinical notes from MIMIC-IV-Note v2.2. For example, HDSR reduces 24% and HDSR-PL reduces 48% hallucinations in Llama-3.1-8B-Instruct. Importantly, both methods preserve summary fluency, coherence, and relevance according to human expert and LLM-Jury evaluations. Together, these results demonstrate that detection-informed refinement and preference learning offer an automated solution for improving factual faithfulness in clinical summarization.",
+      "url": "http://arxiv.org/abs/2605.28910v3",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.28910v3",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "How Do LLMs Cite? A Mechanistic Interpretation of Attribution in Retrieval-Augmented Generation",
+      "authors": [
+        "Ian van Dort",
+        "Maria Heuss"
+      ],
+      "year": 2026,
+      "abstract": "Retrieval-Augmented Generation (RAG) aims to enhance the trustworthiness of Large Language Models (LLMs) by grounding their outputs in external documents, often using inline citations for verifiability. However, the faithfulness of these citations -- whether the model genuinely uses a source to generate an answer -- remains a critical, unverified assumption. This paper offers the first mechanistic account of how a large language model decides whether to attach an inline citation while answering a factoid question. Using the Llama-3.1-8B-Instruct model in a controlled experimental environment based on the PopQA dataset, we employ an activation patching approach. We map the underlying mechanism responsible for citation, discovering that it is not a single, localized component but a distributed, multi-stage \"attributional ensemble\" of attention heads and MLP layers. We show that amplifying or attenuating only those critical heads and MLPs repairs over 90% of missed citations and eliminates 69% of spurious ones on PopQA without harming answer accuracy. Although gains on the multi-document HotpotQA benchmark are modest, the same component set still moves citation rates in the intended direction, indicating that the underlying mechanism is not dataset-specific. The results reveal a potential disconnect between the model's apparent reasoning and its internal computational pathway, suggesting that inline citations can create a false sense of security.",
+      "url": "http://arxiv.org/abs/2606.28358v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2606.28358v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Stable-RAG: Mitigating Retrieval-Permutation-Induced Hallucinations in Retrieval-Augmented Generation",
+      "authors": [
+        "Qianchi Zhang",
+        "Hainan Zhang",
+        "Liang Pang",
+        "Hongwei Zheng",
+        "Zhiming Zheng"
+      ],
+      "year": 2026,
+      "abstract": "Retrieval-Augmented Generation (RAG) has become a key paradigm for reducing factual hallucinations in Large Language Models (LLMs), yet little is known about how the order of retrieved documents affects model behavior. We empirically show that under a Top-5 retrieval setting with the gold document included, LLM answers vary substantially across permutations of the retrieved set, even when the gold document is fixed in the first position. This reveals a previously underexplored sensitivity to retrieval permutations. Although existing robust RAG methods focus primarily on enhancing LLM robustness to low-quality retrieval and mitigating positional bias to distribute attention fairly over long contexts, neither approach directly addresses permutation sensitivity. In this paper, we propose Stable-RAG, which exploits permutation sensitivity estimation to mitigate permutation-induced hallucinations. Stable-RAG runs the generator under multiple retrieval orders, clusters hidden states, and decodes from a cluster-center representation that captures the dominant reasoning pattern. It then uses these reasoning results to align hallucinated outputs toward the correct answer, encouraging the model to produce consistent and accurate predictions across document permutations. Experiments on three QA datasets show that Stable-RAG improves answer accuracy, reasoning consistency, and generalization across datasets, retrievers, and input lengths compared with strong baselines.",
+      "url": "http://arxiv.org/abs/2601.02993v4",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.02993v4",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records",
+      "authors": [
+        "Saeed Shurrab",
+        "Mariam Al-Omari",
+        "Dana El Samad",
+        "Farah E. Shamout"
+      ],
+      "year": 2026,
+      "abstract": "Electronic Health Records (EHR) contain rich longitudinal patient information and are widely used in predictive modeling applications. However, effectively leveraging historical data remains challenging due to long trajectories, heterogeneous events, temporal irregularity, and the varying relevance of past clinical context. Existing approaches often rely on fixed windows or uniform aggregation, which can obscure clinically important signals. In this work, we introduce EHR-RAGp, a retrieval-augmented foundation model that dynamically integrates the most relevant patient history across diverse clinical event types. We propose a prototype-guided retrieval module that acts as an alignment mechanism and estimates the relevance of retrieved historical chunks with respect to a given prediction task, guiding the model towards the most informative context. Across multiple clinical prediction tasks, EHR-RAGp consistently outperforms state-of-the-art EHR foundation models and transformer-based baselines. Furthermore, integrating EHR-RAGp with existing clinical foundation models yields substantial performance gains. Overall, EHR-RAGp provides a scalable and efficient framework for leveraging long-range clinical context to improve downstream performance.",
+      "url": "http://arxiv.org/abs/2605.12335v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.12335v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+      "authors": [
+        "Suhas BN",
+        "Han-Chin Shing",
+        "Lei Xu",
+        "Mitch Strong",
+        "Jon Burnsky",
+        "Jessica Ofor",
+        "Jordan R. Mason",
+        "Susan Chen",
+        "Sundararajan Srinivasan",
+        "Chaitanya Shivade",
+        "Jack Moriarty",
+        "Joseph Paul Cohen"
+      ],
+      "year": 2025,
+      "abstract": "Hallucinations in large language models (LLMs) during summarization of patient-clinician dialogues pose significant risks to patient care and clinical decision-making. However, the phenomenon remains understudied in the clinical domain, with uncertainty surrounding the applicability of general-domain hallucination detectors. The rarity and randomness of hallucinations further complicate their investigation. In this paper, we conduct an evaluation of hallucination detection methods in the medical domain, and construct two datasets for the purpose: A fact-controlled Leave-N-out dataset -- generated by systematically removing facts from source dialogues to induce hallucinated content in summaries; and a natural hallucination dataset -- arising organically during LLM-based medical summarization. We show that general-domain detectors struggle to detect clinical hallucinations, and that performance on fact-controlled hallucinations does not reliably predict effectiveness on natural hallucinations. We then develop fact-based approaches that count hallucinations, offering explainability not available with existing methods. Notably, our LLM-based detectors, which we developed using fact-controlled hallucinations, generalize well to detecting real-world clinical hallucinations. This research contributes a suite of specialized metrics supported by expert-annotated datasets to advance faithful clinical summarization systems.",
+      "url": "http://arxiv.org/abs/2506.00448v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.00448v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Hybrid-Code v2: Zero-Hallucination Clinical ICD-10 Coding via Neuro-Symbolic Verification and Automated Knowledge Base Expansion",
+      "authors": [
+        "Yunguo Yu"
+      ],
+      "year": 2025,
+      "abstract": "Automated clinical ICD-10 coding is a high-impact healthcare task requiring a balance between coverage, precision, and safety. While neural approaches achieve strong performance, they suffer from hallucination-generating invalid or unsupported codes-posing unacceptable risks in safety-critical clinical settings. Rule-based systems eliminate hallucination but lack scalability and coverage due to manual knowledge base (KB) curation.\n  We present Hybrid-Code v2, a neuro-symbolic framework that achieves zero Type-I hallucination by construction while maintaining competitive coverage and precision. The system integrates neural candidate generation with a symbolic KB verification layer that enforces validity constraints through multi-layer verification, including format, evidence grounding, negation detection, temporal consistency, and exclusion rules. In addition, we introduce an automated KB expansion mechanism that extracts and validates coding patterns from unlabeled clinical text, addressing the scalability limitations of rule-based systems.\n  Evaluated on the MIMIC-III dataset against ClinicalBERT, BioBERT, rule-based systems, and GPT-4, Hybrid-Code v2 achieves 85% coverage, 92% precision, and 0% Type-I hallucination, outperforming rule-based systems by +40% coverage while eliminating hallucination observed in neural baselines (6-18%). The proposed architecture provides a formal safety guarantee for syntactic validity while preserving strong empirical performance.\n  These results demonstrate that neuro-symbolic verification can enforce safety constraints in neural medical AI systems without sacrificing effectiveness, offering a generalizable design pattern for deploying trustworthy AI in safety-critical domains.",
+      "url": "http://arxiv.org/abs/2512.23743v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2512.23743v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Probabilistic distances-based hallucination detection in LLMs with RAG",
+      "authors": [
+        "Rodion Oblovatny",
+        "Alexandra Kuleshova",
+        "Konstantin Polev",
+        "Alexey Zaytsev"
+      ],
+      "year": 2025,
+      "abstract": "Detecting hallucinations in large language models (LLMs) is critical for their safety in many applications. Without proper detection, these systems often provide harmful, unreliable answers. In recent years, LLMs have been actively used in retrieval-augmented generation (RAG) settings. However, hallucinations remain even in this setting, and while numerous hallucination detection methods have been proposed, most approaches are not specifically designed for RAG systems. To overcome this limitation, we introduce a hallucination detection method based on estimating the distances between the distributions of prompt token embeddings and language model response token embeddings. The method examines the geometric structure of token hidden states to reliably extract a signal of factuality in text, while remaining friendly to long sequences. Extensive experiments demonstrate that our method achieves state-of-the-art or competitive performance. It also has transferability from solving the NLI task to the hallucination detection task, making it a fully unsupervised and efficient method with a competitive performance on the final task.",
+      "url": "http://arxiv.org/abs/2506.09886v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.09886v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Aviation Safety Enhancement via NLP & Deep Learning: Classifying Flight Phases in ATSB Safety Reports",
+      "authors": [
+        "Aziida Nanyonga",
+        "Hassan Wasswa",
+        "Graham Wild"
+      ],
+      "year": 2025,
+      "abstract": "Aviation safety is paramount, demanding precise analysis of safety occurrences during different flight phases. This study employs Natural Language Processing (NLP) and Deep Learning models, including LSTM, CNN, Bidirectional LSTM (BLSTM), and simple Recurrent Neural Networks (sRNN), to classify flight phases in safety reports from the Australian Transport Safety Bureau (ATSB). The models exhibited high accuracy, precision, recall, and F1 scores, with LSTM achieving the highest performance of 87%, 88%, 87%, and 88%, respectively. This performance highlights their effectiveness in automating safety occurrence analysis. The integration of NLP and Deep Learning technologies promises transformative enhancements in aviation safety analysis, enabling targeted safety measures and streamlined report handling.",
+      "url": "http://arxiv.org/abs/2501.07923v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2501.07923v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+      "authors": [
+        "Jingyuan Qi",
+        "Zhiyang Xu",
+        "Qifan Wang",
+        "Lifu Huang"
+      ],
+      "year": 2025,
+      "abstract": "We introduce Autoregressive Retrieval Augmentation (AR-RAG), a novel paradigm that enhances image generation by autoregressively incorporating knearest neighbor retrievals at the patch level. Unlike prior methods that perform a single, static retrieval before generation and condition the entire generation on fixed reference images, AR-RAG performs context-aware retrievals at each generation step, using prior-generated patches as queries to retrieve and incorporate the most relevant patch-level visual references, enabling the model to respond to evolving generation needs while avoiding limitations (e.g., over-copying, stylistic bias, etc.) prevalent in existing methods. To realize AR-RAG, we propose two parallel frameworks: (1) Distribution-Augmentation in Decoding (DAiD), a training-free plug-and-use decoding strategy that directly merges the distribution of model-predicted patches with the distribution of retrieved patches, and (2) Feature-Augmentation in Decoding (FAiD), a parameter-efficient fine-tuning method that progressively smooths the features of retrieved patches via multi-scale convolution operations and leverages them to augment the image generation process. We validate the effectiveness of AR-RAG on widely adopted benchmarks, including Midjourney-30K, GenEval and DPG-Bench, demonstrating significant performance gains over state-of-the-art image generation models.",
+      "url": "http://arxiv.org/abs/2506.06962v3",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.06962v3",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+      "authors": [
+        "Ali Naseh",
+        "Yuefeng Peng",
+        "Anshuman Suri",
+        "Harsh Chaudhari",
+        "Alina Oprea",
+        "Amir Houmansadr"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) enables Large Language Models (LLMs) to generate grounded responses by leveraging external knowledge databases without altering model parameters. Although the absence of weight tuning prevents leakage via model parameters, it introduces the risk of inference adversaries exploiting retrieved documents in the model's context. Existing methods for membership inference and data extraction often rely on jailbreaking or carefully crafted unnatural queries, which can be easily detected or thwarted with query rewriting techniques common in RAG systems. In this work, we present Interrogation Attack (IA), a membership inference technique targeting documents in the RAG datastore. By crafting natural-text queries that are answerable only with the target document's presence, our approach demonstrates successful inference with just 30 queries while remaining stealthy; straightforward detectors identify adversarial prompts from existing methods up to ~76x more frequently than those generated by our attack. We observe a 2x improvement in TPR@1%FPR over prior inference attacks across diverse RAG configurations, all while costing less than $0.02 per document inference.",
+      "url": "http://arxiv.org/abs/2502.00306v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2502.00306v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "FAIR-RAG: Faithful Adaptive Iterative Refinement for Retrieval-Augmented Generation",
+      "authors": [
+        "Mohammad Aghajani Asl",
+        "Majid Asgari-Bidhendi",
+        "Behrooz Minaei-Bidgoli"
+      ],
+      "year": 2025,
+      "abstract": "While Retrieval-Augmented Generation (RAG) mitigates hallucination and knowledge staleness in Large Language Models (LLMs), existing frameworks often falter on complex, multi-hop queries that require synthesizing information from disparate sources. Current advanced RAG methods, employing iterative or adaptive strategies, lack a robust mechanism to systematically identify and fill evidence gaps, often propagating noise or failing to gather a comprehensive context. We introduce FAIR-RAG, a novel agentic framework that transforms the standard RAG pipeline into a dynamic, evidence-driven reasoning process. At its core is an Iterative Refinement Cycle governed by a module we term Structured Evidence Assessment (SEA). The SEA acts as an analytical gating mechanism: it deconstructs the initial query into a checklist of required findings and audits the aggregated evidence to identify confirmed facts and, critically, explicit informational gaps. These gaps provide a precise signal to an Adaptive Query Refinement agent, which generates new, targeted sub-queries to retrieve missing information. This cycle repeats until the evidence is verified as sufficient, ensuring a comprehensive context for a final, strictly faithful generation. We conducted experiments on challenging multi-hop QA benchmarks, including HotpotQA, 2WikiMultiHopQA, and MusiQue. In a unified experimental setup, FAIR-RAG significantly outperforms strong baselines. On HotpotQA, it achieves an F1-score of 0.453 -- an absolute improvement of 8.3 points over the strongest iterative baseline -- establishing a new state-of-the-art for this class of methods on these benchmarks. Our work demonstrates that a structured, evidence-driven refinement process with explicit gap analysis is crucial for unlocking reliable and accurate reasoning in advanced RAG systems for complex, knowledge-intensive tasks.",
+      "url": "http://arxiv.org/abs/2510.22344v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2510.22344v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems",
+      "authors": [
+        "Dean Wampler",
+        "Dave Nielson",
+        "Alireza Seddighi"
+      ],
+      "year": 2025,
+      "abstract": "This article provides a comprehensive systematic literature review of academic studies, industrial applications, and real-world deployments from 2018 to 2025, providing a practical guide and detailed overview of modern Retrieval-Augmented Generation (RAG) architectures. RAG offers a modular approach for integrating external knowledge without increasing the capacity of the model as LLM systems expand. Research and engineering practices have been fragmented as a result of the increasing diversity of RAG methodologies, which encompasses a variety of fusion mechanisms, retrieval strategies, and orchestration approaches. We provide quantitative assessment frameworks, analyze the implications for trust and alignment, and systematically consolidate existing RAG techniques into a unified taxonomy. This document is a practical framework for the deployment of resilient, secure, and domain-adaptable RAG systems, synthesizing insights from academic literature, industry reports, and technical implementation guides. It also functions as a technical reference.",
+      "url": "http://arxiv.org/abs/2601.05264v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.05264v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "RAG System for Supporting Japanese Litigation Procedures: Faithful Response Generation Complying with Legal Norms",
+      "authors": [
+        "Yuya Ishihara",
+        "Atsushi Keyaki",
+        "Hiroaki Yamada",
+        "Ryutaro Ohara",
+        "Mihoko Sumida"
+      ],
+      "year": 2025,
+      "abstract": "This study discusses the essential components that a Retrieval-Augmented Generation (RAG)-based LLM system should possess in order to support Japanese medical litigation procedures complying with legal norms. In litigation, expert commissioners, such as physicians, architects, accountants, and engineers, provide specialized knowledge to help judges clarify points of dispute. When considering the substitution of these expert roles with a RAG-based LLM system, the constraint of strict adherence to legal norms is imposed. Specifically, three requirements arise: (1) the retrieval module must retrieve appropriate external knowledge relevant to the disputed issues in accordance with the principle prohibiting the use of private knowledge, (2) the responses generated must originate from the context provided by the RAG and remain faithful to that context, and (3) the retrieval module must reference external knowledge with appropriate timestamps corresponding to the issues at hand. This paper discusses the design of a RAG-based LLM system that satisfies these requirements.",
+      "url": "http://arxiv.org/abs/2511.22858v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2511.22858v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Vendi-RAG: Adaptively Trading-Off Diversity And Quality Significantly Improves Retrieval Augmented Generation With LLMs",
+      "authors": [
+        "Mohammad Reza Rezaei",
+        "Adji Bousso Dieng"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-augmented generation (RAG) enhances large language models (LLMs) for domain-specific question-answering (QA) tasks by leveraging external knowledge sources. However, traditional RAG systems primarily focus on relevance-based retrieval and often struggle with redundancy, especially when reasoning requires connecting information from multiple sources. This paper introduces Vendi-RAG, a framework based on an iterative process that jointly optimizes retrieval diversity and answer quality. This joint optimization leads to significantly higher accuracy for multi-hop QA tasks. Vendi-RAG leverages the Vendi Score (VS), a flexible similarity-based diversity metric, to promote semantic diversity in document retrieval. It then uses an LLM judge that evaluates candidate answers, generated after a reasoning step, and outputs a score that the retriever uses to balance relevance and diversity among the retrieved documents during each iteration. Experiments on three challenging datasets -- HotpotQA, MuSiQue, and 2WikiMultiHopQA -- demonstrate Vendi-RAG's effectiveness in multi-hop reasoning tasks. The framework achieves significant accuracy improvements over traditional single-step and multi-step RAG approaches, with accuracy increases reaching up to +4.2% on HotpotQA, +4.1% on 2WikiMultiHopQA, and +1.3% on MuSiQue compared to Adaptive-RAG, the current best baseline. The benefits of Vendi-RAG are even more pronounced as the number of retrieved documents increases. Finally, we evaluated Vendi-RAG across different LLM backbones, including GPT-3.5, GPT-4, and GPT-4o-mini, and observed consistent improvements, demonstrating that the framework's advantages are model-agnostic.",
+      "url": "http://arxiv.org/abs/2502.11228v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2502.11228v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "EVOR: Evolving Retrieval for Code Generation",
+      "authors": [
+        "Hongjin Su",
+        "Shuyang Jiang",
+        "Yuhang Lai",
+        "Haoyuan Wu",
+        "Boao Shi",
+        "Che Liu",
+        "Qian Liu",
+        "Tao Yu"
+      ],
+      "year": 2024,
+      "abstract": "Recently the retrieval-augmented generation (RAG) has been successfully applied in code generation. However, existing pipelines for retrieval-augmented code generation (RACG) employ static knowledge bases with a single source, limiting the adaptation capabilities of Large Language Models (LLMs) to domains they have insufficient knowledge of. In this work, we develop a novel pipeline, EVOR, that employs the synchronous evolution of both queries and diverse knowledge bases. On two realistic settings where the external knowledge is required to solve code generation tasks, we compile four new datasets associated with frequently updated libraries and long-tail programming languages, named EVOR-BENCH. Extensive experiments demonstrate that EVOR achieves two to four times of execution accuracy compared to other methods such as Reflexion (Shinn et al., 2024), DocPrompting (Zhou et al., 2023), etc. We demonstrate that EVOR is flexible and can be easily combined with them to achieve further improvement. Further analysis reveals that EVOR benefits from the synchronous evolution of queries and documents and the diverse information sources in the knowledge base. We hope that our studies will inspire more insights into the design of advanced RACG pipelines in future research. Our model, code, and data are available at https://arks-codegen.github.io.",
+      "url": "http://arxiv.org/abs/2402.12317v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2402.12317v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+      "authors": [
+        "Nurshat Fateh Ali",
+        "Md. Mahdi Mohtasim",
+        "Shakil Mosharrof",
+        "T. Gopi Krishna"
+      ],
+      "year": 2024,
+      "abstract": "This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). The ever-increasing number of research articles provides a huge challenge for manual literature review. It has resulted in an increased demand for automation. Developing a system capable of automatically generating the literature reviews from only the PDF files as input is the primary objective of this research work. The effectiveness of several Natural Language Processing (NLP) strategies, such as the frequency-based method (spaCy), the transformer model (Simple T5), and retrieval-augmented generation (RAG) with Large Language Model (GPT-3.5-turbo), is evaluated to meet the primary objective. The SciTLDR dataset is chosen for this research experiment and three distinct techniques are utilized to implement three different systems for auto-generating the literature reviews. The ROUGE scores are used for the evaluation of all three systems. Based on the evaluation, the Large Language Model GPT-3.5-turbo achieved the highest ROUGE-1 score, 0.364. The transformer model comes in second place and spaCy is at the last position. Finally, a graphical user interface is created for the best system based on the large language model.",
+      "url": "http://arxiv.org/abs/2411.18583v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2411.18583v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries",
+      "authors": [
+        "Yixuan Tang",
+        "Yi Yang"
+      ],
+      "year": 2024,
+      "abstract": "Retrieval-augmented generation (RAG) augments large language models (LLM) by retrieving relevant knowledge, showing promising potential in mitigating LLM hallucinations and enhancing response quality, thereby facilitating the great adoption of LLMs in practice. However, we find that existing RAG systems are inadequate in answering multi-hop queries, which require retrieving and reasoning over multiple pieces of supporting evidence. Furthermore, to our knowledge, no existing RAG benchmarking dataset focuses on multi-hop queries. In this paper, we develop a novel dataset, MultiHop-RAG, which consists of a knowledge base, a large collection of multi-hop queries, their ground-truth answers, and the associated supporting evidence. We detail the procedure of building the dataset, utilizing an English news article dataset as the underlying RAG knowledge base. We demonstrate the benchmarking utility of MultiHop-RAG in two experiments. The first experiment compares different embedding models for retrieving evidence for multi-hop queries. In the second experiment, we examine the capabilities of various state-of-the-art LLMs, including GPT-4, PaLM, and Llama2-70B, in reasoning and answering multi-hop queries given the evidence. Both experiments reveal that existing RAG methods perform unsatisfactorily in retrieving and answering multi-hop queries. We hope MultiHop-RAG will be a valuable resource for the community in developing effective RAG systems, thereby facilitating greater adoption of LLMs in practice. The MultiHop-RAG and implemented RAG system is publicly available at https://github.com/yixuantt/MultiHop-RAG/.",
+      "url": "http://arxiv.org/abs/2401.15391v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2401.15391v1",
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "There is a lack of standardized, unified benchmarks for evaluating hallucination detection methods across diverse generation scenarios, making performance comparisons difficult and limiting generalizability.",
+      "supporting_papers": [
+        "OpenHalDet: A Unified Benchmark for Hallucination Detection across Diverse Generation Scenarios"
+      ],
+      "evidence_quotes": [
+        "However, existing evaluations face two core challenges: inconsistent inference configuration and evaluation, and limited coverage of downstream domains and tasks. Consequently, reported detector performance is often difficult to compare, reproduce, and generalize beyond specific experimental settings.",
+        "We introduce OpenHalDet, a unified benchmark for hallucination detection across diverse generation scenarios. OpenHalDet standardizes the evaluation pipeline, from prompt construction and response generation to truthfulness annotation, detector scoring, and metric computation."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Hallucination mitigation strategies are predominantly static or require large-scale annotated data for fine-tuning, lacking dynamic, inference-time self-correction mechanisms that adapt to the phase-wise emergence of hallucinations.",
+      "supporting_papers": [
+        "Mitigating Multimodal Hallucination via Phase-wise Self-reward"
+      ],
+      "evidence_quotes": [
+        "Existing methods either rely on large-scale annotated data for fine-tuning, which incurs massive computational overhead, or employ static post-hoc strategies that overlook the dynamic nature of hallucination emergence.",
+        "we introduce a new self-rewarding framework, enabling dynamic hallucination mitigation at inference time without external supervision. On the empirical side, we reveal that visual hallucination exhibits phase-wise dynamic patterns, peaking at the onset of each semantic phase.",
+        "Our method operates without fine-tuning base LVLMs or requiring external annotated data"
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "There is no established framework for assessing the clinical safety and real-world harm of hallucinations in domain-specific applications such as medical text summarization, hindering safe deployment in healthcare.",
+      "supporting_papers": [
+        "OpenHalDet: A Unified Benchmark for Hallucination Detection across Diverse Generation Scenarios"
+      ],
+      "evidence_quotes": [
+        "This issue is particularly consequential in high-risk domains such as healthcare, law, and finance, where the dissemination of incorrect information may lead to serious consequences."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "The specific causes and mitigation of hallucinations originating from different sub-tasks within Retrieval-Augmented Generation (RAG) pipelines remain underexplored, despite RAG's growing adoption for grounding LLM outputs.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    },
+    {
+      "description": "Current hallucination detection methods often require access to internal model probability distributions or complex external knowledge bases, leaving a gap for zero-resource, black-box detection approaches usable with proprietary models like ChatGPT.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    },
+    {
+      "description": "Existing hallucination detection methods are not specifically designed for RAG systems, leaving a gap for detection approaches that account for the unique failure modes introduced by retrieval-augmented generation.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    }
+  ],
+  "conflicts": [],
+  "recalled_gaps": [],
+  "novelty_score": null,
+  "novelty_reasoning": null,
+  "overlapping_papers": [],
+  "report_markdown": "## Overview\nHallucination—the generation of plausible but factually incorrect content—remains a critical barrier to the safe deployment of large language models (LLMs) [4, 17]. Research has increasingly focused on both detecting and mitigating these hallucinations, with growing attention to domain-specific risks (e.g., healthcare, law) and the role of retrieval-augmented generation (RAG) in grounding outputs [8, 14, 20].\n\n## Landscape\nThe surveyed papers collectively address hallucination from multiple angles. Foundational surveys establish taxonomies of hallucination types, causes, and mitigation strategies across general LLM use [4, 6, 17]. Detection methods range from white-box approaches leveraging internal model probabilities to black-box, zero-resource techniques like SelfCheckGPT [11] and semantic entropy [7]. Specialized detectors have been proposed for question answering [21], summarization [12, 13], and clinical text [14, 27, 31]. Mitigation strategies include fine-tuning with human feedback [1], self-reflection [15], and RAG-based grounding [8, 20, 38]. Recent work explores dynamic, inference-time self-correction for multimodal hallucinations [24] and neuro-symbolic verification for zero-hallucination clinical coding [32]. Benchmarks and evaluation frameworks are emerging, including OpenHalDet for standardized detection evaluation [23] and clinical safety frameworks for medical summarization [14, 31]. RAG-specific studies investigate failure modes from retrieval and generation sub-tasks [20, 29, 33, 37, 40], while mechanistic interpretability work examines citation faithfulness in RAG outputs [28].\n\n## Research gaps\n- **Lack of standardized, unified benchmarks** for hallucination detection across diverse generation scenarios hinders performance comparability and generalizability [23]. Existing evaluations suffer from inconsistent inference configurations and limited domain coverage, making reported detector performance difficult to reproduce or extend beyond specific settings [23].\n- **Static or fine-tuning-dependent mitigation strategies** dominate, with few dynamic, inference-time self-correction mechanisms that adapt to the phase-wise emergence of hallucinations [24]. Most methods either require large-scale annotated data for fine-tuning or employ static post-hoc approaches that overlook the dynamic nature of hallucination emergence [24].\n- **No established framework exists for assessing clinical safety and real-world harm** of hallucinations in domain-specific applications such as medical text summarization, impeding safe deployment in healthcare [14]. The consequences of incorrect information in high-risk domains like healthcare, law, and finance remain underexplored [4, 14].\n- **Sub-task-specific causes and mitigation of hallucinations within RAG pipelines** are underexplored, despite RAG’s growing adoption for grounding LLM outputs [20]. Research has only begun to disentangle how retrieval failures, generation biases, and document ordering contribute to hallucinations in RAG systems [20, 29].\n- **Zero-resource, black-box detection approaches** remain limited, as many current methods require access to internal model probability distributions or complex external knowledge bases, leaving a gap for techniques usable with proprietary models like ChatGPT [11].\n- **Hallucination detection methods are not specifically designed for RAG systems**, leaving a gap for approaches that account for the unique failure modes introduced by retrieval-augmented generation [33]. Most detection methods were developed for standalone LLM outputs and do not consider the interplay between retrieved context and generated text [33].\n\n## References\n\n[1] [Training language models to follow instructions with human feedback (2022)](http://arxiv.org/abs/2203.02155) — Long Ouyang, Jeff Wu, Xu Jiang et al.  \n[2] [Evaluating non-randomised intervention studies (2003)](https://doi.org/10.3310/hta7270) — Jonathan J Deeks, Jacqueline Dinnes, Roberto D’Amico et al.  \n[3] [Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning (2018)](https://doi.org/10.18653/v1/p18-1238) — Piyush Sharma, Nan Ding, Sebastian Goodman et al.  \n[4] [A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions (2024)](https://doi.org/10.1145/3703155) — Lei Huang, Weijiang Yu, Weitao Ma et al.  \n[5] [Text Data Augmentation for Deep Learning (2021)](https://doi.org/10.1186/s40537-021-00492-0) — Connor Shorten, Taghi M. Khoshgoftaar, Borko Furht  \n[6] [A Survey of Large Language Models (2026)](https://doi.org/10.1007/s11704-026-60308-3) — Wayne Xin Zhao, Kun Zhou, Junyi Li et al.  \n[7] [Detecting hallucinations in large language models using semantic entropy (2024)](https://doi.org/10.1038/s41586-024-07421-0) — Sebastian Farquhar, Jannik Kossen, Lorenz Kuhn et al.  \n[8] [A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models (2024)](https://doi.org/10.1145/3637528.3671470) — Wenqi Fan, Yujuan Ding, Liangbo Ning et al.  \n[9] [A Multitask, Multilingual, Multimodal Evaluation of ChatGPT on Reasoning, Hallucination, and Interactivity (2023)](https://doi.org/10.18653/v1/2023.ijcnlp-main.45) — Yejin Bang, Samuel Cahyawijaya, Nayeon Lee et al.  \n[10] [Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond (2024)](https://doi.org/10.1145/3649506) — Jingfeng Yang, Hongye Jin, Ruixiang Tang et al.  \n[11] [SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.557) — Potsawee Manakul, Adian Liusie, Mark Gales  \n[12] [Asking and Answering Questions to Evaluate the Factual Consistency of Summaries (2020)](https://doi.org/10.18653/v1/2020.acl-main.450) — Alex Wang, Kyunghyun Cho, Mike Lewis  \n[13] [FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.741) — Sewon Min, Kalpesh Krishna, Xinxi Lyu et al.  \n[14] [A framework to assess clinical safety and hallucination rates of LLMs for medical text summarisation (2025)](https://doi.org/10.1038/s41746-025-01670-7) — Elham Asgari, Nina Montaña-Brown, Magda Dubois et al.  \n[15] [Towards Mitigating LLM Hallucination via Self Reflection (2023)](https://doi.org/10.18653/v1/2023.findings-emnlp.123) — Ziwei Ji, Tiezheng Yu, Yan Xu et al.  \n[16] [Improving Factual Completeness and Consistency of Image-to-Text Radiology Report Generation (2021)](https://doi.org/10.18653/v1/2021.naacl-main.416) — Yasuhide Miura, Yuhao Zhang, Emily B. Tsai et al.  \n[17] [A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models (2024)](http://arxiv.org/abs/2401.01313) — S. M Towhidul Islam Tonmoy, S M Mehedi Zaman, Vinija Jain et al.  \n[18] [Bias and Unfairness in Information Retrieval Systems: New Challenges in the LLM Era (2024)](https://doi.org/10.1145/3637528.3671458) — Sunhao Dai, Xu Chen, Shicheng Xu et al.  \n[19] [Q2: : Evaluating Factual Consistency in Knowledge-Grounded Dialogues via Question Generation and Question Answering (2021)](https://doi.org/10.18653/v1/2021.emnlp-main.619) — Or Honovich, Leshem Choshen, Roee Aharoni et al.  \n[20] [Hallucination Mitigation for Retrieval-Augmented Large Language Models: A Review (2025)](https://doi.org/10.3390/math13050856) — Wan Zhang, Jing Zhang  \n[21] [Hallucination Detection: Robustly Discerning Reliable Answers in Large Language Models (2023)](https://doi.org/10.1145/3583780.3614905) — Yuyan Chen, Qiang Fu, Yichen Yuan et al.  \n[22] [Evaluating ChatGPT's Information Extraction Capabilities: An Assessment of Performance, Explainability, Calibration, and Faithfulness (2023)](http://arxiv.org/abs/2304.11633) — Bo Li, Gexiang Fang, Yang Yang et al.  \n[23] [OpenHalDet: A Unified Benchmark for Hallucination Detection across Diverse Generation Scenarios (2026)](http://arxiv.org/abs/2606.06959v1) — Xinyi Li, Zhen Fang, Yongxin Deng et al.  \n[24] [Mitigating Multimodal Hallucination via Phase-wise Self-reward (2026)](http://arxiv.org/abs/2604.17982v1) — Yu Zhang, Chuyang Sun, Kehai Chen et al.  \n[25] [YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition (2026)](http://arxiv.org/abs/2606.05868v1) —  PSBC LLM Team,  Huawei LLM Team, Ruihan Long et al.  \n[26] [Empathy Is Not What Changed: Clinical Assessment of Psychological Safety Across GPT Model Generations (2026)](http://arxiv.org/abs/2603.09997v1) — Michael Keeman, Anastasia Keeman  \n[27] [Hallucination Detection-Guided Preference Optimization for Clinical Summarization (2026)](http://arxiv.org/abs/2605.28910v3) — Shamanth Kuthpadi Seethakantha, Dung Ngoc Thai, Vara Prasad Gudi et al.  \n[28] [How Do LLMs Cite? A Mechanistic Interpretation of Attribution in Retrieval-Augmented Generation (2026)](http://arxiv.org/abs/2606.28358v1) — Ian van Dort, Maria Heuss  \n[29] [Stable-RAG: Mitigating Retrieval-Permutation-Induced Hallucinations in Retrieval-Augmented Generation (2026)](http://arxiv.org/abs/2601.02993v4) — Qianchi Zhang, Hainan Zhang, Liang Pang et al.  \n[30] [EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records (2026)](http://arxiv.org/abs/2605.12335v1) — Saeed Shurrab, Mariam Al-Omari, Dana El Samad et al.  \n[31] [Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization (2025)](http://arxiv.org/abs/2506.00448v1) — Suhas BN, Han-Chin Shing, Lei Xu et al.  \n[32] [Hybrid-Code v2: Zero-Hallucination Clinical ICD-10 Coding via Neuro-Symbolic Verification and Automated Knowledge Base Expansion (2025)](http://arxiv.org/abs/2512.23743v2) — Yunguo Yu  \n[33] [Probabilistic distances-based hallucination detection in LLMs with RAG (2025)](http://arxiv.org/abs/2506.09886v2) — Rodion Oblovatny, Alexandra Kuleshova, Konstantin Polev et al.  \n[34] [Aviation Safety Enhancement via NLP & Deep Learning: Classifying Flight Phases in ATSB Safety Reports (2025)](http://arxiv.org/abs/2501.07923v1) — Aziida Nanyonga, Hassan Wasswa, Graham Wild  \n[35] [AR-RAG: Autoregressive Retrieval Augmentation for Image Generation (2025)](http://arxiv.org/abs/2506.06962v3) — Jingyuan Qi, Zhiyang Xu, Qifan Wang et al.  \n[36] [Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation (2025)](http://arxiv.org/abs/2502.00306v2) — Ali Naseh, Yuefeng Peng, Anshuman Suri et al.  \n[37] [FAIR-RAG: Faithful Adaptive Iterative Refinement for Retrieval-Augmented Generation (2025)](http://arxiv.org/abs/2510.22344v1) — Mohammad Aghajani Asl, Majid Asgari-Bidhendi, Behrooz Minaei-Bidgoli  \n[38] [Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems (2025)](http://arxiv.org/abs/2601.05264v1) — Dean Wampler, Dave Nielson, Alireza Seddighi  \n[39] [RAG System for Supporting Japanese Litigation Procedures: Faithful Response Generation Complying with Legal Norms (2025)](http://arxiv.org/abs/2511.22858v1) — Yuya Ishihara, Atsushi Keyaki, Hiroaki Yamada et al.  \n[40] [Vendi-RAG: Adaptively Trading-Off Diversity And Quality Significantly Improves Retrieval Augmented Generation With LLMs (2025)](http://arxiv.org/abs/2502.11228v2) — Mohammad Reza Rezaei, Adji Bousso Dieng  \n[41] [EVOR: Evolving Retrieval for Code Generation (2024)](http://arxiv.org/abs/2402.12317v2) — Hongjin Su, Shuyang Jiang, Yuhang Lai et al.  \n[42] [Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation (2024)](http://arxiv.org/abs/2411.18583v1) — Nurshat Fateh Ali, Md. Mahdi Mohtasim, Shakil Mosharrof et al.  \n[43] [MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries (2024)](http://arxiv.org/abs/2401.15391v1) — Yixuan Tang, Yi Yang",
+  "iteration": 2,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "http://arxiv.org/abs/2203.02155",
+    "https://doi.org/10.3310/hta7270",
+    "https://doi.org/10.18653/v1/p18-1238",
+    "https://doi.org/10.1145/3703155",
+    "https://doi.org/10.1186/s40537-021-00492-0",
+    "https://doi.org/10.1007/s11704-026-60308-3",
+    "https://doi.org/10.1038/s41586-024-07421-0",
+    "https://doi.org/10.1145/3637528.3671470",
+    "https://doi.org/10.18653/v1/2023.ijcnlp-main.45",
+    "https://doi.org/10.1145/3649506",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.557",
+    "https://doi.org/10.18653/v1/2020.acl-main.450",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.741",
+    "https://doi.org/10.1038/s41746-025-01670-7",
+    "https://doi.org/10.18653/v1/2023.findings-emnlp.123",
+    "https://doi.org/10.18653/v1/2021.naacl-main.416",
+    "http://arxiv.org/abs/2401.01313",
+    "https://doi.org/10.1145/3637528.3671458",
+    "https://doi.org/10.18653/v1/2021.emnlp-main.619",
+    "https://doi.org/10.3390/math13050856",
+    "https://doi.org/10.1145/3583780.3614905",
+    "http://arxiv.org/abs/2304.11633",
+    "http://arxiv.org/abs/2606.06959v1",
+    "http://arxiv.org/abs/2604.17982v1",
+    "http://arxiv.org/abs/2606.05868v1",
+    "http://arxiv.org/abs/2603.09997v1",
+    "http://arxiv.org/abs/2605.28910v3",
+    "http://arxiv.org/abs/2606.28358v1",
+    "http://arxiv.org/abs/2601.02993v4",
+    "http://arxiv.org/abs/2605.12335v1",
+    "http://arxiv.org/abs/2506.00448v1",
+    "http://arxiv.org/abs/2512.23743v2",
+    "http://arxiv.org/abs/2506.09886v2",
+    "http://arxiv.org/abs/2501.07923v1",
+    "http://arxiv.org/abs/2506.06962v3",
+    "http://arxiv.org/abs/2502.00306v2",
+    "http://arxiv.org/abs/2510.22344v1",
+    "http://arxiv.org/abs/2601.05264v1",
+    "http://arxiv.org/abs/2511.22858v1",
+    "http://arxiv.org/abs/2502.11228v2",
+    "http://arxiv.org/abs/2402.12317v2",
+    "http://arxiv.org/abs/2411.18583v1",
+    "http://arxiv.org/abs/2401.15391v1"
+  ],
+  "recent_paper_ids": [
+    "http://arxiv.org/abs/2603.09997v1",
+    "http://arxiv.org/abs/2605.28910v3",
+    "http://arxiv.org/abs/2606.28358v1",
+    "http://arxiv.org/abs/2601.02993v4",
+    "http://arxiv.org/abs/2605.12335v1",
+    "http://arxiv.org/abs/2506.00448v1",
+    "http://arxiv.org/abs/2512.23743v2",
+    "http://arxiv.org/abs/2506.09886v2",
+    "http://arxiv.org/abs/2501.07923v1",
+    "http://arxiv.org/abs/2506.06962v3",
+    "http://arxiv.org/abs/2502.00306v2",
+    "http://arxiv.org/abs/2510.22344v1",
+    "http://arxiv.org/abs/2601.05264v1",
+    "http://arxiv.org/abs/2511.22858v1",
+    "http://arxiv.org/abs/2502.11228v2",
+    "http://arxiv.org/abs/2402.12317v2",
+    "http://arxiv.org/abs/2411.18583v1",
+    "http://arxiv.org/abs/2401.15391v1"
+  ],
+  "open_gaps": [
+    "Current hallucination detection methods often require access to internal model probability distributions or complex external knowledge bases, leaving a gap for zero-resource, black-box detection approaches usable with proprietary models like ChatGPT.",
+    "Hallucination mitigation strategies are predominantly static or require large-scale annotated data for fine-tuning, lacking dynamic, inference-time self-correction mechanisms that adapt to the phase-wise emergence of hallucinations.",
+    "Existing hallucination detection methods are not specifically designed for RAG systems, leaving a gap for detection approaches that account for the unique failure modes introduced by retrieval-augmented generation."
+  ],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "hallucination detection large language models",
+        "hallucination mitigation LLM techniques",
+        "factual consistency evaluation generation",
+        "neural text hallucination survey",
+        "LLM faithfulness calibration"
+      ],
+      "new_papers": 25,
+      "total_papers": 25,
+      "open_gaps": 2,
+      "closed_gaps": 3
+    },
+    {
+      "iteration": 2,
+      "queries": [
+        "clinical safety framework hallucination detection medical text summarization real-world harm assessment",
+        "evaluating hallucination risk in clinical NLP summarization deployment safety metrics",
+        "hallucination causes retrieval-augmented generation sub-task analysis retrieval generation attribution",
+        "mitigating hallucinations in RAG pipeline components retrieval quality generation grounding",
+        "attribution errors in retrieval-augmented generation sub-tasks hallucination mitigation strategies"
+      ],
+      "new_papers": 18,
+      "total_papers": 43,
+      "open_gaps": 3,
+      "closed_gaps": 3
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": false,
+  "coverage_reasoning": "The user's idea is not provided, so we cannot assess which gap is most relevant. However, the most central gap—lack of standardized benchmarks for detection evaluation—is high confidence but supported by only one paper, which is insufficient per the stopping rule. Additionally, two medium-confidence gaps (zero-resource detection and RAG-specific detection) are each supported by a single paper, further indicating that another search round could strengthen coverage.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [
+    "tool-agent fetch failed: Expecting value: line 1 column 2 (char 1)",
+    "openalex failed for query 'clinical safety framework hallucination detection medical text summarization real-world harm assessment': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'evaluating hallucination risk in clinical NLP summarization deployment safety metrics': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'hallucination causes retrieval-augmented generation sub-task analysis retrieval generation attribution': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'mitigating hallucinations in RAG pipeline components retrieval quality generation grounding': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'attribution errors in retrieval-augmented generation sub-tasks hallucination mitigation strategies': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY"
+  ],
+  "tool_call_count": 15
+}

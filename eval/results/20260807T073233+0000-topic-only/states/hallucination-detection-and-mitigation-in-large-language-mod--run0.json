@@ -1,0 +1,1005 @@
+{
+  "topic": "hallucination detection and mitigation in large language models",
+  "user_idea": null,
+  "search_queries": [
+    "black-box hallucination detection LLM without logprobs external knowledge",
+    "reinforcement learning truthfulness free-form text hallucination mitigation",
+    "hallucination detection code generation complex dependencies multi-file context",
+    "hardware description language VHDL Verilog hallucination mitigation LLM",
+    "clinical LLM hallucination multi-axis human evaluation safety-critical medical"
+  ],
+  "papers": [
+    {
+      "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+      "authors": [
+        "Enkelejda Kasneci",
+        "Kathrin Seßler",
+        "Stefan Küchemann",
+        "Maria Bannert",
+        "Daryna Dementieva"
+      ],
+      "year": 2023,
+      "abstract": "",
+      "url": "http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3",
+      "source": "openalex",
+      "citation_count": 5702,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations",
+      "authors": [
+        "Ranjay Krishna",
+        "Yuke Zhu",
+        "Oliver Groth",
+        "Justin Johnson",
+        "Kenji Hata"
+      ],
+      "year": 2017,
+      "abstract": "Despite progress in perceptual tasks such as image classification, computers still perform poorly on cognitive tasks such as image description and question answering. Cognition is core to tasks that involve not just recognizing, but reasoning about our visual world. However, models used to tackle the rich content in images for cognitive tasks are still being trained using the same datasets designed for perceptual tasks. To achieve success at cognitive tasks, models need to understand the interactions and relationships between objects in an image. When asked “What vehicle is the person riding?” ...[truncated]",
+      "url": "https://doi.org/10.1007/s11263-016-0981-7",
+      "source": "openalex",
+      "citation_count": 5247,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Training language models to follow instructions with human feedback",
+      "authors": [
+        "Long Ouyang",
+        "Jeff Wu",
+        "Xu Jiang",
+        "Diogo Almeida",
+        "Carroll L. Wainwright"
+      ],
+      "year": 2022,
+      "abstract": "Making language models bigger does not inherently make them better at following a user's intent. For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user. In other words, these models are not aligned with their users. In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback. Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we u ...[truncated]",
+      "url": "http://arxiv.org/abs/2203.02155",
+      "source": "openalex",
+      "citation_count": 4319,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing",
+      "authors": [
+        "Pengfei Liu",
+        "Weizhe Yuan",
+        "Jinlan Fu",
+        "Zhengbao Jiang",
+        "Hiroaki Hayashi"
+      ],
+      "year": 2022,
+      "abstract": "This article surveys and organizes research works in a new paradigm in natural language processing, which we dub “prompt-based learning.” Unlike traditional supervised learning, which trains a model to take in an input x and predict an output y as P ( y|x ), prompt-based learning is based on language models that model the probability of text directly. To use these models to perform prediction tasks, the original input x is modified using a template into a textual string prompt x′ that has some unfilled slots, and then the language model is used to probabilistically fill the unfilled informatio ...[truncated]",
+      "url": "https://doi.org/10.1145/3560815",
+      "source": "openalex",
+      "citation_count": 3701,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large language models encode clinical knowledge",
+      "authors": [
+        "Karan Singhal",
+        "Shekoofeh Azizi",
+        "Tao Tu",
+        "S. Sara Mahdavi",
+        "Jason Lee"
+      ],
+      "year": 2023,
+      "abstract": "Abstract Large language models (LLMs) have demonstrated impressive capabilities, but the bar for clinical applications is high. Attempts to assess the clinical knowledge of models typically rely on automated evaluations based on limited benchmarks. Here, to address these limitations, we present MultiMedQA, a benchmark combining six existing medical question answering datasets spanning professional medicine, research and consumer queries and a new dataset of medical questions searched online, HealthSearchQA. We propose a human evaluation framework for model answers along multiple axes including ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-023-06291-2",
+      "source": "openalex",
+      "citation_count": 3457,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "GPT-4 Technical Report",
+      "authors": [
+        "OpenAI",
+        "Achiam, Josh",
+        "Adler, Steven",
+        "Agarwal, Sandhini",
+        "Ahmad, Lama"
+      ],
+      "year": 2023,
+      "abstract": "Abstract—Large Language Models (LLMs) suffer from inherent stochasticity, limiting their utility in high-stakes enterprise environments where determinism and auditability are required. This paper introduces the MFOUR Vibe Framework (MVF), a platform-agnostic architectural standard that transforms probabilistic natural language intent into deterministic software artifacts. We define a five-layer topology, comprising the Kernel Identity, Synaptic Routing, Interface Contracts, Context Anchoring, and the Mirror Test. Furthermore, we introduce The Vibe Integrity Score (VIS), a quantitative metric f ...[truncated]",
+      "url": "http://arxiv.org/abs/2303.08774",
+      "source": "openalex",
+      "citation_count": 2443,
+      "pdf_url": null,
+      "full_text_excerpt": "[1 Introduction] . On the MMLU benchmark [35, 36], an English-language suite of multiple-choice questions covering 57 subjects, GPT-4 not only outperforms existing models by a considerable margin in English, but also demonstrates strong performance in other languages. On translated variants of MMLU, GPT-4 surpasses the English-language state-of-the-art in 24 of 26 languages considered. We discuss these model capability results, as well as model safety improvements and results, in more detail in later sections.\n\nThis report also discusses a key challenge of the project, developing deep learning infrastructure and optimization methods that behave predictably across a wide range of scales. This allowed us to make predictions about the expected performance of GPT-4 (based on small runs trained in similar ways) that were tested against the final run to increase confidence in our training.\n\nDespite its capabilities, GPT-4 has similar limitations to earlier GPT models [1, 37, 38]: it is not fully reliable (e.g. can suffer from “hallucinations”), has a limited context window, and does not learn from experience. Care should be taken when using the outputs of GPT-4, particularly in contexts where reliability is important.\n\nGPT-4’s capabilities and limitations create significant and novel safety challenges, and we believe careful study of these challenges is an important area of research given the potential societal impact. This report includes an extensive system card (after the Appendix) describing so\n\n[6 Risks & mitigations] del-level interventions increase the difficulty of eliciting bad behavior but doing so is still possible. For example, there still exist “jailbreaks” (e.g., adversarial system messages, see Figure 10 in the System Card for more details) to generate content which violate our usage guidelines. So long as these limitations exist, it’s important to complement them with deployment-time safety techniques like monitoring for abuse as well as a pipeline for fast iterative model improvement.\n\nGPT-4 and successor models have the potential to significantly influence society in both beneficial and harmful ways. We are collaborating with external researchers to improve how we understand and assess potential impacts, as well as to build evaluations for dangerous capabilities that may emerge in future systems. We will soon publish recommendations on steps society can take to prepare for AI’s effects and initial ideas for projecting AI’s possible economic impacts."
+    },
+    {
+      "title": "A Metaverse: Taxonomy, Components, Applications, and Open Challenges",
+      "authors": [
+        "Sangmin Park",
+        "Young‐Gab Kim"
+      ],
+      "year": 2022,
+      "abstract": "Unlike previous studies on the Metaverse based on Second Life, the current Metaverse is based on the social value of Generation Z that online and offline selves are not different. With the technological development of deep learning-based high-precision recognition models and natural generation models, Metaverse is being strengthened with various factors, from mobile-based always-on access to connectivity with reality using virtual currency. The integration of enhanced social activities and neural-net methods requires a new definition of Metaverse suitable for the present, different from the pr ...[truncated]",
+      "url": "https://doi.org/10.1109/access.2021.3140175",
+      "source": "openalex",
+      "citation_count": 1793,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Language Models as Knowledge Bases?",
+      "authors": [
+        "Fabio Petroni",
+        "Tim Rocktäschel",
+        "Sebastian Riedel",
+        "Patrick Lewis",
+        "Anton Bakhtin"
+      ],
+      "year": 2019,
+      "abstract": "Fabio Petroni, Tim Rocktäschel, Sebastian Riedel, Patrick Lewis, Anton Bakhtin, Yuxiang Wu, Alexander Miller. Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). 2019.",
+      "url": "https://doi.org/10.18653/v1/d19-1250",
+      "source": "openalex",
+      "citation_count": 1778,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+      "authors": [
+        "Lei Huang",
+        "Weijiang Yu",
+        "Weitao Ma",
+        "Weihong Zhong",
+        "Zhangyin Feng"
+      ],
+      "year": 2024,
+      "abstract": "The emergence of large language models (LLMs) has marked a significant breakthrough in natural language processing (NLP), fueling a paradigm shift in information acquisition. Nevertheless, LLMs are prone to hallucination, generating plausible yet nonfactual content. This phenomenon raises significant concerns over the reliability of LLMs in real-world information retrieval (IR) systems and has attracted intensive research to detect and mitigate such hallucinations. Given the open-ended general-purpose attributes inherent to LLMs, LLM hallucinations present distinct challenges that diverge from ...[truncated]",
+      "url": "https://doi.org/10.1145/3703155",
+      "source": "openalex",
+      "citation_count": 1764,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Sparks of Artificial General Intelligence: Early experiments with GPT-4",
+      "authors": [
+        "Sébastien Bubeck",
+        "Varun Chandrasekaran",
+        "Ronen Eldan",
+        "Johannes Gehrke",
+        "Eric Horvitz"
+      ],
+      "year": 2023,
+      "abstract": "Artificial intelligence (AI) researchers have been developing and refining large language models (LLMs) that exhibit remarkable capabilities across a variety of domains and tasks, challenging our understanding of learning and cognition. The latest model developed by OpenAI, GPT-4, was trained using an unprecedented scale of compute and data. In this paper, we report on our investigation of an early version of GPT-4, when it was still in active development by OpenAI. We contend that (this early version of) GPT-4 is part of a new cohort of LLMs (along with ChatGPT and Google's PaLM for example) ...[truncated]",
+      "url": "http://arxiv.org/abs/2303.12712",
+      "source": "openalex",
+      "citation_count": 1565,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey of Large Language Models",
+      "authors": [
+        "Wayne Xin Zhao",
+        "Kun Zhou",
+        "Junyi Li",
+        "Tianyi Tang",
+        "Zican Dong"
+      ],
+      "year": 2026,
+      "abstract": "Abstract The rapid evolution of large language models (LLMs) has driven a transformative shift in artificial intelligence (AI), reshaping both research paradigms and practical applications. Distinguished from their predecessors by unprecedented scale and advanced capabilities, LLMs necessitate new frameworks for understanding their development, behavior, and societal impact. This survey systematically reviews recent advancements in LLM techniques across four key dimensions: (1) pre-training methodologies, which establish core model capabilities through large-scale self-supervised training, arc ...[truncated]",
+      "url": "https://doi.org/10.1007/s11704-026-60308-3",
+      "source": "openalex",
+      "citation_count": 1428,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A survey on large language model based autonomous agents",
+      "authors": [
+        "Lei Wang",
+        "Chen Ma",
+        "Xueyang Feng",
+        "Zeyu Zhang",
+        "Hao Yang"
+      ],
+      "year": 2024,
+      "abstract": "Abstract Autonomous agents have long been a research focus in academic and industry communities. Previous research often focuses on training agents with limited knowledge within isolated environments, which diverges significantly from human learning processes, and makes the agents hard to achieve human-like decisions. Recently, through the acquisition of vast amounts of Web knowledge, large language models (LLMs) have shown potential in human-level intelligence, leading to a surge in research on LLM-based autonomous agents. In this paper, we present a comprehensive survey of these studies, del ...[truncated]",
+      "url": "https://doi.org/10.1007/s11704-024-40231-1",
+      "source": "openalex",
+      "citation_count": 1321,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Flamingo: a Visual Language Model for Few-Shot Learning",
+      "authors": [
+        "Alayrac, Jean-Baptiste",
+        "Jeff Donahue",
+        "Pauline Luc",
+        "Antoine Miech",
+        "Iain Barr"
+      ],
+      "year": 2022,
+      "abstract": "Building models that can be rapidly adapted to novel tasks using only a handful of annotated examples is an open challenge for multimodal machine learning research. We introduce Flamingo, a family of Visual Language Models (VLM) with this ability. We propose key architectural innovations to: (i) bridge powerful pretrained vision-only and language-only models, (ii) handle sequences of arbitrarily interleaved visual and textual data, and (iii) seamlessly ingest images or videos as inputs. Thanks to their flexibility, Flamingo models can be trained on large-scale multimodal web corpora containing ...[truncated]",
+      "url": "http://arxiv.org/abs/2204.14198",
+      "source": "openalex",
+      "citation_count": 1250,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Toward expert-level medical question answering with large language models",
+      "authors": [
+        "K. K. Singhal",
+        "Tao Tu",
+        "Juraj Gottweis",
+        "Rory Sayres",
+        "Ellery Wulczyn"
+      ],
+      "year": 2025,
+      "abstract": "Large language models (LLMs) have shown promise in medical question answering, with Med-PaLM being the first to exceed a 'passing' score in United States Medical Licensing Examination style questions. However, challenges remain in long-form medical question answering and handling real-world workflows. Here, we present Med-PaLM 2, which bridges these gaps with a combination of base LLM improvements, medical domain fine-tuning and new strategies for improving reasoning and grounding through ensemble refinement and chain of retrieval. Med-PaLM 2 scores up to 86.5% on the MedQA dataset, improving ...[truncated]",
+      "url": "https://doi.org/10.1038/s41591-024-03423-7",
+      "source": "openalex",
+      "citation_count": 815,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Detecting hallucinations in large language models using semantic entropy",
+      "authors": [
+        "Sebastian Farquhar",
+        "Jannik Kossen",
+        "Lorenz Kuhn",
+        "Yarin Gal"
+      ],
+      "year": 2024,
+      "abstract": "Abstract Large language model (LLM) systems, such as ChatGPT 1 or Gemini 2 , can show impressive reasoning and question-answering capabilities but often ‘hallucinate’ false outputs and unsubstantiated answers 3,4 . Answering unreliably or without the necessary information prevents adoption in diverse fields, with problems including fabrication of legal precedents 5 or untrue facts in news articles 6 and even posing a risk to human life in medical domains such as radiology 7 . Encouraging truthfulness through supervision or reinforcement has been only partially successful 8 . Researchers need a ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-024-07421-0",
+      "source": "openalex",
+      "citation_count": 705,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Adapted large language models can outperform medical experts in clinical text summarization",
+      "authors": [
+        "Dave Van Veen",
+        "Cara Van Uden",
+        "Louis Blankemeier",
+        "Jean-Benoit Delbrouck",
+        "Asad Aali"
+      ],
+      "year": 2024,
+      "abstract": "",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11479659",
+      "source": "openalex",
+      "citation_count": 693,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "authors": [
+        "Wenqi Fan",
+        "Yujuan Ding",
+        "Liangbo Ning",
+        "Shijie Wang",
+        "Hengyun Li"
+      ],
+      "year": 2024,
+      "abstract": "As one of the most advanced techniques in AI, Retrieval-Augmented Generation (RAG) can offer reliable and up-to-date external knowledge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capacity of retrieval in providing additional knowledge enables RAG to assist existing generative AI in producing high-quality outputs. Recently, Large Language Models (LLMs) have demonstrated revolutionary abilities in language understanding and generation, while still facing inherent limitations such as hallucinations and out-of-date internal ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671470",
+      "source": "openalex",
+      "citation_count": 640,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval Augmentation Reduces Hallucination in Conversation",
+      "authors": [
+        "Kurt Shuster",
+        "Spencer Poff",
+        "Moya Chen",
+        "Douwe Kiela",
+        "Jason Weston"
+      ],
+      "year": 2021,
+      "abstract": "Despite showing increasingly human-like conversational abilities, state-of-the-art dialogue models often suffer from factual incorrectness and hallucination of knowledge (Roller et al., 2020). In this work we explore the use of neural-retrieval-in-the-loop architectures - recently shown to be effective in open-domain QA (Lewis et al., 2020b; Izacard and Grave, 2020) - for knowledge-grounded dialogue, a task that is arguably more challenging as it requires querying based on complex multi-turn dialogue context and generating conversationally coherent responses. We study various types of architec ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2021.findings-emnlp.320",
+      "source": "openalex",
+      "citation_count": 496,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+      "authors": [
+        "Jingfeng Yang",
+        "Hongye Jin",
+        "Ruixiang Tang",
+        "Xiaotian Han",
+        "Qizhang Feng"
+      ],
+      "year": 2024,
+      "abstract": "This article presents a comprehensive and practical guide for practitioners and end-users working with Large Language Models (LLMs) in their downstream Natural Language Processing (NLP) tasks. We provide discussions and insights into the usage of LLMs from the perspectives of models, data, and downstream tasks. First, we offer an introduction and brief summary of current language models. Then, we discuss the influence of pre-training data, training data, and test data. Most importantly, we provide a detailed discussion about the use and non-use cases of large language models for various natura ...[truncated]",
+      "url": "https://doi.org/10.1145/3649506",
+      "source": "openalex",
+      "citation_count": 475,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Enriching Location Representation with Detailed Semantic Information",
+      "authors": [
+        "Grattafiori, Aaron",
+        "Dubey, Abhimanyu",
+        "Jauhri, Abhinav",
+        "Pandey, Abhinav",
+        "Kadian, Abhishek"
+      ],
+      "year": 2024,
+      "abstract": "Cyber-physical systems (CPS) are critical to modern infrastructure, but are vulnerable to faults and anomalies that threaten their operational safety. In this work, we evaluate the use of open-source Large Language Models (LLMs), such as Mistral 7B, Llama3.1:8b-instruct-fp16, and others to detect anomalies in two distinct datasets: battery management and powertrain systems. Our methodology utilises retrieval-augmented generation (RAG) techniques, incorporating a novel two-step process where LLMs first infer operational rules from normal behavior before applying these rules for fault detection. ...[truncated]",
+      "url": "http://arxiv.org/abs/2407.21783",
+      "source": "openalex",
+      "citation_count": 423,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+      "authors": [
+        "Potsawee Manakul",
+        "Adian Liusie",
+        "Mark Gales"
+      ],
+      "year": 2023,
+      "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose “SelfCheckGPT”, a simple sampling-based approach that can be used to fact-check the ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.557",
+      "source": "openalex",
+      "citation_count": 397,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A framework to assess clinical safety and hallucination rates of LLMs for medical text summarisation",
+      "authors": [
+        "Elham Asgari",
+        "Nina Montaña-Brown",
+        "Magda Dubois",
+        "Saleh Khalil",
+        "Jasmine Balloch"
+      ],
+      "year": 2025,
+      "abstract": "Integrating large language models (LLMs) into healthcare can enhance workflow efficiency and patient care by automating tasks such as summarising consultations. However, the fidelity between LLM outputs and ground truth information is vital to prevent miscommunication that could lead to compromise in patient safety. We propose a framework comprising (1) an error taxonomy for classifying LLM outputs, (2) an experimental structure for iterative comparisons in our LLM document generation pipeline, (3) a clinical safety framework to evaluate the harms of errors, and (4) a graphical user interface, ...[truncated]",
+      "url": "https://doi.org/10.1038/s41746-025-01670-7",
+      "source": "openalex",
+      "citation_count": 273,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models",
+      "authors": [
+        "Yue Zhang",
+        "Yafu Li",
+        "Leyang Cui",
+        "Deng Cai",
+        "Lemao Liu"
+      ],
+      "year": 2023,
+      "abstract": "While large language models (LLMs) have demonstrated remarkable capabilities across a range of downstream tasks, a significant concern revolves around their propensity to exhibit hallucinations: LLMs occasionally generate content that diverges from the user input, contradicts previously generated context, or misaligns with established world knowledge. This phenomenon poses a substantial challenge to the reliability of LLMs in real-world scenarios. In this paper, we survey recent efforts on the detection, explanation, and mitigation of hallucination, with an emphasis on the unique challenges po ...[truncated]",
+      "url": "http://arxiv.org/abs/2309.01219",
+      "source": "openalex",
+      "citation_count": 244,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Towards Mitigating LLM Hallucination via Self Reflection",
+      "authors": [
+        "Ziwei Ji",
+        "Tiezheng Yu",
+        "Yan Xu",
+        "Nayeon Lee",
+        "Etsuko Ishii"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (LLMs) have shown promise for generative and knowledge-intensive tasks including question-answering (QA) tasks. However, the practical deployment still faces challenges, notably the issue of \"hallucination\", where models generate plausible-sounding but unfaithful or nonsensical information. This issue becomes particularly critical in the medical domain due to the uncommon professional concepts and potential social risks involved. This paper analyses the phenomenon of hallucination in medical generative QA systems using widely adopted LLMs and datasets. Our investigation c ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.123",
+      "source": "openalex",
+      "citation_count": 222,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+      "authors": [
+        "Lei Huang",
+        "Weijiang Yu",
+        "Weitao Ma",
+        "Wei‐Hong Zhong",
+        "Zhangyin Feng"
+      ],
+      "year": 2023,
+      "abstract": "The emergence of large language models (LLMs) has marked a significant breakthrough in natural language processing (NLP), fueling a paradigm shift in information acquisition. Nevertheless, LLMs are prone to hallucination, generating plausible yet nonfactual content. This phenomenon raises significant concerns over the reliability of LLMs in real-world information retrieval (IR) systems and has attracted intensive research to detect and mitigate such hallucinations. Given the open-ended general-purpose attributes inherent to LLMs, LLM hallucinations present distinct challenges that diverge from ...[truncated]",
+      "url": "http://arxiv.org/abs/2311.05232",
+      "source": "openalex",
+      "citation_count": 218,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+      "authors": [
+        "Shehzaad Dhuliawala",
+        "Mojtaba Komeili",
+        "Jing Xu",
+        "Roberta Răileanu",
+        "Xian Li"
+      ],
+      "year": 2024,
+      "abstract": "Generation of plausible yet incorrect factual information, termed hallucination, is an unsolved issue in large language models.We study the ability of language models to deliberate on the responses they give in order to correct their mistakes.We develop the Chain-of-Verification (COVE) method whereby the model first (i) drafts an initial response; then (ii) plans verification questions to fact-check its draft; (iii) answers those questions independently so the answers are not biased by other responses; and (iv) generates its final verified response.In experiments, we show COVE decreases halluc ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2024.findings-acl.212",
+      "source": "openalex",
+      "citation_count": 191,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Evaluating Large Language Models in Class-Level Code Generation",
+      "authors": [
+        "Xueying Du",
+        "Mingwei Liu",
+        "Kaixin Wang",
+        "Hanlin Wang",
+        "Liu Jun-wei"
+      ],
+      "year": 2024,
+      "abstract": "Recently, many large language models (LLMs) have been proposed, showing advanced proficiency in code generation. Meanwhile, many efforts have been dedicated to evaluating LLMs on code generation benchmarks such as HumanEval. Although being very helpful for comparing different LLMs, existing evaluation focuses on a simple code generation scenario (i.e., function-level or statement-level code generation), which mainly asks LLMs to generate one single code unit (e.g., a function or a statement) for the given natural language description. Such evaluation focuses on generating independent and often ...[truncated]",
+      "url": "https://doi.org/10.1145/3597503.3639219",
+      "source": "openalex",
+      "citation_count": 139,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models",
+      "authors": [
+        "S. M Towhidul Islam Tonmoy",
+        "S M Mehedi Zaman",
+        "Vinija Jain",
+        "Anku Rani",
+        "Vipula Rawte"
+      ],
+      "year": 2024,
+      "abstract": "As Large Language Models (LLMs) continue to advance in their ability to write human-like text, a key challenge remains around their tendency to hallucinate generating content that appears factual but is ungrounded. This issue of hallucination is arguably the biggest hindrance to safely deploying these powerful LLMs into real-world production systems that impact people's lives. The journey toward widespread adoption of LLMs in practical settings heavily relies on addressing and mitigating hallucinations. Unlike traditional AI systems focused on limited tasks, LLMs have been exposed to vast amou ...[truncated]",
+      "url": "http://arxiv.org/abs/2401.01313",
+      "source": "openalex",
+      "citation_count": 121,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts",
+      "authors": [
+        "Dave Van Veen",
+        "Cara Van Uden",
+        "Louis Blankemeier",
+        "Jean-Benoit Delbrouck",
+        "Asad Aali"
+      ],
+      "year": 2023,
+      "abstract": "",
+      "url": "https://doi.org/10.21203/rs.3.rs-3483777/v1",
+      "source": "openalex",
+      "citation_count": 98,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Survey of Hallucination in Natural Language Generation",
+      "authors": [
+        "Ziwei Ji",
+        "Nayeon Lee",
+        "Rita Frieske",
+        "Tiezheng Yu",
+        "Dan Su"
+      ],
+      "year": 2022,
+      "abstract": "Natural Language Generation (NLG) has improved exponentially in recent years thanks to the development of sequence-to-sequence deep learning technologies such as Transformer-based language models. This advancement has led to more fluent and coherent NLG, leading to improved development in downstream tasks such as abstractive summarization, dialogue generation and data-to-text generation. However, it is also apparent that deep learning based generation is prone to hallucinate unintended text, which degrades the system performance and fails to meet user expectations in many real-world scenarios. ...[truncated]",
+      "url": "http://arxiv.org/abs/2202.03629",
+      "source": "openalex",
+      "citation_count": 96,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Hallucination Detection: Robustly Discerning Reliable Answers in Large Language Models",
+      "authors": [
+        "Yuyan Chen",
+        "Qiang Fu",
+        "Yichen Yuan",
+        "Zhihao Wen",
+        "Ge Fan"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (LLMs) have gained widespread adoption in various natural language processing tasks, including question answering and dialogue systems. However, a major drawback of LLMs is the issue of hallucination, where they generate unfaithful or inconsistent content that deviates from the input source, leading to severe consequences. In this paper, we propose a robust discriminator named RelD to effectively detect hallucination in LLMs' generated answers. RelD is trained on the constructed RelQA, a bilingual question-answering dialogue dataset along with answers generated by LLMs an ...[truncated]",
+      "url": "https://doi.org/10.1145/3583780.3614905",
+      "source": "openalex",
+      "citation_count": 91,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLM Hallucinations in Practical Code Generation: Phenomena, Mechanism, and Mitigation",
+      "authors": [
+        "Ziyao Zhang",
+        "Chong Wang",
+        "Yanlin Wang",
+        "Ensheng Shi",
+        "Yuchi Ma"
+      ],
+      "year": 2025,
+      "abstract": "Code generation aims to automatically generate code from input requirements, significantly enhancing development efficiency. Recent large language models (LLMs) based approaches have shown promising results and revolutionized code generation task. Despite the promising performance, LLMs often generate contents with hallucinations, especially for the code generation scenario requiring the handling of complex contextual dependencies in practical development process. Although previous study has analyzed hallucinations in LLM-powered code generation, the study is limited to standalone function gen ...[truncated]",
+      "url": "https://doi.org/10.1145/3728894",
+      "source": "openalex",
+      "citation_count": 76,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large Language Models for Forecasting and Anomaly Detection: A Systematic Literature Review",
+      "authors": [
+        "Jing Su",
+        "Chufeng Jiang",
+        "Xin Jin",
+        "Yuxin Qiao",
+        "Tingsong Xiao"
+      ],
+      "year": 2024,
+      "abstract": "This systematic literature review comprehensively examines the application of Large Language Models (LLMs) in forecasting and anomaly detection, highlighting the current state of research, inherent challenges, and prospective future directions. LLMs have demonstrated significant potential in parsing and analyzing extensive datasets to identify patterns, predict future events, and detect anomalous behavior across various domains. However, this review identifies several critical challenges that impede their broader adoption and effectiveness, including the reliance on vast historical datasets, i ...[truncated]",
+      "url": "http://arxiv.org/abs/2402.10350",
+      "source": "openalex",
+      "citation_count": 75,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment",
+      "authors": [
+        "Yang Liu",
+        "Yuanshun Yao",
+        "Jean-François Ton",
+        "Xiaoying Zhang",
+        "Guo, Ruocheng"
+      ],
+      "year": 2023,
+      "abstract": "Ensuring alignment, which refers to making models behave in accordance with human intentions [1,2], has become a critical task before deploying large language models (LLMs) in real-world applications. For instance, OpenAI devoted six months to iteratively aligning GPT-4 before its release [3]. However, a major challenge faced by practitioners is the lack of clear guidance on evaluating whether LLM outputs align with social norms, values, and regulations. This obstacle hinders systematic iteration and deployment of LLMs. To address this issue, this paper presents a comprehensive survey of key d ...[truncated]",
+      "url": "http://arxiv.org/abs/2308.05374",
+      "source": "openalex",
+      "citation_count": 72,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on Large Language Models for Code Generation",
+      "authors": [
+        "J.-H.R. Jiang",
+        "Fan Wang",
+        "Jiasi Shen",
+        "Kim, Sungju",
+        "Sunghun Kim"
+      ],
+      "year": 2024,
+      "abstract": "Large Language Models (LLMs) have garnered remarkable advancements across diverse code-related tasks, known as Code LLMs, particularly in code generation that generates source code with LLM from natural language descriptions. This burgeoning field has captured significant interest from both academic researchers and industry professionals due to its practical significance in software development, e.g., GitHub Copilot. Despite the active exploration of LLMs for a variety of code tasks, either from the perspective of natural language processing (NLP) or software engineering (SE) or both, there is ...[truncated]",
+      "url": "http://arxiv.org/abs/2406.00515",
+      "source": "openalex",
+      "citation_count": 59,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Self-contradictory Hallucinations of Large Language Models: Evaluation, Detection and Mitigation",
+      "authors": [
+        "Niels Mündler",
+        "Jingxuan He",
+        "Slobodan Jenko",
+        "Martin Vechev"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (large LMs) are susceptible to producing text that contains hallucinated content. An important instance of this problem is self-contradiction, where the LM generates two contradictory sentences within the same context. In this work, we present a comprehensive investigation into self-contradiction for various instruction-tuned LMs, covering evaluation, detection, and mitigation. Our primary evaluation task is open-domain text generation, but we also demonstrate the applicability of our approach to shorter question answering. Our analysis reveals the prevalence of self-cont ...[truncated]",
+      "url": "http://arxiv.org/abs/2305.15852",
+      "source": "openalex",
+      "citation_count": 47,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Stitch in Time Saves Nine: Detecting and Mitigating Hallucinations of LLMs by Validating Low-Confidence Generation",
+      "authors": [
+        "Neeraj Varshney",
+        "Wenlin Yao",
+        "Hongming Zhang",
+        "Jianshu Chen",
+        "Dong Yu"
+      ],
+      "year": 2023,
+      "abstract": "Recently developed large language models have achieved remarkable success in generating fluent and coherent text. However, these models often tend to 'hallucinate' which critically hampers their reliability. In this work, we address this crucial problem and propose an approach that actively detects and mitigates hallucinations during the generation process. Specifically, we first identify the candidates of potential hallucination leveraging the model's logit output values, check their correctness through a validation procedure, mitigate the detected hallucinations, and then continue with the g ...[truncated]",
+      "url": "http://arxiv.org/abs/2307.03987",
+      "source": "openalex",
+      "citation_count": 30,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Hardware Design and Verification with Large Language Models: A Scoping Review, Challenges, and Open Issues",
+      "authors": [
+        "Meisam Abdollahi",
+        "S. Faegheh Yeganli",
+        "Mohammad Baharloo",
+        "Amirali Baniasadi"
+      ],
+      "year": 2024,
+      "abstract": "Background: Large Language Models (LLMs) are emerging as promising tools in hardware design and verification, with recent advancements suggesting they could fundamentally reshape conventional practices. Objective: This study examines the significance of LLMs in shaping the future of hardware design and verification. It offers an extensive literature review, addresses key challenges, and highlights open research questions in this field. Design: in this scoping review, we survey over 360 papers most of the published between 2022 and 2024, including 71 directly relevant ones to the topic, to eval ...[truncated]",
+      "url": "https://doi.org/10.3390/electronics14010120",
+      "source": "openalex",
+      "citation_count": 29,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "ChipNeMo: Domain-Adapted LLMs for Chip Design",
+      "authors": [
+        "Mingjie Liu",
+        "Ene, Teodor-Dumitru",
+        "Robert Kirby",
+        "Chris Cheng",
+        "Nathaniel Pinckney"
+      ],
+      "year": 2023,
+      "abstract": "ChipNeMo aims to explore the applications of large language models (LLMs) for industrial chip design. Instead of directly deploying off-the-shelf commercial or open-source LLMs, we instead adopt the following domain adaptation techniques: domain-adaptive tokenization, domain-adaptive continued pretraining, model alignment with domain-specific instructions, and domain-adapted retrieval models. We evaluate these methods on three selected LLM applications for chip design: an engineering assistant chatbot, EDA script generation, and bug summarization and analysis. Our evaluations demonstrate that ...[truncated]",
+      "url": "http://arxiv.org/abs/2311.00176",
+      "source": "openalex",
+      "citation_count": 26,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Beyond Detection: Large Language Models and Next-Generation Cybersecurity",
+      "authors": [
+        "Aitizaz Ali",
+        "Mohamed Chahine Ghanem"
+      ],
+      "year": 2025,
+      "abstract": "The Integrating Contextual and Adaptive Cyber Defense Systems The accelerating evolution of cyber threats, seen both in terms of their complexity and frequency of attempts, makes it imperative to move away from traditional, reactive defense structures and towards intelligent, adaptive and proactive cyber defense strategies. Large Language Models (LLMs) (such as GPT this-will-be-a-zillionth-of-a-second-type-here or BERT derivatives) represent powerful new capabilities developed for understanding, analyzing, and generating human-like language with contextual depth enabling a new frontier in the ...[truncated]",
+      "url": "https://doi.org/10.70470/shifra/2025/005",
+      "source": "openalex",
+      "citation_count": 25,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "HaVen: Hallucination-Mitigated LLM for Verilog Code Generation Aligned with HDL Engineers",
+      "authors": [
+        "Yiyao Yang",
+        "Teng Fu",
+        "Pengju Liu",
+        "Mengnan Qi",
+        "Chenyang Lv"
+      ],
+      "year": 2025,
+      "abstract": "Recently, the use of large language models (LLMs) for Verilog code generation has attracted great research interest to enable hardware design automation. However, previous works have shown a gap between the ability of LLMs and the practical demands of hardware description language (HDL) engineering. This gap includes differences in how engineers phrase questions and hallucinations in the code generated. To address these chal-lenges, we introduce Haven, a novel LLM framework designed to mitigate hallucinations and align Verilog code generation with the practices of HDL engineers. Haven tackles ...[truncated]",
+      "url": "https://doi.org/10.23919/date64628.2025.10993072",
+      "source": "openalex",
+      "citation_count": 18,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Detecting and Mitigating the Ungrounded Hallucinations in Text Generation by LLMs",
+      "authors": [
+        "Zizhong Wei",
+        "Dongsheng Guo",
+        "Dengrong Huang",
+        "Qilai Zhang",
+        "Sijia Zhang"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (LLMs) have achieved impressive success in generating fluent and coherent texts in natural language. However, the presence of inaccurate or low-quality data can unintentionally lead to the retention of incorrect knowledge, resulting in hallucinations that hinder progress in content generation. In this paper, we propose a comprehensive framework aimed at detecting and mitigating these hallucinations. Our approach uses Named Entity Recognition (NER) and Entity Relationship (ER) models to identify hallucination entities and sentences during the detection phase. Furthermore, ...[truncated]",
+      "url": "https://doi.org/10.1145/3661638.3661653",
+      "source": "openalex",
+      "citation_count": 14,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Detecting and Reducing the Factual Hallucinations of Large Language Models with Metamorphic Testing",
+      "authors": [
+        "Weibin Wu",
+        "Yuhang Cao",
+        "Ning Yi",
+        "R. Ou",
+        "Zibin Zheng"
+      ],
+      "year": 2025,
+      "abstract": "Question answering (QA) is a fundamental task of large language models (LLMs), which requires LLMs to automatically answer human-posed questions in natural language. However, LLMs are known to distort facts and make non-factual statements (i.e., hallucinations) when dealing with QA tasks, which may affect the deployment of LLMs in real-life situations. In this work, we propose DrHall, a framework for detecting and reducing the factual hallucinations of black-box LLMs with metamorphic testing (MT). We believe that hallucinated answers are unstable. Therefore, when LLMs hallucinate, they are mor ...[truncated]",
+      "url": "https://doi.org/10.1145/3715784",
+      "source": "openalex",
+      "citation_count": 7,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "How to Catch an AI Liar: Lie Detection in Black-Box LLMs by Asking Unrelated Questions",
+      "authors": [
+        "Lorenzo Pacchiardi",
+        "Alex Chan",
+        "Sören Mindermann",
+        "Ilan Moscovitz",
+        "Alexa Y. Pan"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (LLMs) can \"lie\", which we define as outputting false statements despite \"knowing\" the truth in a demonstrable sense. LLMs might \"lie\", for example, when instructed to output misinformation. Here, we develop a simple lie detector that requires neither access to the LLM's activations (black-box) nor ground-truth knowledge of the fact in question. The detector works by asking a predefined set of unrelated follow-up questions after a suspected lie, and feeding the LLM's yes/no answers into a logistic regression classifier. Despite its simplicity, this lie detector is highly ...[truncated]",
+      "url": "http://arxiv.org/abs/2309.15840",
+      "source": "openalex",
+      "citation_count": 7,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large Language Models With Contrastive Decoding Algorithm for Hallucination Mitigation in Low‐Resource Languages",
+      "authors": [
+        "Hongying Zan",
+        "Arifa Javed",
+        "Muhammad Abdullah",
+        "Javed Rashid",
+        "Muhammad Faheem"
+      ],
+      "year": 2025,
+      "abstract": "ABSTRACT Neural machine translation (NMT) has advanced with deep learning and large‐scale multilingual models, yet translating low‐resource languages often lacks sufficient training data and leads to hallucinations. This often results in translated content that diverges significantly from the source text. This research proposes a refined Contrastive Decoding (CD) algorithm that dynamically adjusts weights of log probabilities from strong expert and weak amateur models to mitigate hallucinations in low‐resource NMT and improve translation quality. Advanced large language NMT models, including C ...[truncated]",
+      "url": "https://doi.org/10.1049/cit2.70004",
+      "source": "openalex",
+      "citation_count": 5,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLMPirate: LLMs for Black-box Hardware IP Piracy",
+      "authors": [
+        "Vasudev Gohil",
+        "Matthew DeLorenzo",
+        "Veera Vishwa Achuta Sai Venkat Nallam",
+        "Joey See",
+        "Jeyavijayan Rajendran"
+      ],
+      "year": 2025,
+      "abstract": "",
+      "url": "https://doi.org/10.14722/ndss.2025.242059",
+      "source": "openalex",
+      "citation_count": 4,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large Language Models for EDA: Future or Mirage?",
+      "authors": [
+        "Zhuolun He",
+        "Yuan Pu",
+        "Haoyuan Wu",
+        "Tairu Qiu",
+        "Bei Yu"
+      ],
+      "year": 2025,
+      "abstract": "In this article, we explore the burgeoning intersection of large language models (LLMs) and electronic design automation (EDA). We critically assess whether LLMs represent a transformative future for EDA or merely a fleeting mirage. By organizing existing research into four critical domains of EDA—code generation, verification and debugging, knowledge representation and retrieval, and optimization/modeling—we provide a comprehensive overview of the current state-of-the-art. The survey concludes with a 5-level roadmap to guide the progressive integration and advancement of LLMs in EDA. Ultimate ...[truncated]",
+      "url": "https://doi.org/10.1145/3736167",
+      "source": "openalex",
+      "citation_count": 4,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Operationalizing a Threat Model for Red-Teaming Large Language Models (LLMs)",
+      "authors": [
+        "Apurv Verma",
+        "Satyapriya Krishna",
+        "Sebastian Gehrmann",
+        "Madhavan Seshadri",
+        "Anu Pradhan"
+      ],
+      "year": 2024,
+      "abstract": "Creating secure and resilient applications with large language models (LLM) requires anticipating, adjusting to, and countering unforeseen threats. Red-teaming has emerged as a critical technique for identifying vulnerabilities in real-world LLM implementations. This paper presents a detailed threat model and provides a systematization of knowledge (SoK) of red-teaming attacks on LLMs. We develop a taxonomy of attacks based on the stages of the LLM development and deployment process and extract various insights from previous research. In addition, we compile methods for defense and practical r ...[truncated]",
+      "url": "http://arxiv.org/abs/2407.14937",
+      "source": "openalex",
+      "citation_count": 4,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Mask-based Membership Inference Attacks for Retrieval-Augmented Generation",
+      "authors": [
+        "Mingrui Liu",
+        "Sixiao Zhang",
+        "Cheng Long"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) has been an effective approach to mitigate hallucinations in large language models (LLMs) by incorporating up-to-date and domain-specific knowledge. Recently, there has been a trend of storing up-to-date or copyrighted data in RAG knowledge databases instead of using it for LLM training. This practice has raised concerns about Membership Inference Attacks (MIAs), which aim to detect if a specific target document is stored in the RAG system's knowledge database so as to protect the rights of data producers. While research has focused on enhancing the trustwo ...[truncated]",
+      "url": "https://doi.org/10.1145/3696410.3714771",
+      "source": "openalex",
+      "citation_count": 2,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Verilog Programming Learning Assistant System Focused on Basic Verilog with a Guided Learning Method",
+      "authors": [
+        "Pin-Chieh Hsieh",
+        "Tzu-Lun Fang",
+        "Shaobo Jin",
+        "Yuyan Wang",
+        "Nobuo Funabiki"
+      ],
+      "year": 2025,
+      "abstract": "With continuous advancements in semiconductor technology, mastering efficient designs of high-quality and advanced chips has become an important part of science and technology education. Chip performances will determine the futures of various aspects of societies. However, novice students often encounter difficulties in learning digital chip designs using Verilog programming, a common hardware design language. An efficient self-study system for supporting them that can offer various exercise problems, such that any answer is marked automatically, is in strong demand. In this paper, we design a ...[truncated]",
+      "url": "https://doi.org/10.3390/fi17080333",
+      "source": "openalex",
+      "citation_count": 2,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "Supervision and reinforcement learning have been only partially successful in encouraging truthfulness in LLMs, and a general method to detect hallucinations in free-form text generation is still needed.",
+      "supporting_papers": [
+        "GPT-4 Technical Report (2023)"
+      ],
+      "evidence_quotes": [
+        "it is not fully reliable (e.g. can suffer from “hallucinations”)"
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "There is a recognized gap between LLM capabilities and the practical demands of hardware description language (HDL) engineering, including hallucinations in generated code, which requires targeted mitigation methods.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    },
+    {
+      "description": "Hallucination mitigation in low-resource language neural machine translation is underexplored, with existing methods not adequately addressing the data scarcity issue.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    }
+  ],
+  "conflicts": [],
+  "recalled_gaps": [],
+  "novelty_score": null,
+  "novelty_reasoning": null,
+  "overlapping_papers": [],
+  "report_markdown": "## Overview\nHallucination—the generation of plausible but factually incorrect content—remains a critical barrier to the safe and reliable deployment of large language models (LLMs) [9, 23, 28]. While LLMs demonstrate remarkable capabilities across diverse domains, their tendency to produce untruthful or ungrounded outputs necessitates robust detection and mitigation strategies [3, 15].\n\n## Landscape\nThe provided papers collectively address hallucination from multiple angles. Foundational work establishes that scaling models alone does not ensure truthfulness, motivating alignment techniques such as fine-tuning with human feedback [3]. Several surveys comprehensively taxonomize hallucination phenomena, detection methods, and mitigation approaches, highlighting challenges unique to the open-ended nature of LLMs [9, 23, 25, 28, 30]. Detection techniques range from sampling-based approaches like SelfCheckGPT, which assesses factuality without access to output probabilities [21], to semantic entropy methods that quantify uncertainty in free-form generation [15]. Mitigation strategies include retrieval-augmented generation (RAG), which grounds responses in external knowledge to reduce fabrication [17, 18], and self-reflective frameworks such as Chain-of-Verification, where models fact-check their own drafts [26]. Domain-specific investigations further reveal hallucination risks in medical question answering and clinical text summarization, where factual errors carry high stakes [5, 14, 22, 24]. In code generation, studies document hallucinations arising from complex contextual dependencies, with targeted solutions proposed for hardware description languages like Verilog [32, 35, 38, 41]. Additional work explores hallucination in low-resource machine translation [45], self-contradiction within generated text [36], and the use of metamorphic testing to detect factual inconsistencies [43].\n\n## Research gaps\n- **General detection in free-form text:** Supervision and reinforcement learning have been only partially successful in encouraging truthfulness, and a general method to detect hallucinations in free-form text generation is still needed [15]. This gap is underscored by the inherent unreliability of LLM outputs noted in alignment research [3].\n- **Domain-specific mitigation for hardware design:** A recognized gap exists between LLM capabilities and the practical demands of hardware description language (HDL) engineering, including hallucinations in generated code, which requires targeted mitigation methods [41]. Broader reviews of LLMs in hardware design and EDA corroborate the need for specialized solutions [38, 47].\n- **Low-resource language translation:** Hallucination mitigation in low-resource language neural machine translation is underexplored, with existing methods not adequately addressing the data scarcity issue [45].\n\n## References\n\n[1] [ChatGPT for good? On opportunities and challenges of large language models for education (2023)](http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3) — Enkelejda Kasneci, Kathrin Seßler, Stefan Küchemann et al.  \n[2] [Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations (2017)](https://doi.org/10.1007/s11263-016-0981-7) — Ranjay Krishna, Yuke Zhu, Oliver Groth et al.  \n[3] [Training language models to follow instructions with human feedback (2022)](http://arxiv.org/abs/2203.02155) — Long Ouyang, Jeff Wu, Xu Jiang et al.  \n[4] [Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing (2022)](https://doi.org/10.1145/3560815) — Pengfei Liu, Weizhe Yuan, Jinlan Fu et al.  \n[5] [Large language models encode clinical knowledge (2023)](https://doi.org/10.1038/s41586-023-06291-2) — Karan Singhal, Shekoofeh Azizi, Tao Tu et al.  \n[6] [GPT-4 Technical Report (2023)](http://arxiv.org/abs/2303.08774) — OpenAI, Achiam, Josh, Adler, Steven et al.  \n[7] [A Metaverse: Taxonomy, Components, Applications, and Open Challenges (2022)](https://doi.org/10.1109/access.2021.3140175) — Sangmin Park, Young‐Gab Kim  \n[8] [Language Models as Knowledge Bases? (2019)](https://doi.org/10.18653/v1/d19-1250) — Fabio Petroni, Tim Rocktäschel, Sebastian Riedel et al.  \n[9] [A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions (2024)](https://doi.org/10.1145/3703155) — Lei Huang, Weijiang Yu, Weitao Ma et al.  \n[10] [Sparks of Artificial General Intelligence: Early experiments with GPT-4 (2023)](http://arxiv.org/abs/2303.12712) — Sébastien Bubeck, Varun Chandrasekaran, Ronen Eldan et al.  \n[11] [A Survey of Large Language Models (2026)](https://doi.org/10.1007/s11704-026-60308-3) — Wayne Xin Zhao, Kun Zhou, Junyi Li et al.  \n[12] [A survey on large language model based autonomous agents (2024)](https://doi.org/10.1007/s11704-024-40231-1) — Lei Wang, Chen Ma, Xueyang Feng et al.  \n[13] [Flamingo: a Visual Language Model for Few-Shot Learning (2022)](http://arxiv.org/abs/2204.14198) — Alayrac, Jean-Baptiste, Jeff Donahue, Pauline Luc et al.  \n[14] [Toward expert-level medical question answering with large language models (2025)](https://doi.org/10.1038/s41591-024-03423-7) — K. K. Singhal, Tao Tu, Juraj Gottweis et al.  \n[15] [Detecting hallucinations in large language models using semantic entropy (2024)](https://doi.org/10.1038/s41586-024-07421-0) — Sebastian Farquhar, Jannik Kossen, Lorenz Kuhn et al.  \n[16] [Adapted large language models can outperform medical experts in clinical text summarization (2024)](https://www.ncbi.nlm.nih.gov/pmc/articles/11479659) — Dave Van Veen, Cara Van Uden, Louis Blankemeier et al.  \n[17] [A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models (2024)](https://doi.org/10.1145/3637528.3671470) — Wenqi Fan, Yujuan Ding, Liangbo Ning et al.  \n[18] [Retrieval Augmentation Reduces Hallucination in Conversation (2021)](https://doi.org/10.18653/v1/2021.findings-emnlp.320) — Kurt Shuster, Spencer Poff, Moya Chen et al.  \n[19] [Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond (2024)](https://doi.org/10.1145/3649506) — Jingfeng Yang, Hongye Jin, Ruixiang Tang et al.  \n[20] [Enriching Location Representation with Detailed Semantic Information (2024)](http://arxiv.org/abs/2407.21783) — Grattafiori, Aaron, Dubey, Abhimanyu, Jauhri, Abhinav et al.  \n[21] [SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.557) — Potsawee Manakul, Adian Liusie, Mark Gales  \n[22] [A framework to assess clinical safety and hallucination rates of LLMs for medical text summarisation (2025)](https://doi.org/10.1038/s41746-025-01670-7) — Elham Asgari, Nina Montaña-Brown, Magda Dubois et al.  \n[23] [Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models (2023)](http://arxiv.org/abs/2309.01219) — Yue Zhang, Yafu Li, Leyang Cui et al.  \n[24] [Towards Mitigating LLM Hallucination via Self Reflection (2023)](https://doi.org/10.18653/v1/2023.findings-emnlp.123) — Ziwei Ji, Tiezheng Yu, Yan Xu et al.  \n[25] [A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions (2023)](http://arxiv.org/abs/2311.05232) — Lei Huang, Weijiang Yu, Weitao Ma et al.  \n[26] [Chain-of-Verification Reduces Hallucination in Large Language Models (2024)](https://doi.org/10.18653/v1/2024.findings-acl.212) — Shehzaad Dhuliawala, Mojtaba Komeili, Jing Xu et al.  \n[27] [Evaluating Large Language Models in Class-Level Code Generation (2024)](https://doi.org/10.1145/3597503.3639219) — Xueying Du, Mingwei Liu, Kaixin Wang et al.  \n[28] [A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models (2024)](http://arxiv.org/abs/2401.01313) — S. M Towhidul Islam Tonmoy, S M Mehedi Zaman, Vinija Jain et al.  \n[29] [Clinical Text Summarization: Adapting Large Language Models Can Outperform Human Experts (2023)](https://doi.org/10.21203/rs.3.rs-3483777/v1) — Dave Van Veen, Cara Van Uden, Louis Blankemeier et al.  \n[30] [Survey of Hallucination in Natural Language Generation (2022)](http://arxiv.org/abs/2202.03629) — Ziwei Ji, Nayeon Lee, Rita Frieske et al.  \n[31] [Hallucination Detection: Robustly Discerning Reliable Answers in Large Language Models (2023)](https://doi.org/10.1145/3583780.3614905) — Yuyan Chen, Qiang Fu, Yichen Yuan et al.  \n[32] [LLM Hallucinations in Practical Code Generation: Phenomena, Mechanism, and Mitigation (2025)](https://doi.org/10.1145/3728894) — Ziyao Zhang, Chong Wang, Yanlin Wang et al.  \n[33] [Large Language Models for Forecasting and Anomaly Detection: A Systematic Literature Review (2024)](http://arxiv.org/abs/2402.10350) — Jing Su, Chufeng Jiang, Xin Jin et al.  \n[34] [Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment (2023)](http://arxiv.org/abs/2308.05374) — Yang Liu, Yuanshun Yao, Jean-François Ton et al.  \n[35] [A Survey on Large Language Models for Code Generation (2024)](http://arxiv.org/abs/2406.00515) — J.-H.R. Jiang, Fan Wang, Jiasi Shen et al.  \n[36] [Self-contradictory Hallucinations of Large Language Models: Evaluation, Detection and Mitigation (2023)](http://arxiv.org/abs/2305.15852) — Niels Mündler, Jingxuan He, Slobodan Jenko et al.  \n[37] [A Stitch in Time Saves Nine: Detecting and Mitigating Hallucinations of LLMs by Validating Low-Confidence Generation (2023)](http://arxiv.org/abs/2307.03987) — Neeraj Varshney, Wenlin Yao, Hongming Zhang et al.  \n[38] [Hardware Design and Verification with Large Language Models: A Scoping Review, Challenges, and Open Issues (2024)](https://doi.org/10.3390/electronics14010120) — Meisam Abdollahi, S. Faegheh Yeganli, Mohammad Baharloo et al.  \n[39] [ChipNeMo: Domain-Adapted LLMs for Chip Design (2023)](http://arxiv.org/abs/2311.00176) — Mingjie Liu, Ene, Teodor-Dumitru, Robert Kirby et al.  \n[40] [Beyond Detection: Large Language Models and Next-Generation Cybersecurity (2025)](https://doi.org/10.70470/shifra/2025/005) — Aitizaz Ali, Mohamed Chahine Ghanem  \n[41] [HaVen: Hallucination-Mitigated LLM for Verilog Code Generation Aligned with HDL Engineers (2025)](https://doi.org/10.23919/date64628.2025.10993072) — Yiyao Yang, Teng Fu, Pengju Liu et al.  \n[42] [Detecting and Mitigating the Ungrounded Hallucinations in Text Generation by LLMs (2023)](https://doi.org/10.1145/3661638.3661653) — Zizhong Wei, Dongsheng Guo, Dengrong Huang et al.  \n[43] [Detecting and Reducing the Factual Hallucinations of Large Language Models with Metamorphic Testing (2025)](https://doi.org/10.1145/3715784) — Weibin Wu, Yuhang Cao, Ning Yi et al.  \n[44] [How to Catch an AI Liar: Lie Detection in Black-Box LLMs by Asking Unrelated Questions (2023)](http://arxiv.org/abs/2309.15840) — Lorenzo Pacchiardi, Alex Chan, Sören Mindermann et al.  \n[45] [Large Language Models With Contrastive Decoding Algorithm for Hallucination Mitigation in Low‐Resource Languages (2025)](https://doi.org/10.1049/cit2.70004) — Hongying Zan, Arifa Javed, Muhammad Abdullah et al.  \n[46] [LLMPirate: LLMs for Black-box Hardware IP Piracy (2025)](https://doi.org/10.14722/ndss.2025.242059) — Vasudev Gohil, Matthew DeLorenzo, Veera Vishwa Achuta Sai Venkat Nallam et al.  \n[47] [Large Language Models for EDA: Future or Mirage? (2025)](https://doi.org/10.1145/3736167) — Zhuolun He, Yuan Pu, Haoyuan Wu et al.  \n[48] [Operationalizing a Threat Model for Red-Teaming Large Language Models (LLMs) (2024)](http://arxiv.org/abs/2407.14937) — Apurv Verma, Satyapriya Krishna, Sebastian Gehrmann et al.  \n[49] [Mask-based Membership Inference Attacks for Retrieval-Augmented Generation (2025)](https://doi.org/10.1145/3696410.3714771) — Mingrui Liu, Sixiao Zhang, Cheng Long  \n[50] [A Verilog Programming Learning Assistant System Focused on Basic Verilog with a Guided Learning Method (2025)](https://doi.org/10.3390/fi17080333) — Pin-Chieh Hsieh, Tzu-Lun Fang, Shaobo Jin et al.",
+  "iteration": 2,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3",
+    "https://doi.org/10.1007/s11263-016-0981-7",
+    "http://arxiv.org/abs/2203.02155",
+    "https://doi.org/10.1145/3560815",
+    "https://doi.org/10.1038/s41586-023-06291-2",
+    "https://doi.org/10.18653/v1/d19-1250",
+    "https://doi.org/10.1145/3703155",
+    "https://doi.org/10.1007/s11704-026-60308-3",
+    "https://doi.org/10.1007/s11704-024-40231-1",
+    "http://arxiv.org/abs/2204.14198",
+    "https://doi.org/10.1038/s41586-024-07421-0",
+    "https://doi.org/10.1145/3637528.3671470",
+    "https://doi.org/10.18653/v1/2021.findings-emnlp.320",
+    "https://doi.org/10.1145/3649506",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.557",
+    "https://doi.org/10.1038/s41746-025-01670-7",
+    "http://arxiv.org/abs/2309.01219",
+    "https://doi.org/10.18653/v1/2023.findings-emnlp.123",
+    "http://arxiv.org/abs/2202.03629",
+    "https://doi.org/10.1145/3583780.3614905",
+    "https://doi.org/10.1145/3728894",
+    "http://arxiv.org/abs/2305.15852",
+    "http://arxiv.org/abs/2307.03987",
+    "https://doi.org/10.23919/date64628.2025.10993072",
+    "https://doi.org/10.1145/3661638.3661653",
+    "http://arxiv.org/abs/2303.08774",
+    "https://doi.org/10.1109/access.2021.3140175",
+    "http://arxiv.org/abs/2303.12712",
+    "https://doi.org/10.1038/s41591-024-03423-7",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/11479659",
+    "http://arxiv.org/abs/2407.21783",
+    "http://arxiv.org/abs/2311.05232",
+    "https://doi.org/10.18653/v1/2024.findings-acl.212",
+    "https://doi.org/10.1145/3597503.3639219",
+    "http://arxiv.org/abs/2401.01313",
+    "https://doi.org/10.21203/rs.3.rs-3483777/v1",
+    "http://arxiv.org/abs/2402.10350",
+    "http://arxiv.org/abs/2308.05374",
+    "http://arxiv.org/abs/2406.00515",
+    "https://doi.org/10.3390/electronics14010120",
+    "http://arxiv.org/abs/2311.00176",
+    "https://doi.org/10.70470/shifra/2025/005",
+    "https://doi.org/10.1145/3715784",
+    "http://arxiv.org/abs/2309.15840",
+    "https://doi.org/10.1049/cit2.70004",
+    "https://doi.org/10.14722/ndss.2025.242059",
+    "https://doi.org/10.1145/3736167",
+    "http://arxiv.org/abs/2407.14937",
+    "https://doi.org/10.1145/3696410.3714771",
+    "https://doi.org/10.3390/fi17080333"
+  ],
+  "recent_paper_ids": [
+    "http://arxiv.org/abs/2303.08774",
+    "https://doi.org/10.1109/access.2021.3140175",
+    "http://arxiv.org/abs/2303.12712",
+    "https://doi.org/10.1038/s41591-024-03423-7",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/11479659",
+    "http://arxiv.org/abs/2407.21783",
+    "http://arxiv.org/abs/2311.05232",
+    "https://doi.org/10.18653/v1/2024.findings-acl.212",
+    "https://doi.org/10.1145/3597503.3639219",
+    "http://arxiv.org/abs/2401.01313",
+    "https://doi.org/10.21203/rs.3.rs-3483777/v1",
+    "http://arxiv.org/abs/2402.10350",
+    "http://arxiv.org/abs/2308.05374",
+    "http://arxiv.org/abs/2406.00515",
+    "https://doi.org/10.3390/electronics14010120",
+    "http://arxiv.org/abs/2311.00176",
+    "https://doi.org/10.70470/shifra/2025/005",
+    "https://doi.org/10.1145/3715784",
+    "http://arxiv.org/abs/2309.15840",
+    "https://doi.org/10.1049/cit2.70004",
+    "https://doi.org/10.14722/ndss.2025.242059",
+    "https://doi.org/10.1145/3736167",
+    "http://arxiv.org/abs/2407.14937",
+    "https://doi.org/10.1145/3696410.3714771",
+    "https://doi.org/10.3390/fi17080333"
+  ],
+  "open_gaps": [
+    "Supervision and reinforcement learning have been only partially successful in encouraging truthfulness in LLMs, and a general method to detect hallucinations in free-form text generation is still needed.",
+    "There is a recognized gap between LLM capabilities and the practical demands of hardware description language (HDL) engineering, including hallucinations in generated code, which requires targeted mitigation methods.",
+    "Hallucination mitigation in low-resource language neural machine translation is underexplored, with existing methods not adequately addressing the data scarcity issue."
+  ],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "hallucination detection large language models",
+        "hallucination mitigation LLM",
+        "factual accuracy evaluation language models",
+        "LLM hallucination survey benchmark",
+        "faithfulness hallucination reduction NLP"
+      ],
+      "new_papers": 25,
+      "total_papers": 25,
+      "open_gaps": 5,
+      "closed_gaps": 0
+    },
+    {
+      "iteration": 2,
+      "queries": [
+        "black-box hallucination detection LLM without logprobs external knowledge",
+        "reinforcement learning truthfulness free-form text hallucination mitigation",
+        "hallucination detection code generation complex dependencies multi-file context",
+        "hardware description language VHDL Verilog hallucination mitigation LLM",
+        "clinical LLM hallucination multi-axis human evaluation safety-critical medical"
+      ],
+      "new_papers": 25,
+      "total_papers": 50,
+      "open_gaps": 3,
+      "closed_gaps": 0
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": false,
+  "coverage_reasoning": "The user's topic is 'hallucination detection and mitigation in large language models'. The three research gaps found are all relevant to this topic, but each is supported by only 1 paper, and their confidence levels are 'medium'. The most idea-relevant gap is the first one, which directly addresses the need for a general method to detect hallucinations in free-form text generation. However, with only 1 paper and medium confidence, this gap is not yet sufficiently supported to ensure comprehensive coverage. According to the instructions, coverage is sufficient only when the most relevant gap is 'HIGH' confidence and supported by at least 2 papers. Since this condition is not met, the search should continue.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [],
+  "tool_call_count": 20
+}
