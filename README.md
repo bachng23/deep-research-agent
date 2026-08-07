@@ -2,6 +2,33 @@
 
 An AI agent that researches academic literature (ArXiv + OpenAlex), reads paper full text, identifies research gaps, surfaces conflicting evidence, and scores the novelty of your idea — built with LangGraph, model-agnostic via any OpenAI-compatible endpoint (OpenRouter by default).
 
+Python 3.12+ · LangGraph · FastAPI · FastMCP · Qdrant · 143 tests
+
+---
+
+## Quickstart
+
+```bash
+git clone https://github.com/bachng23/deep-re-search-agent
+cd deep-re-search-agent
+uv sync
+
+cp .env.example .env        # then set API_KEY (OpenRouter or any OpenAI-compatible endpoint)
+
+uv run paper-research       # terminal UI
+```
+
+Type a topic to start a research run, or a question to query papers already read. `ctrl+t` switches mode.
+
+---
+
+## Contents
+
+- [What it does](#what-it-does) · [Pipeline](#pipeline) · [Model routing](#model-routing)
+- [Interfaces](#interfaces) — TUI, REST, MCP, Python
+- [Evaluation](#evaluation) · [Project structure](#project-structure) · [Design principles](#design-principles)
+- [Known limitations](#known-limitations) · [Roadmap](#roadmap)
+
 ---
 
 ## What it does
@@ -164,7 +191,28 @@ uv run python -m paper_research_agent.eval.runner --golden all -k 3 --out eval/r
 
 Each run directory holds `meta.json` (model ids per tier, temperature, git SHA, package version, date), `runs.json` (per-run metrics), `summary.json` (mean ± std, broken down by ground-truth strength and difficulty), and `states/` (the full `ResearchState` of every run, so any number can be traced to the run that produced it).
 
-> **Status: harness ready, no numbers published yet.** An audit found `citation_coverage` measured nothing (a character-class regex over a body that was never split from the reference list, returning 1.0 unconditionally) and `grounded_in_fulltext` failed on line-wrapped source text regardless of whether the quote was correct; both are fixed and tested. The golden set now carries provenance, and runs persist model ids, git SHA and raw state. No results table appears here until a real run is committed — see `eval/README.md`.
+### Results
+
+> 🚧 **To be updated.** A full run is in progress; this table stays empty until every figure in it comes from a committed run under `eval/results/`. Nothing here is estimated or filled in by hand.
+
+| Metric | Mean ± std | n |
+|---|---|---|
+| `grounded_in_fulltext` | _pending_ | — |
+| `citation_coverage` | _pending_ | — |
+| `gap_keyword_recall` | _pending_ | — |
+| `paper_recall` | _pending_ | — |
+| `gaps` per run | _pending_ | — |
+| `papers` per run | _pending_ | — |
+
+Method, precise metric definitions, golden-set provenance, the failure taxonomy and the known limitations are documented now, ahead of the numbers, in **[`eval/README.md`](eval/README.md)** — so the method can be judged independently of how the results turn out.
+
+**How the harness is kept honest**
+
+- **k = 3 runs per topic.** LLM output is non-deterministic; a single run is not a result, so mean ± sample std is reported with a per-metric `n`.
+- **Ground truth comes from published surveys**, never from this agent. Every arXiv id is verified; each topic records which section its expected gap keywords came from, and the 5 topics whose labels rest only on an abstract are flagged as weaker.
+- **Unmeasurable is not zero.** A metric that cannot be computed on a run returns `None` and is dropped from the mean and from `n`, rather than counted as 0 or as a perfect score.
+- **Memory is off during eval**, or runs 2 and 3 of a topic would read what run 1 cached and collapse the measured variance into an artefact.
+- **Two metrics were repaired before baselining.** `citation_coverage` previously returned 1.0 unconditionally (a character-class regex over a body never split from the reference list); `grounded_in_fulltext` rejected correct quotes whose source wrapped across lines. Both fixes raise the numbers relative to older code, so results are not comparable to anything produced before commit `bfa8f12`.
 
 ---
 
@@ -319,7 +367,8 @@ uv run ruff check src tests     # lint
 - **Full-text reading is best-effort**: ArXiv HTML when available, PDF otherwise; non-ArXiv papers behind paywalls degrade to abstract-only. Only the top `READ_MAX_PAPERS` (default 5) are read.
 - **Novelty is an LLM self-report** — a 0–100 score with reasoning, not a validated measurement. Treat it as a prompt for your own judgement.
 - **English / CS bias**: ArXiv and OpenAlex coverage is strongest for English-language CS papers.
-- **No published eval numbers** — see the Evaluation section for why.
+- **Eval results not published yet** — the harness is in place and documented; the results table is pending a completed run.
+- **Retrieval ranking favours citation count**, so a broadly-cited survey can outrank a more precisely relevant recent paper, and an ambiguous query term can pull in an unrelated field.
 - **Rate limits**: OpenAlex throttles anonymous usage. Set `OPENALEX_API_KEY` for heavy use.
 - **Semantic result cache can serve a stale run** — a topic within `RESULT_CACHE_TTL_DAYS` and above the similarity threshold short-circuits the graph entirely.
 
@@ -327,7 +376,9 @@ uv run ruff check src tests     # lint
 
 ## Roadmap
 
-- [ ] Fix and re-baseline the eval harness (see Evaluation), publish `eval/README.md`
+- [x] Eval harness — 13-topic golden set with provenance, k-run variance, failure taxonomy, persisted raw state ([`eval/README.md`](eval/README.md))
+- [ ] Publish the results table from a completed run
+- [ ] Model-tier ablation — measure the cost/quality tradeoff of routing every node to the `fast` tier
 - [ ] Token/cost accounting per run
 - [ ] PDF upload — read your own draft, agent finds gaps in your contribution
 - [ ] Citation graph traversal via OpenAlex references
