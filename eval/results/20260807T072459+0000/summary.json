@@ -1,0 +1,266 @@
+{
+  "runs_total": 1,
+  "runs_crashed": 0,
+  "meets_min_gaps": 1,
+  "runs_with_findings": 1,
+  "failure_distribution": {
+    "retrieval_miss": 1
+  },
+  "failure_runs_affected": {
+    "retrieval_miss": 1
+  },
+  "overall": {
+    "papers": {
+      "mean": 25,
+      "std": null,
+      "n": 1
+    },
+    "gaps": {
+      "mean": 5,
+      "std": null,
+      "n": 1
+    },
+    "conflicts": {
+      "mean": 0,
+      "std": null,
+      "n": 1
+    },
+    "rounds": {
+      "mean": 1,
+      "std": null,
+      "n": 1
+    },
+    "tool_calls": {
+      "mean": 10,
+      "std": null,
+      "n": 1
+    },
+    "provider_errors": {
+      "mean": 0,
+      "std": null,
+      "n": 1
+    },
+    "elapsed_s": {
+      "mean": 193,
+      "std": null,
+      "n": 1
+    },
+    "novelty": {
+      "mean": 40,
+      "std": null,
+      "n": 1
+    },
+    "grounded_in_fulltext": {
+      "mean": 1.0,
+      "std": null,
+      "n": 1
+    },
+    "citation_coverage": {
+      "mean": 1.0,
+      "std": null,
+      "n": 1
+    },
+    "gap_keyword_recall": {
+      "mean": 0.0,
+      "std": null,
+      "n": 1
+    },
+    "paper_recall": {
+      "mean": 0.0,
+      "std": null,
+      "n": 1
+    }
+  },
+  "by_gap_source": {
+    "section": {
+      "papers": {
+        "mean": 25,
+        "std": null,
+        "n": 1
+      },
+      "gaps": {
+        "mean": 5,
+        "std": null,
+        "n": 1
+      },
+      "conflicts": {
+        "mean": 0,
+        "std": null,
+        "n": 1
+      },
+      "rounds": {
+        "mean": 1,
+        "std": null,
+        "n": 1
+      },
+      "tool_calls": {
+        "mean": 10,
+        "std": null,
+        "n": 1
+      },
+      "provider_errors": {
+        "mean": 0,
+        "std": null,
+        "n": 1
+      },
+      "elapsed_s": {
+        "mean": 193,
+        "std": null,
+        "n": 1
+      },
+      "novelty": {
+        "mean": 40,
+        "std": null,
+        "n": 1
+      },
+      "grounded_in_fulltext": {
+        "mean": 1.0,
+        "std": null,
+        "n": 1
+      },
+      "citation_coverage": {
+        "mean": 1.0,
+        "std": null,
+        "n": 1
+      },
+      "gap_keyword_recall": {
+        "mean": 0.0,
+        "std": null,
+        "n": 1
+      },
+      "paper_recall": {
+        "mean": 0.0,
+        "std": null,
+        "n": 1
+      }
+    }
+  },
+  "by_difficulty": {
+    "broad": {
+      "papers": {
+        "mean": 25,
+        "std": null,
+        "n": 1
+      },
+      "gaps": {
+        "mean": 5,
+        "std": null,
+        "n": 1
+      },
+      "conflicts": {
+        "mean": 0,
+        "std": null,
+        "n": 1
+      },
+      "rounds": {
+        "mean": 1,
+        "std": null,
+        "n": 1
+      },
+      "tool_calls": {
+        "mean": 10,
+        "std": null,
+        "n": 1
+      },
+      "provider_errors": {
+        "mean": 0,
+        "std": null,
+        "n": 1
+      },
+      "elapsed_s": {
+        "mean": 193,
+        "std": null,
+        "n": 1
+      },
+      "novelty": {
+        "mean": 40,
+        "std": null,
+        "n": 1
+      },
+      "grounded_in_fulltext": {
+        "mean": 1.0,
+        "std": null,
+        "n": 1
+      },
+      "citation_coverage": {
+        "mean": 1.0,
+        "std": null,
+        "n": 1
+      },
+      "gap_keyword_recall": {
+        "mean": 0.0,
+        "std": null,
+        "n": 1
+      },
+      "paper_recall": {
+        "mean": 0.0,
+        "std": null,
+        "n": 1
+      }
+    }
+  },
+  "per_topic": {
+    "retrieval-augmented generation for knowledge-intensive NLP tasks": {
+      "papers": {
+        "mean": 25,
+        "std": null,
+        "n": 1
+      },
+      "gaps": {
+        "mean": 5,
+        "std": null,
+        "n": 1
+      },
+      "conflicts": {
+        "mean": 0,
+        "std": null,
+        "n": 1
+      },
+      "rounds": {
+        "mean": 1,
+        "std": null,
+        "n": 1
+      },
+      "tool_calls": {
+        "mean": 10,
+        "std": null,
+        "n": 1
+      },
+      "provider_errors": {
+        "mean": 0,
+        "std": null,
+        "n": 1
+      },
+      "elapsed_s": {
+        "mean": 193,
+        "std": null,
+        "n": 1
+      },
+      "novelty": {
+        "mean": 40,
+        "std": null,
+        "n": 1
+      },
+      "grounded_in_fulltext": {
+        "mean": 1.0,
+        "std": null,
+        "n": 1
+      },
+      "citation_coverage": {
+        "mean": 1.0,
+        "std": null,
+        "n": 1
+      },
+      "gap_keyword_recall": {
+        "mean": 0.0,
+        "std": null,
+        "n": 1
+      },
+      "paper_recall": {
+        "mean": 0.0,
+        "std": null,
+        "n": 1
+      }
+    }
+  }
+}

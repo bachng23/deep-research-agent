@@ -76,7 +76,12 @@ def test_metadata_records_what_produced_the_numbers(monkeypatch):
         "max_iterations": 2,
         "read_full_text": True,
         "use_memory": False,
+        "with_idea": True,
     }
+    # the arm is recorded, because it changes what the recall metrics mean
+    assert runner.run_metadata(
+        repeats=1, max_iterations=2, n_cases=1, with_idea=False
+    )["eval"]["with_idea"] is False
     for tier in ("fast", "balanced", "reasoning", "embedding"):
         assert meta["models"][tier]
     assert meta["timestamp_utc"].endswith("+00:00")

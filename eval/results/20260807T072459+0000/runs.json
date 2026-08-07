@@ -1,0 +1,27 @@
+[
+  {
+    "topic": "retrieval-augmented generation for knowledge-intensive NLP tasks",
+    "elapsed_s": 193,
+    "papers": 25,
+    "gaps": 5,
+    "conflicts": 0,
+    "rounds": 1,
+    "tool_calls": 10,
+    "provider_errors": 0,
+    "novelty": 40,
+    "grounded_in_fulltext": 1.0,
+    "citation_coverage": 1.0,
+    "gap_keyword_recall": 0.0,
+    "paper_recall": 0.0,
+    "meets_min_gaps": true,
+    "difficulty": "broad",
+    "gap_source": "section",
+    "findings": [
+      {
+        "category": "retrieval_miss",
+        "detail": "expected paper(s) never retrieved: ['retrieval-augmented generation for knowledge-intensive', 'dense passage retrieval', 'lost in the middle']"
+      }
+    ],
+    "run": 0
+  }
+]

@@ -1,0 +1,576 @@
+{
+  "topic": "retrieval-augmented generation for knowledge-intensive NLP tasks",
+  "user_idea": "use document structure to build hierarchical chunks before retrieval",
+  "search_queries": [
+    "hierarchical chunking retrieval-augmented generation",
+    "document structure hierarchical retrieval RAG knowledge-intensive",
+    "structured document chunking for retrieval augmented generation",
+    "hierarchical representation retrieval augmented generation NLP",
+    "chunking strategies retrieval augmented generation knowledge tasks"
+  ],
+  "papers": [
+    {
+      "title": "Natural Language Processing (almost) from Scratch",
+      "authors": [
+        "Ronan Collobert",
+        "Jason Weston",
+        "Léon Bottou",
+        "Michael Karlen",
+        "Koray Kavukcuoglu"
+      ],
+      "year": 2011,
+      "abstract": "Editor: We propose a unified neural network architecture and learning algorithm that can be applied to various natural language processing tasks including: part-of-speech tagging, chunking, named entity recognition, and semantic role labeling, achieving or exceeding state-of-theart performance in each on four benchmark tasks. Our goal was to design a flexible architecture that can learn representations useful for the tasks, thus avoiding excessive taskspecific feature engineering (and therefore disregarding a lot of prior knowledge). Instead of exploiting man-made input features carefully opti ...[truncated]",
+      "url": "http://infoscience.epfl.ch/record/192375",
+      "source": "openalex",
+      "citation_count": 3995,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on Knowledge Graphs: Representation, Acquisition, and Applications",
+      "authors": [
+        "Shaoxiong Ji",
+        "Shirui Pan",
+        "Erik Cambria",
+        "Pekka Marttinen",
+        "Philip S. Yu"
+      ],
+      "year": 2021,
+      "abstract": "Human knowledge provides a formal understanding of the world. Knowledge graphs that represent structural relations between entities have become an increasingly popular research direction toward cognition and human-level intelligence. In this survey, we provide a comprehensive review of the knowledge graph covering overall research topics about: 1) knowledge graph representation learning; 2) knowledge acquisition and completion; 3) temporal knowledge graph; and 4) knowledge-aware applications and summarize recent breakthroughs and perspective directions to facilitate future research. We propose ...[truncated]",
+      "url": "http://arxiv.org/abs/2002.00388",
+      "source": "openalex",
+      "citation_count": 2768,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Natural language processing: an introduction",
+      "authors": [
+        "Prakash M. Nadkarni",
+        "Lucila Ohno‐Machado",
+        "Wendy W. Chapman"
+      ],
+      "year": 2011,
+      "abstract": "OBJECTIVES: To provide an overview and tutorial of natural language processing (NLP) and modern NLP-system design. TARGET AUDIENCE: This tutorial targets the medical informatics generalist who has limited acquaintance with the principles behind NLP and/or limited knowledge of the current state of the art. SCOPE: We describe the historical evolution of NLP, and summarize common NLP sub-problems in this extensive field. We then provide a synopsis of selected highlights of medical NLP efforts. After providing a brief description of common machine-learning approaches that are being used for divers ...[truncated]",
+      "url": "https://doi.org/10.1136/amiajnl-2011-000464",
+      "source": "openalex",
+      "citation_count": 1996,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Recent Advances in Natural Language Processing via Large Pre-trained Language Models: A Survey",
+      "authors": [
+        "Bonan Min",
+        "Hayley Ross",
+        "Elior Sulem",
+        "Amir Pouran Ben Veyseh",
+        "Thien Huu Nguyen"
+      ],
+      "year": 2023,
+      "abstract": "Large, pre-trained language models (PLMs) such as BERT and GPT have drastically changed the Natural Language Processing (NLP) field. For numerous NLP tasks, approaches leveraging PLMs have achieved state-of-the-art performance. The key idea is to learn a generic, latent representation of language from a generic task once, then share it across disparate NLP tasks. Language modeling serves as the generic task, one with abundant self-supervised text available for extensive training. This article presents the key fundamental concepts of PLM architectures and a comprehensive view of the shift to PL ...[truncated]",
+      "url": "https://doi.org/10.1145/3605943",
+      "source": "openalex",
+      "citation_count": 1212,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Three generations of distance education pedagogy",
+      "authors": [
+        "Terry Anderson",
+        "Jon Dron"
+      ],
+      "year": 2011,
+      "abstract": "This paper defines and examines three generations of distance education pedagogy. Unlike earlier classifications of distance education based on the technology used, this analysis focuses on the pedagogy that defines the learning experiences encapsulated in the learning design. The three generations of cognitive-behaviourist, social constructivist, and connectivist pedagogy are examined, using the familiar community of inquiry model (Garrison, Anderson, &amp; Archer, 2000) with its focus on social, cognitive, and teaching presences. Although this typology of pedagogies could also be usefully ap ...[truncated]",
+      "url": "https://doi.org/10.19173/irrodl.v12i3.890",
+      "source": "openalex",
+      "citation_count": 1151,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "authors": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of exte ...[truncated]",
+      "url": "http://arxiv.org/abs/2312.10997",
+      "source": "openalex",
+      "citation_count": 694,
+      "pdf_url": null,
+      "full_text_excerpt": "[III-B3 Structural Index] One effective method for enhancing information retrieval is to establish a hierarchical structure for the documents. By constructing In structure, RAG system can expedite the retrieval and processing of pertinent data.\n\nHierarchical index structure. File are arranged in parent-child relationships, with chunks linked to them. Data summaries are stored at each node, aiding in the swift traversal of data and assisting the RAG system in determining which chunks to extract. This approach can also mitigate the illusion caused by block extraction issues.\n\nKnowledge Graph index. Utilize KG in constructing the hierarchical structure of documents contributes to maintaining consistency. It delineates the connections between different concepts and entities, markedly reducing the potential for illusions. Another advantage is the transformation of the information retrieval process into instructions that LLM can comprehend, thereby enhancing the accuracy of knowledge retrieval and enabling LLM to generate contextually coherent responses, thus improving the overall efficiency of the RAG system. To capture the logical relationship between document content and structure, KGP [91] proposed a method of building an index between multiple documents using KG. This KG consists of nodes (representing paragraphs or structures in the documents, such as pages and tables) and edges (indicating semantic/lexical similarity between paragraphs or relationships within the document structure), effectively addr\n\n[Abstract] Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs’ intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development 111Resources are available at https://github.com/Tongji-KGLLM/RAG-Survey ."
+    },
+    {
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "authors": [
+        "Wenqi Fan",
+        "Yujuan Ding",
+        "Liangbo Ning",
+        "Shijie Wang",
+        "Hengyun Li"
+      ],
+      "year": 2024,
+      "abstract": "As one of the most advanced techniques in AI, Retrieval-Augmented Generation (RAG) can offer reliable and up-to-date external knowledge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capacity of retrieval in providing additional knowledge enables RAG to assist existing generative AI in producing high-quality outputs. Recently, Large Language Models (LLMs) have demonstrated revolutionary abilities in language understanding and generation, while still facing inherent limitations such as hallucinations and out-of-date internal ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671470",
+      "source": "openalex",
+      "citation_count": 640,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval Augmentation Reduces Hallucination in Conversation",
+      "authors": [
+        "Kurt Shuster",
+        "Spencer Poff",
+        "Moya Chen",
+        "Douwe Kiela",
+        "Jason Weston"
+      ],
+      "year": 2021,
+      "abstract": "Despite showing increasingly human-like conversational abilities, state-of-the-art dialogue models often suffer from factual incorrectness and hallucination of knowledge (Roller et al., 2020). In this work we explore the use of neural-retrieval-in-the-loop architectures - recently shown to be effective in open-domain QA (Lewis et al., 2020b; Izacard and Grave, 2020) - for knowledge-grounded dialogue, a task that is arguably more challenging as it requires querying based on complex multi-turn dialogue context and generating conversationally coherent responses. We study various types of architec ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2021.findings-emnlp.320",
+      "source": "openalex",
+      "citation_count": 496,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Almanac — Retrieval-Augmented Language Models for Clinical Medicine",
+      "authors": [
+        "Cyril Zakka",
+        "Rohan Shad",
+        "Akash Chaurasia",
+        "Alex R. Dalal",
+        "Jennifer L. Kim"
+      ],
+      "year": 2024,
+      "abstract": "BACKGROUND: Large language models (LLMs) have recently shown impressive zero-shot capabilities, whereby they can use auxiliary data, without the availability of task-specific training examples, to complete a variety of natural language tasks, such as summarization, dialogue generation, and question answering. However, despite many promising applications of LLMs in clinical medicine, adoption of these models has been limited by their tendency to generate incorrect and sometimes even harmful statements. METHODS: We tasked a panel of eight board-certified clinicians and two health care practition ...[truncated]",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/10857783",
+      "source": "openalex",
+      "citation_count": 364,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Expert Chess Memory: Revisiting the Chunking Hypothesis",
+      "authors": [
+        "Fernand Gobet",
+        "Herbert A. Simon"
+      ],
+      "year": 1998,
+      "abstract": "After reviewing the relevant theory on chess expertise, this paper re-examines experimentally the finding of Chase and Simon (1973a) that the differences in ability of chess players at different skill levels to copy and to recall positions are attributable to the experts' storage of thousands of chunks (patterned clusters of pieces) in long-term memory. Despite important differences in the experimental apparatus, the data of the present experiments regarding latencies and chess relations between successively placed pieces are highly correlated with those of Chase and Simon. We conclude that th ...[truncated]",
+      "url": "http://bura.brunel.ac.uk/handle/2438/1343",
+      "source": "openalex",
+      "citation_count": 315,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Benchmarking Retrieval-Augmented Generation for Medicine",
+      "authors": [
+        "Guangzhi Xiong",
+        "Qiao Jin",
+        "Zhiyong Lu",
+        "Aidong Zhang"
+      ],
+      "year": 2024,
+      "abstract": "While large language models (LLMs) have achieved state-of-the-art performance on a wide range of medical question answering (QA) tasks, they still face challenges with hallucinations and outdated knowledge.Retrievalaugmented generation (RAG) is a promising solution and has been widely adopted.However, a RAG system can involve multiple flexible components, and there is a lack of best practices regarding the optimal RAG setting for various medical purposes.To systematically evaluate such systems, we propose the Medical Information Retrieval-Augmented Generation Evaluation (MIRAGE), a first-of-it ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2024.findings-acl.372",
+      "source": "openalex",
+      "citation_count": 235,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Atlas: Few-shot Learning with Retrieval Augmented Language Models",
+      "authors": [
+        "Gautier Izacard",
+        "Patrick Lewis",
+        "María Lomelí",
+        "Lucas Hosseini",
+        "Fabio Petroni"
+      ],
+      "year": 2022,
+      "abstract": "Large language models have shown impressive few-shot results on a wide range of tasks. However, when knowledge is key for such results, as is the case for tasks such as question answering and fact checking, massive parameter counts to store knowledge seem to be needed. Retrieval augmented models are known to excel at knowledge intensive tasks without the need for as many parameters, but it is unclear whether they work in few-shot settings. In this work we present Atlas, a carefully designed and pre-trained retrieval augmented language model able to learn knowledge intensive tasks with very few ...[truncated]",
+      "url": "http://arxiv.org/abs/2208.03299",
+      "source": "openalex",
+      "citation_count": 201,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Optimization of hepatological clinical guidelines interpretation by large language models: a retrieval augmented generation-based framework",
+      "authors": [
+        "Simone Kresevic",
+        "Mauro Giuffrè",
+        "Miloš Ajčević",
+        "Agostino Accardo",
+        "Lory Saveria Crocè"
+      ],
+      "year": 2024,
+      "abstract": "Large language models (LLMs) can potentially transform healthcare, particularly in providing the right information to the right provider at the right time in the hospital workflow. This study investigates the integration of LLMs into healthcare, specifically focusing on improving clinical decision support systems (CDSSs) through accurate interpretation of medical guidelines for chronic Hepatitis C Virus infection management. Utilizing OpenAI's GPT-4 Turbo model, we developed a customized LLM framework that incorporates retrieval augmented generation (RAG) and prompt engineering. Our framework ...[truncated]",
+      "url": "https://doi.org/10.1038/s41746-024-01091-y",
+      "source": "openalex",
+      "citation_count": 191,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey of Text Representation and Embedding Techniques in NLP",
+      "authors": [
+        "Rajvardhan Patil",
+        "Sorio Boit",
+        "Venkat N. Gudivada",
+        "Jagadeesh Nandigam"
+      ],
+      "year": 2023,
+      "abstract": "Natural Language Processing (NLP) is a research field where a language in consideration is processed to understand its syntactic, semantic, and sentimental aspects. The advancement in the NLP area has helped solve problems in the domains such as Neural Machine Translation, Name Entity Recognition, Sentiment Analysis, and Chatbots, to name a few. The topic of NLP broadly consists of two main parts: the representation of the input text (raw data) into numerical format (vectors or matrix) and the design of models for processing the numerical data. This paper focuses on the former part and surveys ...[truncated]",
+      "url": "https://doi.org/10.1109/access.2023.3266377",
+      "source": "openalex",
+      "citation_count": 185,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval augmented generation for large language models in healthcare: A systematic review",
+      "authors": [
+        "Lameck Mbangula Amugongo",
+        "Pietro Mascheroni",
+        "Steven E. Brooks",
+        "Stefan Doering",
+        "Jan Seidel"
+      ],
+      "year": 2025,
+      "abstract": "Large Language Models (LLMs) have demonstrated promising capabilities to solve complex tasks in critical sectors such as healthcare. However, LLMs are limited by their training data which is often outdated, the tendency to generate inaccurate (\"hallucinated\") content and a lack of transparency in the content they generate. To address these limitations, retrieval augmented generation (RAG) grounds the responses of LLMs by exposing them to external knowledge sources. However, in the healthcare domain there is currently a lack of systematic understanding of which datasets, RAG methodologies and e ...[truncated]",
+      "url": "https://doi.org/10.1371/journal.pdig.0000877",
+      "source": "openalex",
+      "citation_count": 175,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering",
+      "authors": [
+        "Zhentao Xu",
+        "Missy Meine C. Dela Cruz",
+        "Matthew Guevara",
+        "Tie Wang",
+        "M. N. DESHPANDE"
+      ],
+      "year": 2024,
+      "abstract": "In customer service technical support, swiftly and accurately retrieving relevant past issues is critical for efficiently resolving customer inquiries. The conventional retrieval methods in retrieval-augmented generation (RAG) for large language models (LLMs) treat a large corpus of past issue tracking tickets as plain text, ignoring the crucial intra-issue structure and inter-issue relations, which limits performance. We introduce a novel customer service question-answering method that amalgamates RAG with a knowledge graph (KG). Our method constructs a KG from historical issues for use in re ...[truncated]",
+      "url": "http://arxiv.org/abs/2404.17723",
+      "source": "openalex",
+      "citation_count": 140,
+      "pdf_url": null,
+      "full_text_excerpt": "[Abstract.] In customer service technical support, swiftly and accurately retrieving relevant past issues is critical for efficiently resolving customer inquiries. The conventional retrieval methods in retrieval-augmented generation (RAG) for large language models (LLMs) treat a large corpus of past issue tracking tickets as plain text, ignoring the crucial intra-issue structure and inter-issue relations, which limits performance. We introduce a novel customer service question-answering method that amalgamates RAG with a knowledge graph (KG). Our method constructs a KG from historical issues for use in retrieval, retaining the intra-issue structure and inter-issue relations. During the question-answering phase, our method parses consumer queries and retrieves related sub-graphs from the KG to generate answers. This integration of a KG not only improves retrieval accuracy by preserving customer service structure information but also enhances answering quality by mitigating the effects of text segmentation. Empirical assessments on our benchmark datasets, utilizing key retrieval (MRR, Recall@K, NDCG@K) and text generation (BLEU, ROUGE, METEOR) metrics, reveal that our method outperforms the baseline by 77.6% in MRR and by 0.32 in BLEU. Our method has been deployed within LinkedIn’s customer service team for approximately six months and has reduced the median per-issue resolution time by 28.6%.\n\n[6. Conclusions and Future Work] In conclusion, our research significantly advances automated question answering systems for customer service. Integrating retrieval augmented generation (RAG) with a knowledge graph (KG) has improved retrieval and answering metrics, and overall service effectiveness. Future work will focus on: developing an automated mechanism for extracting graph templates, enhancing system adaptability; investigating dynamic updates to the knowledge graph based on user queries to improve real-time responsiveness; and exploring the system’s applicability in other contexts beyond customer service.\n\n[3. Methods] We introduce an LLM-based customer service question answering system that seamlessly integrates retrieval-augmented generation (RAG) with a knowledge graph (KG). Our system (Figure 1) comprises two phases: First, during the KG construction phase, our system constructs a comprehensive knowledge graph from historical customer service issue tickets. It integrates a tree-structured representation of each issue and interlinks them based on relational context. It also generates embedding for each node to facilitate later semantic searching. Second, during the question-answering phase, our method parses consumer queries to identify named entities and intents. It then navigates within the KG to identify related sub-graphs for generating answers."
+    },
+    {
+      "title": "HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction",
+      "authors": [
+        "Bhaskarjit Sarmah",
+        "Dhagash Mehta",
+        "Benika Hall",
+        "Rohan Rao",
+        "Sunil Patel"
+      ],
+      "year": 2024,
+      "abstract": "Extraction and interpretation of intricate information from unstructured text data arising in financial applications, such as earnings call transcripts, present substantial challenges to large language models (LLMs) even using the current best practices to use Retrieval Augmented Generation (RAG) (referred to as VectorRAG techniques which utilize vector databases for information retrieval) due to challenges such as domain specific terminology and complex formats of the documents. We introduce a novel approach based on a combination, called HybridRAG, of the Knowledge Graphs (KGs) based RAG tec ...[truncated]",
+      "url": "https://doi.org/10.1145/3677052.3698671",
+      "source": "openalex",
+      "citation_count": 112,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+      "authors": [
+        "Zirui Guo",
+        "Lianghao Xia",
+        "Yanhua Yu",
+        "Tu Ao",
+        "Chao Huang"
+      ],
+      "year": 2025,
+      "abstract": "",
+      "url": "https://doi.org/10.18653/v1/2025.findings-emnlp.568",
+      "source": "openalex",
+      "citation_count": 110,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Searching for Best Practices in Retrieval-Augmented Generation",
+      "authors": [
+        "Xiaohua Wang",
+        "Zhenhua Wang",
+        "Xuan Gao",
+        "Feiran Zhang",
+        "Yixin Wu"
+      ],
+      "year": 2024,
+      "abstract": "Xiaohua Wang, Zhenghua Wang, Xuan Gao, Feiran Zhang, Yixin Wu, Zhibo Xu, Tianyuan Shi, Zhengyuan Wang, Shizheng Li, Qi Qian, Ruicheng Yin, Changze Lv, Xiaoqing Zheng, Xuanjing Huang. Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing. 2024.",
+      "url": "https://doi.org/10.18653/v1/2024.emnlp-main.981",
+      "source": "openalex",
+      "citation_count": 94,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval augmented generation-driven information retrieval and question answering in construction management",
+      "authors": [
+        "Chengke Wu",
+        "Wenjun Ding",
+        "Qisen Jin",
+        "Junjie Jiang",
+        "Rui Jiang"
+      ],
+      "year": 2025,
+      "abstract": "",
+      "url": "https://doi.org/10.1016/j.aei.2025.103158",
+      "source": "openalex",
+      "citation_count": 55,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval-Augmented Generation (RAG)",
+      "authors": [
+        "Michael Klesel",
+        "H.F. Wittmann"
+      ],
+      "year": 2025,
+      "abstract": "The necessity for information is a fundamental aspect of human nature, and as such, there are ongoing efforts to enhance information retrieval with information systems (Alavi and Leidner 2001 ; Alavi et al. 2024 ). Companies are particularly affected by this, as they have extensive data at their disposal, and employees need to access it. Unfortunately, current systems are not able to adequately meet employees’ expectations. In fact, studies have shown that 79% of employees are dissatisfied with the user interfaces of enterprise search systems (Cleverley and Burnett 2019 ). This has led to a ne ...[truncated]",
+      "url": "https://doi.org/10.1007/s12599-025-00945-3",
+      "source": "openalex",
+      "citation_count": 55,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval-Augmented Generation (RAG) in Healthcare: A Comprehensive Review",
+      "authors": [
+        "Fnu Neha",
+        "Deepshikha Bhati",
+        "Deepak Kumar Shukla"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) enhances large language models (LLMs) by integrating external knowledge retrieval to improve factual consistency and reduce hallucinations. Despite growing interest, its use in healthcare remains fragmented. This paper presents a Systematic Literature Review (SLR) following PRISMA guidelines, synthesizing 30 peer-reviewed studies on RAG in clinical domains, focusing on three of its most prevalent and promising applications in diagnostic support, electronic health record (EHR) summarization, and medical question answering. We synthesize the existing architec ...[truncated]",
+      "url": "https://doi.org/10.3390/ai6090226",
+      "source": "openalex",
+      "citation_count": 55,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records",
+      "authors": [
+        "Saeed Shurrab",
+        "Mariam Al-Omari",
+        "Dana El Samad",
+        "Farah E. Shamout"
+      ],
+      "year": 2026,
+      "abstract": "Electronic Health Records (EHR) contain rich longitudinal patient information and are widely used in predictive modeling applications. However, effectively leveraging historical data remains challenging due to long trajectories, heterogeneous events, temporal irregularity, and the varying relevance of past clinical context. Existing approaches often rely on fixed windows or uniform aggregation, which can obscure clinically important signals. In this work, we introduce EHR-RAGp, a retrieval-augmented foundation model that dynamically integrates the most relevant patient history across diverse c ...[truncated]",
+      "url": "http://arxiv.org/abs/2605.12335v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.12335v1",
+      "full_text_excerpt": "[2 Related Work] ng. RAG has emerged as a powerful technique in NLP for extending large language models capabilities by allowing them to condition on external, non-parametric knowledge sources. The original RAG framework lewis2020retrieval demonstrated how combining dense retrieval with generative transformers improves factual correctness and reduces hallucinations. The concept was later extended by models such as RETRO borgeaud2022improving , FLARE jiang2023active , and REPLUG shi2024replug . These architectures share a common principle: retrieval allows the model to incorporate long-range or domain-specific information without encoding the entire knowledge base within its internal parameters. The success of the retrieval paradigm has also influenced healthcare, particularly in clinical question answering saba2024question ; sohn2025rationale , evidence grounding lewis2025grounding ; jia2025agentic , biomedical knowledge integration feng2025retrieval ; feng2025ontologyrag , phenotyping and cohort identification ziletti2025generating , and many other applications related to medical textual data abo2025survey ; amugongo2025retrieval .\n\nIn the context of EHR modeling, RAG has been primarily explored as a mechanism for integrating external knowledge into predictive models, such as EMERGE zhu2024emerge , RAM-EHR xu2024ram , REALM zhu2024realm , and KAMELEON datta2025improving . To the best of our knowledge, REMED kim2023general is our most closely related work. Its core idea is to retrieve the mos\n\n[1 Introduction] e remarkable success of Retrieval-Augmented Generation lewis2020retrieval (RAG) techniques in Natural Language Processing (NLP) and their ability to leverage external knowledge beyond the training data of the base Large Language Model (LLM) wu2024retrieval ; yu2024evaluation ; zhao2024retrieval ; zheng2025retrieval , the same concept can be applied for retrieving and integrating historical EHR data. In other words, by considering the patient’s historical events as retrievable pieces of information, an EHR foundation model can dynamically condition on what matters the most for the patient’s current state. This perspective shifts longitudinal modeling from a purely sequential problem into a retrieval-augmented one. Hence, in this work, we propose EHR-RAGp, a retrieval-based foundation model designed to reason over the full breadth of a patient’s longitudinal EHR history. The main contributions of the work are summarized as follows:\n\nWe propose a new framework for constructing a vector database of longitudinal EHR patient trajectories using multi-granular chunking strategies, including event-based, time-based, visit-level, and care-stage segmentation, enabling flexible representation of heterogeneous events, temporal structure, and care progression.\n\nWe introduce a prototype-guided retrieval mechanism that acts as an alignment operator, estimating the relevance of retrieved historical patient chunks with respect to the prediction task, guiding the model to integrate the most inf\n\n[7 Discussion & Conclusion] t populations and coding systems. Second, experiments were conducted under a limited set of retrieval, and chunking configurations (e.g., chunk size of 256256, 66-hour temporal windows, and Top-M of 2424), further investigation of larger contexts and alternative chunking granularities is required. Third, although prototype-guided alignment improves performance and organizes the representation space into latent modes, the clinical interpretability of individual prototypes remains limited and requires deeper analysis with expert validation. Finally, while EHR-RAGp is designed on purpose for event-based EHR data, incorporation of other clinical modalities may provide complementary context for retrieval and prediction."
+    },
+    {
+      "title": "Evaluating Chunking Strategies for Retrieval-Augmented Generation on Academic Texts",
+      "authors": [
+        "Valentin J. J. Kreileder",
+        "Johannes Reisinger",
+        "Andreas Fischer"
+      ],
+      "year": 2026,
+      "abstract": "Retrieval-Augmented Generation (RAG) systems use the question-answering capabilities of Large Language Models (LLMs) to access information outside their parameters. We evaluate if cluster-based semantic chunking improves retrieval and answer quality compared to fixed-size and recursive chunking evaluating on long, structured academic theses using the Retrieval Augmented Generation Assessment (RAGAs) framework. RAGAs based faithfulness shows limited reliability in this setup. Performance on fixed versus document specific questions varied substantially, likely related to the formatting of docume ...[truncated]",
+      "url": "http://arxiv.org/abs/2607.01852v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2607.01852v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Citation-Enforced RAG for Fiscal Document Intelligence: Cited, Explainable Knowledge Retrieval in Tax Compliance",
+      "authors": [
+        "Akhil Chandra Shanivendra"
+      ],
+      "year": 2026,
+      "abstract": "Tax authorities and public-sector financial agencies rely on large volumes of unstructured and semi-structured fiscal documents - including tax forms, instructions, publications, and jurisdiction-specific guidance - to support compliance analysis and audit workflows. While recent advances in generative AI and retrieval-augmented generation (RAG) have shown promise for document-centric question answering, existing approaches often lack the transparency, citation fidelity, and conservative behaviour required in high-stakes regulatory domains. This paper presents a multimodal, citation-enforced R ...[truncated]",
+      "url": "http://arxiv.org/abs/2603.14170v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.14170v1",
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "There is a lack of systematic comparison between structure-based chunking (exploiting document layout) and knowledge-graph-based indexing for enhancing RAG in knowledge-intensive domains. Existing approaches either use vector representations over raw text chunks or construct separate knowledge graphs, but do not benchmark hierarchical, structure-aware chunking against graph-based retrieval under controlled settings.",
+      "supporting_papers": [
+        "Retrieval-Augmented Generation for Large Language Models: A Survey",
+        "Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering"
+      ],
+      "evidence_quotes": [
+        "Knowledge Graph index. Utilize KG in constructing the hierarchical structure of documents contributes to maintaining consistency. It delineates the connections between different concepts and entities, markedly reducing the potential for illusions.",
+        "To capture the logical relationship between document content and structure, KGP [91] proposed a method of building an index between multiple documents using KG. This KG consists of nodes (representing paragraphs or structures in the documents, such as pages and tables) and edges (indicating semantic/lexical similarity between paragraphs or relationships within the document structure)",
+        "We introduce a novel customer service question-answering method that amalgamates RAG with a knowledge graph (KG). Our method constructs a KG from historical issues for use in retrieval, retaining the intra-issue structure and inter-issue relations."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "The impact of document structure-aware chunking strategies (e.g., hierarchical chunking based on headings, sections, or tables) on RAG retrieval quality is largely unexplored. Existing work evaluates only basic methods like fixed-size, recursive, or semantic clustering on flat text representations, ignoring the structural hierarchy inherent in many domain documents.",
+      "supporting_papers": [
+        "Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering",
+        "Retrieval-Augmented Generation for Large Language Models: A Survey",
+        "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records"
+      ],
+      "evidence_quotes": [
+        "The conventional retrieval methods in retrieval-augmented generation (RAG) for large language models (LLMs) treat a large corpus of past issue tracking tickets as plain text, ignoring the crucial intra-issue structure and inter-issue relations, which limits performance.",
+        "One effective method for enhancing information retrieval is to establish a hierarchical structure for the documents. By constructing In structure, RAG system can expedite the retrieval and processing of pertinent data.",
+        "experiments were conducted under a limited set of retrieval, and chunking configurations (e.g., chunk size of 256256, 66-hour temporal windows, and Top-M of 2424), further investigation of larger contexts and alternative chunking granularities is required."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Existing RAG surveys and best-practice studies do not address how the internal structure of source documents (sections, subsections, tables, hierarchical relations) should be preserved, split, or represented during the chunking and retrieval phase to optimize generation quality.",
+      "supporting_papers": [
+        "Retrieval-Augmented Generation for Large Language Models: A Survey",
+        "Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering"
+      ],
+      "evidence_quotes": [
+        "Hierarchical index structure. File are arranged in parent-child relationships, with chunks linked to them. Data summaries are stored at each node, aiding in the swift traversal of data and assisting the RAG system in determining which chunks to extract.",
+        "The conventional retrieval methods in retrieval-augmented generation (RAG) for large language models (LLMs) treat a large corpus of past issue tracking tickets as plain text, ignoring the crucial intra-issue structure and inter-issue relations, which limits performance.",
+        "This integration of a KG not only improves retrieval accuracy by preserving customer service structure information but also enhances answering quality by mitigating the effects of text segmentation."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "The effect of hierarchical chunking on faithfulness and hallucination reduction in domain-specific RAG (e.g., healthcare, legal, financial) is not empirically measured against simpler chunking baselines. Current medical and legal RAG evaluations focus on answering accuracy but neglect how structure-aware chunking might improve evidence attribution or reduce factual errors.",
+      "supporting_papers": [
+        "Retrieval-Augmented Generation for Large Language Models: A Survey",
+        "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records"
+      ],
+      "evidence_quotes": [
+        "This approach can also mitigate the illusion caused by block extraction issues.",
+        "It delineates the connections between different concepts and entities, markedly reducing the potential for illusions.",
+        "further investigation of larger contexts and alternative chunking granularities is required."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "description": "No existing work systematically evaluates multi-granular chunking strategies (event-based, time-based, visit-level, care-stage) for retrieval-augmented generation on longitudinal structured data such as electronic health records. The EHR-RAGp paper proposes these strategies but explicitly leaves their comparative evaluation as future work.",
+      "supporting_papers": [
+        "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records"
+      ],
+      "evidence_quotes": [
+        "We propose a new framework for constructing a vector database of longitudinal EHR patient trajectories using multi-granular chunking strategies, including event-based, time-based, visit-level, and care-stage segmentation, enabling flexible representation of heterogeneous events, temporal structure, and care progression.",
+        "experiments were conducted under a limited set of retrieval, and chunking configurations (e.g., chunk size of 256256, 66-hour temporal windows, and Top-M of 2424), further investigation of larger contexts and alternative chunking granularities is required."
+      ],
+      "confidence": "high"
+    }
+  ],
+  "conflicts": [],
+  "recalled_gaps": [],
+  "novelty_score": 40,
+  "novelty_reasoning": "The idea of building hierarchical chunks based on document structure is already described in the RAG survey [6] under 'Structural Index', which explicitly discusses parent-child chunk relationships and data summaries at each node. While the identified research gaps confirm that systematic empirical evaluation of such structure-aware chunking is lacking, the core concept itself is not new. The user's idea as stated overlaps substantially with existing proposals, though a rigorous implementation and comparison could add a meaningful new angle.",
+  "overlapping_papers": [
+    "Retrieval-Augmented Generation for Large Language Models: A Survey (2023)"
+  ],
+  "report_markdown": "## Overview\nRetrieval‑augmented generation (RAG) promises to ground large language models in external knowledge, but its retrieval quality hinges on how documents are split into chunks [6,7]. The user proposes exploiting document structure to build hierarchical chunks before retrieval, an idea that, while conceptually present in the literature, lacks systematic empirical validation.\n\n## Landscape\nRAG surveys broadly categorise indexing strategies, including structural indexes that preserve parent‑child relationships and store data summaries at each node [6,7]. Domain‑specific works increasingly recognise the importance of structure: customer‑service systems ignore intra‑issue structure and inter‑issue relations when treating tickets as plain text [16]; financial applications struggle with complex document formats despite vector‑ or KG‑based retrieval [17,25]; and healthcare RAG reviews note that optimal chunking configurations remain under‑investigated [11,15,22]. Recent papers propose multi‑granular chunking for electronic health records [23] and compare basic chunking methods on academic theses [24], but systematic evaluation of structure‑aware, hierarchical chunking is absent. Knowledge graphs have been combined with RAG to maintain structural consistency [2,16,17], yet no controlled benchmarks contrast them with layout‑based hierarchical chunking.\n\n## Research gaps\n- **Structure‑based vs. graph‑based indexing** – No work systematically compares hierarchical, structure‑aware chunking against knowledge‑graph‑based retrieval for knowledge‑intensive tasks [6,16,17]. While [6] describes structural indexes with parent‑child links, and [16] uses KGs to preserve intra‑issue structure, a direct benchmark is missing.\n- **Impact of structure‑aware chunking** – The effect of exploiting headings, sections, tables, or other document hierarchy on retrieval quality is largely unexplored. Existing evaluations test only fixed‑size, recursive, or semantic clustering on flat text [24]; the crucial structure ignored in [16] is never systematically varied or measured.\n- **Preservation of internal document structure** – RAG surveys and best‑practice studies [6,19] do not address how section‑ and subsection‑level relations should be preserved, split, or represented during chunking to optimise generation quality [6,16,24].\n- **Hallucination reduction in domain‑specific RAG** – No empirical study isolates the effect of hierarchical chunking on faithfulness or evidence attribution in healthcare, legal, or financial settings. Current medical RAG evaluations focus on answering accuracy, not on how chunking influences factual errors [9,11,13,15,22,25].\n- **Multi‑granular chunking for longitudinal data** – EHR‑RAGp proposes event‑based, time‑based, visit‑level, and care‑stage chunking strategies for electronic health records but explicitly leaves their comparative evaluation as future work [23].\n\n## Novelty\n**Score: 40/100**  \nThe concept of building hierarchical chunks from document structure overlaps directly with the “Structural Index” described in the RAG survey [6], which discusses parent‑child chunk relationships and node‑level summaries. While the identified gaps confirm that rigorous empirical comparison of such chunking is lacking, the core idea is not new. A well‑designed implementation and evaluation could add a meaningful angle, but the proposal as stated does not go beyond existing conceptual descriptions.\n\n## References\n\n[1] [Natural Language Processing (almost) from Scratch (2011)](http://infoscience.epfl.ch/record/192375) — Ronan Collobert, Jason Weston, Léon Bottou et al.  \n[2] [A Survey on Knowledge Graphs: Representation, Acquisition, and Applications (2021)](http://arxiv.org/abs/2002.00388) — Shaoxiong Ji, Shirui Pan, Erik Cambria et al.  \n[3] [Natural language processing: an introduction (2011)](https://doi.org/10.1136/amiajnl-2011-000464) — Prakash M. Nadkarni, Lucila Ohno‐Machado, Wendy W. Chapman  \n[4] [Recent Advances in Natural Language Processing via Large Pre-trained Language Models: A Survey (2023)](https://doi.org/10.1145/3605943) — Bonan Min, Hayley Ross, Elior Sulem et al.  \n[5] [Three generations of distance education pedagogy (2011)](https://doi.org/10.19173/irrodl.v12i3.890) — Terry Anderson, Jon Dron  \n[6] [Retrieval-Augmented Generation for Large Language Models: A Survey (2023)](http://arxiv.org/abs/2312.10997) — Yunfan Gao, Yun Xiong, Xinyu Gao et al.  \n[7] [A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models (2024)](https://doi.org/10.1145/3637528.3671470) — Wenqi Fan, Yujuan Ding, Liangbo Ning et al.  \n[8] [Retrieval Augmentation Reduces Hallucination in Conversation (2021)](https://doi.org/10.18653/v1/2021.findings-emnlp.320) — Kurt Shuster, Spencer Poff, Moya Chen et al.  \n[9] [Almanac — Retrieval-Augmented Language Models for Clinical Medicine (2024)](https://www.ncbi.nlm.nih.gov/pmc/articles/10857783) — Cyril Zakka, Rohan Shad, Akash Chaurasia et al.  \n[10] [Expert Chess Memory: Revisiting the Chunking Hypothesis (1998)](http://bura.brunel.ac.uk/handle/2438/1343) — Fernand Gobet, Herbert A. Simon  \n[11] [Benchmarking Retrieval-Augmented Generation for Medicine (2024)](https://doi.org/10.18653/v1/2024.findings-acl.372) — Guangzhi Xiong, Qiao Jin, Zhiyong Lu et al.  \n[12] [Atlas: Few-shot Learning with Retrieval Augmented Language Models (2022)](http://arxiv.org/abs/2208.03299) — Gautier Izacard, Patrick Lewis, María Lomelí et al.  \n[13] [Optimization of hepatological clinical guidelines interpretation by large language models: a retrieval augmented generation-based framework (2024)](https://doi.org/10.1038/s41746-024-01091-y) — Simone Kresevic, Mauro Giuffrè, Miloš Ajčević et al.  \n[14] [A Survey of Text Representation and Embedding Techniques in NLP (2023)](https://doi.org/10.1109/access.2023.3266377) — Rajvardhan Patil, Sorio Boit, Venkat N. Gudivada et al.  \n[15] [Retrieval augmented generation for large language models in healthcare: A systematic review (2025)](https://doi.org/10.1371/journal.pdig.0000877) — Lameck Mbangula Amugongo, Pietro Mascheroni, Steven E. Brooks et al.  \n[16] [Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering (2024)](http://arxiv.org/abs/2404.17723) — Zhentao Xu, Missy Meine C. Dela Cruz, Matthew Guevara et al.  \n[17] [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction (2024)](https://doi.org/10.1145/3677052.3698671) — Bhaskarjit Sarmah, Dhagash Mehta, Benika Hall et al.  \n[18] [LightRAG: Simple and Fast Retrieval-Augmented Generation (2025)](https://doi.org/10.18653/v1/2025.findings-emnlp.568) — Zirui Guo, Lianghao Xia, Yanhua Yu et al.  \n[19] [Searching for Best Practices in Retrieval-Augmented Generation (2024)](https://doi.org/10.18653/v1/2024.emnlp-main.981) — Xiaohua Wang, Zhenhua Wang, Xuan Gao et al.  \n[20] [Retrieval augmented generation-driven information retrieval and question answering in construction management (2025)](https://doi.org/10.1016/j.aei.2025.103158) — Chengke Wu, Wenjun Ding, Qisen Jin et al.  \n[21] [Retrieval-Augmented Generation (RAG) (2025)](https://doi.org/10.1007/s12599-025-00945-3) — Michael Klesel, H.F. Wittmann  \n[22] [Retrieval-Augmented Generation (RAG) in Healthcare: A Comprehensive Review (2025)](https://doi.org/10.3390/ai6090226) — Fnu Neha, Deepshikha Bhati, Deepak Kumar Shukla  \n[23] [EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records (2026)](http://arxiv.org/abs/2605.12335v1) — Saeed Shurrab, Mariam Al-Omari, Dana El Samad et al.  \n[24] [Evaluating Chunking Strategies for Retrieval-Augmented Generation on Academic Texts (2026)](http://arxiv.org/abs/2607.01852v1) — Valentin J. J. Kreileder, Johannes Reisinger, Andreas Fischer  \n[25] [Citation-Enforced RAG for Fiscal Document Intelligence: Cited, Explainable Knowledge Retrieval in Tax Compliance (2026)](http://arxiv.org/abs/2603.14170v1) — Akhil Chandra Shanivendra",
+  "iteration": 1,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "http://infoscience.epfl.ch/record/192375",
+    "http://arxiv.org/abs/2002.00388",
+    "https://doi.org/10.1136/amiajnl-2011-000464",
+    "https://doi.org/10.1145/3605943",
+    "https://doi.org/10.19173/irrodl.v12i3.890",
+    "http://arxiv.org/abs/2312.10997",
+    "https://doi.org/10.1145/3637528.3671470",
+    "https://doi.org/10.18653/v1/2021.findings-emnlp.320",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/10857783",
+    "http://bura.brunel.ac.uk/handle/2438/1343",
+    "https://doi.org/10.18653/v1/2024.findings-acl.372",
+    "http://arxiv.org/abs/2208.03299",
+    "https://doi.org/10.1038/s41746-024-01091-y",
+    "https://doi.org/10.1109/access.2023.3266377",
+    "https://doi.org/10.1371/journal.pdig.0000877",
+    "http://arxiv.org/abs/2404.17723",
+    "https://doi.org/10.1145/3677052.3698671",
+    "https://doi.org/10.18653/v1/2025.findings-emnlp.568",
+    "https://doi.org/10.18653/v1/2024.emnlp-main.981",
+    "https://doi.org/10.1016/j.aei.2025.103158",
+    "https://doi.org/10.1007/s12599-025-00945-3",
+    "https://doi.org/10.3390/ai6090226",
+    "http://arxiv.org/abs/2605.12335v1",
+    "http://arxiv.org/abs/2607.01852v1",
+    "http://arxiv.org/abs/2603.14170v1"
+  ],
+  "recent_paper_ids": [
+    "http://infoscience.epfl.ch/record/192375",
+    "http://arxiv.org/abs/2002.00388",
+    "https://doi.org/10.1136/amiajnl-2011-000464",
+    "https://doi.org/10.1145/3605943",
+    "https://doi.org/10.19173/irrodl.v12i3.890",
+    "http://arxiv.org/abs/2312.10997",
+    "https://doi.org/10.1145/3637528.3671470",
+    "https://doi.org/10.18653/v1/2021.findings-emnlp.320",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/10857783",
+    "http://bura.brunel.ac.uk/handle/2438/1343",
+    "https://doi.org/10.18653/v1/2024.findings-acl.372",
+    "http://arxiv.org/abs/2208.03299",
+    "https://doi.org/10.1038/s41746-024-01091-y",
+    "https://doi.org/10.1109/access.2023.3266377",
+    "https://doi.org/10.1371/journal.pdig.0000877",
+    "http://arxiv.org/abs/2404.17723",
+    "https://doi.org/10.1145/3677052.3698671",
+    "https://doi.org/10.18653/v1/2025.findings-emnlp.568",
+    "https://doi.org/10.18653/v1/2024.emnlp-main.981",
+    "https://doi.org/10.1016/j.aei.2025.103158",
+    "https://doi.org/10.1007/s12599-025-00945-3",
+    "https://doi.org/10.3390/ai6090226",
+    "http://arxiv.org/abs/2605.12335v1",
+    "http://arxiv.org/abs/2607.01852v1",
+    "http://arxiv.org/abs/2603.14170v1"
+  ],
+  "open_gaps": [
+    "There is a lack of systematic comparison between structure-based chunking (exploiting document layout) and knowledge-graph-based indexing for enhancing RAG in knowledge-intensive domains. Existing approaches either use vector representations over raw text chunks or construct separate knowledge graphs, but do not benchmark hierarchical, structure-aware chunking against graph-based retrieval under controlled settings.",
+    "Existing RAG surveys and best-practice studies do not address how the internal structure of source documents (sections, subsections, tables, hierarchical relations) should be preserved, split, or represented during the chunking and retrieval phase to optimize generation quality.",
+    "The effect of hierarchical chunking on faithfulness and hallucination reduction in domain-specific RAG (e.g., healthcare, legal, financial) is not empirically measured against simpler chunking baselines. Current medical and legal RAG evaluations focus on answering accuracy but neglect how structure-aware chunking might improve evidence attribution or reduce factual errors."
+  ],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "hierarchical chunking retrieval-augmented generation",
+        "document structure hierarchical retrieval RAG knowledge-intensive",
+        "structured document chunking for retrieval augmented generation",
+        "hierarchical representation retrieval augmented generation NLP",
+        "chunking strategies retrieval augmented generation knowledge tasks"
+      ],
+      "new_papers": 25,
+      "total_papers": 25,
+      "open_gaps": 3,
+      "closed_gaps": 1
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": true,
+  "coverage_reasoning": "The user's core idea is to use document structure (hierarchical chunking) to improve RAG retrieval quality. The most directly relevant gap is the first one: 'The impact of document structure-aware chunking strategies on RAG retrieval quality is largely unexplored.' This gap is rated HIGH confidence and supported by 2 papers. According to the stopping criteria, a gap rated HIGH with 2+ papers is sufficient to stop. The other gaps are medium or low and also supported by 2 papers, but the primary gap already meets the threshold. Therefore, no further search is needed.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [],
+  "tool_call_count": 10
+}

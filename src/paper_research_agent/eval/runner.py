@@ -81,7 +81,9 @@ def _package_version() -> str | None:
         return None
 
 
-def run_metadata(*, repeats: int, max_iterations: int, n_cases: int) -> dict:
+def run_metadata(
+    *, repeats: int, max_iterations: int, n_cases: int, with_idea: bool = True
+) -> dict:
     """Everything needed to say what produced a number.
 
     A result without this is not reproducible, and a reader is right to
@@ -125,6 +127,10 @@ def run_metadata(*, repeats: int, max_iterations: int, n_cases: int) -> dict:
             "max_iterations": max_iterations,
             "read_full_text": True,
             "use_memory": False,
+            # The golden labels are topic-level, taken from surveys. Passing a
+            # narrow idea makes the planner chase the idea instead of the
+            # topic, so recall would score a question the labels do not ask.
+            "with_idea": with_idea,
         },
     }
 
@@ -134,12 +140,16 @@ def _slug(topic: str) -> str:
 
 
 def run_one(
-    case: GoldenCase, *, max_iterations: int, timeout_seconds: float | None = None
+    case: GoldenCase,
+    *,
+    max_iterations: int,
+    timeout_seconds: float | None = None,
+    with_idea: bool = True,
 ) -> tuple[dict, ResearchState]:
     t0 = time.monotonic()
     state = run_research(
         case.topic,
-        case.idea,
+        case.idea if with_idea else None,
         read_full_text=True,
         max_iterations=max_iterations,
         # Memory off: a cached or recalled result would make run 2 and 3 of the
@@ -162,6 +172,7 @@ def evaluate(
     max_iterations: int,
     timeout_seconds: float | None = None,
     states_dir: Path | None = None,
+    with_idea: bool = True,
 ) -> list[dict]:
     rows: list[dict] = []
     total = len(cases) * repeats
@@ -173,7 +184,10 @@ def evaluate(
             console.log(f"({done}/{total}) [{case.topic[:45]}] run {r + 1}/{repeats}")
             try:
                 row, state = run_one(
-                    case, max_iterations=max_iterations, timeout_seconds=timeout_seconds
+                    case,
+                    max_iterations=max_iterations,
+                    timeout_seconds=timeout_seconds,
+                    with_idea=with_idea,
                 )
             except Exception as e:
                 # A crashed run is a data point, not a reason to lose the ones
@@ -338,6 +352,12 @@ def main() -> None:
         action="store_true",
         help="1 case, 1 run — for iterating without burning credits",
     )
+    ap.add_argument(
+        "--no-idea",
+        action="store_true",
+        help="research the topic only; the golden labels are topic-level",
+    )
+    ap.add_argument("--tag", default=None, help="label for this run directory")
     ap.add_argument("--out", default="eval/results", help="results root directory")
     args = ap.parse_args()
 
@@ -356,10 +376,15 @@ def main() -> None:
         console.print(f"[red]no golden case matches {args.golden!r}[/]")
         raise SystemExit(1)
 
+    with_idea = not args.no_idea
     meta = run_metadata(
-        repeats=repeats, max_iterations=args.max_iterations, n_cases=len(cases)
+        repeats=repeats,
+        max_iterations=args.max_iterations,
+        n_cases=len(cases),
+        with_idea=with_idea,
     )
-    run_dir = Path(args.out) / meta["timestamp_utc"].replace(":", "").replace("-", "")
+    stamp = meta["timestamp_utc"].replace(":", "").replace("-", "")
+    run_dir = Path(args.out) / (f"{stamp}-{args.tag}" if args.tag else stamp)
     states_dir = run_dir / "states"
     states_dir.mkdir(parents=True, exist_ok=True)
 
@@ -375,6 +400,7 @@ def main() -> None:
         max_iterations=args.max_iterations,
         timeout_seconds=args.timeout,
         states_dir=states_dir,
+        with_idea=with_idea,
     )
     summary = summarise(rows)
 

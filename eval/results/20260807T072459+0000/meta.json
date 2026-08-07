@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-08-07T07:24:59+00:00",
+  "git_sha": "44a5d26459d1a0a35d531a1cb0140ab61fb208a1",
+  "git_dirty": false,
+  "package_version": "0.1.0",
+  "python": "3.12.10",
+  "platform": "macOS-15.7.7-arm64-arm-64bit",
+  "models": {
+    "fast": "deepseek/deepseek-v4-flash",
+    "balanced": "deepseek/deepseek-v4-pro",
+    "reasoning": "deepseek/deepseek-v4-pro",
+    "embedding": "openai/text-embedding-3-small",
+    "tier_override": null
+  },
+  "llm": {
+    "temperature": 0.0,
+    "seed": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "timeout_seconds": 180
+  },
+  "config": {
+    "read_max_papers": 5,
+    "arxiv_max_results": 8,
+    "openalex_max_results": 8,
+    "max_new_papers_per_round": 25,
+    "fulltext_chunk_chars": 1500,
+    "fulltext_top_k": 5
+  },
+  "eval": {
+    "cases": 1,
+    "repeats": 1,
+    "max_iterations": 2,
+    "read_full_text": true,
+    "use_memory": false
+  }
+}
