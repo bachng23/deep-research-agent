@@ -4,4 +4,4 @@ test/
 __pycache__
 ROADMAP.md
 eval_*.json
-eval_results.json
+.paper_research_memory/

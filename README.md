@@ -152,13 +152,19 @@ print(state.report_markdown)
 
 ## Evaluation
 
-The eval harness lives in [`src/paper_research_agent/eval/`](src/paper_research_agent/eval/): a golden set of research topics with expected papers and gap keywords, metrics over a finished run (`grounded_in_fulltext`, `gap_keyword_recall`, `paper_recall`, `citation_coverage`, plus operational counters), heuristic failure analysis, and a runner supporting repeated runs for variance.
+The eval harness lives in [`src/paper_research_agent/eval/`](src/paper_research_agent/eval/): a 13-topic golden set with recorded provenance (survey title, arXiv id, and the exact section each expected gap keyword came from), metrics over a finished run (`grounded_in_fulltext`, `gap_keyword_recall`, `paper_recall`, `citation_coverage`, plus operational counters), heuristic failure analysis, and a runner that repeats each topic k times and reports mean ± std.
 
 ```bash
-uv run python -m paper_research_agent.eval.runner --repeats 3 --max-iterations 2
+# smoke: 1 topic, 1 run — for iterating without burning credits
+uv run python -m paper_research_agent.eval.runner --smoke
+
+# full: every topic, 3 runs each, results under eval/results/<timestamp>/
+uv run python -m paper_research_agent.eval.runner --golden all -k 3 --out eval/results
 ```
 
-> **Status: not yet a reportable result.** An audit of the harness found `citation_coverage` measures nothing (a regex bug makes it constant), `grounded_in_fulltext` conflates "no data" with "0% grounded", the golden set is 6 hard-coded topics with no recorded provenance, and runs persist no model/commit/date metadata. No evaluation numbers are published here yet because none of them would currently survive scrutiny. See `eval/README.md` once the harness is fixed and a real run is committed.
+Each run directory holds `meta.json` (model ids per tier, temperature, git SHA, package version, date), `runs.json` (per-run metrics), `summary.json` (mean ± std, broken down by ground-truth strength and difficulty), and `states/` (the full `ResearchState` of every run, so any number can be traced to the run that produced it).
+
+> **Status: harness ready, no numbers published yet.** An audit found `citation_coverage` measured nothing (a character-class regex over a body that was never split from the reference list, returning 1.0 unconditionally) and `grounded_in_fulltext` failed on line-wrapped source text regardless of whether the quote was correct; both are fixed and tested. The golden set now carries provenance, and runs persist model ids, git SHA and raw state. No results table appears here until a real run is committed — see `eval/README.md`.
 
 ---
 
@@ -244,9 +250,12 @@ src/paper_research_agent/
 git clone https://github.com/bachng23/deep-re-search-agent
 cd deep-re-search-agent
 uv sync
+
+cp .env.example .env
+# then fill in API_KEY
 ```
 
-Create a `.env`:
+Environment variables (`.env.example` has the full list):
 
 ```bash
 # Required — key for the OpenAI-compatible LLM endpoint
