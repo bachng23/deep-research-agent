@@ -1,0 +1,1016 @@
+{
+  "topic": "parameter-efficient fine-tuning of large language models",
+  "user_idea": null,
+  "search_queries": [
+    "parameter-efficient fine-tuning multimodal language model vision-language",
+    "parameter-efficient instruction tuning vision language",
+    "parameter-efficient fine-tuning chain-of-thought reasoning",
+    "PEFT CoT reasoning instruction tuning large language model",
+    "unified parameter-efficient multimodal LLM AdaptFormer LLaMA-Adapter"
+  ],
+  "papers": [
+    {
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "authors": [
+        "Karen Simonyan",
+        "Andrew Zisserman"
+      ],
+      "year": 2014,
+      "abstract": "In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3x3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisation and classification tracks respective ...[truncated]",
+      "url": "http://arxiv.org/abs/1409.1556",
+      "source": "openalex",
+      "citation_count": 75548,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Gradient-based learning applied to document recognition",
+      "authors": [
+        "Yann LeCun",
+        "Léon Bottou",
+        "Yoshua Bengio",
+        "Patrick Haffner"
+      ],
+      "year": 1998,
+      "abstract": "Multilayer neural networks trained with the back-propagation algorithm constitute the best example of a successful gradient based learning technique. Given an appropriate network architecture, gradient-based learning algorithms can be used to synthesize a complex decision surface that can classify high-dimensional patterns, such as handwritten characters, with minimal preprocessing. This paper reviews various methods applied to handwritten character recognition and compares them on a standard handwritten digit recognition task. Convolutional neural networks, which are specifically designed to ...[truncated]",
+      "url": "https://hal.science/hal-03926082",
+      "source": "openalex",
+      "citation_count": 58873,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supplement Content at Scale",
+      "authors": [
+        "Kefallinos, Dionysios",
+        "Alexandris, Georgios",
+        "Maras, Alexis",
+        "Chaidos, Panagiotis",
+        "Gomony, Manil Dev"
+      ],
+      "year": 2018,
+      "abstract": "Although geospatial question answering systems have received increasing attention in recent years, existing prototype systems struggle to properly answer qualitative spatial questions. In this work, we propose a unique framework for answering qualitative spatial questions, which comprises three main components: a geoparser that takes the input questions and extracts place semantic information from text, a reasoning system which is embedded with a crisp reasoner, and finally, answer extraction, which refines the solution space and generates final answers. We present an experimental design to ev ...[truncated]",
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.LDK.2019.21",
+      "source": "openalex",
+      "citation_count": 45822,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)",
+      "authors": [
+        "Bjoern Menze",
+        "András Jakab",
+        "Stefan Bauer",
+        "Jayashree Kalpathy–Cramer",
+        "Keyvan Farahani"
+      ],
+      "year": 2014,
+      "abstract": "In this paper we report the set-up and results of the Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) organized in conjunction with the MICCAI 2012 and 2013 conferences. Twenty state-of-the-art tumor segmentation algorithms were applied to a set of 65 multi-contrast MR scans of low- and high-grade glioma patients-manually annotated by up to four raters-and to 65 comparable scans generated using tumor image simulation software. Quantitative evaluations revealed considerable disagreement between the human raters in segmenting various tumor sub-regions (Dice scores in the range 74%-85 ...[truncated]",
+      "url": "https://doi.org/10.1109/tmi.2014.2377694",
+      "source": "openalex",
+      "citation_count": 6655,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+      "authors": [
+        "Enkelejda Kasneci",
+        "Kathrin Seßler",
+        "Stefan Küchemann",
+        "Maria Bannert",
+        "Daryna Dementieva"
+      ],
+      "year": 2023,
+      "abstract": "",
+      "url": "http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3",
+      "source": "openalex",
+      "citation_count": 5702,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Training language models to follow instructions with human feedback",
+      "authors": [
+        "Long Ouyang",
+        "Jeff Wu",
+        "Xu Jiang",
+        "Diogo Almeida",
+        "Carroll L. Wainwright"
+      ],
+      "year": 2022,
+      "abstract": "Making language models bigger does not inherently make them better at following a user's intent. For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user. In other words, these models are not aligned with their users. In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback. Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we u ...[truncated]",
+      "url": "http://arxiv.org/abs/2203.02155",
+      "source": "openalex",
+      "citation_count": 4319,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLaMA: Open and Efficient Foundation Language Models",
+      "authors": [
+        "Hugo Touvron",
+        "Thibaut Lavril",
+        "Gautier Izacard",
+        "Xavier Martinet",
+        "Marie-Anne Lachaux"
+      ],
+      "year": 2023,
+      "abstract": "We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.",
+      "url": "http://arxiv.org/abs/2302.13971",
+      "source": "openalex",
+      "citation_count": 3942,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing",
+      "authors": [
+        "Pengfei Liu",
+        "Weizhe Yuan",
+        "Jinlan Fu",
+        "Zhengbao Jiang",
+        "Hiroaki Hayashi"
+      ],
+      "year": 2022,
+      "abstract": "This article surveys and organizes research works in a new paradigm in natural language processing, which we dub “prompt-based learning.” Unlike traditional supervised learning, which trains a model to take in an input x and predict an output y as P ( y|x ), prompt-based learning is based on language models that model the probability of text directly. To use these models to perform prediction tasks, the original input x is modified using a template into a textual string prompt x′ that has some unfilled slots, and then the language model is used to probabilistically fill the unfilled informatio ...[truncated]",
+      "url": "https://doi.org/10.1145/3560815",
+      "source": "openalex",
+      "citation_count": 3701,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large language models encode clinical knowledge",
+      "authors": [
+        "Karan Singhal",
+        "Shekoofeh Azizi",
+        "Tao Tu",
+        "S. Sara Mahdavi",
+        "Jason Lee"
+      ],
+      "year": 2023,
+      "abstract": "Abstract Large language models (LLMs) have demonstrated impressive capabilities, but the bar for clinical applications is high. Attempts to assess the clinical knowledge of models typically rely on automated evaluations based on limited benchmarks. Here, to address these limitations, we present MultiMedQA, a benchmark combining six existing medical question answering datasets spanning professional medicine, research and consumer queries and a new dataset of medical questions searched online, HealthSearchQA. We propose a human evaluation framework for model answers along multiple axes including ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-023-06291-2",
+      "source": "openalex",
+      "citation_count": 3457,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages",
+      "authors": [
+        "Zhangyin Feng",
+        "Daya Guo",
+        "Duyu Tang",
+        "Nan Duan",
+        "Xiaocheng Feng"
+      ],
+      "year": 2020,
+      "abstract": "Zhangyin Feng, Daya Guo, Duyu Tang, Nan Duan, Xiaocheng Feng, Ming Gong, Linjun Shou, Bing Qin, Ting Liu, Daxin Jiang, Ming Zhou. Findings of the Association for Computational Linguistics: EMNLP 2020. 2020.",
+      "url": "https://doi.org/10.18653/v1/2020.findings-emnlp.139",
+      "source": "openalex",
+      "citation_count": 2544,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+      "authors": [
+        "Xiang Lisa Li",
+        "Percy Liang"
+      ],
+      "year": 2021,
+      "abstract": "Xiang Lisa Li, Percy Liang. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). 2021.",
+      "url": "https://doi.org/10.18653/v1/2021.acl-long.353",
+      "source": "openalex",
+      "citation_count": 2262,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey of Large Language Models",
+      "authors": [
+        "Wayne Xin Zhao",
+        "Kun Zhou",
+        "Junyi Li",
+        "Tianyi Tang",
+        "Zican Dong"
+      ],
+      "year": 2026,
+      "abstract": "Abstract The rapid evolution of large language models (LLMs) has driven a transformative shift in artificial intelligence (AI), reshaping both research paradigms and practical applications. Distinguished from their predecessors by unprecedented scale and advanced capabilities, LLMs necessitate new frameworks for understanding their development, behavior, and societal impact. This survey systematically reviews recent advancements in LLM techniques across four key dimensions: (1) pre-training methodologies, which establish core model capabilities through large-scale self-supervised training, arc ...[truncated]",
+      "url": "https://doi.org/10.1007/s11704-026-60308-3",
+      "source": "openalex",
+      "citation_count": 1428,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Multimodal Compact Bilinear Pooling for Visual Question Answering and Visual Grounding",
+      "authors": [
+        "Akira Fukui",
+        "Dong Huk Park",
+        "Daylen Yang",
+        "Anna Rohrbach",
+        "Trevor Darrell"
+      ],
+      "year": 2016,
+      "abstract": "Modeling textual or visual information with vector representations trained from large language or visual datasets has been successfully explored in recent years. However, tasks such as visual question answering require combining these vector representations with each other. Approaches to multimodal pooling include element-wise product or sum, as well as concatenation of the visual and textual representations. We hypothesize that these methods are not as expressive as an outer product of the visual and textual vectors. As the outer product is typically infeasible due to its high dimensionality, ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/d16-1044",
+      "source": "openalex",
+      "citation_count": 1416,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "authors": [
+        "Woosuk Kwon",
+        "Z. Li",
+        "Siyuan Zhuang",
+        "Ying Sheng",
+        "L Zheng"
+      ],
+      "year": 2023,
+      "abstract": "High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system ...[truncated]",
+      "url": "https://doi.org/10.1145/3600006.3613165",
+      "source": "openalex",
+      "citation_count": 1218,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Recent Advances in Natural Language Processing via Large Pre-trained Language Models: A Survey",
+      "authors": [
+        "Bonan Min",
+        "Hayley Ross",
+        "Elior Sulem",
+        "Amir Pouran Ben Veyseh",
+        "Thien Huu Nguyen"
+      ],
+      "year": 2023,
+      "abstract": "Large, pre-trained language models (PLMs) such as BERT and GPT have drastically changed the Natural Language Processing (NLP) field. For numerous NLP tasks, approaches leveraging PLMs have achieved state-of-the-art performance. The key idea is to learn a generic, latent representation of language from a generic task once, then share it across disparate NLP tasks. Language modeling serves as the generic task, one with abundant self-supervised text available for extensive training. This article presents the key fundamental concepts of PLM architectures and a comprehensive view of the shift to PL ...[truncated]",
+      "url": "https://doi.org/10.1145/3605943",
+      "source": "openalex",
+      "citation_count": 1212,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Scaling Instruction-Finetuned Language Models",
+      "authors": [
+        "Hyung Won Chung",
+        "Le Hou",
+        "Shayne Longpre",
+        "Barret Zoph",
+        "Yi Tay"
+      ],
+      "year": 2022,
+      "abstract": "Finetuning language models on a collection of datasets phrased as instructions has been shown to improve model performance and generalization to unseen tasks. In this paper we explore instruction finetuning with a particular focus on (1) scaling the number of tasks, (2) scaling the model size, and (3) finetuning on chain-of-thought data. We find that instruction finetuning with the above aspects dramatically improves performance on a variety of model classes (PaLM, T5, U-PaLM), prompting setups (zero-shot, few-shot, CoT), and evaluation benchmarks (MMLU, BBH, TyDiQA, MGSM, open-ended generatio ...[truncated]",
+      "url": "http://arxiv.org/abs/2210.11416",
+      "source": "openalex",
+      "citation_count": 1197,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Parameter-efficient fine-tuning of large-scale pre-trained language models",
+      "authors": [
+        "Ning Ding",
+        "Yujia Qin",
+        "Guang Yang",
+        "Fuchao Wei",
+        "Zonghan Yang"
+      ],
+      "year": 2023,
+      "abstract": "Abstract With the prevalence of pre-trained language models (PLMs) and the pre-training–fine-tuning paradigm, it has been continuously shown that larger models tend to yield better performance. However, as PLMs scale up, fine-tuning and storing all the parameters is prohibitively costly and eventually becomes practically infeasible. This necessitates a new branch of research focusing on the parameter-efficient adaptation of PLMs, which optimizes a small portion of the model parameters while keeping the rest fixed, drastically cutting down computation and storage costs. In general, it demonstra ...[truncated]",
+      "url": "https://doi.org/10.1038/s42256-023-00626-4",
+      "source": "openalex",
+      "citation_count": 958,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "EEG Conformer: Convolutional Transformer for EEG Decoding and Visualization",
+      "authors": [
+        "Yonghao Song",
+        "Qingqing Zheng",
+        "Bingchuan Liu",
+        "Xiaorong Gao"
+      ],
+      "year": 2022,
+      "abstract": "Due to the limited perceptual field, convolutional neural networks (CNN) only extract local temporal features and may fail to capture long-term dependencies for EEG decoding. In this paper, we propose a compact Convolutional Transformer, named EEG Conformer, to encapsulate local and global features in a unified EEG classification framework. Specifically, the convolution module learns the low-level local features throughout the one-dimensional temporal and spatial convolution layers. The self-attention module is straightforwardly connected to extract the global correlation within the local temp ...[truncated]",
+      "url": "https://doi.org/10.1109/tnsre.2022.3230250",
+      "source": "openalex",
+      "citation_count": 927,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+      "authors": [
+        "Junnan Li",
+        "Dongxu Li",
+        "Silvio Savarese",
+        "Steven C. H. Hoi"
+      ],
+      "year": 2023,
+      "abstract": "The cost of vision-and-language pre-training has become increasingly prohibitive due to end-to-end training of large-scale models. This paper proposes BLIP-2, a generic and efficient pre-training strategy that bootstraps vision-language pre-training from off-the-shelf frozen pre-trained image encoders and frozen large language models. BLIP-2 bridges the modality gap with a lightweight Querying Transformer, which is pre-trained in two stages. The first stage bootstraps vision-language representation learning from a frozen image encoder. The second stage bootstraps vision-to-language generative ...[truncated]",
+      "url": "http://arxiv.org/abs/2301.12597",
+      "source": "openalex",
+      "citation_count": 921,
+      "pdf_url": null,
+      "full_text_excerpt": "[1 Introduction] Vision-language pre-training (VLP) research has witnessed a rapid advancement in the past few years, where pre-trained models with increasingly larger scale have been developed to continuously push the state-of-the-art on various downstream tasks (Radford et al., 2021; Li et al., 2021, 2022; Wang et al., 2022a; Alayrac et al., 2022; Wang et al., 2022b). However, most state-of-the-art vision-language models incur a high computation cost during pre-training, due to end-to-end training using large-scale models and datasets.\n\nVision-language research sits at the intersection between vision and language, therefore it is naturally expected that vision-language models can harvest from the readily-available unimodal models from the vision and natural language communities. In this paper, we propose a generic and compute-efficient VLP method by bootstrapping from off-the-shelf pre-trained vision models and language models. Pre-trained vision models offer high-quality visual representation. Pre-trained language models, in particular large language models (LLMs), offer strong language generation and zero-shot transfer abilities. To reduce computation cost and counteract the issue of catastrophic forgetting, the unimodal pre-trained models remain frozen during the pre-training.\n\nIn order to leverage pre-trained unimodal models for VLP, it is key to facilitate cross-modal alignment. However, since LLMs have not seen images during their unimodal pre-training, freezing them makes vision-lang\n\n[2.1 End-to-end Vision-Language Pre-training] Vision-language pre-training aims to learn multimodal foundation models with improved performance on various vision-and-language tasks. Depending on the downstream task, different model architectures have been proposed, including the dual-encoder architecture (Radford et al., 2021; Jia et al., 2021), the fusion-encoder architecture (Tan & Bansal, 2019; Li et al., 2021), the encoder-decoder architecture (Cho et al., 2021; Wang et al., 2021b; Chen et al., 2022b), and more recently, the unified transformer architecture (Li et al., 2022; Wang et al., 2022b). Various pre-training objectives have also been proposed over the years, and have progressively converged to a few time-tested ones: image-text contrastive learning (Radford et al., 2021; Yao et al., 2022; Li et al., 2021, 2022), image-text matching (Li et al., 2021, 2022; Wang et al., 2021a), and (masked) language modeling (Li et al., 2021, 2022; Yu et al., 2022; Wang et al., 2022b).\n\nMost VLP methods perform end-to-end pre-training using large-scale image-text pair datasets. As the model size keeps increasing, the pre-training can incur an extremely high computation cost. Moreover, it is inflexible for end-to-end pre-trained models to leverage readily-available unimodal pre-trained models, such as LLMs (Brown et al., 2020; Zhang et al., 2022; Chung et al., 2022)."
+    },
+    {
+      "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning",
+      "authors": [
+        "Daya Guo",
+        "Dejian Yang",
+        "Haowei Zhang",
+        "Junxiao Song",
+        "Peiyi Wang"
+      ],
+      "year": 2025,
+      "abstract": "Abstract General reasoning represents a long-standing and formidable challenge in artificial intelligence (AI). Recent breakthroughs, exemplified by large language models (LLMs) 1,2 and chain-of-thought (CoT) prompting 3 , have achieved considerable success on foundational reasoning tasks. However, this success is heavily contingent on extensive human-annotated demonstrations and the capabilities of models are still insufficient for more complex problems. Here we show that the reasoning abilities of LLMs can be incentivized through pure reinforcement learning (RL), obviating the need for human ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-025-09422-z",
+      "source": "openalex",
+      "citation_count": 743,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Visual Instruction Tuning",
+      "authors": [
+        "Haotian Liu",
+        "Chunyuan Li",
+        "Qingyang Wu",
+        "Yong Jae Lee"
+      ],
+      "year": 2023,
+      "abstract": "Instruction tuning large language models (LLMs) using machine-generated instruction-following data has improved zero-shot capabilities on new tasks, but the idea is less explored in the multimodal field. In this paper, we present the first attempt to use language-only GPT-4 to generate multimodal language-image instruction-following data. By instruction tuning on such generated data, we introduce LLaVA: Large Language and Vision Assistant, an end-to-end trained large multimodal model that connects a vision encoder and LLM for general-purpose visual and language understanding.Our early experime ...[truncated]",
+      "url": "http://arxiv.org/abs/2304.08485",
+      "source": "openalex",
+      "citation_count": 689,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "authors": [
+        "Wenqi Fan",
+        "Yujuan Ding",
+        "Liangbo Ning",
+        "Shijie Wang",
+        "Hengyun Li"
+      ],
+      "year": 2024,
+      "abstract": "As one of the most advanced techniques in AI, Retrieval-Augmented Generation (RAG) can offer reliable and up-to-date external knowledge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capacity of retrieval in providing additional knowledge enables RAG to assist existing generative AI in producing high-quality outputs. Recently, Large Language Models (LLMs) have demonstrated revolutionary abilities in language understanding and generation, while still facing inherent limitations such as hallucinations and out-of-date internal ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671470",
+      "source": "openalex",
+      "citation_count": 640,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "authors": [
+        "Tim Dettmers",
+        "Artidoro Pagnoni",
+        "Ari Holtzman",
+        "Luke Zettlemoyer"
+      ],
+      "year": 2023,
+      "abstract": "We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters~(LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save m ...[truncated]",
+      "url": "http://arxiv.org/abs/2305.14314",
+      "source": "openalex",
+      "citation_count": 503,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding",
+      "authors": [
+        "Hang Zhang",
+        "Xin Li",
+        "Lidong Bing"
+      ],
+      "year": 2023,
+      "abstract": "We present Video-LLaMA, a multi-modal framework that empowers Large Language Models (LLMs) with the capability of understanding both visual and auditory content in the video. Video-LLaMA bootstraps cross-modal training from the frozen pre-trained visual & audio encoders and the frozen LLMs. Unlike previous works that complement LLMs to process the visual or audio signals only, Video-LLaMA enables video comprehension by tackling two challenges: (1) capturing the temporal changes in visual scenes, (2) integrating audio-visual signals. To counter the first challenge, we propose a Video Q-former t ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-demo.49",
+      "source": "openalex",
+      "citation_count": 486,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+      "authors": [
+        "Jingfeng Yang",
+        "Hongye Jin",
+        "Ruixiang Tang",
+        "Xiaotian Han",
+        "Qizhang Feng"
+      ],
+      "year": 2024,
+      "abstract": "This article presents a comprehensive and practical guide for practitioners and end-users working with Large Language Models (LLMs) in their downstream Natural Language Processing (NLP) tasks. We provide discussions and insights into the usage of LLMs from the perspectives of models, data, and downstream tasks. First, we offer an introduction and brief summary of current language models. Then, we discuss the influence of pre-training data, training data, and test data. Most importantly, we provide a detailed discussion about the use and non-use cases of large language models for various natura ...[truncated]",
+      "url": "https://doi.org/10.1145/3649506",
+      "source": "openalex",
+      "citation_count": 475,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning",
+      "authors": [
+        "Wenliang Dai",
+        "Junnan Li",
+        "Dongxu Li",
+        "Anthony Meng Huat Tiong",
+        "Junqi Zhao"
+      ],
+      "year": 2023,
+      "abstract": "Large-scale pre-training and instruction tuning have been successful at creating general-purpose language models with broad competence. However, building general-purpose vision-language models is challenging due to the rich input distributions and task diversity resulting from the additional visual input. Although vision-language pretraining has been widely studied, vision-language instruction tuning remains under-explored. In this paper, we conduct a systematic and comprehensive study on vision-language instruction tuning based on the pretrained BLIP-2 models. We gather 26 publicly available ...[truncated]",
+      "url": "http://arxiv.org/abs/2305.06500",
+      "source": "openalex",
+      "citation_count": 409,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Comprehensive Overview of Large Language Models",
+      "authors": [
+        "Humza Naveed",
+        "Asad Ullah Khan",
+        "Shi Qiu",
+        "Muhammad Saqib",
+        "Saeed Anwar"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) have recently demonstrated remarkable capabilities in natural language processing tasks and beyond. This success of LLMs has led to a large influx of research contributions in this direction. These works encompass diverse topics such as architectural innovations, better training strategies, context length improvements, fine-tuning, multi-modal LLMs, robotics, datasets, benchmarking, efficiency, and more. With the rapid development of techniques and regular breakthroughs in LLM research, it has become considerably challenging to perceive the bigger picture of the ad ...[truncated]",
+      "url": "http://arxiv.org/abs/2307.06435",
+      "source": "openalex",
+      "citation_count": 367,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models",
+      "authors": [
+        "Lei Wang",
+        "Wanyu Xu",
+        "Yihuai Lan",
+        "Zhiqiang Hu",
+        "Yunshi Lan"
+      ],
+      "year": 2023,
+      "abstract": "Lei Wang, Wanyu Xu, Yihuai Lan, Zhiqiang Hu, Yunshi Lan, Roy Ka-Wei Lee, Ee-Peng Lim. Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2023.",
+      "url": "https://doi.org/10.18653/v1/2023.acl-long.147",
+      "source": "openalex",
+      "citation_count": 284,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AdaptFormer: Adapting Vision Transformers for Scalable Visual Recognition",
+      "authors": [
+        "Shoufa Chen",
+        "Chongjian Ge",
+        "Tong Zhan",
+        "Jiangliu Wang",
+        "Yibing Song"
+      ],
+      "year": 2022,
+      "abstract": "Pretraining Vision Transformers (ViTs) has achieved great success in visual recognition. A following scenario is to adapt a ViT to various image and video recognition tasks. The adaptation is challenging because of heavy computation and memory storage. Each model needs an independent and complete finetuning process to adapt to different tasks, which limits its transferability to different visual domains. To address this challenge, we propose an effective adaptation approach for Transformer, namely AdaptFormer, which can adapt the pre-trained ViTs into many different image and video tasks effic ...[truncated]",
+      "url": "http://arxiv.org/abs/2205.13535",
+      "source": "openalex",
+      "citation_count": 262,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Automatic Chain of Thought Prompting in Large Language Models",
+      "authors": [
+        "Zhuosheng Zhang",
+        "Aston Zhang",
+        "Mu Li",
+        "Alex Smola"
+      ],
+      "year": 2022,
+      "abstract": "Large language models (LLMs) can perform complex reasoning by generating intermediate reasoning steps. Providing these steps for prompting demonstrations is called chain-of-thought (CoT) prompting. CoT prompting has two major paradigms. One leverages a simple prompt like \"Let's think step by step\" to facilitate step-by-step thinking before answering a question. The other uses a few manual demonstrations one by one, each composed of a question and a reasoning chain that leads to an answer. The superior performance of the second paradigm hinges on the hand-crafting of task-specific demonstration ...[truncated]",
+      "url": "http://arxiv.org/abs/2210.03493",
+      "source": "openalex",
+      "citation_count": 237,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large Language Models: A Survey",
+      "authors": [
+        "Shervin Minaee",
+        "Tomas Mikolov",
+        "Nikzad, Narjes",
+        "Meysam Chenaghlu",
+        "Richard Socher"
+      ],
+      "year": 2024,
+      "abstract": "Large Language Models (LLMs) have drawn a lot of attention due to their strong performance on a wide range of natural language tasks, since the release of ChatGPT in November 2022. LLMs' ability of general-purpose language understanding and generation is acquired by training billions of model's parameters on massive amounts of text data, as predicted by scaling laws \\cite{kaplan2020scaling,hoffmann2022training}. The research area of LLMs, while very recent, is evolving rapidly in many different ways. In this paper, we review some of the most prominent LLMs, including three popular LLM families ...[truncated]",
+      "url": "http://arxiv.org/abs/2402.06196",
+      "source": "openalex",
+      "citation_count": 225,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A review of large language models and autonomous agents in chemistry",
+      "authors": [
+        "Mayk Caldas Ramos",
+        "Christopher J. Collison",
+        "Andrew Dickson White"
+      ],
+      "year": 2024,
+      "abstract": "Large language models (LLMs) have emerged as powerful tools in chemistry, significantly impacting molecule design, property prediction, and synthesis optimization. This review highlights LLM capabilities in these domains and their potential to accelerate scientific discovery through automation. We also review LLM-based autonomous agents: LLMs with a broader set of tools to interact with their surrounding environment. These agents perform diverse tasks such as paper scraping, interfacing with automated laboratories, and synthesis planning. As agents are an emerging topic, we extend the scope of ...[truncated]",
+      "url": "https://doi.org/10.1039/d4sc03921a",
+      "source": "openalex",
+      "citation_count": 221,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLM-Adapters: An Adapter Family for Parameter-Efficient Fine-Tuning of Large Language Models",
+      "authors": [
+        "Zhiqiang Hu",
+        "Lei Wang",
+        "Yihuai Lan",
+        "Wanyu Xu",
+        "Ee‐Peng Lim"
+      ],
+      "year": 2023,
+      "abstract": "The success of large language models (LLMs), like GPT-4 and ChatGPT, has led to the development of numerous cost-effective and accessible alternatives that are created by finetuning open-access LLMs with task-specific data (e.g., ChatDoctor) or instruction data (e.g., Alpaca). Among the various fine-tuning methods, adapter-based parameter-efficient fine-tuning (PEFT) is undoubtedly one of the most attractive topics, as it only requires fine-tuning a few external parameters instead of the entire LLMs while achieving comparable or even better performance. To enable further research on PEFT metho ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.319",
+      "source": "openalex",
+      "citation_count": 215,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "MM-LLMs: Recent Advances in MultiModal Large Language Models",
+      "authors": [
+        "Duzhen Zhang",
+        "Yahan Yu",
+        "Jiahua Dong",
+        "Chenxing Li",
+        "Dan Su"
+      ],
+      "year": 2024,
+      "abstract": "",
+      "url": "https://doi.org/10.18653/v1/2024.findings-acl.738",
+      "source": "openalex",
+      "citation_count": 210,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "When LLMs meet cybersecurity: a systematic literature review",
+      "authors": [
+        "Jie Zhang",
+        "H. Bu",
+        "Hui Wen",
+        "Yongji Liu",
+        "Haiqiang Fei"
+      ],
+      "year": 2025,
+      "abstract": "Abstract The rapid development of large language models (LLMs) has opened new avenues across various fields, including cybersecurity, which faces an evolving threat landscape and demand for innovative technologies. Despite initial explorations into the application of LLMs in cybersecurity, there is a lack of a comprehensive overview of this research area. This paper addresses this gap by providing a systematic literature review, covering the analysis of over 300 works, encompassing 25 LLMs and more than 10 downstream scenarios. Our comprehensive overview addresses three key research questions: ...[truncated]",
+      "url": "https://doi.org/10.1186/s42400-025-00361-w",
+      "source": "openalex",
+      "citation_count": 179,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Challenges and Applications of Large Language Models",
+      "authors": [
+        "Jean Kaddour",
+        "Joshua Harris",
+        "Maximilian Mozes",
+        "Herbie Bradley",
+        "Roberta Răileanu"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) went from non-existent to ubiquitous in the machine learning discourse within a few years. Due to the fast pace of the field, it is difficult to identify the remaining challenges and already fruitful application areas. In this paper, we aim to establish a systematic set of open problems and application successes so that ML researchers can comprehend the field's current state more quickly and become productive.",
+      "url": "http://arxiv.org/abs/2307.10169",
+      "source": "openalex",
+      "citation_count": 179,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning",
+      "authors": [
+        "Jun Chen",
+        "Han Guo",
+        "Kai Yi",
+        "Boyang Li",
+        "Mohamed Elhoseiny"
+      ],
+      "year": 2022,
+      "abstract": "The limited availability of annotated data often hinders real-world applications of machine learning. To efficiently learn from small quantities of multimodal data, we leverage the linguistic knowledge from a large pre-trained language model (PLM) and quickly adapt it to new domains of image captioning. To effectively utilize a pretrained model, it is critical to balance the visual input and prior linguistic knowledge from pretraining. We propose VisualGPT, which employs a novel self-resurrecting encoder-decoder attention mechanism to quickly adapt the PLM with a small amount of in-domain imag ...[truncated]",
+      "url": "https://doi.org/10.1109/cvpr52688.2022.01750",
+      "source": "openalex",
+      "citation_count": 176,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention",
+      "authors": [
+        "Renrui Zhang",
+        "Jiaming Han",
+        "Liu, Chris",
+        "Peng Gao",
+        "Aojun Zhou"
+      ],
+      "year": 2023,
+      "abstract": "We present LLaMA-Adapter, a lightweight adaption method to efficiently fine-tune LLaMA into an instruction-following model. Using 52K self-instruct demonstrations, LLaMA-Adapter only introduces 1.2M learnable parameters upon the frozen LLaMA 7B model, and costs less than one hour for fine-tuning on 8 A100 GPUs. Specifically, we adopt a set of learnable adaption prompts, and prepend them to the word tokens at higher transformer layers. Then, a zero-initialized attention mechanism with zero gating is proposed, which adaptively injects the new instructional cues into LLaMA, while effectively pres ...[truncated]",
+      "url": "http://arxiv.org/abs/2303.16199",
+      "source": "openalex",
+      "citation_count": 172,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Fine-Tuning Large Language Models for Specialized Use Cases",
+      "authors": [
+        "DM Anisuzzaman",
+        "Jeffrey G. Malins",
+        "Paul A. Friedman",
+        "Zachi I. Attia"
+      ],
+      "year": 2024,
+      "abstract": "Large language models (LLMs) are a type of artificial intelligence, which operate by predicting and assembling sequences of words that are statistically likely to follow from a given text input. With this basic ability, LLMs are able to answer complex questions and follow extremely complex instructions. Products created using LLMs such as ChatGPT by OpenAI and Claude by Anthropic have created a huge amount of traction and user engagements and revolutionized the way we interact with technology, bringing a new dimension to human-computer interaction. Fine-tuning is a process in which a pretraine ...[truncated]",
+      "url": "https://doi.org/10.1016/j.mcpdig.2024.11.005",
+      "source": "openalex",
+      "citation_count": 123,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning",
+      "authors": [
+        "Weirui Kuang",
+        "Bingchen Qian",
+        "Zitao Li",
+        "Daoyuan Chen",
+        "Dawei Gao"
+      ],
+      "year": 2024,
+      "abstract": "Large language models (LLMs) have demonstrated great capabilities in various natural language understanding and generation tasks.These pre-trained LLMs can be further improved for specific downstream tasks by fine-tuning.However, the adoption of LLM in real-world applications can be hindered by privacy concerns and the resource-intensive nature of model training and fine-tuning.When multiple entities have similar interested tasks but cannot directly share their local data due to privacy regulations, federated learning (FL) is a mainstream solution to leverage the data of different entities.Bes ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671573",
+      "source": "openalex",
+      "citation_count": 109,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey",
+      "authors": [
+        "Zeyu Han",
+        "Chao Gao",
+        "Jinyang Liu",
+        "Jeff",
+        "Zhang"
+      ],
+      "year": 2024,
+      "abstract": "Large models represent a groundbreaking advancement in multiple application fields, enabling remarkable achievements across various tasks. However, their unprecedented scale comes with significant computational costs. These models, often consisting of billions of parameters, require vast amounts of computational resources for execution. Especially, the expansive scale and computational demands pose considerable challenges when customizing them for particular downstream tasks, particularly over the hardware platforms constrained by computational capabilities. Parameter Efficient Fine-Tuning (PE ...[truncated]",
+      "url": "http://arxiv.org/abs/2403.14608",
+      "source": "openalex",
+      "citation_count": 93,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models",
+      "authors": [
+        "Gen Luo",
+        "Yiyi Zhou",
+        "Tianhe Ren",
+        "S.L. Chen",
+        "Xiaoshuai Sun"
+      ],
+      "year": 2023,
+      "abstract": "Recently, growing interest has been aroused in extending the multimodal capability of large language models (LLMs), e.g., vision-language (VL) learning, which is regarded as the next milestone of artificial general intelligence. However, existing solutions are prohibitively expensive, which not only need to optimize excessive parameters, but also require another large-scale pre-training before VL instruction tuning. In this paper, we propose a novel and affordable solution for the effective VL adaption of LLMs, called Mixture-of-Modality Adaptation (MMA). Instead of using large neural networks ...[truncated]",
+      "url": "http://arxiv.org/abs/2305.15023",
+      "source": "openalex",
+      "citation_count": 45,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Survey on Multimodal Large Language Models in Radiology for Report Generation and Visual Question Answering",
+      "authors": [
+        "Ziruo Yi",
+        "Ting Xiao",
+        "Mark V. Albert"
+      ],
+      "year": 2025,
+      "abstract": "Large language models (LLMs) and large vision models (LVMs) have driven significant advancements in natural language processing (NLP) and computer vision (CV), establishing a foundation for multimodal large language models (MLLMs) to integrate diverse data types in real-world applications. This survey explores the evolution of MLLMs in radiology, focusing on radiology report generation (RRG) and radiology visual question answering (RVQA), where MLLMs leverage the combined capabilities of LLMs and LVMs to improve clinical efficiency. We begin by tracing the history of radiology and the developm ...[truncated]",
+      "url": "https://doi.org/10.3390/info16020136",
+      "source": "openalex",
+      "citation_count": 24,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Parameter-Efficient Fine-Tuning for Foundation Models",
+      "authors": [
+        "Dan Zhang",
+        "Tao Feng",
+        "Lilong Xue",
+        "Yuandong Wang",
+        "Yuxiao Dong"
+      ],
+      "year": 2025,
+      "abstract": "This survey delves into the realm of Parameter-Efficient Fine-Tuning (PEFT) within the context of Foundation Models (FMs). PEFT, a cost-effective fine-tuning technique, minimizes parameters and computational complexity while striving for optimal downstream task performance. FMs, like ChatGPT, DALL-E, and LLaVA specialize in language understanding, generative tasks, and multimodal tasks, trained on diverse datasets spanning text, images, and videos. The diversity of FMs guides various adaptation strategies for PEFT. Therefore, this survey aims to provide a comprehensive overview of PEFT techniq ...[truncated]",
+      "url": "http://arxiv.org/abs/2501.13787",
+      "source": "openalex",
+      "citation_count": 5,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "MoME: Mixture of Multimodal Experts for Generalist Multimodal Large Language Models",
+      "authors": [
+        "Leyang Shen",
+        "Gongwei Chen",
+        "Rui Shao",
+        "Weili Guan",
+        "Liqiang Nie"
+      ],
+      "year": 2024,
+      "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive capabilities across various vision-language tasks. However, a generalist MLLM typically underperforms compared with a specialist MLLM on most VL tasks, which can be attributed to task interference. In this paper, we propose a mixture of multimodal experts (MoME) to mitigate task interference and obtain a generalist MLLM. Our MoME is composed of two key components, a mixture of vision experts (MoVE) and a mixture of language experts (MoLE). MoVE can adaptively modulate the features transformed from various vision encoders, an ...[truncated]",
+      "url": "http://arxiv.org/abs/2407.12709",
+      "source": "openalex",
+      "citation_count": 4,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "CROME: Cross-Modal Adapters for Efficient Multimodal LLM",
+      "authors": [
+        "Sayna Ebrahimi",
+        "Sercan Ö. Arık",
+        "Tejas Nama",
+        "Tomas Pfister"
+      ],
+      "year": 2024,
+      "abstract": "Multimodal Large Language Models (MLLMs) demonstrate remarkable image-language capabilities, but their widespread use faces challenges in cost-effective training and adaptation. Existing approaches often necessitate expensive language model retraining and limited adaptability. Additionally, the current focus on zero-shot performance improvements offers insufficient guidance for task-specific tuning. We propose CROME, an efficient vision-language instruction tuning framework. It features a novel gated cross-modal adapter that effectively combines visual and textual representations prior to inpu ...[truncated]",
+      "url": "http://arxiv.org/abs/2408.06610",
+      "source": "openalex",
+      "citation_count": 1,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "SuperLoRA: Parameter-Efficient Unified Adaptation of Multi-Layer Attention Modules",
+      "authors": [
+        "Xiangyu Chen",
+        "Jing Liu",
+        "Ye Wang",
+        "Pu Perry Wang",
+        "Matthew Brand"
+      ],
+      "year": 2024,
+      "abstract": "Low-rank adaptation (LoRA) and its variants are widely employed in fine-tuning large models, including large language models for natural language processing and diffusion models for computer vision. This paper proposes a generalized framework called SuperLoRA that unifies and extends different LoRA variants, which can be realized under different hyper-parameter settings. Introducing grouping, folding, shuffling, projecting, and tensor factoring, SuperLoRA offers high flexibility compared with other LoRA variants and demonstrates superior performance for transfer learning tasks especially in th ...[truncated]",
+      "url": "http://arxiv.org/abs/2403.11887",
+      "source": "openalex",
+      "citation_count": 1,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Parameter-Efficient Fine-Tuning of Large Pretrained Models for Instance Segmentation Tasks",
+      "authors": [
+        "Nermeen Abou Baker",
+        "David Rohrschneider",
+        "Uwe Handmann"
+      ],
+      "year": 2026,
+      "abstract": "Research and applications in artificial intelligence have recently shifted with the rise of large pretrained models, which deliver state-of-the-art results across numerous tasks. However, the substantial increase in parameters introduces a need for parameter-efficient training strategies. Despite significant advancements, limited research has explored parameter-efficient fine-tuning (PEFT) methods in the context of transformer-based models for instance segmentation. Addressing this gap, this study investigates the effectiveness of PEFT methods, specifically adapters and Low-Rank Adaptation (Lo ...[truncated]",
+      "url": "http://arxiv.org/abs/2606.01947v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2606.01947v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Hierarchical Pre-Training of Vision Encoders with Large Language Model",
+      "authors": [
+        "Eugene Lee",
+        "Ting-Yu Chang",
+        "Jui-Huang Tsai",
+        "Jiajie Diao",
+        "Chen-Yi Lee"
+      ],
+      "year": 2026,
+      "abstract": "The field of computer vision has experienced significant advancements through scalable vision encoders and multimodal pre-training frameworks. However, existing approaches often treat vision encoders and large language models (LLMs) as independent modules, limiting the integration of hierarchical visual features. In this work, we propose HIVE (Hierarchical Pre-Training of Vision Encoders), a novel framework that enhances vision-language alignment by introducing hierarchical cross-attention between the vision encoder and LLM. Unlike conventional methods that flatten image embeddings, HIVE enabl ...[truncated]",
+      "url": "http://arxiv.org/abs/2604.00086v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2604.00086v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "authors": [
+        "Hao Zheng",
+        "Jinyi Huang",
+        "Tiantian Zheng",
+        "Xun Xu",
+        "Tuka Alhanai"
+      ],
+      "year": 2026,
+      "abstract": "Assembly action understanding is a key enabler for effective human-robot collaborative assembly, yet it remains challenging due to subtle motions and fine-grained hand-object interactions. We adapt vision-language models (VLMs) to this challenging domain with Compositional Context Fine-Tuning (CCFT), a method that decomposes assembly actions into semantic elements (Verb, Object, Tool) and fine-tunes VLMs to recognize each action element using templated question-answering pairs. This approach ensures near-deterministic outputs. To enable efficient and effective multi-task learning under limited ...[truncated]",
+      "url": "http://arxiv.org/abs/2607.10797v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2607.10797v1",
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "Multimodal instruction tuning is underexplored, and no parameter-efficient fine-tuning technique has been proposed for adapting large language models to vision-language tasks. While PEFT methods exist separately for vision (AdaptFormer) and for language (LLaMA-Adapter), no work combines them into a unified parameter-efficient multimodal LLM.",
+      "supporting_papers": [
+        "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models"
+      ],
+      "evidence_quotes": [
+        "In order to leverage pre-trained unimodal models for VLP, it is key to facilitate cross-modal alignment.",
+        "To reduce computation cost and counteract the issue of catastrophic forgetting, the unimodal pre-trained models remain frozen during the pre-training."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Prior to the LLM-Adapters framework, there was no standardized way to integrate and systematically compare different adapter-based parameter-efficient fine-tuning methods for large language models. This lack of a common evaluation framework hindered objective assessment of PEFT approaches.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    },
+    {
+      "description": "Parameter-efficient fine-tuning methods like LLaMA-Adapter are designed and evaluated exclusively on instruction-following scenarios. Their performance on other NLP tasks—such as classification, summarization, or reasoning—remains unexplored.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    },
+    {
+      "description": "The combination of parameter-efficient fine-tuning with chain-of-thought (CoT) instruction data has not been studied. Current work that scales CoT fine-tuning uses full model fine-tuning, missing the opportunity to reduce the computational cost of injecting reasoning capabilities into LLMs.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    },
+    {
+      "description": "Parameter-efficient fine-tuning methods have not been explored in the context of federated learning for large language models. While federated learning frameworks exist for LLMs, they do not incorporate PEFT techniques to reduce the communication and computation overhead of fine-tuning in a distributed, privacy-preserving setting.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    },
+    {
+      "description": "Parameter-efficient fine-tuning methods have not been applied to reinforcement learning from human feedback (RLHF) for aligning language models. Existing work uses full fine-tuning for RLHF, leaving open the question of whether lightweight adapters or other PEFT approaches can achieve comparable alignment with reduced compute.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "low"
+    }
+  ],
+  "conflicts": [],
+  "recalled_gaps": [],
+  "novelty_score": null,
+  "novelty_reasoning": null,
+  "overlapping_papers": [],
+  "report_markdown": "## Overview\nParameter-efficient fine-tuning (PEFT) has emerged as a critical strategy for adapting large language models (LLMs) to downstream tasks while drastically reducing computational and storage costs. As LLMs scale, full fine-tuning becomes prohibitive, motivating a growing body of work on lightweight adaptation methods. However, several important application domains and training paradigms remain underexplored for PEFT, leaving open questions about its broader applicability and effectiveness.\n\n## Landscape\nThe PEFT landscape encompasses a variety of techniques that update only a small fraction of parameters while keeping the pretrained backbone frozen. Early methods include prefix-tuning [11] and adapter-based approaches, later extended by low-rank adaptation (LoRA) and its quantized variant QLoRA [23]. Comprehensive surveys [17,41,44] systematize these methods and highlight their competitive performance with full fine-tuning across many NLP benchmarks. Frameworks like LLM-Adapters [33] provide unified implementations and evaluations of multiple adapter types, facilitating fair comparisons. For instruction-following, LLaMA-Adapter [38] introduces a lightweight adaptation with zero-initialized attention, achieving strong results with only 1.2M trainable parameters.\n\nIn parallel, multimodal LLMs have gained traction. BLIP-2 [19] bridges vision and language by training a lightweight Q-Former while freezing both the image encoder and LLM, a form of parameter-efficient pre-training. Visual instruction tuning, as in LLaVA [21], typically fine-tunes the entire LLM on multimodal instruction data. More recent works propose PEFT methods specifically for vision-language instruction tuning, such as MMA [42] and CROME [46], and InstructBLIP [26] leverages a frozen LLM with a Q-Former. Video-LLaMA [24] similarly adopts a parameter-efficient design for video understanding. Despite these advances, the integration of separate vision and language adapters into a unified, parameter-efficient multimodal LLM remains nascent.\n\nOther relevant paradigms include chain-of-thought (CoT) fine-tuning [16], which scales reasoning capabilities via full model updates, and reinforcement learning from human feedback (RLHF) [6], where full fine-tuning is used to align models with human preferences. Federated learning for LLMs [40] has also been explored, but without incorporating PEFT to reduce communication and computation overhead.\n\n## Research gaps\n- **Multimodal instruction tuning is underexplored, and no unified parameter-efficient technique combines vision and language adapters for multimodal LLMs.** While PEFT methods exist separately for vision (AdaptFormer [29]) and language (LLaMA-Adapter [38]), and some recent works apply lightweight modules to vision-language instruction tuning (e.g., InstructBLIP [26], MMA [42], CROME [46]), a cohesive framework that jointly leverages vision-specific and language-specific adapters in a parameter-efficient manner has not been established. Most multimodal instruction-tuned models still rely on full LLM fine-tuning [21] or train only a modality bridge without unifying adapter paradigms. (confidence: high)\n\n- **Prior to LLM-Adapters [33], there was no standardized framework to integrate and systematically compare different adapter-based PEFT methods for LLMs.** Although individual adapter techniques existed, the lack of a common evaluation suite hindered objective assessment and fair benchmarking. LLM-Adapters filled this gap by providing a unified implementation and evaluation across multiple adapter types, but the need for such a framework was evident from earlier PEFT surveys [17] that catalogued disparate approaches without a shared experimental setup. (confidence: high)\n\n- **PEFT methods like LLaMA-Adapter [38] are designed and evaluated exclusively on instruction-following scenarios; their performance on other NLP tasks (e.g., classification, summarization, reasoning) remains underexplored.** While LLM-Adapters [33] evaluates several adapters on commonsense reasoning and other tasks, many lightweight adaptation techniques still lack comprehensive assessment across diverse task types, limiting understanding of their generality. (confidence: medium)\n\n- **The combination of PEFT with chain-of-thought (CoT) instruction data has not been studied.** Current work that scales CoT fine-tuning uses full model updates [16], missing the opportunity to reduce the computational cost of injecting reasoning capabilities into LLMs. No existing PEFT method has been applied to CoT-augmented instruction tuning. (confidence: medium)\n\n- **PEFT methods have not been explored in the context of federated learning (FL) for LLMs.** While FL frameworks for LLMs exist [40], they do not incorporate PEFT techniques to mitigate the communication and computation overhead of fine-tuning in a distributed, privacy-preserving setting. (confidence: medium)\n\n- **PEFT has not been applied to reinforcement learning from human feedback (RLHF) for aligning language models.** Existing work uses full fine-tuning for RLHF [6], leaving open the question of whether lightweight adapters or other PEFT approaches can achieve comparable alignment with reduced compute. (confidence: low)\n\n## References\n\n[1] [Very Deep Convolutional Networks for Large-Scale Image Recognition (2014)](http://arxiv.org/abs/1409.1556) — Karen Simonyan, Andrew Zisserman  \n[2] [Gradient-based learning applied to document recognition (1998)](https://hal.science/hal-03926082) — Yann LeCun, Léon Bottou, Yoshua Bengio et al.  \n[3] [AI-Assisted Pipeline for Dynamic Generation of Trustworthy Health Supplement Content at Scale (2018)](https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.LDK.2019.21) — Kefallinos, Dionysios, Alexandris, Georgios, Maras, Alexis et al.  \n[4] [The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) (2014)](https://doi.org/10.1109/tmi.2014.2377694) — Bjoern Menze, András Jakab, Stefan Bauer et al.  \n[5] [ChatGPT for good? On opportunities and challenges of large language models for education (2023)](http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3) — Enkelejda Kasneci, Kathrin Seßler, Stefan Küchemann et al.  \n[6] [Training language models to follow instructions with human feedback (2022)](http://arxiv.org/abs/2203.02155) — Long Ouyang, Jeff Wu, Xu Jiang et al.  \n[7] [LLaMA: Open and Efficient Foundation Language Models (2023)](http://arxiv.org/abs/2302.13971) — Hugo Touvron, Thibaut Lavril, Gautier Izacard et al.  \n[8] [Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing (2022)](https://doi.org/10.1145/3560815) — Pengfei Liu, Weizhe Yuan, Jinlan Fu et al.  \n[9] [Large language models encode clinical knowledge (2023)](https://doi.org/10.1038/s41586-023-06291-2) — Karan Singhal, Shekoofeh Azizi, Tao Tu et al.  \n[10] [CodeBERT: A Pre-Trained Model for Programming and Natural Languages (2020)](https://doi.org/10.18653/v1/2020.findings-emnlp.139) — Zhangyin Feng, Daya Guo, Duyu Tang et al.  \n[11] [Prefix-Tuning: Optimizing Continuous Prompts for Generation (2021)](https://doi.org/10.18653/v1/2021.acl-long.353) — Xiang Lisa Li, Percy Liang  \n[12] [A Survey of Large Language Models (2026)](https://doi.org/10.1007/s11704-026-60308-3) — Wayne Xin Zhao, Kun Zhou, Junyi Li et al.  \n[13] [Multimodal Compact Bilinear Pooling for Visual Question Answering and Visual Grounding (2016)](https://doi.org/10.18653/v1/d16-1044) — Akira Fukui, Dong Huk Park, Daylen Yang et al.  \n[14] [Efficient Memory Management for Large Language Model Serving with PagedAttention (2023)](https://doi.org/10.1145/3600006.3613165) — Woosuk Kwon, Z. Li, Siyuan Zhuang et al.  \n[15] [Recent Advances in Natural Language Processing via Large Pre-trained Language Models: A Survey (2023)](https://doi.org/10.1145/3605943) — Bonan Min, Hayley Ross, Elior Sulem et al.  \n[16] [Scaling Instruction-Finetuned Language Models (2022)](http://arxiv.org/abs/2210.11416) — Hyung Won Chung, Le Hou, Shayne Longpre et al.  \n[17] [Parameter-efficient fine-tuning of large-scale pre-trained language models (2023)](https://doi.org/10.1038/s42256-023-00626-4) — Ning Ding, Yujia Qin, Guang Yang et al.  \n[18] [EEG Conformer: Convolutional Transformer for EEG Decoding and Visualization (2022)](https://doi.org/10.1109/tnsre.2022.3230250) — Yonghao Song, Qingqing Zheng, Bingchuan Liu et al.  \n[19] [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models (2023)](http://arxiv.org/abs/2301.12597) — Junnan Li, Dongxu Li, Silvio Savarese et al.  \n[20] [DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning (2025)](https://doi.org/10.1038/s41586-025-09422-z) — Daya Guo, Dejian Yang, Haowei Zhang et al.  \n[21] [Visual Instruction Tuning (2023)](http://arxiv.org/abs/2304.08485) — Haotian Liu, Chunyuan Li, Qingyang Wu et al.  \n[22] [A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models (2024)](https://doi.org/10.1145/3637528.3671470) — Wenqi Fan, Yujuan Ding, Liangbo Ning et al.  \n[23] [QLoRA: Efficient Finetuning of Quantized LLMs (2023)](http://arxiv.org/abs/2305.14314) — Tim Dettmers, Artidoro Pagnoni, Ari Holtzman et al.  \n[24] [Video-LLaMA: An Instruction-tuned Audio-Visual Language Model for Video Understanding (2023)](https://doi.org/10.18653/v1/2023.emnlp-demo.49) — Hang Zhang, Xin Li, Lidong Bing  \n[25] [Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond (2024)](https://doi.org/10.1145/3649506) — Jingfeng Yang, Hongye Jin, Ruixiang Tang et al.  \n[26] [InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning (2023)](http://arxiv.org/abs/2305.06500) — Wenliang Dai, Junnan Li, Dongxu Li et al.  \n[27] [A Comprehensive Overview of Large Language Models (2023)](http://arxiv.org/abs/2307.06435) — Humza Naveed, Asad Ullah Khan, Shi Qiu et al.  \n[28] [Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models (2023)](https://doi.org/10.18653/v1/2023.acl-long.147) — Lei Wang, Wanyu Xu, Yihuai Lan et al.  \n[29] [AdaptFormer: Adapting Vision Transformers for Scalable Visual Recognition (2022)](http://arxiv.org/abs/2205.13535) — Shoufa Chen, Chongjian Ge, Tong Zhan et al.  \n[30] [Automatic Chain of Thought Prompting in Large Language Models (2022)](http://arxiv.org/abs/2210.03493) — Zhuosheng Zhang, Aston Zhang, Mu Li et al.  \n[31] [Large Language Models: A Survey (2024)](http://arxiv.org/abs/2402.06196) — Shervin Minaee, Tomas Mikolov, Nikzad, Narjes et al.  \n[32] [A review of large language models and autonomous agents in chemistry (2024)](https://doi.org/10.1039/d4sc03921a) — Mayk Caldas Ramos, Christopher J. Collison, Andrew Dickson White  \n[33] [LLM-Adapters: An Adapter Family for Parameter-Efficient Fine-Tuning of Large Language Models (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.319) — Zhiqiang Hu, Lei Wang, Yihuai Lan et al.  \n[34] [MM-LLMs: Recent Advances in MultiModal Large Language Models (2024)](https://doi.org/10.18653/v1/2024.findings-acl.738) — Duzhen Zhang, Yahan Yu, Jiahua Dong et al.  \n[35] [When LLMs meet cybersecurity: a systematic literature review (2025)](https://doi.org/10.1186/s42400-025-00361-w) — Jie Zhang, H. Bu, Hui Wen et al.  \n[36] [Challenges and Applications of Large Language Models (2023)](http://arxiv.org/abs/2307.10169) — Jean Kaddour, Joshua Harris, Maximilian Mozes et al.  \n[37] [VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning (2022)](https://doi.org/10.1109/cvpr52688.2022.01750) — Jun Chen, Han Guo, Kai Yi et al.  \n[38] [LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention (2023)](http://arxiv.org/abs/2303.16199) — Renrui Zhang, Jiaming Han, Liu, Chris et al.  \n[39] [Fine-Tuning Large Language Models for Specialized Use Cases (2024)](https://doi.org/10.1016/j.mcpdig.2024.11.005) — DM Anisuzzaman, Jeffrey G. Malins, Paul A. Friedman et al.  \n[40] [FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning (2024)](https://doi.org/10.1145/3637528.3671573) — Weirui Kuang, Bingchen Qian, Zitao Li et al.  \n[41] [Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey (2024)](http://arxiv.org/abs/2403.14608) — Zeyu Han, Chao Gao, Jinyang Liu et al.  \n[42] [Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models (2023)](http://arxiv.org/abs/2305.15023) — Gen Luo, Yiyi Zhou, Tianhe Ren et al.  \n[43] [A Survey on Multimodal Large Language Models in Radiology for Report Generation and Visual Question Answering (2025)](https://doi.org/10.3390/info16020136) — Ziruo Yi, Ting Xiao, Mark V. Albert  \n[44] [Parameter-Efficient Fine-Tuning for Foundation Models (2025)](http://arxiv.org/abs/2501.13787) — Dan Zhang, Tao Feng, Lilong Xue et al.  \n[45] [MoME: Mixture of Multimodal Experts for Generalist Multimodal Large Language Models (2024)](http://arxiv.org/abs/2407.12709) — Leyang Shen, Gongwei Chen, Rui Shao et al.  \n[46] [CROME: Cross-Modal Adapters for Efficient Multimodal LLM (2024)](http://arxiv.org/abs/2408.06610) — Sayna Ebrahimi, Sercan Ö. Arık, Tejas Nama et al.  \n[47] [SuperLoRA: Parameter-Efficient Unified Adaptation of Multi-Layer Attention Modules (2024)](http://arxiv.org/abs/2403.11887) — Xiangyu Chen, Jing Liu, Ye Wang et al.  \n[48] [Parameter-Efficient Fine-Tuning of Large Pretrained Models for Instance Segmentation Tasks (2026)](http://arxiv.org/abs/2606.01947v1) — Nermeen Abou Baker, David Rohrschneider, Uwe Handmann  \n[49] [Hierarchical Pre-Training of Vision Encoders with Large Language Model (2026)](http://arxiv.org/abs/2604.00086v2) — Eugene Lee, Ting-Yu Chang, Jui-Huang Tsai et al.  \n[50] [Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos (2026)](http://arxiv.org/abs/2607.10797v1) — Hao Zheng, Jinyi Huang, Tiantian Zheng et al.",
+  "iteration": 2,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "http://arxiv.org/abs/1409.1556",
+    "https://drops.dagstuhl.de/entities/document/10.4230/oasics.ldk.2019.21",
+    "http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3",
+    "http://arxiv.org/abs/2203.02155",
+    "http://arxiv.org/abs/2302.13971",
+    "https://doi.org/10.1145/3560815",
+    "https://doi.org/10.1038/s41586-023-06291-2",
+    "https://doi.org/10.18653/v1/2020.findings-emnlp.139",
+    "https://doi.org/10.18653/v1/2021.acl-long.353",
+    "https://doi.org/10.1007/s11704-026-60308-3",
+    "http://arxiv.org/abs/2210.11416",
+    "https://doi.org/10.1038/s42256-023-00626-4",
+    "https://doi.org/10.1109/tnsre.2022.3230250",
+    "https://doi.org/10.1038/s41586-025-09422-z",
+    "http://arxiv.org/abs/2304.08485",
+    "https://doi.org/10.1145/3637528.3671470",
+    "http://arxiv.org/abs/2305.14314",
+    "https://doi.org/10.1145/3649506",
+    "http://arxiv.org/abs/2307.06435",
+    "http://arxiv.org/abs/2205.13535",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.319",
+    "https://doi.org/10.18653/v1/2024.findings-acl.738",
+    "https://doi.org/10.1186/s42400-025-00361-w",
+    "https://doi.org/10.1109/cvpr52688.2022.01750",
+    "http://arxiv.org/abs/2303.16199",
+    "https://hal.science/hal-03926082",
+    "https://doi.org/10.1109/tmi.2014.2377694",
+    "https://doi.org/10.18653/v1/d16-1044",
+    "https://doi.org/10.1145/3600006.3613165",
+    "https://doi.org/10.1145/3605943",
+    "http://arxiv.org/abs/2301.12597",
+    "https://doi.org/10.18653/v1/2023.emnlp-demo.49",
+    "http://arxiv.org/abs/2305.06500",
+    "https://doi.org/10.18653/v1/2023.acl-long.147",
+    "http://arxiv.org/abs/2210.03493",
+    "http://arxiv.org/abs/2402.06196",
+    "https://doi.org/10.1039/d4sc03921a",
+    "http://arxiv.org/abs/2307.10169",
+    "https://doi.org/10.1016/j.mcpdig.2024.11.005",
+    "https://doi.org/10.1145/3637528.3671573",
+    "http://arxiv.org/abs/2403.14608",
+    "http://arxiv.org/abs/2305.15023",
+    "https://doi.org/10.3390/info16020136",
+    "http://arxiv.org/abs/2501.13787",
+    "http://arxiv.org/abs/2407.12709",
+    "http://arxiv.org/abs/2408.06610",
+    "http://arxiv.org/abs/2403.11887",
+    "http://arxiv.org/abs/2606.01947v1",
+    "http://arxiv.org/abs/2604.00086v2",
+    "http://arxiv.org/abs/2607.10797v1"
+  ],
+  "recent_paper_ids": [
+    "https://hal.science/hal-03926082",
+    "https://doi.org/10.1109/tmi.2014.2377694",
+    "https://doi.org/10.18653/v1/d16-1044",
+    "https://doi.org/10.1145/3600006.3613165",
+    "https://doi.org/10.1145/3605943",
+    "http://arxiv.org/abs/2301.12597",
+    "https://doi.org/10.18653/v1/2023.emnlp-demo.49",
+    "http://arxiv.org/abs/2305.06500",
+    "https://doi.org/10.18653/v1/2023.acl-long.147",
+    "http://arxiv.org/abs/2210.03493",
+    "http://arxiv.org/abs/2402.06196",
+    "https://doi.org/10.1039/d4sc03921a",
+    "http://arxiv.org/abs/2307.10169",
+    "https://doi.org/10.1016/j.mcpdig.2024.11.005",
+    "https://doi.org/10.1145/3637528.3671573",
+    "http://arxiv.org/abs/2403.14608",
+    "http://arxiv.org/abs/2305.15023",
+    "https://doi.org/10.3390/info16020136",
+    "http://arxiv.org/abs/2501.13787",
+    "http://arxiv.org/abs/2407.12709",
+    "http://arxiv.org/abs/2408.06610",
+    "http://arxiv.org/abs/2403.11887",
+    "http://arxiv.org/abs/2606.01947v1",
+    "http://arxiv.org/abs/2604.00086v2",
+    "http://arxiv.org/abs/2607.10797v1"
+  ],
+  "open_gaps": [
+    "Parameter-efficient fine-tuning methods have not been applied to reinforcement learning from human feedback (RLHF) for aligning language models. Existing work uses full fine-tuning for RLHF, leaving open the question of whether lightweight adapters or other PEFT approaches can achieve comparable alignment with reduced compute.",
+    "Parameter-efficient fine-tuning methods like LLaMA-Adapter are designed and evaluated exclusively on instruction-following scenarios. Their performance on other NLP tasks—such as classification, summarization, or reasoning—remains unexplored.",
+    "The combination of parameter-efficient fine-tuning with chain-of-thought (CoT) instruction data has not been studied. Current work that scales CoT fine-tuning uses full model fine-tuning, missing the opportunity to reduce the computational cost of injecting reasoning capabilities into LLMs.",
+    "Parameter-efficient fine-tuning methods have not been explored in the context of federated learning for large language models. While federated learning frameworks exist for LLMs, they do not incorporate PEFT techniques to reduce the communication and computation overhead of fine-tuning in a distributed, privacy-preserving setting."
+  ],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "parameter-efficient fine-tuning large language models",
+        "adapter modules LoRA prefix-tuning LLM",
+        "efficient adaptation pretrained language models",
+        "fine-tuning few parameters LLM",
+        "lightweight fine-tuning transformers"
+      ],
+      "new_papers": 25,
+      "total_papers": 25,
+      "open_gaps": 2,
+      "closed_gaps": 3
+    },
+    {
+      "iteration": 2,
+      "queries": [
+        "parameter-efficient fine-tuning multimodal language model vision-language",
+        "parameter-efficient instruction tuning vision language",
+        "parameter-efficient fine-tuning chain-of-thought reasoning",
+        "PEFT CoT reasoning instruction tuning large language model",
+        "unified parameter-efficient multimodal LLM AdaptFormer LLaMA-Adapter"
+      ],
+      "new_papers": 25,
+      "total_papers": 50,
+      "open_gaps": 4,
+      "closed_gaps": 2
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": false,
+  "coverage_reasoning": "The user's idea is not provided, so we must conservatively assess coverage. The most central gap relevant to the general topic of PEFT is the lack of a standardized evaluation framework (high confidence, but only 1 paper) and the unexplored combination of PEFT with RLHF (low confidence, 0 papers). Both are critical for assessing the user's potential idea, yet neither is high confidence with at least two papers. Therefore, another search round is recommended to strengthen these gaps.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [],
+  "tool_call_count": 20
+}

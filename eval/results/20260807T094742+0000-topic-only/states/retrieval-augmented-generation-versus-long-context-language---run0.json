@@ -1,0 +1,709 @@
+{
+  "topic": "retrieval-augmented generation versus long-context language models",
+  "user_idea": null,
+  "search_queries": [
+    "retrieval-augmented generation long-context language model comparison summarization task",
+    "RAG versus long-context LLM dialogue evaluation empirical study",
+    "domain-specific retrieval-augmented generation long-context transformer benchmark",
+    "systematic evaluation RAG long-context language models non-question-answering tasks",
+    "RAG long-context LM summarization dialogue performance gap"
+  ],
+  "papers": [
+    {
+      "title": "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records",
+      "authors": [
+        "Saeed Shurrab",
+        "Mariam Al-Omari",
+        "Dana El Samad",
+        "Farah E. Shamout"
+      ],
+      "year": 2026,
+      "abstract": "Electronic Health Records (EHR) contain rich longitudinal patient information and are widely used in predictive modeling applications. However, effectively leveraging historical data remains challenging due to long trajectories, heterogeneous events, temporal irregularity, and the varying relevance of past clinical context. Existing approaches often rely on fixed windows or uniform aggregation, which can obscure clinically important signals. In this work, we introduce EHR-RAGp, a retrieval-augmented foundation model that dynamically integrates the most relevant patient history across diverse clinical event types. We propose a prototype-guided retrieval module that acts as an alignment mechanism and estimates the relevance of retrieved historical chunks with respect to a given prediction task, guiding the model towards the most informative context. Across multiple clinical prediction tasks, EHR-RAGp consistently outperforms state-of-the-art EHR foundation models and transformer-based baselines. Furthermore, integrating EHR-RAGp with existing clinical foundation models yields substantial performance gains. Overall, EHR-RAGp provides a scalable and efficient framework for leveraging long-range clinical context to improve downstream performance.",
+      "url": "http://arxiv.org/abs/2605.12335v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.12335v1",
+      "full_text_excerpt": "[2 Related Work] ng. RAG has emerged as a powerful technique in NLP for extending large language models capabilities by allowing them to condition on external, non-parametric knowledge sources. The original RAG framework lewis2020retrieval demonstrated how combining dense retrieval with generative transformers improves factual correctness and reduces hallucinations. The concept was later extended by models such as RETRO borgeaud2022improving , FLARE jiang2023active , and REPLUG shi2024replug . These architectures share a common principle: retrieval allows the model to incorporate long-range or domain-specific information without encoding the entire knowledge base within its internal parameters. The success of the retrieval paradigm has also influenced healthcare, particularly in clinical question answering saba2024question ; sohn2025rationale , evidence grounding lewis2025grounding ; jia2025agentic , biomedical knowledge integration feng2025retrieval ; feng2025ontologyrag , phenotyping and cohort identification ziletti2025generating , and many other applications related to medical textual data abo2025survey ; amugongo2025retrieval .\n\nIn the context of EHR modeling, RAG has been primarily explored as a mechanism for integrating external knowledge into predictive models, such as EMERGE zhu2024emerge , RAM-EHR xu2024ram , REALM zhu2024realm , and KAMELEON datta2025improving . To the best of our knowledge, REMED kim2023general is our most closely related work. Its core idea is to retrieve the mos\n\n[5 Main Results] ults demonstrate that EHR-RAGp provides consistent improvements over all baselines, indicating effective utilization of long-range clinical context beyond increasing context length alone. Table S5 shows that LLM baselines perform substantially worse across all tasks.\n\nEHR-RAGp Improves Clinical Foundation Models. Table 3 evaluates whether EHR-RAGp can improve existing EHR foundation models when used as a retrieval-augmented extension. Across Med-BERT, CEHR-BERT, and BEHRT, adding EHR-RAGp consistently improves performance across all four tasks. For Med-BERT, the largest gains appear in long LOS prediction, where AUPRC increases from 0.3870.387 to 0.5860.586, and in-hospital mortality, where AUPRC improves from 0.6090.609 to 0.6830.683. For CEHR-BERT, EHR-RAGp improves ICU readmission AUPRC from 0.1330.133 to 0.1670.167, long LOS AUPRC from 0.4470.447 to 0.6040.604, and 1-year mortality AUPRC from 0.3420.342 to 0.3720.372. Similar gains are observed for BEHRT, especially for long LOS, where AUPRC increases from 0.4390.439 to 0.5990.599. These results show that EHR-RAGp is not only a standalone model, but also a general retrieval-augmentation framework that can strengthen existing EHR foundation models.\n\nLatent Representation Structure. Figure 2 presents UMAP projections of history embeddings for two tasks: in-hospital mortality and long length-of-stay. Across both tasks, the embedding space exhibits a consistent global structure, with clear separation between high-acuity (ICU)"
+    },
+    {
+      "title": "Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing",
+      "authors": [
+        "Lingkun Long",
+        "Yushi Huang",
+        "Shihao Bai",
+        "Ruihao Gong",
+        "Jun Zhang",
+        "Ao Zhou",
+        "Jianlei Yang"
+      ],
+      "year": 2026,
+      "abstract": "Diffusion Large Language Models (dLLMs) deliver strong long-context processing capability in a non-autoregressive decoding paradigm. However, the considerable computational cost of bidirectional full attention limits the inference efficiency. Although sparse attention is promising, existing methods remain ineffective. This stems from the need to estimate attention importance for tokens yet to be decoded, while the unmasked token positions are unknown during diffusion. In this paper, we present Focus-dLLM, a novel training-free attention sparsification framework tailored for accurate and efficient long-context dLLM inference. Based on the finding that token confidence strongly correlates across adjacent steps, we first design a past confidence-guided indicator to predict unmasked regions. Built upon this, we propose a sink-aware pruning strategy to accurately estimate and remove redundant attention computation, while preserving highly influential attention sinks. To further reduce overhead, this strategy reuses identified sink locations across layers, leveraging the observed cross-layer consistency. Experimental results show that our method offers more than $29\\times$ lossless speedup under $32K$ context length. The code is publicly available at: https://github.com/Longxmas/Focus-dLLM",
+      "url": "http://arxiv.org/abs/2602.02159v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2602.02159v1",
+      "full_text_excerpt": "[1 Introduction] Diffusion large language models (dLLMs) Bie et al. (2025); Gong et al. (2025); Arriola et al. (2025) have recently emerged as a compelling non-autoregressive paradigm for text generation, replacing left-to-right token emission with iterative denoising over a fixed-length sequence Li et al. (2022); Gong et al. (2022); Austin et al. (2021); Lou et al. (2023); He et al. (2023). By updating multiple positions in parallel and leveraging bidirectional attention, dLLMs offer an appealing path toward higher decoding throughput while retaining strong generation quality. Moreover, recent studies have substantially extended the context length of dLLMs Liu et al. (2025a); He et al. (2025), demonstrating effective long-context extrapolation and scaling to long inputs.\n\nNevertheless, efficient long-context inference remains a key obstacle for the dLLM due to its non-autoregressive decoding and bidirectional full attention nature. Prior methods Wu et al. (2025); Liu et al. (2025b); Ma et al. (2025) to address this challenge fall into two categories: (i) Approximated KV cache and (ii) sparse attention. The former selectively refreshes KV states by exploiting strong redundancy between adjacent steps. However, attention computation is still costly over the full cached context. On the other hand, sparse attention Tang et al. (2024); Xiao et al. (2024a); Xu et al. (2025); Yuan et al. (2025) offers a practical solution, but it often requires token importance estimation using the currently decoded\n\n[6.1 Experiments Settings] Models. We evaluate our method on two representative diffusion LLMs: UltraLLaDA He et al. (2025) and Dream-7B-Instruct Ye et al. (2025).\n\nBaselines. We compare Focus-dLLM against standard native inference (Vanilla) and three dLLM acceleration frameworks: Fast-dLLM Wu et al. (2025), SparseD Wang et al. (2025), and Sparse-dLLM Song et al. (2025).\n\nBenchmarks. To comprehensively assess long-context capabilities, we conduct evaluations on LongBench Bai et al. (2024), a widely adopted benchmark specifically designed for multi-task long-context understanding.\n\nImplementation details. All experiments were conducted on NVIDIA H200 GPUs using OpenCompass Contributors (2023). To ensure a fair comparison, all baselines utilize the recommended configurations provided in their official implementations. Specifically, for SparseD, we set s​k​i​p=20%skip=20\\%, r​a​t​i​o=30%ratio=30\\%, and b​l​o​c​k​_​s​i​z​e=128block\\_size=128; for Sparse-dLLM, we use retention ratio r=0.5r=0.5 and kernel size s=3s=3. For the Focus-dLLM setup, we adopt identical hyperparameters for both UltraLLaDA and Dream: we set prediction expansion factor ρ=4\\rho=4, window size w=8w=8, dense layers ldense=6l_{\\text{dense}}=6, and sparsity ratio α=0.5\\alpha=0.5. Additionally, the number of sink tokens is set to Nsinks=0.01×MN_{\\text{sinks}}=0.01\\times M, where MM denotes the prompt length, and prompt block size = 64. Additional details for datasets, models, and methods are provided in the Appendix A."
+    },
+    {
+      "title": "A$^2$RD: Agentic Autoregressive Diffusion for Long Video Consistency",
+      "authors": [
+        "Do Xuan Long",
+        "Yale Song",
+        "Min-Yen Kan",
+        "Tomas Pfister",
+        "Long T. Le"
+      ],
+      "year": 2026,
+      "abstract": "Synthesizing consistent and coherent long video remains a fundamental challenge. Existing methods suffer from semantic drift and narrative collapse over long horizons. We present A$^2$RD, an Agentic Auto-Regressive Diffusion architecture that decouples creative synthesis from consistency enforcement. A$^2$RD formulates long video synthesis as a closed-loop process that synthesizes and self-improves video segment-by-segment through a Retrieve--Synthesize--Refine--Update cycle. It comprises three core components: (i) Multimodal Video Memory that tracks video progression across modalities; (ii) Adaptive Segment Generation that switches among generation modes for natural progression and visual consistency; and (iii) Hierarchical Test-Time Self-Improvement that self-improves each segment at frame and video levels to prevent error propagation. We further introduce LVBench-C, a challenging benchmark with non-linear entity and environment transitions to stress-test long-horizon consistency. Across public and LVBench-C benchmarks spanning one- to ten-minute videos, A$^2$RD outperforms state-of-the-art baselines by up to 30% in consistency and 20% in narrative coherence. Human evaluations corroborate these gains while also highlighting notable improvements in motion and transition smoothness.",
+      "url": "http://arxiv.org/abs/2605.06924v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.06924v1",
+      "full_text_excerpt": "[Limitations] We acknowledge that A2RD incurs more computational overhead than the baselines experimented in Section˜5. However, since all baselines follow the passive generation paradigm, direct comparison is therefore the meaningful way to evaluate their capabilities. To ensure fairness, we also provide compute-matched variants of all autoregressive baselines in the Scaling Baselines paragraph. In addition, it is worth noting that A2RD’s active reasoning incurs insignificant costs. Our analysis following Section˜B.5 reveals that its cost overhead with using Gemini 3 Flash can be estimated only about less than 0.5$ per segment (with less than 10K tokens per call on average; excluding costs associated with generating 5 additional videos and 5 additional frames per segment).\n\nIn addition, we did not report human agreement scores in our study. This is because several videos are rated by exactly two reviewers, making the agreement not very informative. Additionally, evaluating long-form video generation is inherently subjective, particularly for complex criteria such as transition smoothness and narrative coherence. We decided to average scores over raters, as they are all highly qualified.\n\nFinally, while A2RD made solid progress in long-form video synthesis, several limitations remain. It requires component models (MLLM, TI2I, TI2V models) with strong instruction-following and visual reasoning capabilities. Additionally, the verification rubrics reflect implicit assumptions about consistenc\n\n[1 Introduction] f-Improvement algorithms. These components form a Retrieve–Synthesize–Refine–Update cycle: for each segment, the agent retrieves relevant video world contexts from memory, determines the segment generation mode (e.g., extrapolation or interpolation) adaptively, synthesizes boundary frames then video segment with hierarchical self-improvements applied at both frame and video levels, and finally updates the memory for subsequent generation.\n\nMoreover, existing benchmarks lack the realistic complexity of long-horizon narratives, where entities and environments undergo non-linear transitions. We contribute LVbench-C, a benchmark designed to challenge long-horizon consistency where entities and environments appear, disappear, and reappear (“cyclic”) with optional state changes. Extensive evaluations on LVbench-C and public benchmarks show that A2RD achieves state-of-the-art consistency and narrative coherence in just two self-improved iterations, corroborated by human studies. In summary, this paper contributes:\n\nWe introduce A2RD, the first agentic autoregressive architecture for long video synthesis that integrates multimodal memory, adaptive segment generation, and self-improvement to enforce temporal consistency and narrative coherence. A2RD significantly outperforms existing baselines, scaling to ultra-long video while substantially mitigating semantic drift and content collapse.\n\nWe contribute LVbench-C, a challenging benchmark evaluating long-horizon video consistency throu"
+    },
+    {
+      "title": "Does RAG Know When Retrieval Is Wrong? Diagnosing Context Compliance under Knowledge Conflict",
+      "authors": [
+        "Yihang Chen",
+        "Pin Qian",
+        "Su Wang",
+        "Sipeng Zhang",
+        "Huan Xu",
+        "Shuhuai Lin",
+        "Xinpeng Wei"
+      ],
+      "year": 2026,
+      "abstract": "Retrieval-Augmented Generation (RAG) is usually evaluated by whether the final answer is correct. Under knowledge conflict, this hides a key question: did the model follow retrieved evidence, rely on its parametric prior, or produce a post-hoc rationale? We study this as context compliance, the regime in which retrieved context controls the answer even when it conflicts with the model's prior knowledge. We introduce Context-Driven Decomposition (CDD), an inference-time diagnostic intervention that elicits contextual and prior answers, isolates the conflicting premise, and records a resolution trace that can be perturbed. Across Epi-Scale stress tests, TruthfulQA misconception injection, and cross-model reruns, CDD makes three behaviors visible. First, misleading retrieval can severely degrade accuracy: under a worst-case TruthfulQA misconception-injection probe, Standard RAG reaches only 15.0%. Second, better answers need not share the same mechanism: CDD improves adversarial accuracy on Gemini-2.5-Flash and shows directional gains across Claude variants, yet trace-perturbation sensitivity is high only on Gemini. Third, explicit decomposition improves controlled-conflict robustness over a conflict-aware instruction baseline on localized factual conflicts, with the clearest margins on Entity Swap (88.0% vs 79.3%) and Logical Contradiction (83.2% vs 75.4%). We frame RAG conflict handling as an observability problem.",
+      "url": "http://arxiv.org/abs/2605.14473v4",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.14473v4",
+      "full_text_excerpt": "[1 Introduction] Standard Retrieval-Augmented Generation (RAG) (Lewis et al., 2020) is built on a useful default assumption: retrieved evidence should help the model answer. The assumption becomes fragile when retrieval returns evidence that is wrong or adversarially injected (Xie et al., 2024; Zou et al., 2025). Consider a query about whether cracking knuckles causes arthritis. If the retrieved context asserts this common misconception (Lin et al., 2022), a RAG model that answers “yes” may be faithfully following the context while becoming factually wrong; a model that answers “no” may have detected the conflict, ignored retrieval, or simply relied on memorized prior knowledge. The final answer alone cannot tell these cases apart.\n\nThis is the central blind spot we study. Under knowledge conflict, standard accuracy evaluation collapses several distinct behaviors into the same score, paralleling broader concerns that accuracy-only evaluation can hide trace-level differences (Turpin et al., 2023; Lanham et al., 2023; Sun et al., 2026). A correct answer does not reveal whether the model used the right source of evidence, rejected a false retrieved premise, or produced a post-hoc rationale. An incorrect answer does not distinguish ordinary knowledge failure from context compliance: retrieved context controlling the answer despite conflicting with the model’s parametric prior. RAG therefore needs diagnostics that expose not only what the model answered, but which source controlled the answer and\n\n[Abstract] Retrieval-Augmented Generation (RAG) is usually evaluated by whether the final answer is correct. Under knowledge conflict, this hides a key question: did the model follow retrieved evidence, rely on its parametric prior, or produce a post-hoc rationale? We study this as context compliance, the regime in which retrieved context controls the answer even when it conflicts with the model’s prior knowledge. We introduce Context-Driven Decomposition (CDD), an inference-time diagnostic intervention that elicits contextual and prior answers, isolates the conflicting premise, and records a resolution trace that can be perturbed. Across Epi-Scale stress tests, TruthfulQA misconception injection, and cross-model reruns, CDD makes three behaviors visible. First, misleading retrieval can severely degrade accuracy: under worst-case injected context (a TruthfulQA misconception-injection probe), Standard RAG reaches only 15.0%. Second, better answers need not share the same mechanism: CDD improves adversarial accuracy on Gemini-2.5-Flash and shows directional gains across Claude variants, yet trace-perturbation sensitivity is high only on Gemini. Third, explicit decomposition improves controlled-conflict robustness over a conflict-aware instruction baseline on localized factual conflicts, with the clearest margins on Entity Swap (88.0% vs 79.3%) and Logical Contradiction (83.2% vs 75.4%). We frame RAG conflict handling as an observability problem.\n\nDoes RAG Know When Retrieval Is Wrong? Dia"
+    },
+    {
+      "title": "Shortlisting: a Principled Approach",
+      "authors": [
+        "Edith Elkind",
+        "Qishen Han",
+        "Lirong Xia"
+      ],
+      "year": 2026,
+      "abstract": "Shortlisting is the process of selecting a subset of alternatives from a larger pool for further consideration or final decision-making. It is widely applied in social choice and multi-agent system scenarios. The growing demand for participatory decision-making and the continuously expanding space of candidates create an urgent need for efficient and fair shortlisting procedures. However, little principled study has been done on this problem. This blue-sky paper aims to highlight the overlooked significance of shortlisting, distinguish it from related problems, provide initial thoughts, and, more importantly, serve as a call to arms. We envision that principled shortlisting can reduce cognitive burden, enable fair collective decisions, encourage broader participation, and ultimately build trust in democratic systems.",
+      "url": "http://arxiv.org/abs/2601.21277v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.21277v1",
+      "full_text_excerpt": "[3.4. Shortlist: the Shortlisters’ Perspective] This combination is similar to multi-winner voting, so researchers can start with axioms for multi-winner voting. One caveat is that for shortlisting, the size of the shortlist is variable. Additionally, we may also consider learning-augmented shortlisting, as discussed later in Section 4.\n\n[1. Introduction] s; however, it is not more cognitively efficient, as the agents still need to consider the full candidate set when reporting their preferences.\n\nWhile there has been a large body of literature on agents directly making a collective decision (Brandt2016:Handbook), to the best of our knowledge, there is little principled study on shortlisting, despite shortlisting being an important and multidisciplinary challenge with many real-world applications. An important exception here is the work of rey2021shortlisting, who study shortlisting and voting in PB together as an end-to-end problem. However, their model assumes that the shortlisters have full knowledge of agent preferences. In contrast, we view shortlisting more broadly as a collective decision problem where access to full preferences is limited, which connects to work on distortion (procaccia2006distortion; anshelevich2018approximating; anshelevich2021distortion), the preference bottleneck problem (Boutilier06:Constraint; Boutilier2002PODMP; Cramton06:Combinatorial), and informed voting with incomplete information (Austen96:Information; Feddersen97:Voting; han2023wisdom).\n\nWe believe that research on shortlisting is both tractable (as it can build on many strands of existing work) and timely, given the growing popularity of participatory budgeting and other forms of direct participation. Crucially, we feel that the design of shortlisting procedures can benefit from both social choice ideas and concepts and modern machine lea\n\n[4. Aggregation] Having defined the desiderata, the next natural question is\n\nCan we identify shortlisting procedures that satisfy our axioms?\n\nAs in classical social choice, we start by considering non-strategic agents and shortlisters; we defer discussion of strategic aspects to the next section.\n\nThe design and analysis of the shortlisting rule rLr_{L} and the voting rule rNr_{N} in the shortlisting framework (Figure 1) can be built upon the vast literature on social choice, such as multi-winner rules (lackner2023multi) (e.g., approval voting and method of equal shares (peters2020proportionality)), single-winner voting, matching, and recommender systems, just to name a few. We foresee a rich and fruitful research agenda on evaluating the satisfaction of existing rules w.r.t. existing axioms and their recovery variants (Section 3). Such studies can be based on worst-case analysis as in classical social choice theory (Plott76:Axiomatic), average-case analysis under popular distributions over preferences (Diss2021:Evaluating; boehmer2023properties), or smoothed analysis (xia2020smoothed; flanigan2023smoothed). The design of novel shortlisting processes to satisfy these axioms is another promising direction for future work, for which the automated mechanism design paradigm can be helpful (Conitzer03:Automated; Mohsin2022:Learning; Armstrong2019:Machine; lanctot2025soft).\n\nAdditionally, below we highlight two specifically interesting, and somewhat unique aspects of shortlisting: cognitive effic"
+    },
+    {
+      "title": "Investigating Retrieval-Augmented Generation in Quranic Studies: A Study of 13 Open-Source Large Language Models",
+      "authors": [
+        "Zahra Khalila",
+        "Arbi Haza Nasution",
+        "Winda Monika",
+        "Aytug Onan",
+        "Yohei Murakami",
+        "Yasir Bin Ismail Radi",
+        "Noor Mohammad Osmani"
+      ],
+      "year": 2025,
+      "abstract": "Accurate and contextually faithful responses are critical when applying large language models (LLMs) to sensitive and domain-specific tasks, such as answering queries related to quranic studies. General-purpose LLMs often struggle with hallucinations, where generated responses deviate from authoritative sources, raising concerns about their reliability in religious contexts. This challenge highlights the need for systems that can integrate domain-specific knowledge while maintaining response accuracy, relevance, and faithfulness. In this study, we investigate 13 open-source LLMs categorized into large (e.g., Llama3:70b, Gemma2:27b, QwQ:32b), medium (e.g., Gemma2:9b, Llama3:8b), and small (e.g., Llama3.2:3b, Phi3:3.8b). A Retrieval-Augmented Generation (RAG) is used to make up for the problems that come with using separate models. This research utilizes a descriptive dataset of Quranic surahs including the meanings, historical context, and qualities of the 114 surahs, allowing the model to gather relevant knowledge before responding. The models are evaluated using three key metrics set by human evaluators: context relevance, answer faithfulness, and answer relevance. The findings reveal that large models consistently outperform smaller models in capturing query semantics and producing accurate, contextually grounded responses. The Llama3.2:3b model, even though it is considered small, does very well on faithfulness (4.619) and relevance (4.857), showing the promise of smaller architectures that have been well optimized. This article examines the trade-offs between model size, computational efficiency, and response quality while using LLMs in domain-specific applications.",
+      "url": "http://arxiv.org/abs/2503.16581v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2503.16581v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+      "authors": [
+        "Jingyuan Qi",
+        "Zhiyang Xu",
+        "Qifan Wang",
+        "Lifu Huang"
+      ],
+      "year": 2025,
+      "abstract": "We introduce Autoregressive Retrieval Augmentation (AR-RAG), a novel paradigm that enhances image generation by autoregressively incorporating knearest neighbor retrievals at the patch level. Unlike prior methods that perform a single, static retrieval before generation and condition the entire generation on fixed reference images, AR-RAG performs context-aware retrievals at each generation step, using prior-generated patches as queries to retrieve and incorporate the most relevant patch-level visual references, enabling the model to respond to evolving generation needs while avoiding limitations (e.g., over-copying, stylistic bias, etc.) prevalent in existing methods. To realize AR-RAG, we propose two parallel frameworks: (1) Distribution-Augmentation in Decoding (DAiD), a training-free plug-and-use decoding strategy that directly merges the distribution of model-predicted patches with the distribution of retrieved patches, and (2) Feature-Augmentation in Decoding (FAiD), a parameter-efficient fine-tuning method that progressively smooths the features of retrieved patches via multi-scale convolution operations and leverages them to augment the image generation process. We validate the effectiveness of AR-RAG on widely adopted benchmarks, including Midjourney-30K, GenEval and DPG-Bench, demonstrating significant performance gains over state-of-the-art image generation models.",
+      "url": "http://arxiv.org/abs/2506.06962v3",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.06962v3",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Stronger Baselines for Retrieval-Augmented Generation with Long-Context Language Models",
+      "authors": [
+        "Alex Laitenberger",
+        "Christopher D. Manning",
+        "Nelson F. Liu"
+      ],
+      "year": 2025,
+      "abstract": "With the rise of long-context language models (LMs) capable of processing tens of thousands of tokens in a single context window, do multi-stage retrieval-augmented generation (RAG) pipelines still offer measurable benefits over simpler, single-stage approaches? To assess this question, we conduct a controlled evaluation for QA tasks under systematically scaled token budgets, comparing two recent multi-stage pipelines, ReadAgent and RAPTOR, against three baselines, including DOS RAG (Document's Original Structure RAG), a simple retrieve-then-read method that preserves original passage order. Despite its straightforward design, DOS RAG consistently matches or outperforms more intricate methods on multiple long-context QA benchmarks. We trace this strength to a combination of maintaining source fidelity and document structure, prioritizing recall within effective context windows, and favoring simplicity over added pipeline complexity. We recommend establishing DOS RAG as a simple yet strong baseline for future RAG evaluations, paired with state-of-the-art embedding and language models, and benchmarked under matched token budgets, to ensure that added pipeline complexity is justified by clear performance gains as models continue to improve.",
+      "url": "http://arxiv.org/abs/2506.03989v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.03989v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "FAIR-RAG: Faithful Adaptive Iterative Refinement for Retrieval-Augmented Generation",
+      "authors": [
+        "Mohammad Aghajani Asl",
+        "Majid Asgari-Bidhendi",
+        "Behrooz Minaei-Bidgoli"
+      ],
+      "year": 2025,
+      "abstract": "While Retrieval-Augmented Generation (RAG) mitigates hallucination and knowledge staleness in Large Language Models (LLMs), existing frameworks often falter on complex, multi-hop queries that require synthesizing information from disparate sources. Current advanced RAG methods, employing iterative or adaptive strategies, lack a robust mechanism to systematically identify and fill evidence gaps, often propagating noise or failing to gather a comprehensive context. We introduce FAIR-RAG, a novel agentic framework that transforms the standard RAG pipeline into a dynamic, evidence-driven reasoning process. At its core is an Iterative Refinement Cycle governed by a module we term Structured Evidence Assessment (SEA). The SEA acts as an analytical gating mechanism: it deconstructs the initial query into a checklist of required findings and audits the aggregated evidence to identify confirmed facts and, critically, explicit informational gaps. These gaps provide a precise signal to an Adaptive Query Refinement agent, which generates new, targeted sub-queries to retrieve missing information. This cycle repeats until the evidence is verified as sufficient, ensuring a comprehensive context for a final, strictly faithful generation. We conducted experiments on challenging multi-hop QA benchmarks, including HotpotQA, 2WikiMultiHopQA, and MusiQue. In a unified experimental setup, FAIR-RAG significantly outperforms strong baselines. On HotpotQA, it achieves an F1-score of 0.453 -- an absolute improvement of 8.3 points over the strongest iterative baseline -- establishing a new state-of-the-art for this class of methods on these benchmarks. Our work demonstrates that a structured, evidence-driven refinement process with explicit gap analysis is crucial for unlocking reliable and accurate reasoning in advanced RAG systems for complex, knowledge-intensive tasks.",
+      "url": "http://arxiv.org/abs/2510.22344v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2510.22344v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+      "authors": [
+        "Ali Naseh",
+        "Yuefeng Peng",
+        "Anshuman Suri",
+        "Harsh Chaudhari",
+        "Alina Oprea",
+        "Amir Houmansadr"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) enables Large Language Models (LLMs) to generate grounded responses by leveraging external knowledge databases without altering model parameters. Although the absence of weight tuning prevents leakage via model parameters, it introduces the risk of inference adversaries exploiting retrieved documents in the model's context. Existing methods for membership inference and data extraction often rely on jailbreaking or carefully crafted unnatural queries, which can be easily detected or thwarted with query rewriting techniques common in RAG systems. In this work, we present Interrogation Attack (IA), a membership inference technique targeting documents in the RAG datastore. By crafting natural-text queries that are answerable only with the target document's presence, our approach demonstrates successful inference with just 30 queries while remaining stealthy; straightforward detectors identify adversarial prompts from existing methods up to ~76x more frequently than those generated by our attack. We observe a 2x improvement in TPR@1%FPR over prior inference attacks across diverse RAG configurations, all while costing less than $0.02 per document inference.",
+      "url": "http://arxiv.org/abs/2502.00306v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2502.00306v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "RAG System for Supporting Japanese Litigation Procedures: Faithful Response Generation Complying with Legal Norms",
+      "authors": [
+        "Yuya Ishihara",
+        "Atsushi Keyaki",
+        "Hiroaki Yamada",
+        "Ryutaro Ohara",
+        "Mihoko Sumida"
+      ],
+      "year": 2025,
+      "abstract": "This study discusses the essential components that a Retrieval-Augmented Generation (RAG)-based LLM system should possess in order to support Japanese medical litigation procedures complying with legal norms. In litigation, expert commissioners, such as physicians, architects, accountants, and engineers, provide specialized knowledge to help judges clarify points of dispute. When considering the substitution of these expert roles with a RAG-based LLM system, the constraint of strict adherence to legal norms is imposed. Specifically, three requirements arise: (1) the retrieval module must retrieve appropriate external knowledge relevant to the disputed issues in accordance with the principle prohibiting the use of private knowledge, (2) the responses generated must originate from the context provided by the RAG and remain faithful to that context, and (3) the retrieval module must reference external knowledge with appropriate timestamps corresponding to the issues at hand. This paper discusses the design of a RAG-based LLM system that satisfies these requirements.",
+      "url": "http://arxiv.org/abs/2511.22858v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2511.22858v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "StFT: Spatio-temporal Fourier Transformer for Long-term Dynamics Prediction",
+      "authors": [
+        "Da Long",
+        "Shandian Zhe",
+        "Samuel Williams",
+        "Leonid Oliker",
+        "Zhe Bai"
+      ],
+      "year": 2025,
+      "abstract": "Simulating the long-term dynamics of multi-scale and multi-physics systems poses a significant challenge in understanding complex phenomena across science and engineering. The complexity arises from the intricate interactions between scales and the interplay of diverse physical processes, which manifest in PDEs through coupled, nonlinear terms that govern the evolution of multiple physical fields across scales. Neural operators have shown potential in short-term prediction of such complex spatio-temporal dynamics; however, achieving stable high-fidelity predictions and providing robust uncertainty quantification over extended time horizons remains an open and unsolved area of research. These limitations often lead to stability degradation with rapid error accumulation, particularly in long-term forecasting of systems characterized by multi-scale behaviors involving dynamics of different orders. To address these challenges, we propose an autoregressive Spatio-temporal Fourier Transformer (StFT), in which each transformer block is designed to learn the system dynamics at a distinct scale through a dual-path architecture that integrates frequency-domain and spatio-temporal representations. By leveraging a structured hierarchy of \\ours blocks, the resulting model explicitly captures the underlying dynamics across both macro- and micro- spatial scales. Furthermore, a generative residual correction mechanism is introduced to learn a probabilistic refinement temporally while simultaneously quantifying prediction uncertainties, enhancing both the accuracy and reliability of long-term probabilistic forecasting. Evaluations conducted on three benchmark datasets (plasma, fluid, and atmospheric dynamics) demonstrate the advantages of our approach over state-of-the-art ML methods.",
+      "url": "http://arxiv.org/abs/2503.11899v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2503.11899v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Q-RAG: Long Context Multi-step Retrieval via Value-based Embedder Training",
+      "authors": [
+        "Artyom Sorokin",
+        "Nazar Buzun",
+        "Alexander Anokhin",
+        "Oleg Inozemcev",
+        "Egor Vedernikov",
+        "Petr Anokhin",
+        "Mikhail Burtsev",
+        "Trushkov Alexey",
+        "Yin Wenshuai",
+        "Evgeny Burnaev"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) methods enhance LLM performance by efficiently filtering relevant context for LLMs, reducing hallucinations and inference cost. However, most existing RAG methods focus on single-step retrieval, which is often insufficient for answering complex questions that require multi-step search. Recently, multi-step retrieval approaches have emerged, typically involving the fine-tuning of small LLMs to perform multi-step retrieval. This type of fine-tuning is highly resource-intensive and does not enable the use of larger LLMs. In this work, we propose Q-RAG, a novel approach that fine-tunes the Embedder model for multi-step retrieval using reinforcement learning (RL). Q-RAG offers a competitive, resource-efficient alternative to existing multi-step retrieval methods for open-domain question answering and achieves state-of-the-art results on the popular long-context benchmarks BabiLong and RULER for contexts up to 10M tokens. Code is available at https://github.com/griver/Q-RAG",
+      "url": "http://arxiv.org/abs/2511.07328v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2511.07328v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models",
+      "authors": [
+        "Zhengliang Shi",
+        "Yuhan Wang",
+        "Lingyong Yan",
+        "Pengjie Ren",
+        "Shuaiqiang Wang",
+        "Dawei Yin",
+        "Zhaochun Ren"
+      ],
+      "year": 2025,
+      "abstract": "Tool learning aims to augment large language models (LLMs) with diverse tools, enabling them to act as agents for solving practical tasks. Due to the limited context length of tool-using LLMs, adopting information retrieval (IR) models to select useful tools from large toolsets is a critical initial step. However, the performance of IR models in tool retrieval tasks remains underexplored and unclear. Most tool-use benchmarks simplify this step by manually pre-annotating a small set of relevant tools for each task, which is far from the real-world scenarios. In this paper, we propose ToolRet, a heterogeneous tool retrieval benchmark comprising 7.6k diverse retrieval tasks, and a corpus of 43k tools, collected from existing datasets. We benchmark six types of models on ToolRet. Surprisingly, even the models with strong performance in conventional IR benchmarks, exhibit poor performance on ToolRet. This low retrieval quality degrades the task pass rate of tool-use LLMs. As a further step, we contribute a large-scale training dataset with over 200k instances, which substantially optimizes the tool retrieval ability of IR models.",
+      "url": "http://arxiv.org/abs/2503.01763v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2503.01763v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Towards Better Instruction Following Retrieval Models",
+      "authors": [
+        "Yuchen Zhuang",
+        "Aaron Trinh",
+        "Rushi Qiang",
+        "Haotian Sun",
+        "Chao Zhang",
+        "Hanjun Dai",
+        "Bo Dai"
+      ],
+      "year": 2025,
+      "abstract": "Modern information retrieval (IR) models, trained exclusively on standard <query, passage> pairs, struggle to effectively interpret and follow explicit user instructions. We introduce InF-IR, a large-scale, high-quality training corpus tailored for enhancing retrieval models in Instruction-Following IR. InF-IR expands traditional training pairs into over 38,000 expressive <instruction, query, passage> triplets as positive samples. In particular, for each positive triplet, we generate two additional hard negative examples by poisoning both instructions and queries, then rigorously validated by an advanced reasoning model (o3-mini) to ensure semantic plausibility while maintaining instructional incorrectness. Unlike existing corpora that primarily support computationally intensive reranking tasks for decoder-only language models, the highly contrastive positive-negative triplets in InF-IR further enable efficient representation learning for smaller encoder-only models, facilitating direct embedding-based retrieval. Using this corpus, we train InF-Embed, an instruction-aware Embedding model optimized through contrastive learning and instruction-query attention mechanisms to align retrieval outcomes precisely with user intents. Extensive experiments across five instruction-based retrieval benchmarks demonstrate that InF-Embed significantly surpasses competitive baselines by 8.1% in p-MRR, measuring the instruction-following capabilities.",
+      "url": "http://arxiv.org/abs/2505.21439v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2505.21439v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Enhancing Human-Like Responses in Large Language Models",
+      "authors": [
+        "Ethem Yağız Çalık",
+        "Talha Rüzgar Akkuş"
+      ],
+      "year": 2025,
+      "abstract": "This paper explores the advancements in making large language models (LLMs) more human-like. We focus on techniques that enhance natural language understanding, conversational coherence, and emotional intelligence in AI systems. The study evaluates various approaches, including fine-tuning with diverse datasets, incorporating psychological principles, and designing models that better mimic human reasoning patterns. Our findings demonstrate that these enhancements not only improve user interactions but also open new possibilities for AI applications across different domains. Future work will address the ethical implications and potential biases introduced by these human-like attributes.",
+      "url": "http://arxiv.org/abs/2501.05032v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2501.05032v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Lightweight and Direct Document Relevance Optimization for Generative Information Retrieval",
+      "authors": [
+        "Kidist Amde Mekonnen",
+        "Yubao Tang",
+        "Maarten de Rijke"
+      ],
+      "year": 2025,
+      "abstract": "Generative information retrieval (GenIR) is a promising neural retrieval paradigm that formulates document retrieval as a document identifier (docid) generation task, allowing for end-to-end optimization toward a unified global retrieval objective. However, existing GenIR models suffer from token-level misalignment, where models trained to predict the next token often fail to capture document-level relevance effectively. While reinforcement learning-based methods, such as reinforcement learning from relevance feedback (RLRF), aim to address this misalignment through reward modeling, they introduce significant complexity, requiring the optimization of an auxiliary reward function followed by reinforcement fine-tuning, which is computationally expensive and often unstable. To address these challenges, we propose direct document relevance optimization (DDRO), which aligns token-level docid generation with document-level relevance estimation through direct optimization via pairwise ranking, eliminating the need for explicit reward modeling and reinforcement learning. Experimental results on benchmark datasets, including MS MARCO document and Natural Questions, show that DDRO outperforms reinforcement learning-based methods, achieving a 7.4% improvement in MRR@10 for MS MARCO and a 19.9% improvement for Natural Questions. These findings highlight DDRO's potential to enhance retrieval effectiveness with a simplified optimization approach. By framing alignment as a direct optimization problem, DDRO simplifies the ranking optimization pipeline of GenIR models while offering a viable alternative to reinforcement learning-based methods.",
+      "url": "http://arxiv.org/abs/2504.05181v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2504.05181v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Satisfactory Medical Consultation based on Terminology-Enhanced Information Retrieval and Emotional In-Context Learning",
+      "authors": [
+        "Kaiwen Zuo",
+        "Jing Tang",
+        "Hanbing Qin",
+        "Binli Luo",
+        "Ligang He",
+        "Shiyan Tang"
+      ],
+      "year": 2025,
+      "abstract": "Recent advancements in Large Language Models (LLMs) have marked significant progress in understanding and responding to medical inquiries. However, their performance still falls short of the standards set by professional consultations. This paper introduces a novel framework for medical consultation, comprising two main modules: Terminology-Enhanced Information Retrieval (TEIR) and Emotional In-Context Learning (EICL). TEIR ensures implicit reasoning through the utilization of inductive knowledge and key terminology retrieval, overcoming the limitations of restricted domain knowledge in public databases. Additionally, this module features capabilities for processing long context. The EICL module aids in generating sentences with high attribute relevance by memorizing semantic and attribute information from unlabelled corpora and applying controlled retrieval for the required information. Furthermore, a dataset comprising 803,564 consultation records was compiled in China, significantly enhancing the model's capability for complex dialogues and proactive inquiry initiation. Comprehensive experiments demonstrate the proposed method's effectiveness in extending the context window length of existing LLMs. The experimental outcomes and extensive data validate the framework's superiority over five baseline models in terms of BLEU and ROUGE performance metrics, with substantial leads in certain capabilities. Notably, ablation studies confirm the significance of the TEIR and EICL components. In addition, our new framework has the potential to significantly improve patient satisfaction in real clinical consulting situations.",
+      "url": "http://arxiv.org/abs/2503.17876v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2503.17876v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Algorithmic Shortlisting in Participatory Budgeting",
+      "authors": [
+        "Juan Zambrano",
+        "Clément Contet",
+        "Jairo Gudiño-Rosero",
+        "Felipe Garrido-Lucero",
+        "Umberto Grandi",
+        "César Hidalgo"
+      ],
+      "year": 2025,
+      "abstract": "Participatory budgeting is a democratic innovation that allows citizens to propose and vote on public investment projects. To help organizers manage large volumes of submissions, we design and test privacy-preserving methods for algorithmic shortlisting. These algorithms predict which projects are likely to be funded using only project features and anonymous historical voting data. We demonstrate the limitations of a naive approach that uses a large language model to rank projects based on past success and propose a vote-based pipeline that enables state-of-the-art LLMs to perform on par with classical machine learning. Our findings indicate that user preferences in participatory budgeting are stable enough to allow algorithmic shortlisting to approximate an initial selection of projects effectively.",
+      "url": "http://arxiv.org/abs/2508.06577v3",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2508.06577v3",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "QA-prompting: Improving Summarization with Large Language Models using Question-Answering",
+      "authors": [
+        "Neelabh Sinha"
+      ],
+      "year": 2025,
+      "abstract": "Language Models (LMs) have revolutionized natural language processing, enabling high-quality text generation through prompting and in-context learning. However, models often struggle with long-context summarization due to positional biases, leading to suboptimal extraction of critical information. There are techniques to improve this with fine-tuning, pipelining, or using complex techniques, which have their own challenges. To solve these challenges, we propose QA-prompting - a simple prompting method for summarization that utilizes question-answering as an intermediate step prior to summary generation. Our method extracts key information and enriches the context of text to mitigate positional biases and improve summarization in a single LM call per task without requiring fine-tuning or pipelining. Experiments on multiple datasets belonging to different domains using ten state-of-the-art pre-trained models demonstrate that QA-prompting outperforms baseline and other state-of-the-art methods, achieving up to 29% improvement in ROUGE scores. This provides an effective and scalable solution for summarization and highlights the importance of domain-specific question selection for optimal performance.",
+      "url": "http://arxiv.org/abs/2505.14347v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2505.14347v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Thus Spake Long-Context Large Language Model",
+      "authors": [
+        "Xiaoran Liu",
+        "Ruixiao Li",
+        "Mianqiu Huang",
+        "Zhigeng Liu",
+        "Yuerong Song",
+        "Qipeng Guo",
+        "Siyang He",
+        "Qiqi Wang",
+        "Linlin Li",
+        "Qun Liu",
+        "Ziwei He",
+        "Yaqian Zhou",
+        "Xuanjing Huang",
+        "Xipeng Qiu"
+      ],
+      "year": 2025,
+      "abstract": "Long context is an important topic in Natural Language Processing (NLP), running through the development of NLP architectures, and offers immense opportunities for Large Language Models (LLMs), giving LLMs the lifelong learning potential akin to humans. Unfortunately, the pursuit of a long context is accompanied by numerous obstacles. Nevertheless, long context remains a core competitive advantage for LLMs. In the past two years, the context length of LLMs has achieved a breakthrough extension to millions of tokens. Moreover, research on long-context LLMs has expanded beyond length extrapolation to a comprehensive focus on architecture, infrastructure, training, and evaluation technologies.\n  Inspired by the symphonic poem, Thus Spake Zarathustra, we draw an analogy between the journey of extending the context of LLM and the attempts of humans to transcend their mortality. In this survey, we will illustrate how LLM struggles between the tremendous need for a longer context and its equal need to accept the fact that it is ultimately finite. To achieve this, we give a global picture of the lifecycle of long-context LLMs from four perspectives: architecture, infrastructure, training, and evaluation, showcasing the full spectrum of long-context technologies. At the end of this survey, we will present 10 unanswered questions currently faced by long-context LLMs. We hope this survey can serve as a systematic introduction to research on long-context LLMs.\n  Video: https://www.bilibili.com/video/BV11h9AYoEYj.\n  Github: https://github.com/OpenMOSS/Thus-Spake-Long-Context-LLM.",
+      "url": "http://arxiv.org/abs/2502.17129v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2502.17129v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "When F1 Fails: Granularity-Aware Evaluation for Dialogue Topic Segmentation",
+      "authors": [
+        "Michael H. Coen"
+      ],
+      "year": 2025,
+      "abstract": "Dialogue topic segmentation supports summarization, retrieval, memory management, and conversational continuity. Despite decades of work, evaluation practice remains dominated by strict boundary matching and F1-based metrics. Modern large language model (LLM) based conversational systems increasingly rely on segmentation to manage conversation history beyond fixed context windows. In such systems, unstructured context accumulation degrades efficiency and coherence.\n  This paper introduces an evaluation framework that reports boundary density and segment alignment diagnostics (purity and coverage) alongside window-tolerant F1 (W-F1). By separating boundary scoring from boundary selection, we evaluate segmentation quality across density regimes rather than at a single operating point. Cross-dataset evaluation shows that reported performance differences often reflect annotation granularity mismatch rather than boundary placement quality alone.\n  We evaluate structurally distinct segmentation strategies across eight dialogue datasets spanning task-oriented, open-domain, meeting-style, and synthetic interactions. Boundary-based metrics are strongly coupled to boundary density: threshold sweeps produce larger W-F1 changes than switching between methods. These findings support viewing topic segmentation as a granularity selection problem rather than prediction of a single correct boundary set. This motivates separating boundary scoring from boundary selection for analyzing and tuning segmentation under varying annotation granularities.",
+      "url": "http://arxiv.org/abs/2512.17083v3",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2512.17083v3",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLMs and their Limited Theory of Mind: Evaluating Mental State Annotations in Situated Dialogue",
+      "authors": [
+        "Katharine Kowalyshyn",
+        "Matthias Scheutz"
+      ],
+      "year": 2025,
+      "abstract": "What if large language models could not only infer human mindsets but also expose every blind spot in team dialogue such as discrepancies in the team members' joint understanding? We present a novel, two-step framework that leverages large language models (LLMs) both as human-style annotators of team dialogues to track the team's shared mental models (SMMs) and as automated discrepancy detectors among individuals' mental states. In the first step, an LLM generates annotations by identifying SMM elements within task-oriented dialogues from the Cooperative Remote Search Task (CReST) corpus. Then, a secondary LLM compares these LLM-derived annotations and human annotations against gold-standard labels to detect and characterize divergences. We define an SMM coherence evaluation framework for this use case and apply it to six CReST dialogues, ultimately producing: (1) a dataset of human and LLM annotations; (2) a reproducible evaluation framework for SMM coherence; and (3) an empirical assessment of LLM-based discrepancy detection. Our results reveal that, although LLMs exhibit apparent coherence on straightforward natural-language annotation tasks, they systematically err in scenarios requiring spatial reasoning or disambiguation of prosodic cues.",
+      "url": "http://arxiv.org/abs/2509.02292v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2509.02292v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "MUST-RAG: MUSical Text Question Answering with Retrieval Augmented Generation",
+      "authors": [
+        "Daeyong Kwon",
+        "SeungHeon Doh",
+        "Juhan Nam"
+      ],
+      "year": 2025,
+      "abstract": "Recent advancements in Large language models (LLMs) have demonstrated remarkable capabilities across diverse domains. While they exhibit strong zero-shot performance on various tasks, LLMs' effectiveness in music-related applications remains limited due to the relatively small proportion of music-specific knowledge in their training data. To address this limitation, we propose MusT-RAG, a comprehensive framework based on Retrieval Augmented Generation (RAG) to adapt general-purpose LLMs for text-only music question answering (MQA) tasks. RAG is a technique that provides external knowledge to LLMs by retrieving relevant context information when generating answers to questions. To optimize RAG for the music domain, we (1) propose MusWikiDB, a music-specialized vector database for the retrieval stage, and (2) utilizes context information during both inference and fine-tuning processes to effectively transform general-purpose LLMs into music-specific models. Our experiment demonstrates that MusT-RAG significantly outperforms traditional fine-tuning approaches in enhancing LLMs' music domain adaptation capabilities, showing consistent improvements across both in-domain and out-of-domain MQA benchmarks. Additionally, our MusWikiDB proves substantially more effective than general Wikipedia corpora, delivering superior performance and computational efficiency.",
+      "url": "http://arxiv.org/abs/2507.23334v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2507.23334v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems",
+      "authors": [
+        "Dean Wampler",
+        "Dave Nielson",
+        "Alireza Seddighi"
+      ],
+      "year": 2025,
+      "abstract": "This article provides a comprehensive systematic literature review of academic studies, industrial applications, and real-world deployments from 2018 to 2025, providing a practical guide and detailed overview of modern Retrieval-Augmented Generation (RAG) architectures. RAG offers a modular approach for integrating external knowledge without increasing the capacity of the model as LLM systems expand. Research and engineering practices have been fragmented as a result of the increasing diversity of RAG methodologies, which encompasses a variety of fusion mechanisms, retrieval strategies, and orchestration approaches. We provide quantitative assessment frameworks, analyze the implications for trust and alignment, and systematically consolidate existing RAG techniques into a unified taxonomy. This document is a practical framework for the deployment of resilient, secure, and domain-adaptable RAG systems, synthesizing insights from academic literature, industry reports, and technical implementation guides. It also functions as a technical reference.",
+      "url": "http://arxiv.org/abs/2601.05264v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.05264v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Ref-Long: Benchmarking the Long-context Referencing Capability of Long-context Language Models",
+      "authors": [
+        "Junjie Wu",
+        "Gefei Gu",
+        "Yanan Zheng",
+        "Dit-Yan Yeung",
+        "Arman Cohan"
+      ],
+      "year": 2025,
+      "abstract": "Long-context language models (LCLMs) have exhibited impressive capabilities in long-context understanding tasks. Among these, long-context referencing -- a crucial task that requires LCLMs to attribute items of interest to specific parts of long-context data -- remains underexplored. To bridge this gap, this paper proposes Referencing Evaluation for Long-context Language Models (Ref-Long), a novel benchmark designed to assess the long-context referencing capability of LCLMs. Specifically, Ref-Long requires LCLMs to identify the indexes of documents that reference a specific key, emphasizing contextual relationships between the key and the documents over simple retrieval. Based on the task design, we construct three subsets ranging from synthetic to realistic scenarios to form the Ref-Long benchmark. Experimental results of 13 LCLMs reveal significant shortcomings in long-context referencing, even among advanced models like GPT-4o. To further investigate these challenges, we conduct comprehensive analyses, including human evaluations, task format adjustments, fine-tuning experiments, and error analyses, leading to several key insights. Our data and code can be found in https://github. com/wujunjie1998/Ref-Long.",
+      "url": "http://arxiv.org/abs/2507.09506v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2507.09506v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Learning Long-Context Diffusion Policies via Past-Token Prediction",
+      "authors": [
+        "Marcel Torne",
+        "Andy Tang",
+        "Yuejiang Liu",
+        "Chelsea Finn"
+      ],
+      "year": 2025,
+      "abstract": "Reasoning over long sequences of observations and actions is essential for many robotic tasks. Yet, learning effective long-context policies from demonstrations remains challenging. As context length increases, training becomes increasingly expensive due to rising memory demands, and policy performance often degrades as a result of spurious correlations. Recent methods typically sidestep these issues by truncating context length, discarding historical information that may be critical for subsequent decisions. In this paper, we propose an alternative approach that explicitly regularizes the retention of past information. We first revisit the copycat problem in imitation learning and identify an opposite challenge in recent diffusion policies: rather than over-relying on prior actions, they often fail to capture essential dependencies between past and future actions. To address this, we introduce Past-Token Prediction (PTP), an auxiliary task in which the policy learns to predict past action tokens alongside future ones. This regularization significantly improves temporal modeling in the policy head, with minimal reliance on visual representations. Building on this observation, we further introduce a multistage training strategy: pre-train the visual encoder with short contexts, and fine-tune the policy head using cached long-context embeddings. This strategy preserves the benefits of PTP while greatly reducing memory and computational overhead. Finally, we extend PTP into a self-verification mechanism at test time, enabling the policy to score and select candidates consistent with past actions during inference. Experiments across four real-world and six simulated tasks demonstrate that our proposed method improves the performance of long-context diffusion policies by 3x and accelerates policy training by more than 10x.",
+      "url": "http://arxiv.org/abs/2505.09561v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2505.09561v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+      "authors": [
+        "Nurshat Fateh Ali",
+        "Md. Mahdi Mohtasim",
+        "Shakil Mosharrof",
+        "T. Gopi Krishna"
+      ],
+      "year": 2024,
+      "abstract": "This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). The ever-increasing number of research articles provides a huge challenge for manual literature review. It has resulted in an increased demand for automation. Developing a system capable of automatically generating the literature reviews from only the PDF files as input is the primary objective of this research work. The effectiveness of several Natural Language Processing (NLP) strategies, such as the frequency-based method (spaCy), the transformer model (Simple T5), and retrieval-augmented generation (RAG) with Large Language Model (GPT-3.5-turbo), is evaluated to meet the primary objective. The SciTLDR dataset is chosen for this research experiment and three distinct techniques are utilized to implement three different systems for auto-generating the literature reviews. The ROUGE scores are used for the evaluation of all three systems. Based on the evaluation, the Large Language Model GPT-3.5-turbo achieved the highest ROUGE-1 score, 0.364. The transformer model comes in second place and spaCy is at the last position. Finally, a graphical user interface is created for the best system based on the large language model.",
+      "url": "http://arxiv.org/abs/2411.18583v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2411.18583v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "EVOR: Evolving Retrieval for Code Generation",
+      "authors": [
+        "Hongjin Su",
+        "Shuyang Jiang",
+        "Yuhang Lai",
+        "Haoyuan Wu",
+        "Boao Shi",
+        "Che Liu",
+        "Qian Liu",
+        "Tao Yu"
+      ],
+      "year": 2024,
+      "abstract": "Recently the retrieval-augmented generation (RAG) has been successfully applied in code generation. However, existing pipelines for retrieval-augmented code generation (RACG) employ static knowledge bases with a single source, limiting the adaptation capabilities of Large Language Models (LLMs) to domains they have insufficient knowledge of. In this work, we develop a novel pipeline, EVOR, that employs the synchronous evolution of both queries and diverse knowledge bases. On two realistic settings where the external knowledge is required to solve code generation tasks, we compile four new datasets associated with frequently updated libraries and long-tail programming languages, named EVOR-BENCH. Extensive experiments demonstrate that EVOR achieves two to four times of execution accuracy compared to other methods such as Reflexion (Shinn et al., 2024), DocPrompting (Zhou et al., 2023), etc. We demonstrate that EVOR is flexible and can be easily combined with them to achieve further improvement. Further analysis reveals that EVOR benefits from the synchronous evolution of queries and documents and the diverse information sources in the knowledge base. We hope that our studies will inspire more insights into the design of advanced RACG pipelines in future research. Our model, code, and data are available at https://arks-codegen.github.io.",
+      "url": "http://arxiv.org/abs/2402.12317v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2402.12317v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "RAG-Star: Enhancing Deliberative Reasoning with Retrieval Augmented Verification and Refinement",
+      "authors": [
+        "Jinhao Jiang",
+        "Jiayi Chen",
+        "Junyi Li",
+        "Ruiyang Ren",
+        "Shijie Wang",
+        "Wayne Xin Zhao",
+        "Yang Song",
+        "Tao Zhang"
+      ],
+      "year": 2024,
+      "abstract": "Existing large language models (LLMs) show exceptional problem-solving capabilities but might struggle with complex reasoning tasks. Despite the successes of chain-of-thought and tree-based search methods, they mainly depend on the internal knowledge of LLMs to search over intermediate reasoning steps, limited to dealing with simple tasks involving fewer reasoning steps. In this paper, we propose \\textbf{RAG-Star}, a novel RAG approach that integrates the retrieved information to guide the tree-based deliberative reasoning process that relies on the inherent knowledge of LLMs. By leveraging Monte Carlo Tree Search, RAG-Star iteratively plans intermediate sub-queries and answers for reasoning based on the LLM itself. To consolidate internal and external knowledge, we propose an retrieval-augmented verification that utilizes query- and answer-aware reward modeling to provide feedback for the inherent reasoning of LLMs. Our experiments involving Llama-3.1-8B-Instruct and GPT-4o demonstrate that RAG-Star significantly outperforms previous RAG and reasoning methods.",
+      "url": "http://arxiv.org/abs/2412.12881v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2412.12881v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Long Context vs. RAG for LLMs: An Evaluation and Revisits",
+      "authors": [
+        "Xinze Li",
+        "Yixin Cao",
+        "Yubo Ma",
+        "Aixin Sun"
+      ],
+      "year": 2024,
+      "abstract": "Extending context windows (i.e., Long Context, LC) and using retrievers to selectively access relevant information (i.e., Retrieval-Augmented Generation, RAG) are the two main strategies to enable LLMs to incorporate extremely long external contexts. This paper revisits recent studies on this topic, highlighting their key insights and discrepancies. We then provide a more comprehensive evaluation by filtering out questions answerable without external context, identifying the most effective retrieval methods, and expanding the datasets. We show that LC generally outperforms RAG in question-answering benchmarks, especially for Wikipedia-based questions. Summarization-based retrieval performs comparably to LC, while chunk-based retrieval lags behind. However, RAG has advantages in dialogue-based and general question queries. These insights underscore the trade-offs between RAG and LC strategies, offering guidance for future optimization of LLMs with external knowledge sources. We also provide an in-depth discussion on this topic, highlighting the overlooked importance of context relevance in existing studies.",
+      "url": "http://arxiv.org/abs/2501.01880v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2501.01880v1",
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "Current RAG evaluations lack simple long-context baselines and token-budget-controlled comparisons, making it difficult to assess the true value of retrieval augmentation over directly using long-context LMs.",
+      "supporting_papers": [
+        "Does RAG Know When Retrieval Is Wrong? Diagnosing Context Compliance under Knowledge Conflict"
+      ],
+      "evidence_quotes": [
+        "Under knowledge conflict, this hides a key question: did the model follow retrieved evidence, rely on its parametric prior, or produce a post-hoc rationale?",
+        "misleading retrieval can severely degrade accuracy: under worst-case injected context (a TruthfulQA misconception-injection probe), Standard RAG reaches only 15.0%."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "The empirical comparison between RAG pipelines and long-context LMs has been restricted to question-answering tasks; no systematic evaluation exists for other task types such as summarization, dialogue, or domain-specific applications.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    },
+    {
+      "description": "No existing work systematically evaluates RAG versus long-context LMs on long-context referencing tasks, where models must attribute items of interest to specific parts of long-context data based on contextual relationships rather than simple retrieval.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "high"
+    },
+    {
+      "description": "Existing RAG architectures and evaluations do not systematically address the trade-off between retrieval granularity and context relevance, particularly how annotation granularity mismatch affects downstream task performance in RAG versus long-context settings.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Whether retrieval-augmented generation (RAG) can outperform long-context (LC) models on long-context understanding tasks.",
+      "position_a": "Long-context models generally outperform retrieval-augmented generation on question-answering benchmarks.",
+      "position_a_papers": [
+        "Long Context vs. RAG for LLMs: An Evaluation and Revisits (2024)"
+      ],
+      "position_a_quote": "We show that LC generally outperforms RAG in question-answering benchmarks, especially for Wikipedia-based questions.",
+      "position_b": "A retrieval-augmented generation method can achieve state-of-the-art results on long-context benchmarks.",
+      "position_b_papers": [
+        "Q-RAG: Long Context Multi-step Retrieval via Value-based Embedder Training (2025)"
+      ],
+      "position_b_quote": "achieves state-of-the-art results on the popular long-context benchmarks BabiLong and RULER for contexts up to 10M tokens."
+    },
+    {
+      "topic": "Whether current large language models have limited context length that necessitates retrieval.",
+      "position_a": "Current large language models have limited context length, making retrieval necessary for handling large toolsets.",
+      "position_a_papers": [
+        "Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models (2025)"
+      ],
+      "position_a_quote": "Due to the limited context length of tool-using LLMs, adopting information retrieval (IR) models to select useful tools from large toolsets is a critical initial step.",
+      "position_b": "Large language models have achieved context lengths of millions of tokens.",
+      "position_b_papers": [
+        "Thus Spake Long-Context Large Language Model (2025)"
+      ],
+      "position_b_quote": "the context length of LLMs has achieved a breakthrough extension to millions of tokens."
+    }
+  ],
+  "recalled_gaps": [],
+  "novelty_score": null,
+  "novelty_reasoning": null,
+  "overlapping_papers": [],
+  "report_markdown": "## Overview\nThis report examines the research landscape of retrieval‑augmented generation (RAG) and long‑context language models, drawing on a diverse set of recent papers. While both paradigms aim to handle extended context, direct comparisons between them remain narrow, and several critical evaluation gaps are evident.\n\n## Landscape\nThe papers span a broad spectrum of RAG system designs and evaluations across domains, including clinical prediction [1], religious studies [6], legal support [11], music question answering [24], code generation [29], and multi‑hop reasoning [9,30]. Comprehensive reviews and engineering frameworks [25,28] consolidate RAG architectures. On the long‑context side, advances address efficient attention in diffusion models [2], long‑context referencing capabilities [26], and broader surveys of long‑context LLMs [21]. Only a few studies directly compare RAG and long‑context language models, primarily in question‑answering settings [8,31], while [4] diagnoses context‑compliance failures under knowledge conflict.\n\n## Research gaps\n- **Lack of simple long‑context baselines and token‑budget‑controlled comparisons**  \n  RAG evaluations frequently omit straightforward long‑context baselines and fail to control for token budgets. This makes it difficult to determine whether retrieval augmentation genuinely improves over directly feeding the model a long context. Under worst‑case adversarial retrieval, accuracy can plummet to 15 % [4], and simpler RAG designs can match or exceed complex pipelines when compared under matched token budgets [8,31].\n\n- **Narrow task scope in RAG vs. long‑context comparisons**  \n  Existing empirical comparisons are almost exclusively restricted to question‑answering tasks [8,31]. Even domain‑specific RAG studies (e.g., Quranic QA [6], music QA [24]) remain QA‑centric. No systematic evaluation exists for other task types such as summarization, dialogue, or domain‑specific applications beyond QA.\n\n- **No systematic evaluation on long‑context referencing tasks**  \n  Long‑context referencing, where models must attribute items of interest to specific parts of long‑context data based on contextual relationships, has been introduced as a benchmark only for long‑context language models [26]. There is no existing work that systematically compares RAG pipelines against long‑context LMs on this task.\n\n- **Unaddressed trade‑off between retrieval granularity and context relevance**  \n  The impact of annotation granularity mismatch on downstream performance is known to be significant in other tasks (e.g., dialogue topic segmentation) [22]. However, existing RAG architectures and evaluations do not systematically investigate how retrieval granularity and context‑relevance granularity affect RAG versus long‑context settings.\n\n## Conflicting Evidence\n- **Whether retrieval-augmented generation (RAG) can outperform long-context (LC) models on long-context understanding tasks.**\n - Long-context models generally outperform retrieval-augmented generation on question-answering benchmarks. (Long Context vs. RAG for LLMs: An Evaluation and Revisits (2024)) - 'We show that LC generally outperforms RAG in question-answering benchmarks, especially for Wikipedia-based questions.'\n - A retrieval-augmented generation method can achieve state-of-the-art results on long-context benchmarks. (Q-RAG: Long Context Multi-step Retrieval via Value-based Embedder Training (2025)) - 'achieves state-of-the-art results on the popular long-context benchmarks BabiLong and RULER for contexts up to 10M tokens.'\n- **Whether current large language models have limited context length that necessitates retrieval.**\n - Current large language models have limited context length, making retrieval necessary for handling large toolsets. (Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models (2025)) - 'Due to the limited context length of tool-using LLMs, adopting information retrieval (IR) models to select useful tools from large toolsets is a critical initial step.'\n - Large language models have achieved context lengths of millions of tokens. (Thus Spake Long-Context Large Language Model (2025)) - 'the context length of LLMs has achieved a breakthrough extension to millions of tokens.'\n\n## References\n\n[1] [EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records (2026)](http://arxiv.org/abs/2605.12335v1) — Saeed Shurrab, Mariam Al-Omari, Dana El Samad et al.  \n[2] [Focus-dLLM: Accelerating Long-Context Diffusion LLM Inference via Confidence-Guided Context Focusing (2026)](http://arxiv.org/abs/2602.02159v1) — Lingkun Long, Yushi Huang, Shihao Bai et al.  \n[3] [A$^2$RD: Agentic Autoregressive Diffusion for Long Video Consistency (2026)](http://arxiv.org/abs/2605.06924v1) — Do Xuan Long, Yale Song, Min-Yen Kan et al.  \n[4] [Does RAG Know When Retrieval Is Wrong? Diagnosing Context Compliance under Knowledge Conflict (2026)](http://arxiv.org/abs/2605.14473v4) — Yihang Chen, Pin Qian, Su Wang et al.  \n[5] [Shortlisting: a Principled Approach (2026)](http://arxiv.org/abs/2601.21277v1) — Edith Elkind, Qishen Han, Lirong Xia  \n[6] [Investigating Retrieval-Augmented Generation in Quranic Studies: A Study of 13 Open-Source Large Language Models (2025)](http://arxiv.org/abs/2503.16581v1) — Zahra Khalila, Arbi Haza Nasution, Winda Monika et al.  \n[7] [AR-RAG: Autoregressive Retrieval Augmentation for Image Generation (2025)](http://arxiv.org/abs/2506.06962v3) — Jingyuan Qi, Zhiyang Xu, Qifan Wang et al.  \n[8] [Stronger Baselines for Retrieval-Augmented Generation with Long-Context Language Models (2025)](http://arxiv.org/abs/2506.03989v2) — Alex Laitenberger, Christopher D. Manning, Nelson F. Liu  \n[9] [FAIR-RAG: Faithful Adaptive Iterative Refinement for Retrieval-Augmented Generation (2025)](http://arxiv.org/abs/2510.22344v1) — Mohammad Aghajani Asl, Majid Asgari-Bidhendi, Behrooz Minaei-Bidgoli  \n[10] [Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation (2025)](http://arxiv.org/abs/2502.00306v2) — Ali Naseh, Yuefeng Peng, Anshuman Suri et al.  \n[11] [RAG System for Supporting Japanese Litigation Procedures: Faithful Response Generation Complying with Legal Norms (2025)](http://arxiv.org/abs/2511.22858v1) — Yuya Ishihara, Atsushi Keyaki, Hiroaki Yamada et al.  \n[12] [StFT: Spatio-temporal Fourier Transformer for Long-term Dynamics Prediction (2025)](http://arxiv.org/abs/2503.11899v2) — Da Long, Shandian Zhe, Samuel Williams et al.  \n[13] [Q-RAG: Long Context Multi-step Retrieval via Value-based Embedder Training (2025)](http://arxiv.org/abs/2511.07328v2) — Artyom Sorokin, Nazar Buzun, Alexander Anokhin et al.  \n[14] [Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models (2025)](http://arxiv.org/abs/2503.01763v2) — Zhengliang Shi, Yuhan Wang, Lingyong Yan et al.  \n[15] [Towards Better Instruction Following Retrieval Models (2025)](http://arxiv.org/abs/2505.21439v1) — Yuchen Zhuang, Aaron Trinh, Rushi Qiang et al.  \n[16] [Enhancing Human-Like Responses in Large Language Models (2025)](http://arxiv.org/abs/2501.05032v2) — Ethem Yağız Çalık, Talha Rüzgar Akkuş  \n[17] [Lightweight and Direct Document Relevance Optimization for Generative Information Retrieval (2025)](http://arxiv.org/abs/2504.05181v2) — Kidist Amde Mekonnen, Yubao Tang, Maarten de Rijke  \n[18] [Satisfactory Medical Consultation based on Terminology-Enhanced Information Retrieval and Emotional In-Context Learning (2025)](http://arxiv.org/abs/2503.17876v1) — Kaiwen Zuo, Jing Tang, Hanbing Qin et al.  \n[19] [Algorithmic Shortlisting in Participatory Budgeting (2025)](http://arxiv.org/abs/2508.06577v3) — Juan Zambrano, Clément Contet, Jairo Gudiño-Rosero et al.  \n[20] [QA-prompting: Improving Summarization with Large Language Models using Question-Answering (2025)](http://arxiv.org/abs/2505.14347v2) — Neelabh Sinha  \n[21] [Thus Spake Long-Context Large Language Model (2025)](http://arxiv.org/abs/2502.17129v2) — Xiaoran Liu, Ruixiao Li, Mianqiu Huang et al.  \n[22] [When F1 Fails: Granularity-Aware Evaluation for Dialogue Topic Segmentation (2025)](http://arxiv.org/abs/2512.17083v3) — Michael H. Coen  \n[23] [LLMs and their Limited Theory of Mind: Evaluating Mental State Annotations in Situated Dialogue (2025)](http://arxiv.org/abs/2509.02292v2) — Katharine Kowalyshyn, Matthias Scheutz  \n[24] [MUST-RAG: MUSical Text Question Answering with Retrieval Augmented Generation (2025)](http://arxiv.org/abs/2507.23334v2) — Daeyong Kwon, SeungHeon Doh, Juhan Nam  \n[25] [Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems (2025)](http://arxiv.org/abs/2601.05264v1) — Dean Wampler, Dave Nielson, Alireza Seddighi  \n[26] [Ref-Long: Benchmarking the Long-context Referencing Capability of Long-context Language Models (2025)](http://arxiv.org/abs/2507.09506v2) — Junjie Wu, Gefei Gu, Yanan Zheng et al.  \n[27] [Learning Long-Context Diffusion Policies via Past-Token Prediction (2025)](http://arxiv.org/abs/2505.09561v2) — Marcel Torne, Andy Tang, Yuejiang Liu et al.  \n[28] [Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation (2024)](http://arxiv.org/abs/2411.18583v1) — Nurshat Fateh Ali, Md. Mahdi Mohtasim, Shakil Mosharrof et al.  \n[29] [EVOR: Evolving Retrieval for Code Generation (2024)](http://arxiv.org/abs/2402.12317v2) — Hongjin Su, Shuyang Jiang, Yuhang Lai et al.  \n[30] [RAG-Star: Enhancing Deliberative Reasoning with Retrieval Augmented Verification and Refinement (2024)](http://arxiv.org/abs/2412.12881v1) — Jinhao Jiang, Jiayi Chen, Junyi Li et al.  \n[31] [Long Context vs. RAG for LLMs: An Evaluation and Revisits (2024)](http://arxiv.org/abs/2501.01880v1) — Xinze Li, Yixin Cao, Yubo Ma et al.",
+  "iteration": 2,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "http://arxiv.org/abs/2605.12335v1",
+    "http://arxiv.org/abs/2602.02159v1",
+    "http://arxiv.org/abs/2605.06924v1",
+    "http://arxiv.org/abs/2605.14473v4",
+    "http://arxiv.org/abs/2601.21277v1",
+    "http://arxiv.org/abs/2503.16581v1",
+    "http://arxiv.org/abs/2506.06962v3",
+    "http://arxiv.org/abs/2506.03989v2",
+    "http://arxiv.org/abs/2510.22344v1",
+    "http://arxiv.org/abs/2502.00306v2",
+    "http://arxiv.org/abs/2511.22858v1",
+    "http://arxiv.org/abs/2503.11899v2",
+    "http://arxiv.org/abs/2511.07328v2",
+    "http://arxiv.org/abs/2503.01763v2",
+    "http://arxiv.org/abs/2505.21439v1",
+    "http://arxiv.org/abs/2501.05032v2",
+    "http://arxiv.org/abs/2504.05181v2",
+    "http://arxiv.org/abs/2503.17876v1",
+    "http://arxiv.org/abs/2508.06577v3",
+    "http://arxiv.org/abs/2411.18583v1",
+    "http://arxiv.org/abs/2505.14347v2",
+    "http://arxiv.org/abs/2502.17129v2",
+    "http://arxiv.org/abs/2512.17083v3",
+    "http://arxiv.org/abs/2509.02292v2",
+    "http://arxiv.org/abs/2507.23334v2",
+    "http://arxiv.org/abs/2601.05264v1",
+    "http://arxiv.org/abs/2507.09506v2",
+    "http://arxiv.org/abs/2505.09561v2",
+    "http://arxiv.org/abs/2402.12317v2",
+    "http://arxiv.org/abs/2412.12881v1",
+    "http://arxiv.org/abs/2501.01880v1"
+  ],
+  "recent_paper_ids": [
+    "http://arxiv.org/abs/2505.14347v2",
+    "http://arxiv.org/abs/2502.17129v2",
+    "http://arxiv.org/abs/2512.17083v3",
+    "http://arxiv.org/abs/2509.02292v2",
+    "http://arxiv.org/abs/2507.23334v2",
+    "http://arxiv.org/abs/2601.05264v1",
+    "http://arxiv.org/abs/2507.09506v2",
+    "http://arxiv.org/abs/2505.09561v2",
+    "http://arxiv.org/abs/2402.12317v2",
+    "http://arxiv.org/abs/2412.12881v1",
+    "http://arxiv.org/abs/2501.01880v1"
+  ],
+  "open_gaps": [
+    "Existing RAG architectures and evaluations do not systematically address the trade-off between retrieval granularity and context relevance, particularly how annotation granularity mismatch affects downstream task performance in RAG versus long-context settings."
+  ],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "retrieval-augmented generation long-context language models comparison",
+        "RAG long context transformer benchmark",
+        "retrieval versus extended context large language models performance",
+        "long-context models information retrieval augmentation evaluation",
+        "shortlist"
+      ],
+      "new_papers": 20,
+      "total_papers": 20,
+      "open_gaps": 1,
+      "closed_gaps": 1
+    },
+    {
+      "iteration": 2,
+      "queries": [
+        "retrieval-augmented generation long-context language model comparison summarization task",
+        "RAG versus long-context LLM dialogue evaluation empirical study",
+        "domain-specific retrieval-augmented generation long-context transformer benchmark",
+        "systematic evaluation RAG long-context language models non-question-answering tasks",
+        "RAG long-context LM summarization dialogue performance gap"
+      ],
+      "new_papers": 11,
+      "total_papers": 31,
+      "open_gaps": 1,
+      "closed_gaps": 3
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": false,
+  "coverage_reasoning": "The user has not provided a specific idea, so all gaps are potentially relevant. However, the three high-confidence gaps are each supported by only a single paper, and the medium-confidence gap is the only one with two papers. None of the high-confidence gaps meet the criterion of being supported by at least two papers. Therefore, the most idea-relevant gaps are insufficiently supported to stop. At least one more search round is recommended to strengthen these gaps, especially the high-confidence ones that are close to the threshold.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [
+    "tool-agent fetch failed: Expecting value: line 1 column 2 (char 1)",
+    "openalex failed for query 'retrieval-augmented generation long-context language models comparison': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'RAG long context transformer benchmark': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'retrieval versus extended context large language models performance': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'long-context models information retrieval augmentation evaluation': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'shortlist': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "tool-agent fetch failed: Connection error.",
+    "openalex failed for query 'retrieval-augmented generation long-context language model comparison summarization task': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'RAG versus long-context LLM dialogue evaluation empirical study': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'domain-specific retrieval-augmented generation long-context transformer benchmark': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'systematic evaluation RAG long-context language models non-question-answering tasks': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY",
+    "openalex failed for query 'RAG long-context LM summarization dialogue performance gap': [openalex] Rate limit hit. Wait or set OPENALEX_API_KEY"
+  ],
+  "tool_call_count": 10
+}

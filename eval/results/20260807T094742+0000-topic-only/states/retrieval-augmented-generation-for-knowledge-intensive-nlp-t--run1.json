@@ -1,0 +1,785 @@
+{
+  "topic": "retrieval-augmented generation for knowledge-intensive NLP tasks",
+  "user_idea": null,
+  "search_queries": [
+    "in-context retrieval augmented generation without architecture modification",
+    "retrieval augmented language models simple retrieval without training",
+    "free-form hallucination evaluation retrieval augmented generation",
+    "abstention retrieval augmented generation insufficient evidence",
+    "knowledge intensive NLP failure modes abstention"
+  ],
+  "papers": [
+    {
+      "title": "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)",
+      "authors": [
+        "Bjoern Menze",
+        "András Jakab",
+        "Stefan Bauer",
+        "Jayashree Kalpathy–Cramer",
+        "Keyvan Farahani"
+      ],
+      "year": 2014,
+      "abstract": "In this paper we report the set-up and results of the Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) organized in conjunction with the MICCAI 2012 and 2013 conferences. Twenty state-of-the-art tumor segmentation algorithms were applied to a set of 65 multi-contrast MR scans of low- and high-grade glioma patients-manually annotated by up to four raters-and to 65 comparable scans generated using tumor image simulation software. Quantitative evaluations revealed considerable disagreement between the human raters in segmenting various tumor sub-regions (Dice scores in the range 74%-85 ...[truncated]",
+      "url": "https://doi.org/10.1109/tmi.2014.2377694",
+      "source": "openalex",
+      "citation_count": 6655,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large language models encode clinical knowledge",
+      "authors": [
+        "Karan Singhal",
+        "Shekoofeh Azizi",
+        "Tao Tu",
+        "S. Sara Mahdavi",
+        "Jason Lee"
+      ],
+      "year": 2023,
+      "abstract": "Abstract Large language models (LLMs) have demonstrated impressive capabilities, but the bar for clinical applications is high. Attempts to assess the clinical knowledge of models typically rely on automated evaluations based on limited benchmarks. Here, to address these limitations, we present MultiMedQA, a benchmark combining six existing medical question answering datasets spanning professional medicine, research and consumer queries and a new dataset of medical questions searched online, HealthSearchQA. We propose a human evaluation framework for model answers along multiple axes including ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-023-06291-2",
+      "source": "openalex",
+      "citation_count": 3457,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "authors": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of exte ...[truncated]",
+      "url": "http://arxiv.org/abs/2312.10997",
+      "source": "openalex",
+      "citation_count": 694,
+      "pdf_url": null,
+      "full_text_excerpt": "[Abstract] Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs’ intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development 111Resources are available at https://github.com/Tongji-KGLLM/RAG-Survey .\n\n[I Introduction] Large language models (LLMs) have achieved remarkable success, though they still face significant limitations, especially in domain-specific or knowledge-intensive tasks [1], notably producing “hallucinations” [2] when handling queries beyond their training data or requiring current information. To overcome challenges, Retrieval-Augmented Generation (RAG) enhances LLMs by retrieving relevant document chunks from external knowledge base through semantic similarity calculation. By referencing external knowledge, RAG effectively reduces the problem of generating factually incorrect content. Its integration into LLMs has resulted in widespread adoption, establishing RAG as a key technology in advancing chatbots and enhancing the suitability of LLMs for real-world applications.\n\nRAG technology has rapidly developed in recent years, and the technology tree summarizing related research is shown in Figure 1. The development trajectory of RAG in the era of large models exhibits several distinct stage characteristics. Initially, RAG’s inception coincided with the rise of the Transformer architecture, focusing on enhancing language models by incorporating additional knowledge through Pre-Training Models (PTM). This early stage was characterized by foundational work aimed at refining pre-training techniques[3, 4, 5].The subsequent arrival of ChatGPT [6] marked a pivotal moment, with LLM demonstrating powerful in context learning (ICL) capabilities. RAG research shifted towards providing"
+    },
+    {
+      "title": "A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models",
+      "authors": [
+        "Wenqi Fan",
+        "Yujuan Ding",
+        "Liangbo Ning",
+        "Shijie Wang",
+        "Hengyun Li"
+      ],
+      "year": 2024,
+      "abstract": "As one of the most advanced techniques in AI, Retrieval-Augmented Generation (RAG) can offer reliable and up-to-date external knowledge, providing huge convenience for numerous tasks. Particularly in the era of AI-Generated Content (AIGC), the powerful capacity of retrieval in providing additional knowledge enables RAG to assist existing generative AI in producing high-quality outputs. Recently, Large Language Models (LLMs) have demonstrated revolutionary abilities in language understanding and generation, while still facing inherent limitations such as hallucinations and out-of-date internal ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671470",
+      "source": "openalex",
+      "citation_count": 640,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Active Retrieval Augmented Generation",
+      "authors": [
+        "Zhengbao Jiang",
+        "Frank F. Xu",
+        "Luyu Gao",
+        "Zhiqing Sun",
+        "Qian Liu"
+      ],
+      "year": 2023,
+      "abstract": "Zhengbao Jiang, Frank Xu, Luyu Gao, Zhiqing Sun, Qian Liu, Jane Dwivedi-Yu, Yiming Yang, Jamie Callan, Graham Neubig. Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing. 2023.",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.495",
+      "source": "openalex",
+      "citation_count": 394,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "In-Context Retrieval-Augmented Language Models",
+      "authors": [
+        "Ori Ram",
+        "Yoav Levine",
+        "Itay Dalmedigos",
+        "Dor Muhlgay",
+        "Amnon Shashua"
+      ],
+      "year": 2023,
+      "abstract": "Abstract Retrieval-Augmented Language Modeling (RALM) methods, which condition a language model (LM) on relevant documents from a grounding corpus during generation, were shown to significantly improve language modeling performance. In addition, they can mitigate the problem of factually inaccurate text generation and provide natural source attribution mechanism. Existing RALM approaches focus on modifying the LM architecture in order to facilitate the incorporation of external information, significantly complicating deployment. This paper considers a simple alternative, which we dub In-Contex ...[truncated]",
+      "url": "https://doi.org/10.1162/tacl_a_00605",
+      "source": "openalex",
+      "citation_count": 371,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Almanac — Retrieval-Augmented Language Models for Clinical Medicine",
+      "authors": [
+        "Cyril Zakka",
+        "Rohan Shad",
+        "Akash Chaurasia",
+        "Alex R. Dalal",
+        "Jennifer L. Kim"
+      ],
+      "year": 2024,
+      "abstract": "BACKGROUND: Large language models (LLMs) have recently shown impressive zero-shot capabilities, whereby they can use auxiliary data, without the availability of task-specific training examples, to complete a variety of natural language tasks, such as summarization, dialogue generation, and question answering. However, despite many promising applications of LLMs in clinical medicine, adoption of these models has been limited by their tendency to generate incorrect and sometimes even harmful statements. METHODS: We tasked a panel of eight board-certified clinicians and two health care practition ...[truncated]",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/10857783",
+      "source": "openalex",
+      "citation_count": 364,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Benchmarking Large Language Models in Retrieval-Augmented Generation",
+      "authors": [
+        "Jiawei Chen",
+        "Hongyu Lin",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "year": 2024,
+      "abstract": "Retrieval-Augmented Generation (RAG) is a promising approach for mitigating the hallucination of large language models (LLMs). However, existing research lacks rigorous evaluation of the impact of retrieval-augmented generation on different large language models, which make it challenging to identify the potential bottlenecks in the capabilities of RAG for different LLMs. In this paper, we systematically investigate the impact of Retrieval-Augmented Generation on large language models. We analyze the performance of different large language models in 4 fundamental abilities required for RAG, in ...[truncated]",
+      "url": "https://doi.org/10.1609/aaai.v38i16.29728",
+      "source": "openalex",
+      "citation_count": 340,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering",
+      "authors": [
+        "Shamane Siriwardhana",
+        "Rivindu Weerasekera",
+        "Elliott Wen",
+        "Tharindu Kaluarachchi",
+        "Rajib Rana"
+      ],
+      "year": 2023,
+      "abstract": "Abstract Retrieval Augment Generation (RAG) is a recent advancement in Open-Domain Question Answering (ODQA). RAG has only been trained and explored with a Wikipedia-based external knowledge base and is not optimized for use in other specialized domains such as healthcare and news. In this paper, we evaluate the impact of joint training of the retriever and generator components of RAG for the task of domain adaptation in ODQA. We propose RAG-end2end, an extension to RAG that can adapt to a domain-specific knowledge base by updating all components of the external knowledge base during training. ...[truncated]",
+      "url": "https://doi.org/10.1162/tacl_a_00530",
+      "source": "openalex",
+      "citation_count": 297,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Benchmarking Retrieval-Augmented Generation for Medicine",
+      "authors": [
+        "Guangzhi Xiong",
+        "Qiao Jin",
+        "Zhiyong Lu",
+        "Aidong Zhang"
+      ],
+      "year": 2024,
+      "abstract": "While large language models (LLMs) have achieved state-of-the-art performance on a wide range of medical question answering (QA) tasks, they still face challenges with hallucinations and outdated knowledge.Retrievalaugmented generation (RAG) is a promising solution and has been widely adopted.However, a RAG system can involve multiple flexible components, and there is a lack of best practices regarding the optimal RAG setting for various medical purposes.To systematically evaluate such systems, we propose the Medical Information Retrieval-Augmented Generation Evaluation (MIRAGE), a first-of-it ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2024.findings-acl.372",
+      "source": "openalex",
+      "citation_count": 235,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Blended RAG: Improving RAG (Retriever-Augmented Generation) Accuracy with Semantic Search and Hybrid Query-Based Retrievers",
+      "authors": [
+        "Kunal Sawarkar",
+        "Abhilasha Mangal",
+        "Shivam R Solanki"
+      ],
+      "year": 2024,
+      "abstract": "Retrieval-Augmented Generation (RAG) is a prevalent approach to infuse a private knowledge base of documents with Large Language Models (LLM) to build Generative Q&A (Question-Answering) systems. However, RAG accuracy becomes increasingly challenging as the corpus of documents scales up, with Retrievers playing an outsized role in the overall RAG accuracy by extracting the most relevant document from the corpus to provide context to the LLM. In this paper, we propose the ‘Blended RAG’ method of leveraging semantic search techniques, such as Dense Vector indexes and Sparse Encoder indexes, blen ...[truncated]",
+      "url": "https://doi.org/10.1109/mipr62202.2024.00031",
+      "source": "openalex",
+      "citation_count": 112,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "CBR-RAG: Case-Based Reasoning for Retrieval Augmented Generation in LLMs for Legal Question Answering",
+      "authors": [
+        "Nirmalie Wiratunga",
+        "Ramitha Abeyratne",
+        "Lasal Jayawardena",
+        "Kyle Martin",
+        "Stewart Massie"
+      ],
+      "year": 2024,
+      "abstract": "",
+      "url": "https://rgu-repository.worktribe.com/output/2383595",
+      "source": "openalex",
+      "citation_count": 100,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "MKGF: A multi-modal knowledge graph based RAG framework to enhance LVLMs for Medical visual question answering",
+      "authors": [
+        "Yinan Wu",
+        "Yuming Lu",
+        "Yan Zhou",
+        "Yifan Ding",
+        "Jingping Liu"
+      ],
+      "year": 2025,
+      "abstract": "",
+      "url": "https://doi.org/10.1016/j.neucom.2025.129999",
+      "source": "openalex",
+      "citation_count": 13,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Multimodal Retrieval Augmented Generation Evaluation Benchmark",
+      "authors": [
+        "Tienlan Sun",
+        "Anaiy Somalwar",
+        "Hinson Chan"
+      ],
+      "year": 2024,
+      "abstract": "While advances in prompt engineering and RAG have improved LLM proficiency in field-specific, specialized tasks, there has yet to be an industry standard or accepted evaluation metric of the highly fragmented RAG solutions that are currently being deployed. Thus, in this work, we focused on building a robust LLM and RAG evaluation platform. We contribute 1) a platform that evaluates an RAG system's performance on a multimodal input context for LLM question answering and 2) MRAFE: Multimodal Retrieval Augmented Feature Extractor, which processes information from the input to our platform. Throu ...[truncated]",
+      "url": "https://doi.org/10.1109/vtc2024-spring62846.2024.10683437",
+      "source": "openalex",
+      "citation_count": 5,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "From RAG to Agentic RAG for Faithful Islamic Question Answering",
+      "authors": [
+        "Gagan Bhatia",
+        "Hamdy Mubarak",
+        "Mustafa Jarrar",
+        "George Mikros",
+        "Fadi Zaraket"
+      ],
+      "year": 2026,
+      "abstract": "Large Language Models (LLMs) are increasingly used for Islamic question answering, where ungrounded responses may carry serious religious consequences. Yet standard MCQ/MRC-style evaluations (MCQ: Multiple choice questions, MRC: Machine Reading Comprehension) do not capture key real-world failure modes, notably free-form hallucinations and the ability to abstain when evidence is insufficient. To address this gap, we introduce IslamicFaithQA, a 3,810-item bilingual (Arabic/English) generative benchmark with atomic single-gold answers, which enables direct measurement of hallucination and absten ...[truncated]",
+      "url": "http://arxiv.org/abs/2601.07528v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.07528v2",
+      "full_text_excerpt": "[Body] ng: We develop and evaluate an agen-\ntic RAG setup that turns retrieval into an explicit\ndecision process through structured tool calls (se-\nmantic search, verse reading, metadata lookup).\nAcross all backbones, ISLAMICFAITHQA ex-\nposes a substantial reliability gap between general\ninstruction-following fluency and text-grounded\nIslamic correctness. Most off-the-shelf multilin-\ngual LLMs remain below 30% accuracy under\nstrict LLM-as-Judge grading (Table 3). Retrieval\naugmentation is the most consistently effective in-\ntervention, improving performance across mod-\nels by anchoring generations to canonical evi-\ndence (Table 4).\nMost notably, agentic RAG\nyields the largest gains beyond standard RAG, en-\nabling strong bilingual robustness by forcing it-\nerative evidence seeking and verse inspection be-\nfore answering. For Qwen3-4B-2507, accuracy\nimproves from 21.85 (base) to 38.85 (+RAG) and\nto 48.90 (+Agentic RAG), while also narrowing\nthe Arabic–English gap (Table 4). Finally, com-\nbining a strong in-domain backbone with agentic\ngrounding achieves the best overall performance,\nwith Fanar-2-27B + Agentic RAG reaching 57.30\naverage accuracy (Table 4).\n2\nRelated Work\n2.1\nBenchmarking in Islamic Domain\nGeneral-purpose evaluations of moral and trust-\nworthiness show that LLM behavior is highly\nsensitive to framing and may appear competent\nwhile remaining unreliable, motivating the need\nfor domain-grounded assessment beyond generic\nscenarios (Al-Khalifa et al., 2025; Abhishek et al.,\n\n[Body] r than\nisolating the retrieval engine in a separate bench-\nmark. To better contextualize the retrieval compo-\nnent used in our RAG and Agentic RAG settings,\nwe conducted a preliminary retrieval-side compari-\nson between our dense multilingual retriever and a\nsparse lexical baseline.\nSpecifically, we compare mE5-base, the dense\nencoder used in our retrieval-augmented experi-\nments, against BM25 on the IslamicEval 2025\nShared Task 2 dataset (Mubarak et al., 2025).\nWe report Mean Average Precision at rank 5\n(MAP_Q@5). The results show that mE5-base\noutperforms BM25 by a clear margin, achieving\n0.138 compared with 0.094.\nThis result supports our choice of dense retrieval\nfor two reasons. First, the task is bilingual (Ara-\nbic/English), and dense multilingual embeddings\nbetter align semantically equivalent queries across\nlanguages. Second, Quranic question answering of-\nten depends on theological and paraphrastic phras-\ning that is not always well matched by pure lex-\nical overlap. At the same time, the absolute re-\ntrieval scores remain modest, suggesting that stan-\ndard RAG based retrieval is still insufficient for\nmany questions. This observation is consistent with\nour main findings. Standard RAG improves cor-\nrectness, but Agentic RAG yields further gains by\nturning retrieval into an iterative evidence-seeking\nprocess rather than a one-pass preprocessing step.\nWe note that this comparison serves only as a\npreliminary sanity check on retrieval quality, not a\nfull benchmark. A b"
+    },
+    {
+      "title": "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records",
+      "authors": [
+        "Saeed Shurrab",
+        "Mariam Al-Omari",
+        "Dana El Samad",
+        "Farah E. Shamout"
+      ],
+      "year": 2026,
+      "abstract": "Electronic Health Records (EHR) contain rich longitudinal patient information and are widely used in predictive modeling applications. However, effectively leveraging historical data remains challenging due to long trajectories, heterogeneous events, temporal irregularity, and the varying relevance of past clinical context. Existing approaches often rely on fixed windows or uniform aggregation, which can obscure clinically important signals. In this work, we introduce EHR-RAGp, a retrieval-augmented foundation model that dynamically integrates the most relevant patient history across diverse c ...[truncated]",
+      "url": "http://arxiv.org/abs/2605.12335v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.12335v1",
+      "full_text_excerpt": "[2 Related Work] ng. RAG has emerged as a powerful technique in NLP for extending large language models capabilities by allowing them to condition on external, non-parametric knowledge sources. The original RAG framework lewis2020retrieval demonstrated how combining dense retrieval with generative transformers improves factual correctness and reduces hallucinations. The concept was later extended by models such as RETRO borgeaud2022improving , FLARE jiang2023active , and REPLUG shi2024replug . These architectures share a common principle: retrieval allows the model to incorporate long-range or domain-specific information without encoding the entire knowledge base within its internal parameters. The success of the retrieval paradigm has also influenced healthcare, particularly in clinical question answering saba2024question ; sohn2025rationale , evidence grounding lewis2025grounding ; jia2025agentic , biomedical knowledge integration feng2025retrieval ; feng2025ontologyrag , phenotyping and cohort identification ziletti2025generating , and many other applications related to medical textual data abo2025survey ; amugongo2025retrieval .\n\nIn the context of EHR modeling, RAG has been primarily explored as a mechanism for integrating external knowledge into predictive models, such as EMERGE zhu2024emerge , RAM-EHR xu2024ram , REALM zhu2024realm , and KAMELEON datta2025improving . To the best of our knowledge, REMED kim2023general is our most closely related work. Its core idea is to retrieve the mos\n\n[7 Discussion & Conclusion] In this work, we introduce EHR-RAGp, a retrieval-augmented, prototype-guided foundation model designed to reason over heterogeneous EHR trajectories by selectively incorporating relevant patient history. By framing longitudinal EHR modeling as a retrieval problem, EHR-RAGp addresses the limitations of fixed-window approaches and enables scalable integration of long-range clinical context. Across multiple downstream tasks, our approach consistently outperforms strong baselines as well as boosting existing clinical foundation models when used as an extension. Beyond quantitative improvements, our qualitative analyses further show that EHR-RAGp learns structured latent representations and dynamically reweighs retrieved patient history according to downstream relevance rather than retrieval similarity alone. Together, these results support the central claim of this work: increasing the effective medical context available to prediction models improves performance wornow2024context ; fallahpour2024ehrmamba ; li2022hi .\n\nLimitations. While EHR-RAGp shows strong potential, some limitations remain to be investigated in future research. First, experiments are conducted on a single EHR dataset, and evaluation on different datasets is needed to assess generalizability across different patient populations and coding systems. Second, experiments were conducted under a limited set of retrieval, and chunking configurations (e.g., chunk size of 256256, 66-hour temporal windows, and Top-M of 2"
+    },
+    {
+      "title": "Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector",
+      "authors": [
+        "Diego Ezequiel Cervera"
+      ],
+      "year": 2026,
+      "abstract": "The departure of subject-matter experts from industrial organizations results in the irreversible loss of tacit knowledge that is rarely captured through conventional documentation practices. This paper proposes Expert Mind, an experimental system that leverages Retrieval-Augmented Generation (RAG), large language models (LLMs), and multimodal capture techniques to preserve, structure, and make queryable the deep expertise of organizational knowledge holders. Drawing on the specific context of the energy sector, where decades of operational experience risk being lost to an aging workforce, we ...[truncated]",
+      "url": "http://arxiv.org/abs/2603.14541v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2603.14541v1",
+      "full_text_excerpt": "[Body] lanyi's \nseminal distinction between explicit and tacit knowledge \n[1] remains as relevant today as when it was first \narticulated: the knowledge that experts know how to do is \nfundamentally different from the knowledge they can \narticulate on demand. This tacit dimension, encompassing \npattern recognition, diagnostic intuition, and experiential \njudgment, has historically resisted systematic capture. \nRecent advances in large language models \n(LLMs), vector-based semantic search, and multimodal \nprocessing have opened a viable technical pathway \ntoward \ntacit \nknowledge \npreservation. \nThe \nRetrieval-Augmented Generation (RAG) paradigm [2] \ncombines the generative capacity of LLMs with structured \nretrieval from domain-specific corpora, enabling systems \nto produce contextually grounded responses from curated \nknowledge bases. When applied to the problem of expert \nknowledge preservation, RAG provides a compelling \narchitecture for converting interview transcripts, technical \ndocuments, and think-aloud recordings into a queryable \nconversational agent. \nThis \npaper \npresents \nExpert \nMind, \nan \nexperimental system designed to preserve the tacit \nknowledge of subject-matter experts through a four-layer \narchitecture: multimodal knowledge capture, LLM-driven \nprocessing and indexing, vector store persistence, and a \nconversational \nquery \ninterface. \nThe \nsystem \nis \ncontextualized within the energy sector, where the \nknowledge crisis is most acute, though the architecture is\n\n[Body] ribes \nknowledge \nthat \nis \ndifficult \nto \ntransfer \nthrough \nverbalization or written documentation. Within the SECI \nmodel [3], socialization and externalization are identified \nas the primary conversion modes through which tacit \nknowledge becomes accessible to others. Expert Mind \ntargets the externalization quadrant by converting spoken \nand written expert output into structured, retrievable \nknowledge artifacts. \nKnowledge elicitation research has long grappled \nwith the challenge of surfacing tacit expertise. Protocol \nanalysis and think-aloud methods [4] have proven \neffective in capturing domain reasoning by prompting \nexperts to verbalize their thought processes during \nproblem-solving. More recently, structured interviewing \ntechniques adapted from cognitive task analysis [5] have \nbeen employed in high-stakes domains including aviation, \nmilitary operations, and nuclear energy. Expert Mind \nintegrates both approaches as primary capture modalities. \nB. Retrieval-Augmented Generation \nLewis et al. [2] introduced Retrieval-Augmented \nGeneration as a method for enhancing generative models \nwith non-parametric memory retrieved from external \ndocument stores. Unlike purely parametric models, RAG \nsystems decouple knowledge storage from language \ngeneration, enabling continuous knowledge updates \nwithout retraining. This property is particularly valuable \nfor organizational knowledge systems, where corpora \nevolve as new expertise is captured. \nSubsequent work has expand"
+    },
+    {
+      "title": "When the Chain of Thought Knows Better: Failure Modes in Multi-Turn Reasoning Models",
+      "authors": [
+        "Sai Kartheek Reddy Kasu",
+        "Nils Lukas",
+        "Samuele Poppi"
+      ],
+      "year": 2026,
+      "abstract": "Failures in multi-turn reasoning models are largely invisible to terminal-score evaluation. A model can lock onto an unsafe stance early in a long dialogue, yet its final-turn refusal rate may appear indistinguishable from a robustly aligned baseline. To expose these hidden temporal dynamics, we propose a trace-level diagnostic - the CoT-Output 2x2 safety matrix. This framework labels every turn along two independent axes (internal reasoning and visible output), yielding four operationally defined failure cells: robust alignment, alignment faking, overt jailbreak, and a distinct failure mode w ...[truncated]",
+      "url": "http://arxiv.org/abs/2606.10740v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2606.10740v2",
+      "full_text_excerpt": "[7 Limitations] While our framework provides novel insights into multi-turn adversarial drift, we acknowledge the following limitations in our current experimental design:\n\nReliance on Open-Source Evaluators: To maintain an auditable and reproducible pipeline, we utilize a judge ensemble of open-source models (Llama, Mistral, Qwen). We accept that these may be less nuanced than stronger proprietary evaluators, which could introduce some noise into the consensus labels.\n\nNarrow Scenario Scope: The current dataset and analysis are restricted to a single harm scenario (INFORMATION-HAZARD). While sufficient to elicit dynamic refusal mechanisms, extending this framework to a broader taxonomy of adversarial cases is an active area of our future work.\n\nUnfaithfulness of Visible Reasoning: We treat the generated chain-of-thought as an observable behavioral signal alongside the model’s output. However, CoT is known to sometimes suffer from unfaithfulness, where the visible text rationalizes rather than drives the final output. We accept this as a limitation of behavioral observation; fully verifying whether these failure modes are driven by genuine deceptive planning versus CoT-output decoupling will require the residual-stream activation analysis we outline for future work.\n\n[Situational Awareness.] Benchmarks such as SAD (Laine et al., 2024) and earlier out-of-context probes (Berglund et al., 2023) ask whether models recognize they are being evaluated. They are single-turn and do not address how this awareness evolves under prolonged adversarial pressure, nor how it shapes the gap between internal reasoning and external output.\n\n[Impact Statement] This work examines critical safety failures in widely deployed open-source reasoning models during adversarial multi-turn dialogue, specifically exposing alignment faking and context-injection failures. Because our released dataset includes full Chain-of-Thought traces where models endorse harmful goals and generate unsafe demand strings, this research inherently carries a dual-use dimension. We deliberately chose not to censor or withhold these explicit interactions. The prompting framework required to elicit these failures relies entirely on publicly accessible models, such as Mistral-7B-Instruct-v0.3. Because this attack surface is already available to malicious actors, attempting security through obscurity by hiding these transcripts would only hinder defensive research. While our study focuses on open-source architectures rather than proprietary frontier systems, the rapid integration of distilled reasoning models into real-world applications means these vulnerabilities present immediate risks for current deployers. The primary value of releasing this 6,750-turn diagnostic dataset is to equip the research community with the exact behavioral traces needed to build robust CoT monitoring tools, detect deceptive compliance in production, and ultimately patch these structural reasoning vulnerabilities before they scale."
+    },
+    {
+      "title": "The SMC Blind Spot: A Failure Mode Analysis of State-of-the-Art Beat Tracking",
+      "authors": [
+        "Jaehoon Ahn",
+        "Tae Gum Hwang",
+        "Moon-Ryul Jung"
+      ],
+      "year": 2026,
+      "abstract": "Over the past two decades, the task of musical beat tracking has transitioned from heuristic onset detection algorithms to highly capable deep neural networks (DNN). Although DNN-based beat tracking models achieve near-perfect performance on mainstream, percussive datasets, the SMC dataset has stubbornly yielded low F-measure scores. By testing how well state-of-the-art models detect beats on individual tracks in the SMC dataset, we identify three distinct failure modes: octave errors, continuity errors, and complete tracking failure where all metrics fall below 0.3. We reveal that state-of-th ...[truncated]",
+      "url": "http://arxiv.org/abs/2605.12287v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.12287v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+      "authors": [
+        "Jingyuan Qi",
+        "Zhiyang Xu",
+        "Qifan Wang",
+        "Lifu Huang"
+      ],
+      "year": 2025,
+      "abstract": "We introduce Autoregressive Retrieval Augmentation (AR-RAG), a novel paradigm that enhances image generation by autoregressively incorporating knearest neighbor retrievals at the patch level. Unlike prior methods that perform a single, static retrieval before generation and condition the entire generation on fixed reference images, AR-RAG performs context-aware retrievals at each generation step, using prior-generated patches as queries to retrieve and incorporate the most relevant patch-level visual references, enabling the model to respond to evolving generation needs while avoiding limitati ...[truncated]",
+      "url": "http://arxiv.org/abs/2506.06962v3",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2506.06962v3",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+      "authors": [
+        "Ali Naseh",
+        "Yuefeng Peng",
+        "Anshuman Suri",
+        "Harsh Chaudhari",
+        "Alina Oprea"
+      ],
+      "year": 2025,
+      "abstract": "Retrieval-Augmented Generation (RAG) enables Large Language Models (LLMs) to generate grounded responses by leveraging external knowledge databases without altering model parameters. Although the absence of weight tuning prevents leakage via model parameters, it introduces the risk of inference adversaries exploiting retrieved documents in the model's context. Existing methods for membership inference and data extraction often rely on jailbreaking or carefully crafted unnatural queries, which can be easily detected or thwarted with query rewriting techniques common in RAG systems. In this work ...[truncated]",
+      "url": "http://arxiv.org/abs/2502.00306v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2502.00306v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "FARSIQA: Faithful and Advanced RAG System for Islamic Question Answering",
+      "authors": [
+        "Mohammad Aghajani Asl",
+        "Behrooz Minaei Bidgoli"
+      ],
+      "year": 2025,
+      "abstract": "The advent of Large Language Models (LLMs) has revolutionized Natural Language Processing, yet their application in high-stakes, specialized domains like religious question answering is hindered by challenges like hallucination and unfaithfulness to authoritative sources. This issue is particularly critical for the Persian-speaking Muslim community, where accuracy and trustworthiness are paramount. Existing Retrieval-Augmented Generation (RAG) systems, relying on simplistic single-pass pipelines, fall short on complex, multi-hop queries requiring multi-step reasoning and evidence aggregation. ...[truncated]",
+      "url": "http://arxiv.org/abs/2510.25621v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2510.25621v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Intelligent Interaction Strategies for Context-Aware Cognitive Augmentation",
+      "authors": [
+        " Xiangrong",
+        " Zhu",
+        "Yuan Xu",
+        "Tianjian Liu",
+        "Jingwei Sun"
+      ],
+      "year": 2025,
+      "abstract": "Human cognition is constrained by processing limitations, leading to cognitive overload and inefficiencies in knowledge synthesis and decision-making. Large Language Models (LLMs) present an opportunity for cognitive augmentation, but their current reactive nature limits their real-world applicability. This position paper explores the potential of context-aware cognitive augmentation, where LLMs dynamically adapt to users' cognitive states and task environments to provide appropriate support. Through a think-aloud study in an exhibition setting, we examine how individuals interact with multi-m ...[truncated]",
+      "url": "http://arxiv.org/abs/2504.13684v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2504.13684v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Factually: Exploring Wearable Fact-Checking for Augmented Truth Discernment",
+      "authors": [
+        "Chitralekha Gupta",
+        "Hanjun Wu",
+        "Praveen Sasikumar",
+        "Shreyas Sridhar",
+        "Priambudi Bagaskara"
+      ],
+      "year": 2025,
+      "abstract": "Wearable devices are transforming human capabilities by seamlessly augmenting cognitive functions. In this position paper, we propose a voice-based, interactive learning companion designed to amplify and extend cognitive abilities through informal learning. Our vision is threefold: (1) to enable users to discover new knowledge on-the-go through contextual interactive quizzes, fostering critical thinking and mindfulness, (2) to proactively detect misinformation, empowering users to critically assess information in real time, and (3) to provide spoken language correction and prompting hints for ...[truncated]",
+      "url": "http://arxiv.org/abs/2504.17204v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2504.17204v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Designing AI Systems that Augment Human Performed vs. Demonstrated Critical Thinking",
+      "authors": [
+        "Katelyn Xiaoying Mei",
+        "Nic Weber"
+      ],
+      "year": 2025,
+      "abstract": "The recent rapid advancement of LLM-based AI systems has accelerated our search and production of information. While the advantages brought by these systems seemingly improve the performance or efficiency of human activities, they do not necessarily enhance human capabilities. Recent research has started to examine the impact of generative AI on individuals' cognitive abilities, especially critical thinking. Based on definitions of critical thinking across psychology and education, this position paper proposes the distinction between demonstrated and performed critical thinking in the era of g ...[truncated]",
+      "url": "http://arxiv.org/abs/2504.14689v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2504.14689v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Investigating Retrieval-Augmented Generation in Quranic Studies: A Study of 13 Open-Source Large Language Models",
+      "authors": [
+        "Zahra Khalila",
+        "Arbi Haza Nasution",
+        "Winda Monika",
+        "Aytug Onan",
+        "Yohei Murakami"
+      ],
+      "year": 2025,
+      "abstract": "Accurate and contextually faithful responses are critical when applying large language models (LLMs) to sensitive and domain-specific tasks, such as answering queries related to quranic studies. General-purpose LLMs often struggle with hallucinations, where generated responses deviate from authoritative sources, raising concerns about their reliability in religious contexts. This challenge highlights the need for systems that can integrate domain-specific knowledge while maintaining response accuracy, relevance, and faithfulness. In this study, we investigate 13 open-source LLMs categorized in ...[truncated]",
+      "url": "http://arxiv.org/abs/2503.16581v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2503.16581v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems",
+      "authors": [
+        "Dean Wampler",
+        "Dave Nielson",
+        "Alireza Seddighi"
+      ],
+      "year": 2025,
+      "abstract": "This article provides a comprehensive systematic literature review of academic studies, industrial applications, and real-world deployments from 2018 to 2025, providing a practical guide and detailed overview of modern Retrieval-Augmented Generation (RAG) architectures. RAG offers a modular approach for integrating external knowledge without increasing the capacity of the model as LLM systems expand. Research and engineering practices have been fragmented as a result of the increasing diversity of RAG methodologies, which encompasses a variety of fusion mechanisms, retrieval strategies, and or ...[truncated]",
+      "url": "http://arxiv.org/abs/2601.05264v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.05264v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Towards Better Instruction Following Retrieval Models",
+      "authors": [
+        "Yuchen Zhuang",
+        "Aaron Trinh",
+        "Rushi Qiang",
+        "Haotian Sun",
+        "Chao Zhang"
+      ],
+      "year": 2025,
+      "abstract": "Modern information retrieval (IR) models, trained exclusively on standard <query, passage> pairs, struggle to effectively interpret and follow explicit user instructions. We introduce InF-IR, a large-scale, high-quality training corpus tailored for enhancing retrieval models in Instruction-Following IR. InF-IR expands traditional training pairs into over 38,000 expressive <instruction, query, passage> triplets as positive samples. In particular, for each positive triplet, we generate two additional hard negative examples by poisoning both instructions and queries, then rigorously validated by ...[truncated]",
+      "url": "http://arxiv.org/abs/2505.21439v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2505.21439v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models",
+      "authors": [
+        "Zhengliang Shi",
+        "Yuhan Wang",
+        "Lingyong Yan",
+        "Pengjie Ren",
+        "Shuaiqiang Wang"
+      ],
+      "year": 2025,
+      "abstract": "Tool learning aims to augment large language models (LLMs) with diverse tools, enabling them to act as agents for solving practical tasks. Due to the limited context length of tool-using LLMs, adopting information retrieval (IR) models to select useful tools from large toolsets is a critical initial step. However, the performance of IR models in tool retrieval tasks remains underexplored and unclear. Most tool-use benchmarks simplify this step by manually pre-annotating a small set of relevant tools for each task, which is far from the real-world scenarios. In this paper, we propose ToolRet, a ...[truncated]",
+      "url": "http://arxiv.org/abs/2503.01763v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2503.01763v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Lightweight and Direct Document Relevance Optimization for Generative Information Retrieval",
+      "authors": [
+        "Kidist Amde Mekonnen",
+        "Yubao Tang",
+        "Maarten de Rijke"
+      ],
+      "year": 2025,
+      "abstract": "Generative information retrieval (GenIR) is a promising neural retrieval paradigm that formulates document retrieval as a document identifier (docid) generation task, allowing for end-to-end optimization toward a unified global retrieval objective. However, existing GenIR models suffer from token-level misalignment, where models trained to predict the next token often fail to capture document-level relevance effectively. While reinforcement learning-based methods, such as reinforcement learning from relevance feedback (RLRF), aim to address this misalignment through reward modeling, they intro ...[truncated]",
+      "url": "http://arxiv.org/abs/2504.05181v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2504.05181v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Explicit Abstention Knobs for Predictable Reliability in Video Question Answering",
+      "authors": [
+        "Jorge Ortiz"
+      ],
+      "year": 2025,
+      "abstract": "High-stakes deployment of vision-language models (VLMs) requires selective prediction, where systems abstain when uncertain rather than risk costly errors. We investigate whether confidence-based abstention provides reliable control over error rates in video question answering, and whether that control remains robust under distribution shift. Using NExT-QA and Gemini 2.0 Flash, we establish two findings. First, confidence thresholding provides mechanistic control in-distribution. Sweeping threshold epsilon produces smooth risk-coverage tradeoffs, reducing error rates f",
+      "url": "http://arxiv.org/abs/2601.00138v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2601.00138v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+      "authors": [
+        "Nurshat Fateh Ali",
+        "Md. Mahdi Mohtasim",
+        "Shakil Mosharrof",
+        "T. Gopi Krishna"
+      ],
+      "year": 2024,
+      "abstract": "This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). The ever-increasing number of research articles provides a huge challenge for manual literature review. It has resulted in an increased demand for automation. Developing a system capable of automatically generating the literature reviews from only the PDF files as input is the primary objective of this research work. The effectiveness of several Natural Lang ...[truncated]",
+      "url": "http://arxiv.org/abs/2411.18583v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2411.18583v1",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "EVOR: Evolving Retrieval for Code Generation",
+      "authors": [
+        "Hongjin Su",
+        "Shuyang Jiang",
+        "Yuhang Lai",
+        "Haoyuan Wu",
+        "Boao Shi"
+      ],
+      "year": 2024,
+      "abstract": "Recently the retrieval-augmented generation (RAG) has been successfully applied in code generation. However, existing pipelines for retrieval-augmented code generation (RACG) employ static knowledge bases with a single source, limiting the adaptation capabilities of Large Language Models (LLMs) to domains they have insufficient knowledge of. In this work, we develop a novel pipeline, EVOR, that employs the synchronous evolution of both queries and diverse knowledge bases. On two realistic settings where the external knowledge is required to solve code generation tasks, we compile four new data ...[truncated]",
+      "url": "http://arxiv.org/abs/2402.12317v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2402.12317v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+      "authors": [
+        "Shahul Es",
+        "Jithin James",
+        "Luis Espinosa-Anke",
+        "Steven Schockaert"
+      ],
+      "year": 2023,
+      "abstract": "We introduce Ragas (Retrieval Augmented Generation Assessment), a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines. RAG systems are composed of a retrieval and an LLM based generation module, and provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ability of the retrieval system to identify relevant and focuse ...[truncated]",
+      "url": "http://arxiv.org/abs/2309.15217v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2309.15217v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A dissemination workshop for introducing young Italian students to NLP",
+      "authors": [
+        "Lucio Messina",
+        "Lucia Busso",
+        "Claudia Roberta Combei",
+        "Ludovica Pannitto",
+        "Alessio Miaschi"
+      ],
+      "year": 2021,
+      "abstract": "We describe and make available the game-based material developed for a laboratory run at several Italian science festivals to popularize NLP among young students.",
+      "url": "http://arxiv.org/abs/2104.12405v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2104.12405v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students",
+      "authors": [
+        "Ludovica Pannitto",
+        "Lucia Busso",
+        "Claudia Roberta Combei",
+        "Lucio Messina",
+        "Alessio Miaschi"
+      ],
+      "year": 2021,
+      "abstract": "Although Natural Language Processing (NLP) is at the core of many tools young people use in their everyday life, high school curricula (in Italy) do not include any computational linguistics education. This lack of exposure makes the use of such tools less responsible than it could be and makes choosing computational linguistics as a university degree unlikely. To raise awareness, curiosity, and longer-term interest in young people, we have developed an interactive workshop designed to illustrate the basic principles of NLP and computational linguistics to high school Italian students aged bet ...[truncated]",
+      "url": "http://arxiv.org/abs/2104.12422v2",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/2104.12422v2",
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Overcoming low-utility facets for complex answer retrieval",
+      "authors": [
+        "Sean MacAvaney",
+        "Andrew Yates",
+        "Arman Cohan",
+        "Luca Soldaini",
+        "Kai Hui"
+      ],
+      "year": 2018,
+      "abstract": "Many questions cannot be answered simply; their answers must include numerous nuanced details and additional context. Complex Answer Retrieval (CAR) is the retrieval of answers to such questions. In their simplest form, these questions are constructed from a topic entity (e.g., `cheese') and a facet (e.g., `health effects'). While topic matching has been thoroughly explored, we observe that some facets use general language that is unlikely to appear verbatim in answers. We call these low-utility facets. In this work, we present an approach to CAR that identifies and addresses low-utility facet ...[truncated]",
+      "url": "http://arxiv.org/abs/1811.08772v1",
+      "source": "arxiv",
+      "citation_count": null,
+      "pdf_url": "https://arxiv.org/pdf/1811.08772v1",
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "RAG models are predominantly trained and optimized on Wikipedia-based knowledge bases, leaving a gap in methods for effective domain adaptation (e.g., healthcare, news, legal) where joint training of retriever and generator on specialized corpora is underexplored.",
+      "supporting_papers": [
+        "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records (2026)",
+        "Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector (2026)"
+      ],
+      "evidence_quotes": [
+        "First, experiments are conducted on a single EHR dataset, and evaluation on different datasets is needed to assess generalizability across different patient populations and coding systems.",
+        "This paper presents Expert Mind, an experimental system designed to preserve the tacit knowledge of subject-matter experts through a four-layer architecture: multimodal knowledge capture, LLM-driven processing and indexing, vector store persistence, and a conversational query interface. The system is contextualized within the energy sector, where the knowledge crisis is most acute, though the architecture is"
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Standard MCQ/MRC-style evaluations do not capture critical real-world failure modes of RAG systems, such as free-form hallucinations and the ability to abstain when evidence is insufficient, particularly in high-stakes domains.",
+      "supporting_papers": [
+        "From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)",
+        "When the Chain of Thought Knows Better: Failure Modes in Multi-Turn Reasoning Models (2026)"
+      ],
+      "evidence_quotes": [
+        "ISLAMICFAITHQA exposes a substantial reliability gap between general instruction-following fluency and text-grounded Islamic correctness. Most off-the-shelf multilingual LLMs remain below 30% accuracy under strict LLM-as-Judge grading",
+        "We treat the generated chain-of-thought as an observable behavioral signal alongside the model’s output. However, CoT is known to sometimes suffer from unfaithfulness, where the visible text rationalizes rather than drives the final output."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "There is a lack of rigorous, systematic evaluation frameworks and benchmarks that measure the specific impact of RAG components on different LLMs' fundamental abilities (noise robustness, negative rejection, information integration, counterfactual robustness), making it difficult to identify capability bottlenecks.",
+      "supporting_papers": [
+        "Retrieval-Augmented Generation for Large Language Models: A Survey (2023)"
+      ],
+      "evidence_quotes": [
+        "This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques.",
+        "At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development"
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Existing RAG systems rely on simplistic single-pass retrieval pipelines that fail on complex, multi-hop queries requiring multi-step reasoning and evidence aggregation across multiple documents.",
+      "supporting_papers": [
+        "From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)"
+      ],
+      "evidence_quotes": [
+        "Standard RAG improves correctness, but Agentic RAG yields further gains by turning retrieval into an iterative evidence-seeking process rather than a one-pass preprocessing step.",
+        "At the same time, the absolute retrieval scores remain modest, suggesting that standard RAG based retrieval is still insufficient for many questions."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "RAG systems lack robust mechanisms for handling multi-turn, stateful interactions where retrieval needs evolve dynamically based on conversation history and adversarial pressure, leading to alignment faking and context-injection failures.",
+      "supporting_papers": [
+        "When the Chain of Thought Knows Better: Failure Modes in Multi-Turn Reasoning Models (2026)"
+      ],
+      "evidence_quotes": [
+        "This work examines critical safety failures in widely deployed open-source reasoning models during adversarial multi-turn dialogue, specifically exposing alignment faking and context-injection failures.",
+        "They are single-turn and do not address how this awareness evolves under prolonged adversarial pressure, nor how it shapes the gap between internal reasoning and external output."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "Current RALM approaches focus on modifying LM architecture to incorporate external information, which complicates deployment; simpler alternatives like in-context retrieval without architectural changes remain underexplored.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    },
+    {
+      "description": "Retrieval models used in RAG pipelines are not evaluated or optimized for instruction-following capabilities, limiting their ability to handle nuanced, user-specified retrieval constraints.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "medium"
+    }
+  ],
+  "conflicts": [],
+  "recalled_gaps": [],
+  "novelty_score": null,
+  "novelty_reasoning": null,
+  "overlapping_papers": [],
+  "report_markdown": "## Overview\nRetrieval‑augmented generation (RAG) has emerged as a key paradigm for grounding large language models in external knowledge, addressing hallucinations and enabling knowledge‑intensive NLP tasks [3,4]. The field is rapidly maturing, yet significant gaps remain in domain adaptation, robust evaluation, multi‑step reasoning, multi‑turn safety, and instruction‑aware retrieval.\n\n## Landscape\nRAG surveys [3,4,27] establish a tripartite architecture—retrieval, augmentation, generation—and trace its evolution from naive to agentic forms. Specialized applications in medicine [2,7,10,13,16], law [12], energy [17], and religious QA [15,22,26] demonstrate that coupling LLMs with domain corpora improves accuracy and faithfulness. Retrieval improvements include hybrid semantic search [11], in‑context RALM [6], and autoregressive patch‑level augmentation [20]. Evaluation frameworks such as Ragas [34], MIRAGE [10], and Retrieval‑Augmented Generation Benchmark [8] begin to systematically measure component‑level impacts, while agentic RAG [15] and iterative evidence‑seeking [22] push beyond single‑pass pipelines. However, these advances also expose critical limitations.\n\n## Research gaps\n- **Domain adaptation beyond Wikipedia**: RAG models are predominantly trained on general knowledge bases; joint retriever‑generator fine‑tuning on specialized corpora (healthcare, legal, energy) remains underexplored [9]. Early domain‑specific systems require separate evaluation on diverse EHR datasets [16], and knowledge‑preservation architectures like Expert Mind are only contextualized in a single sector [17].\n- **Evaluation of real‑world failure modes**: Standard MCQ/MRC‑style benchmarks mask critical failures—free‑form hallucinations and the inability to abstain when evidence is insufficient [15]. In high‑stakes religious QA, most LLMs remain below 30% accuracy under strict grading, and chain‑of‑thought outputs can rationalize rather than drive final answers, especially in multi‑turn dialogues [18].\n- **Component‑level capability bottlenecks**: There is a lack of rigorous frameworks that dissect how retrieval‑augmentation affects essential LLM abilities (noise robustness, negative rejection, information integration, counterfactual robustness) [8]. Despite comprehensive surveys outlining challenges [3], systematic benchmarking of these sub‑capabilities across RAG variants is scarce.\n- **Multi‑hop reasoning and evidence aggregation**: Existing RAG pipelines often rely on single‑pass retrieval, which fails on complex queries requiring multi‑step synthesis [22]. Agentic RAG that turns retrieval into an iterative process improves correctness, but absolute retrieval scores remain modest, indicating that standard retrieval is still insufficient [15].\n- **Multi‑turn, adversarial safety**: RAG systems lack robust mechanisms for stateful interactions where retrieval needs evolve under conversational pressure, leading to alignment faking and context‑injection failures [18]. Diagnosis of such failures requires trace‑level analysis beyond terminal‑score evaluations, yet no standard benchmark addresses adversarial multi‑turn RAG.\n- **Architectural simplification for in‑context RALM**: Retrieval‑augmented language modeling often requires modifying LM architecture, complicating deployment; lightweight alternatives that leverage in‑context retrieval without architectural changes have been proposed but remain underexplored [6].\n- **Instruction‑following retrieval**: Retrieval models in RAG are rarely optimized for nuanced user‑specified constraints, limiting their ability to handle expressive instructions. The recently introduced InF‑IR corpus and associated benchmarks highlight that standard retrieval pairs fail to capture instruction‑following needs [28].\n\n## References\n\n[1] [The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS) (2014)](https://doi.org/10.1109/tmi.2014.2377694) — Bjoern Menze, András Jakab, Stefan Bauer et al.  \n[2] [Large language models encode clinical knowledge (2023)](https://doi.org/10.1038/s41586-023-06291-2) — Karan Singhal, Shekoofeh Azizi, Tao Tu et al.  \n[3] [Retrieval-Augmented Generation for Large Language Models: A Survey (2023)](http://arxiv.org/abs/2312.10997) — Yunfan Gao, Yun Xiong, Xinyu Gao et al.  \n[4] [A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models (2024)](https://doi.org/10.1145/3637528.3671470) — Wenqi Fan, Yujuan Ding, Liangbo Ning et al.  \n[5] [Active Retrieval Augmented Generation (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.495) — Zhengbao Jiang, Frank F. Xu, Luyu Gao et al.  \n[6] [In-Context Retrieval-Augmented Language Models (2023)](https://doi.org/10.1162/tacl_a_00605) — Ori Ram, Yoav Levine, Itay Dalmedigos et al.  \n[7] [Almanac — Retrieval-Augmented Language Models for Clinical Medicine (2024)](https://www.ncbi.nlm.nih.gov/pmc/articles/10857783) — Cyril Zakka, Rohan Shad, Akash Chaurasia et al.  \n[8] [Benchmarking Large Language Models in Retrieval-Augmented Generation (2024)](https://doi.org/10.1609/aaai.v38i16.29728) — Jiawei Chen, Hongyu Lin, Xianpei Han et al.  \n[9] [Improving the Domain Adaptation of Retrieval Augmented Generation (RAG) Models for Open Domain Question Answering (2023)](https://doi.org/10.1162/tacl_a_00530) — Shamane Siriwardhana, Rivindu Weerasekera, Elliott Wen et al.  \n[10] [Benchmarking Retrieval-Augmented Generation for Medicine (2024)](https://doi.org/10.18653/v1/2024.findings-acl.372) — Guangzhi Xiong, Qiao Jin, Zhiyong Lu et al.  \n[11] [Blended RAG: Improving RAG (Retriever-Augmented Generation) Accuracy with Semantic Search and Hybrid Query-Based Retrievers (2024)](https://doi.org/10.1109/mipr62202.2024.00031) — Kunal Sawarkar, Abhilasha Mangal, Shivam R Solanki  \n[12] [CBR-RAG: Case-Based Reasoning for Retrieval Augmented Generation in LLMs for Legal Question Answering (2024)](https://rgu-repository.worktribe.com/output/2383595) — Nirmalie Wiratunga, Ramitha Abeyratne, Lasal Jayawardena et al.  \n[13] [MKGF: A multi-modal knowledge graph based RAG framework to enhance LVLMs for Medical visual question answering (2025)](https://doi.org/10.1016/j.neucom.2025.129999) — Yinan Wu, Yuming Lu, Yan Zhou et al.  \n[14] [Multimodal Retrieval Augmented Generation Evaluation Benchmark (2024)](https://doi.org/10.1109/vtc2024-spring62846.2024.10683437) — Tienlan Sun, Anaiy Somalwar, Hinson Chan  \n[15] [From RAG to Agentic RAG for Faithful Islamic Question Answering (2026)](http://arxiv.org/abs/2601.07528v2) — Gagan Bhatia, Hamdy Mubarak, Mustafa Jarrar et al.  \n[16] [EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records (2026)](http://arxiv.org/abs/2605.12335v1) — Saeed Shurrab, Mariam Al-Omari, Dana El Samad et al.  \n[17] [Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector (2026)](http://arxiv.org/abs/2603.14541v1) — Diego Ezequiel Cervera  \n[18] [When the Chain of Thought Knows Better: Failure Modes in Multi-Turn Reasoning Models (2026)](http://arxiv.org/abs/2606.10740v2) — Sai Kartheek Reddy Kasu, Nils Lukas, Samuele Poppi  \n[19] [The SMC Blind Spot: A Failure Mode Analysis of State-of-the-Art Beat Tracking (2026)](http://arxiv.org/abs/2605.12287v1) — Jaehoon Ahn, Tae Gum Hwang, Moon-Ryul Jung  \n[20] [AR-RAG: Autoregressive Retrieval Augmentation for Image Generation (2025)](http://arxiv.org/abs/2506.06962v3) — Jingyuan Qi, Zhiyang Xu, Qifan Wang et al.  \n[21] [Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation (2025)](http://arxiv.org/abs/2502.00306v2) — Ali Naseh, Yuefeng Peng, Anshuman Suri et al.  \n[22] [FARSIQA: Faithful and Advanced RAG System for Islamic Question Answering (2025)](http://arxiv.org/abs/2510.25621v1) — Mohammad Aghajani Asl, Behrooz Minaei Bidgoli  \n[23] [Intelligent Interaction Strategies for Context-Aware Cognitive Augmentation (2025)](http://arxiv.org/abs/2504.13684v1) —  Xiangrong,  Zhu, Yuan Xu et al.  \n[24] [Factually: Exploring Wearable Fact-Checking for Augmented Truth Discernment (2025)](http://arxiv.org/abs/2504.17204v1) — Chitralekha Gupta, Hanjun Wu, Praveen Sasikumar et al.  \n[25] [Designing AI Systems that Augment Human Performed vs. Demonstrated Critical Thinking (2025)](http://arxiv.org/abs/2504.14689v1) — Katelyn Xiaoying Mei, Nic Weber  \n[26] [Investigating Retrieval-Augmented Generation in Quranic Studies: A Study of 13 Open-Source Large Language Models (2025)](http://arxiv.org/abs/2503.16581v1) — Zahra Khalila, Arbi Haza Nasution, Winda Monika et al.  \n[27] [Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems (2025)](http://arxiv.org/abs/2601.05264v1) — Dean Wampler, Dave Nielson, Alireza Seddighi  \n[28] [Towards Better Instruction Following Retrieval Models (2025)](http://arxiv.org/abs/2505.21439v1) — Yuchen Zhuang, Aaron Trinh, Rushi Qiang et al.  \n[29] [Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models (2025)](http://arxiv.org/abs/2503.01763v2) — Zhengliang Shi, Yuhan Wang, Lingyong Yan et al.  \n[30] [Lightweight and Direct Document Relevance Optimization for Generative Information Retrieval (2025)](http://arxiv.org/abs/2504.05181v2) — Kidist Amde Mekonnen, Yubao Tang, Maarten de Rijke  \n[31] [Explicit Abstention Knobs for Predictable Reliability in Video Question Answering (2025)](http://arxiv.org/abs/2601.00138v2) — Jorge Ortiz  \n[32] [Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation (2024)](http://arxiv.org/abs/2411.18583v1) — Nurshat Fateh Ali, Md. Mahdi Mohtasim, Shakil Mosharrof et al.  \n[33] [EVOR: Evolving Retrieval for Code Generation (2024)](http://arxiv.org/abs/2402.12317v2) — Hongjin Su, Shuyang Jiang, Yuhang Lai et al.  \n[34] [Ragas: Automated Evaluation of Retrieval Augmented Generation (2023)](http://arxiv.org/abs/2309.15217v2) — Shahul Es, Jithin James, Luis Espinosa-Anke et al.  \n[35] [A dissemination workshop for introducing young Italian students to NLP (2021)](http://arxiv.org/abs/2104.12405v2) — Lucio Messina, Lucia Busso, Claudia Roberta Combei et al.  \n[36] [Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students (2021)](http://arxiv.org/abs/2104.12422v2) — Ludovica Pannitto, Lucia Busso, Claudia Roberta Combei et al.  \n[37] [Overcoming low-utility facets for complex answer retrieval (2018)](http://arxiv.org/abs/1811.08772v1) — Sean MacAvaney, Andrew Yates, Arman Cohan et al.",
+  "iteration": 2,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "https://doi.org/10.1109/tmi.2014.2377694",
+    "https://doi.org/10.1038/s41586-023-06291-2",
+    "http://arxiv.org/abs/2312.10997",
+    "https://doi.org/10.1145/3637528.3671470",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.495",
+    "https://doi.org/10.1162/tacl_a_00605",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/10857783",
+    "https://doi.org/10.1609/aaai.v38i16.29728",
+    "https://doi.org/10.1162/tacl_a_00530",
+    "https://doi.org/10.18653/v1/2024.findings-acl.372",
+    "https://doi.org/10.1109/mipr62202.2024.00031",
+    "https://rgu-repository.worktribe.com/output/2383595",
+    "https://doi.org/10.1016/j.neucom.2025.129999",
+    "https://doi.org/10.1109/vtc2024-spring62846.2024.10683437",
+    "http://arxiv.org/abs/2601.07528v2",
+    "http://arxiv.org/abs/2605.12335v1",
+    "http://arxiv.org/abs/2506.06962v3",
+    "http://arxiv.org/abs/2502.00306v2",
+    "http://arxiv.org/abs/2510.25621v1",
+    "http://arxiv.org/abs/2504.13684v1",
+    "http://arxiv.org/abs/2504.17204v1",
+    "http://arxiv.org/abs/2504.14689v1",
+    "http://arxiv.org/abs/2503.16581v1",
+    "http://arxiv.org/abs/2411.18583v1",
+    "http://arxiv.org/abs/2402.12317v2",
+    "http://arxiv.org/abs/2603.14541v1",
+    "http://arxiv.org/abs/2606.10740v2",
+    "http://arxiv.org/abs/2605.12287v1",
+    "http://arxiv.org/abs/2601.05264v1",
+    "http://arxiv.org/abs/2505.21439v1",
+    "http://arxiv.org/abs/2503.01763v2",
+    "http://arxiv.org/abs/2504.05181v2",
+    "http://arxiv.org/abs/2601.00138v2",
+    "http://arxiv.org/abs/2309.15217v2",
+    "http://arxiv.org/abs/2104.12405v2",
+    "http://arxiv.org/abs/2104.12422v2",
+    "http://arxiv.org/abs/1811.08772v1"
+  ],
+  "recent_paper_ids": [
+    "http://arxiv.org/abs/2603.14541v1",
+    "http://arxiv.org/abs/2606.10740v2",
+    "http://arxiv.org/abs/2605.12287v1",
+    "http://arxiv.org/abs/2601.05264v1",
+    "http://arxiv.org/abs/2505.21439v1",
+    "http://arxiv.org/abs/2503.01763v2",
+    "http://arxiv.org/abs/2504.05181v2",
+    "http://arxiv.org/abs/2601.00138v2",
+    "http://arxiv.org/abs/2309.15217v2",
+    "http://arxiv.org/abs/2104.12405v2",
+    "http://arxiv.org/abs/2104.12422v2",
+    "http://arxiv.org/abs/1811.08772v1"
+  ],
+  "open_gaps": [
+    "Current RALM approaches focus on modifying LM architecture to incorporate external information, which complicates deployment; simpler alternatives like in-context retrieval without architectural changes remain underexplored.",
+    "Retrieval models used in RAG pipelines are not evaluated or optimized for instruction-following capabilities, limiting their ability to handle nuanced, user-specified retrieval constraints."
+  ],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "retrieval-augmented generation knowledge-intensive NLP",
+        "RAG knowledge base question answering",
+        "retrieval augmented generation open-domain QA",
+        "retrieval augmented language models factuality",
+        "retrieval-augmented generation evaluation benchmark"
+      ],
+      "new_papers": 25,
+      "total_papers": 25,
+      "open_gaps": 2,
+      "closed_gaps": 3
+    },
+    {
+      "iteration": 2,
+      "queries": [
+        "in-context retrieval augmented generation without architecture modification",
+        "retrieval augmented language models simple retrieval without training",
+        "free-form hallucination evaluation retrieval augmented generation",
+        "abstention retrieval augmented generation insufficient evidence",
+        "knowledge intensive NLP failure modes abstention"
+      ],
+      "new_papers": 12,
+      "total_papers": 37,
+      "open_gaps": 2,
+      "closed_gaps": 4
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": true,
+  "coverage_reasoning": "The user did not provide an idea, so I must assess whether the research gaps found are sufficient based on the topic and the gaps themselves. The most central gaps for RAG in knowledge-intensive tasks are rigorous evaluation frameworks (high, 2 papers) and real-world failure modes like free-form hallucinations (high, 2 papers). Both are high confidence with two papers each, meeting the sufficiency criteria. While other gaps have only one paper each, the most idea-relevant gaps (evaluation and failure modes) are well-supported. Therefore, coverage is sufficient.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [],
+  "tool_call_count": 15
+}

@@ -1,0 +1,1006 @@
+{
+  "topic": "parameter-efficient fine-tuning of large language models",
+  "user_idea": null,
+  "search_queries": [
+    "continual learning adapter LoRA prefix tuning beyond prompt-based Transformers",
+    "prompt tuning generalization unseen domains zero-shot preservation domain-specific training",
+    "multi-task medical NLP parameter-efficient fine-tuning data imbalance task variety",
+    "parameter-efficient fine-tuning mental health prediction tasks evaluation"
+  ],
+  "papers": [
+    {
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "authors": [
+        "Karen Simonyan",
+        "Andrew Zisserman"
+      ],
+      "year": 2014,
+      "abstract": "In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3x3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisation and classification tracks respective ...[truncated]",
+      "url": "http://arxiv.org/abs/1409.1556",
+      "source": "openalex",
+      "citation_count": 75548,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+      "authors": [
+        "Laith Alzubaidi",
+        "Jinglan Zhang",
+        "Amjad J. Humaidi",
+        "Ayad Q. Al-Dujaili",
+        "Ye Duan"
+      ],
+      "year": 2021,
+      "abstract": "In the last few years, the deep learning (DL) computing paradigm has been deemed the Gold Standard in the machine learning (ML) community. Moreover, it has gradually become the most widely used computational approach in the field of ML, thus achieving outstanding results on several complex cognitive tasks, matching or even beating those provided by human performance. One of the benefits of DL is the ability to learn massive amounts of data. The DL field has grown fast in the last few years and it has been extensively used to successfully address a wide range of traditional applications. More i ...[truncated]",
+      "url": "https://doi.org/10.1186/s40537-021-00444-8",
+      "source": "openalex",
+      "citation_count": 7718,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "ChatGPT for good? On opportunities and challenges of large language models for education",
+      "authors": [
+        "Enkelejda Kasneci",
+        "Kathrin Seßler",
+        "Stefan Küchemann",
+        "Maria Bannert",
+        "Daryna Dementieva"
+      ],
+      "year": 2023,
+      "abstract": "",
+      "url": "http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3",
+      "source": "openalex",
+      "citation_count": 5702,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Communication-Efficient Learning of Deep Networks from Decentralized Data",
+      "authors": [
+        "H. Brendan McMahan",
+        "Eider Moore",
+        "Daniel Ramage",
+        "Seth Hampson",
+        "Blaise Agüera y Arcas"
+      ],
+      "year": 2016,
+      "abstract": "Modern mobile devices have access to a wealth of data suitable for learning models, which in turn can greatly improve the user experience on the device. For example, language models can improve speech recognition and text entry, and image models can automatically select good photos. However, this rich data is often privacy sensitive, large in quantity, or both, which may preclude logging to the data center and training there using conventional approaches. We advocate an alternative that leaves the training data distributed on the mobile devices, and learns a shared model by aggregating locally ...[truncated]",
+      "url": "http://arxiv.org/abs/1602.05629",
+      "source": "openalex",
+      "citation_count": 5178,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Training language models to follow instructions with human feedback",
+      "authors": [
+        "Long Ouyang",
+        "Jeff Wu",
+        "Xu Jiang",
+        "Diogo Almeida",
+        "Carroll L. Wainwright"
+      ],
+      "year": 2022,
+      "abstract": "Making language models bigger does not inherently make them better at following a user's intent. For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user. In other words, these models are not aligned with their users. In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback. Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we u ...[truncated]",
+      "url": "http://arxiv.org/abs/2203.02155",
+      "source": "openalex",
+      "citation_count": 4319,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLaMA: Open and Efficient Foundation Language Models",
+      "authors": [
+        "Hugo Touvron",
+        "Thibaut Lavril",
+        "Gautier Izacard",
+        "Xavier Martinet",
+        "Marie-Anne Lachaux"
+      ],
+      "year": 2023,
+      "abstract": "We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.",
+      "url": "http://arxiv.org/abs/2302.13971",
+      "source": "openalex",
+      "citation_count": 3942,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Large language models encode clinical knowledge",
+      "authors": [
+        "Karan Singhal",
+        "Shekoofeh Azizi",
+        "Tao Tu",
+        "S. Sara Mahdavi",
+        "Jason Lee"
+      ],
+      "year": 2023,
+      "abstract": "Abstract Large language models (LLMs) have demonstrated impressive capabilities, but the bar for clinical applications is high. Attempts to assess the clinical knowledge of models typically rely on automated evaluations based on limited benchmarks. Here, to address these limitations, we present MultiMedQA, a benchmark combining six existing medical question answering datasets spanning professional medicine, research and consumer queries and a new dataset of medical questions searched online, HealthSearchQA. We propose a human evaluation framework for model answers along multiple axes including ...[truncated]",
+      "url": "https://doi.org/10.1038/s41586-023-06291-2",
+      "source": "openalex",
+      "citation_count": 3457,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Deep learning applications and challenges in big data analytics",
+      "authors": [
+        "Maryam M. Najafabadi",
+        "Flavio Villanustre",
+        "Taghi M. Khoshgoftaar",
+        "Naeem Seliya",
+        "Randall Wald"
+      ],
+      "year": 2015,
+      "abstract": "Abstract Big Data Analytics and Deep Learning are two high-focus of data science. Big Data has become important as many organizations both public and private have been collecting massive amounts of domain-specific information, which can contain useful information about problems such as national intelligence, cyber security, fraud detection, marketing, and medical informatics. Companies such as Google and Microsoft are analyzing large volumes of data for business analysis and decisions, impacting existing and future technology. Deep Learning algorithms extract high-level, complex abstractions a ...[truncated]",
+      "url": "https://doi.org/10.1186/s40537-014-0007-7",
+      "source": "openalex",
+      "citation_count": 2604,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+      "authors": [
+        "Xiang Lisa Li",
+        "Percy Liang"
+      ],
+      "year": 2021,
+      "abstract": "Xiang Lisa Li, Percy Liang. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). 2021.",
+      "url": "https://doi.org/10.18653/v1/2021.acl-long.353",
+      "source": "openalex",
+      "citation_count": 2262,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Attention gated networks: Learning to leverage salient regions in medical images",
+      "authors": [
+        "Jo Schlemper",
+        "Ozan Oktay",
+        "Michiel Schaap",
+        "Mattias P. Heinrich‬",
+        "Bernhard Kainz"
+      ],
+      "year": 2019,
+      "abstract": "We propose a novel attention gate (AG) model for medical image analysis that automatically learns to focus on target structures of varying shapes and sizes. Models trained with AGs implicitly learn to suppress irrelevant regions in an input image while highlighting salient features useful for a specific task. This enables us to eliminate the necessity of using explicit external tissue/organ localisation modules when using convolutional neural networks (CNNs). AGs can be easily integrated into standard CNN models such as VGG or U-Net architectures with minimal computational overhead while incre ...[truncated]",
+      "url": "https://doi.org/10.1016/j.media.2019.01.012",
+      "source": "openalex",
+      "citation_count": 1949,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "The Sleep-Immune Crosstalk in Health and Disease",
+      "authors": [
+        "Luciana Besedovsky",
+        "Tanja Lange",
+        "Monika Haack"
+      ],
+      "year": 2019,
+      "abstract": "Sleep and immunity are bidirectionally linked. Immune system activation alters sleep, and sleep in turn affects the innate and adaptive arm of our body's defense system. Stimulation of the immune system by microbial challenges triggers an inflammatory response, which, depending on its magnitude and time course, can induce an increase in sleep duration and intensity, but also a disruption of sleep. Enhancement of sleep during an infection is assumed to feedback to the immune system to promote host defense. Indeed, sleep affects various immune parameters, is associated with a reduced infection r ...[truncated]",
+      "url": "https://doi.org/10.1152/physrev.00010.2018",
+      "source": "openalex",
+      "citation_count": 1457,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Machine learning on big data: Opportunities and challenges",
+      "authors": [
+        "Lina Zhou",
+        "Shimei Pan",
+        "Jianwu Wang",
+        "Athanasios V. Vasilakos"
+      ],
+      "year": 2017,
+      "abstract": "",
+      "url": "https://doi.org/10.1016/j.neucom.2017.01.026",
+      "source": "openalex",
+      "citation_count": 1210,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Parameter-efficient fine-tuning of large-scale pre-trained language models",
+      "authors": [
+        "Ning Ding",
+        "Yujia Qin",
+        "Guang Yang",
+        "Fuchao Wei",
+        "Zonghan Yang"
+      ],
+      "year": 2023,
+      "abstract": "Abstract With the prevalence of pre-trained language models (PLMs) and the pre-training–fine-tuning paradigm, it has been continuously shown that larger models tend to yield better performance. However, as PLMs scale up, fine-tuning and storing all the parameters is prohibitively costly and eventually becomes practically infeasible. This necessitates a new branch of research focusing on the parameter-efficient adaptation of PLMs, which optimizes a small portion of the model parameters while keeping the rest fixed, drastically cutting down computation and storage costs. In general, it demonstra ...[truncated]",
+      "url": "https://doi.org/10.1038/s42256-023-00626-4",
+      "source": "openalex",
+      "citation_count": 958,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Deep Learning in Medical Ultrasound Analysis: A Review",
+      "authors": [
+        "Shengfeng Liu",
+        "Yi Wang",
+        "Xin Yang",
+        "Baiying Lei",
+        "Li Liu"
+      ],
+      "year": 2019,
+      "abstract": "Ultrasound (US) has become one of the most commonly performed imaging modalities in clinical practice. It is a rapidly evolving technology with certain advantages and with unique challenges that include low imaging quality and high variability. From the perspective of image analysis, it is essential to develop advanced automatic US image analysis methods to assist in US diagnosis and/or to make such assessment more objective and accurate. Deep learning has recently emerged as the leading machine learning tool in various research fields, and especially in general imaging analysis and computer v ...[truncated]",
+      "url": "https://doi.org/10.1016/j.eng.2018.11.020",
+      "source": "openalex",
+      "citation_count": 789,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Survey of the State of the Art in Natural Language Generation: Core tasks, applications and evaluation",
+      "authors": [
+        "Albert Gatt",
+        "Emiel Krahmer"
+      ],
+      "year": 2018,
+      "abstract": "This paper surveys the current state of the art in Natural Language Generation (NLG), defined as the task of generating text or speech from non-linguistic input. A survey of NLG is timely in view of the changes that the field has undergone over the past two decades, especially in relation to new (usually data-driven) methods, as well as new applications of NLG technology. This survey therefore aims to (a) give an up-to-date synthesis of research on the core tasks in NLG and the architectures adopted in which such tasks are organised; (b) highlight a number of recent research topics that have a ...[truncated]",
+      "url": "https://doi.org/10.1613/jair.5477",
+      "source": "openalex",
+      "citation_count": 763,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Adapted large language models can outperform medical experts in clinical text summarization",
+      "authors": [
+        "Dave Van Veen",
+        "Cara Van Uden",
+        "Louis Blankemeier",
+        "Jean-Benoit Delbrouck",
+        "Asad Aali"
+      ],
+      "year": 2024,
+      "abstract": "",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11479659",
+      "source": "openalex",
+      "citation_count": 693,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models",
+      "authors": [
+        "Elad Ben Zaken",
+        "Yoav Goldberg",
+        "Shauli Ravfogel"
+      ],
+      "year": 2022,
+      "abstract": "We introduce BitFit, a sparse-finetuning method where only the bias-terms of the model (or a subset of them) are being modified. We show that with small-to-medium training data, applying BitFit on pre-trained BERT models is competitive with (and sometimes better than) fine-tuning the entire model. For larger data, the method is competitive with other sparse fine-tuning methods. Besides their practical utility, these findings are relevant for the question of understanding the commonly-used process of finetuning: they support the hypothesis that finetuning is mainly about exposing knowledge indu ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2022.acl-short.1",
+      "source": "openalex",
+      "citation_count": 690,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "scBERT as a large-scale pretrained deep language model for cell type annotation of single-cell RNA-seq data",
+      "authors": [
+        "Fan Yang",
+        "Wenchuan Wang",
+        "Fang Wang",
+        "Yuan Fang",
+        "Duyu Tang"
+      ],
+      "year": 2022,
+      "abstract": "",
+      "url": "https://doi.org/10.1038/s42256-022-00534-z",
+      "source": "openalex",
+      "citation_count": 612,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "The Power of Generative AI: A Review of Requirements, Models, Input–Output Formats, Evaluation Metrics, and Challenges",
+      "authors": [
+        "Ajay Bandi",
+        "Pydi Venkata Satya Ramesh Adapa",
+        "Yudu Eswar Vinay Pratap Kumar Kuchi"
+      ],
+      "year": 2023,
+      "abstract": "Generative artificial intelligence (AI) has emerged as a powerful technology with numerous applications in various domains. There is a need to identify the requirements and evaluation metrics for generative AI models designed for specific tasks. The purpose of the research aims to investigate the fundamental aspects of generative AI systems, including their requirements, models, input–output formats, and evaluation metrics. The study addresses key research questions and presents comprehensive insights to guide researchers, developers, and practitioners in the field. Firstly, the requirements n ...[truncated]",
+      "url": "https://doi.org/10.3390/fi15080260",
+      "source": "openalex",
+      "citation_count": 599,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Machine Learning and Natural Language Processing in Mental Health: Systematic Review",
+      "authors": [
+        "Aziliz Le Glaz",
+        "Yannis Haralambous",
+        "Deok-Hee Kim-Dufor",
+        "Philippe Lenca",
+        "Romain Billot"
+      ],
+      "year": 2020,
+      "abstract": "BACKGROUND: Machine learning systems are part of the field of artificial intelligence that automatically learn models from data to make better decisions. Natural language processing (NLP), by using corpora and learning approaches, provides good performance in statistical tasks, such as text classification or sentiment mining. OBJECTIVE: The primary aim of this systematic review was to summarize and characterize, in methodological and technical terms, studies that used machine learning and NLP techniques for mental health. The secondary aim was to consider the potential use of these methods in ...[truncated]",
+      "url": "https://doi.org/10.2196/15708",
+      "source": "openalex",
+      "citation_count": 565,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "BEHRT: Transformer for Electronic Health Records",
+      "authors": [
+        "Yikuan Li",
+        "Shishir Rao",
+        "José Roberto Ayala Solares",
+        "Abdelǎali Hassaïne",
+        "Rema Ramakrishnan"
+      ],
+      "year": 2020,
+      "abstract": "Today, despite decades of developments in medicine and the growing interest in precision healthcare, vast majority of diagnoses happen once patients begin to show noticeable signs of illness. Early indication and detection of diseases, however, can provide patients and carers with the chance of early intervention, better disease management, and efficient allocation of healthcare resources. The latest developments in machine learning (including deep learning) provides a great opportunity to address this unmet need. In this study, we introduce BEHRT: A deep neural sequence transduction model for ...[truncated]",
+      "url": "https://doi.org/10.1038/s41598-020-62922-y",
+      "source": "openalex",
+      "citation_count": 549,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "authors": [
+        "Tim Dettmers",
+        "Artidoro Pagnoni",
+        "Ari Holtzman",
+        "Luke Zettlemoyer"
+      ],
+      "year": 2023,
+      "abstract": "We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters~(LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save m ...[truncated]",
+      "url": "http://arxiv.org/abs/2305.14314",
+      "source": "openalex",
+      "citation_count": 503,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+      "authors": [
+        "Jingfeng Yang",
+        "Hongye Jin",
+        "Ruixiang Tang",
+        "Xiaotian Han",
+        "Qizhang Feng"
+      ],
+      "year": 2024,
+      "abstract": "This article presents a comprehensive and practical guide for practitioners and end-users working with Large Language Models (LLMs) in their downstream Natural Language Processing (NLP) tasks. We provide discussions and insights into the usage of LLMs from the perspectives of models, data, and downstream tasks. First, we offer an introduction and brief summary of current language models. Then, we discuss the influence of pre-training data, training data, and test data. Most importantly, we provide a detailed discussion about the use and non-use cases of large language models for various natura ...[truncated]",
+      "url": "https://doi.org/10.1145/3649506",
+      "source": "openalex",
+      "citation_count": 475,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Deep learning in mental health outcome research: a scoping review",
+      "authors": [
+        "Chang Su",
+        "Zhenxing Xu",
+        "Jyotishman Pathak",
+        "Fei Wang"
+      ],
+      "year": 2020,
+      "abstract": "Mental illnesses, such as depression, are highly prevalent and have been shown to impact an individual's physical health. Recently, artificial intelligence (AI) methods have been introduced to assist mental health providers, including psychiatrists and psychologists, for decision-making based on patients' historical data (e.g., medical records, behavioral data, social media usage, etc.). Deep learning (DL), as one of the most recent generation of AI technologies, has demonstrated superior performance in many real-world applications ranging from computer vision to healthcare. The goal of this s ...[truncated]",
+      "url": "https://doi.org/10.1038/s41398-020-0780-3",
+      "source": "openalex",
+      "citation_count": 369,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Comprehensive Overview of Large Language Models",
+      "authors": [
+        "Humza Naveed",
+        "Asad Ullah Khan",
+        "Shi Qiu",
+        "Muhammad Saqib",
+        "Saeed Anwar"
+      ],
+      "year": 2023,
+      "abstract": "Large Language Models (LLMs) have recently demonstrated remarkable capabilities in natural language processing tasks and beyond. This success of LLMs has led to a large influx of research contributions in this direction. These works encompass diverse topics such as architectural innovations, better training strategies, context length improvements, fine-tuning, multi-modal LLMs, robotics, datasets, benchmarking, efficiency, and more. With the rapid development of techniques and regular breakthroughs in LLM research, it has become considerably challenging to perceive the bigger picture of the ad ...[truncated]",
+      "url": "http://arxiv.org/abs/2307.06435",
+      "source": "openalex",
+      "citation_count": 367,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Self-Supervised Speech Representation Learning: A Review",
+      "authors": [
+        "Abdelrahman Mohamed",
+        "Hung-yi Lee",
+        "Lasse Borgholt",
+        "Jakob D. Havtorn",
+        "Joakim Edin"
+      ],
+      "year": 2022,
+      "abstract": "Although supervised deep learning has revolutionized speech and audio processing, it has necessitated the building of specialist models for individual tasks and application scenarios. It is likewise difficult to apply this to dialects and languages for which only limited labeled data is available. Self-supervised representation learning methods promise a single universal model that would benefit a wide variety of tasks and domains. Such methods have shown success in natural language processing and computer vision domains, achieving new levels of performance while reducing the number of labels ...[truncated]",
+      "url": "http://arxiv.org/abs/2205.10643",
+      "source": "openalex",
+      "citation_count": 359,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models",
+      "authors": [
+        "Yaowei Zheng",
+        "Richong Zhang",
+        "Junhao Zhang",
+        "YeYanhan YeYanhan",
+        "Zheyan Luo"
+      ],
+      "year": 2024,
+      "abstract": "",
+      "url": "https://doi.org/10.18653/v1/2024.acl-demos.38",
+      "source": "openalex",
+      "citation_count": 332,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks",
+      "authors": [
+        "Yizhong Wang",
+        "Swaroop Mishra",
+        "Pegah Alipoormolabashi",
+        "Yeganeh Kordi",
+        "Amirreza Mirzaei"
+      ],
+      "year": 2022,
+      "abstract": "Yizhong Wang, Swaroop Mishra, Pegah Alipoormolabashi, Yeganeh Kordi, Amirreza Mirzaei, Atharva Naik, Arjun Ashok, Arut Selvan Dhanasekaran, Anjana Arunkumar, David Stap, Eshaan Pathak, Giannis Karamanolakis, Haizhi Lai, Ishan Purohit, Ishani Mondal, Jacob Anderson, Kirby Kuznia, Krima Doshi, Kuntal Kumar Pal, Maitreya Patel, Mehrad Moradshahi, Mihir Parmar, Mirali Purohit, Neeraj Varshney, Phani Rohitha Kaza, Pulkit Verma, Ravsehaj Singh Puri, Rushang Karia, Savan Doshi, Shailaja Keyur Sampat, Siddhartha Mishra, Sujan Reddy A, Sumanta Patro, Tanay Dixit, Xudong Shen. Proceedings of the 2022 Co ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2022.emnlp-main.340",
+      "source": "openalex",
+      "citation_count": 243,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Fine-Tuned BERT-Based Transfer Learning Approach for Text Classification",
+      "authors": [
+        "Rukhma Qasim",
+        "Waqas Haider Bangyal",
+        "Mohammed Alqarni",
+        "Abdulwahab Ali Almazroi"
+      ],
+      "year": 2022,
+      "abstract": "Text Classification problem has been thoroughly studied in information retrieval problems and data mining tasks. It is beneficial in multiple tasks including medical diagnose health and care department, targeted marketing, entertainment industry, and group filtering processes. A recent innovation in both data mining and natural language processing gained the attention of researchers from all over the world to develop automated systems for text classification. NLP allows categorizing documents containing different texts. A huge amount of data is generated on social media sites through social me ...[truncated]",
+      "url": "https://doi.org/10.1155/2022/3498123",
+      "source": "openalex",
+      "citation_count": 221,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLM-Adapters: An Adapter Family for Parameter-Efficient Fine-Tuning of Large Language Models",
+      "authors": [
+        "Zhiqiang Hu",
+        "Lei Wang",
+        "Yihuai Lan",
+        "Wanyu Xu",
+        "Ee‐Peng Lim"
+      ],
+      "year": 2023,
+      "abstract": "The success of large language models (LLMs), like GPT-4 and ChatGPT, has led to the development of numerous cost-effective and accessible alternatives that are created by finetuning open-access LLMs with task-specific data (e.g., ChatDoctor) or instruction data (e.g., Alpaca). Among the various fine-tuning methods, adapter-based parameter-efficient fine-tuning (PEFT) is undoubtedly one of the most attractive topics, as it only requires fine-tuning a few external parameters instead of the entire LLMs while achieving comparable or even better performance. To enable further research on PEFT metho ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.emnlp-main.319",
+      "source": "openalex",
+      "citation_count": 215,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "MM-LLMs: Recent Advances in MultiModal Large Language Models",
+      "authors": [
+        "Duzhen Zhang",
+        "Yahan Yu",
+        "Jiahua Dong",
+        "Chenxing Li",
+        "Dan Su"
+      ],
+      "year": 2024,
+      "abstract": "",
+      "url": "https://doi.org/10.18653/v1/2024.findings-acl.738",
+      "source": "openalex",
+      "citation_count": 210,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Mental-LLM",
+      "authors": [
+        "Xuhai Xu",
+        "Bingsheng Yao",
+        "Yuanzhe Dong",
+        "Saadia Gabriel",
+        "Hong Yu"
+      ],
+      "year": 2024,
+      "abstract": "Advances in large language models (LLMs) have empowered a variety of applications. However, there is still a significant gap in research when it comes to understanding and enhancing the capabilities of LLMs in the field of mental health. In this work, we present a comprehensive evaluation of multiple LLMs on various mental health prediction tasks via online text data, including Alpaca, Alpaca-LoRA, FLAN-T5, GPT-3.5, and GPT-4. We conduct a broad range of experiments, covering zero-shot prompting, few-shot prompting, and instruction fine-tuning. The results indicate a promising yet limited perf ...[truncated]",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11806945",
+      "source": "openalex",
+      "citation_count": 189,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "When LLMs meet cybersecurity: a systematic literature review",
+      "authors": [
+        "Jie Zhang",
+        "H. Bu",
+        "Hui Wen",
+        "Yongji Liu",
+        "Haiqiang Fei"
+      ],
+      "year": 2025,
+      "abstract": "Abstract The rapid development of large language models (LLMs) has opened new avenues across various fields, including cybersecurity, which faces an evolving threat landscape and demand for innovative technologies. Despite initial explorations into the application of LLMs in cybersecurity, there is a lack of a comprehensive overview of this research area. This paper addresses this gap by providing a systematic literature review, covering the analysis of over 300 works, encompassing 25 LLMs and more than 10 downstream scenarios. Our comprehensive overview addresses three key research questions: ...[truncated]",
+      "url": "https://doi.org/10.1186/s42400-025-00361-w",
+      "source": "openalex",
+      "citation_count": 179,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention",
+      "authors": [
+        "Renrui Zhang",
+        "Jiaming Han",
+        "Liu, Chris",
+        "Peng Gao",
+        "Aojun Zhou"
+      ],
+      "year": 2023,
+      "abstract": "We present LLaMA-Adapter, a lightweight adaption method to efficiently fine-tune LLaMA into an instruction-following model. Using 52K self-instruct demonstrations, LLaMA-Adapter only introduces 1.2M learnable parameters upon the frozen LLaMA 7B model, and costs less than one hour for fine-tuning on 8 A100 GPUs. Specifically, we adopt a set of learnable adaption prompts, and prepend them to the word tokens at higher transformer layers. Then, a zero-initialized attention mechanism with zero gating is proposed, which adaptively injects the new instructional cues into LLaMA, while effectively pres ...[truncated]",
+      "url": "http://arxiv.org/abs/2303.16199",
+      "source": "openalex",
+      "citation_count": 172,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Unleashing the potential of prompt engineering for large language models",
+      "authors": [
+        "B.‐C. CHEN",
+        "Zhaofeng Zhang",
+        "Nicolas Langrené",
+        "Shengxin Zhu"
+      ],
+      "year": 2023,
+      "abstract": "This comprehensive review delves into the pivotal role of prompt engineering in unleashing the capabilities of Large Language Models (LLMs). The development of Artificial Intelligence (AI), from its inception in the 1950s to the emergence of advanced neural networks and deep learning architectures, has made a breakthrough in LLMs, with models such as GPT-4o and Claude-3, and in Vision-Language Models (VLMs), with models such as CLIP and ALIGN. Prompt engineering is the process of structuring inputs, which has emerged as a crucial technique to maximize the utility and accuracy of these models. ...[truncated]",
+      "url": "http://arxiv.org/abs/2310.14735",
+      "source": "openalex",
+      "citation_count": 137,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Parameter-efficient fine-tuning in large language models: a survey of methodologies",
+      "authors": [
+        "Luping Wang",
+        "Sheng Chen",
+        "Linnan Jiang",
+        "Shu Pan",
+        "Runze Cai"
+      ],
+      "year": 2025,
+      "abstract": "The large language models, as predicted by scaling law forecasts, have made groundbreaking progress in many fields, particularly in natural language generation tasks, where they have approached or even surpassed human levels. However, the unprecedented scale of their parameters brings significant computational and storage costs. These large language models require substantial computational resources and GPU memory to operate. When adapting large language models to specific downstream tasks, their massive parameter scale poses a significant challenge in fine-tuning on hardware platforms with li ...[truncated]",
+      "url": "https://doi.org/10.1007/s10462-025-11236-4",
+      "source": "openalex",
+      "citation_count": 120,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Test-Time Prompt Tuning for Zero-Shot Generalization in Vision-Language Models",
+      "authors": [
+        "Manli Shu",
+        "Weili Nie",
+        "De-An Huang",
+        "Zhiding Yu",
+        "Tom Goldstein"
+      ],
+      "year": 2022,
+      "abstract": "Pre-trained vision-language models (e.g., CLIP) have shown promising zero-shot generalization in many downstream tasks with properly designed text prompts. Instead of relying on hand-engineered prompts, recent works learn prompts using the training data from downstream tasks. While effective, training on domain-specific data reduces a model's generalization capability to unseen new domains. In this work, we propose test-time prompt tuning (TPT), a method that can learn adaptive prompts on the fly with a single test sample. For image classification, TPT optimizes the prompt by minimizing the en ...[truncated]",
+      "url": "http://arxiv.org/abs/2209.07511",
+      "source": "openalex",
+      "citation_count": 112,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning",
+      "authors": [
+        "Weirui Kuang",
+        "Bingchen Qian",
+        "Zitao Li",
+        "Daoyuan Chen",
+        "Dawei Gao"
+      ],
+      "year": 2024,
+      "abstract": "Large language models (LLMs) have demonstrated great capabilities in various natural language understanding and generation tasks.These pre-trained LLMs can be further improved for specific downstream tasks by fine-tuning.However, the adoption of LLM in real-world applications can be hindered by privacy concerns and the resource-intensive nature of model training and fine-tuning.When multiple entities have similar interested tasks but cannot directly share their local data due to privacy regulations, federated learning (FL) is a mainstream solution to leverage the data of different entities.Bes ...[truncated]",
+      "url": "https://doi.org/10.1145/3637528.3671573",
+      "source": "openalex",
+      "citation_count": 109,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Instruction Tuning for Large Language Models: A Survey",
+      "authors": [
+        "Shengyu Zhang",
+        "Linfeng Dong",
+        "Xiaoya Li",
+        "Sen Zhang",
+        "Xiaofei Sun"
+      ],
+      "year": 2023,
+      "abstract": "This paper surveys research works in the quickly advancing field of instruction tuning (IT), which can also be referred to as supervised fine-tuning (SFT)\\footnote{In this paper, unless specified otherwise, supervised fine-tuning (SFT) and instruction tuning (IT) are used interchangeably.}, a crucial technique to enhance the capabilities and controllability of large language models (LLMs). Instruction tuning refers to the process of further training LLMs on a dataset consisting of \\textsc{(instruction, output)} pairs in a supervised fashion, which bridges the gap between the next-word predicti ...[truncated]",
+      "url": "http://arxiv.org/abs/2308.10792",
+      "source": "openalex",
+      "citation_count": 100,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+      "authors": [
+        "Brian Lester",
+        "Rami Al‐Rfou",
+        "Noah Constant"
+      ],
+      "year": 2021,
+      "abstract": "In this work, we explore \"prompt tuning,\" a simple yet effective mechanism for learning \"soft prompts\" to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3's few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of paramete ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2021.emnlp-main.243",
+      "source": "openalex",
+      "citation_count": 94,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey",
+      "authors": [
+        "Zeyu Han",
+        "Chao Gao",
+        "Jinyang Liu",
+        "Jeff",
+        "Zhang"
+      ],
+      "year": 2024,
+      "abstract": "Large models represent a groundbreaking advancement in multiple application fields, enabling remarkable achievements across various tasks. However, their unprecedented scale comes with significant computational costs. These models, often consisting of billions of parameters, require vast amounts of computational resources for execution. Especially, the expansive scale and computational demands pose considerable challenges when customizing them for particular downstream tasks, particularly over the hardware platforms constrained by computational capabilities. Parameter Efficient Fine-Tuning (PE ...[truncated]",
+      "url": "http://arxiv.org/abs/2403.14608",
+      "source": "openalex",
+      "citation_count": 93,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Towards Adaptive Prefix Tuning for Parameter-Efficient Language Model Fine-tuning",
+      "authors": [
+        "Zhen-Ru Zhang",
+        "Chuanqi Tan",
+        "Haiyang Xu",
+        "Chengyu Wang",
+        "Jun Huang"
+      ],
+      "year": 2023,
+      "abstract": "Fine-tuning large pre-trained language models on various downstream tasks with whole parameters is prohibitively expensive. Hence, Parameter-efficient fine-tuning has attracted attention that only optimizes a few task-specific parameters with the frozen pre-trained model. In this work, we focus on prefix tuning, which only optimizes continuous prefix vectors (i.e. pseudo tokens) inserted into Transformer layers. Based on the observation that the learned syntax and semantics representation varies a lot at different layers, we argue that the adaptive prefix will be further tailored to each layer ...[truncated]",
+      "url": "https://doi.org/10.18653/v1/2023.acl-short.107",
+      "source": "openalex",
+      "citation_count": 82,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "When MOE Meets LLMs: Parameter Efficient Fine-tuning for Multi-task Medical Applications",
+      "authors": [
+        "Qidong Liu",
+        "Xian Wu",
+        "Xiangyu Zhao",
+        "Yuanshao Zhu",
+        "Derong Xu"
+      ],
+      "year": 2024,
+      "abstract": "The recent surge in Large Language Models (LLMs) has garnered significant attention across numerous fields. Fine-tuning is often required to fit general LLMs for a specific domain, like the web-based healthcare system. However, two problems arise during fine-tuning LLMs for medical applications. One is the task variety problem, which involves distinct tasks in real-world medical scenarios. The variety often leads to sub-optimal fine-tuning for data imbalance and seesaw problems. Besides, the large amount of parameters in LLMs leads to huge time and computation consumption by fine-tuning. To ad ...[truncated]",
+      "url": "https://doi.org/10.1145/3626772.3657722",
+      "source": "openalex",
+      "citation_count": 81,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Unified Continual Learning Framework with General Parameter-Efficient Tuning",
+      "authors": [
+        "Qiankun Gao",
+        "Chen Zhao",
+        "Yifan Sun",
+        "Teng Xi",
+        "Gang Zhang"
+      ],
+      "year": 2023,
+      "abstract": "The \"pre-training → downstream adaptation\" presents both new opportunities and challenges for Continual Learning (CL). Although the recent state-of-the-art in CL is achieved through Parameter-Efficient-Tuning (PET) adaptation paradigm, only prompt has been explored, limiting its application to Transformers only. In this paper, we position prompting as one instantiation of PET, and propose a unified CL framework with general PET, dubbed as Learning-Accumulation-Ensemble (LAE). PET, e.g., using Adapter, LoRA, or Prefix, can adapt a pre-trained model to downstream tasks with fewer parameters and ...[truncated]",
+      "url": "https://doi.org/10.1109/iccv51070.2023.01055",
+      "source": "openalex",
+      "citation_count": 80,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "LLM Fine-Tuning: Concepts, Opportunities, and Challenges",
+      "authors": [
+        "Xiao-Kun Wu",
+        "Min Chen",
+        "Wanyi Li",
+        "Rui Wang",
+        "Lingbin Lu"
+      ],
+      "year": 2025,
+      "abstract": "As a foundation of large language models, fine-tuning drives rapid progress, broad applicability, and profound impacts on human–AI collaboration, surpassing earlier technological advancements. This paper provides a comprehensive overview of large language model (LLM) fine-tuning by integrating hermeneutic theories of human comprehension, with a focus on the essential cognitive conditions that underpin this process. Drawing on Gadamer’s concepts of Vorverständnis, Distanciation, and the Hermeneutic Circle, the paper explores how LLM fine-tuning evolves from initial learning to deeper comprehens ...[truncated]",
+      "url": "https://doi.org/10.3390/bdcc9040087",
+      "source": "openalex",
+      "citation_count": 74,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Domain Specialization as the Key to Make Large Language Models Disruptive: A Comprehensive Survey",
+      "authors": [
+        "Chen Ling",
+        "Xujiang Zhao",
+        "Jiaying Lu",
+        "Chengyuan Deng",
+        "Can Zheng"
+      ],
+      "year": 2023,
+      "abstract": "Large language models (LLMs) have significantly advanced the field of natural language processing (NLP), providing a highly useful, task-agnostic foundation for a wide range of applications. However, directly applying LLMs to solve sophisticated problems in specific domains meets many hurdles, caused by the heterogeneity of domain data, the sophistication of domain knowledge, the uniqueness of domain objectives, and the diversity of the constraints (e.g., various social norms, cultural conformity, religious beliefs, and ethical standards in the domain applications). Domain specification techni ...[truncated]",
+      "url": "http://arxiv.org/abs/2305.18703",
+      "source": "openalex",
+      "citation_count": 74,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "A Systematic Survey of Prompt Engineering on Vision-Language Foundation Models",
+      "authors": [
+        "Jindong Gu",
+        "Zhen Han",
+        "Shuo Chen",
+        "Ahmad Beirami",
+        "Bailan He"
+      ],
+      "year": 2023,
+      "abstract": "Prompt engineering is a technique that involves augmenting a large pre-trained model with task-specific hints, known as prompts, to adapt the model to new tasks. Prompts can be created manually as natural language instructions or generated automatically as either natural language instructions or vector representations. Prompt engineering enables the ability to perform predictions based solely on prompts without updating model parameters, and the easier application of large pre-trained models in real-world tasks. In past years, Prompt engineering has been well-studied in natural language proces ...[truncated]",
+      "url": "http://arxiv.org/abs/2307.12980",
+      "source": "openalex",
+      "citation_count": 64,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Continual Learning of Large Language Models: A Comprehensive Survey",
+      "authors": [
+        "Haizhou Shi",
+        "Zihao Xu",
+        "Hengyi Wang",
+        "Weiyi Qin",
+        "Wenyuan Wang"
+      ],
+      "year": 2025,
+      "abstract": "The challenge of effectively and efficiently adapting statically pre-trained Large Language Models (LLMs) to ever-evolving data distributions remains predominant. When tailored for specific needs, pre-trained LLMs often suffer from significant performance degradation in previous knowledge domains—a phenomenon known as “catastrophic forgetting” . While extensively studied in the Continual Learning (CL) community, this problem presents new challenges in the context of LLMs. In this survey, we provide a comprehensive overview and detailed discussion of the current research progress on LLMs within ...[truncated]",
+      "url": "https://doi.org/10.1145/3735633",
+      "source": "openalex",
+      "citation_count": 55,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "Survey on Factuality in Large Language Models: Knowledge, Retrieval and Domain-Specificity",
+      "authors": [
+        "Cunxiang Wang",
+        "Xiaoze Liu",
+        "Yuanhao Yue",
+        "Xiangru Tang",
+        "Tianhang Zhang"
+      ],
+      "year": 2023,
+      "abstract": "This survey addresses the crucial issue of factuality in Large Language Models (LLMs). As LLMs find applications across diverse domains, the reliability and accuracy of their outputs become vital. We define the Factuality Issue as the probability of LLMs to produce content inconsistent with established facts. We first delve into the implications of these inaccuracies, highlighting the potential consequences and challenges posed by factual errors in LLM outputs. Subsequently, we analyze the mechanisms through which LLMs store and process facts, seeking the primary causes of factual errors. Our ...[truncated]",
+      "url": "http://arxiv.org/abs/2310.07521",
+      "source": "openalex",
+      "citation_count": 55,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    },
+    {
+      "title": "DARWIN Series: Domain Specific Large Language Models for Natural Science",
+      "authors": [
+        "Tong Xie",
+        "Yuwei Wan",
+        "Wei Huang",
+        "Zhenyu Yin",
+        "Yixuan Liu"
+      ],
+      "year": 2023,
+      "abstract": "Emerging tools bring forth fresh approaches to work, and the field of natural science is no different. In natural science, traditional manual, serial, and labour-intensive work is being augmented by automated, parallel, and iterative processes driven by artificial intelligence-based experimental automation and more. To add new capabilities in natural science, enabling the acceleration and enrichment of automation of the discovery process, we present DARWIN, a series of tailored LLMs for natural science, mainly in physics, chemistry, and material science. This series relies on open-source LLM, ...[truncated]",
+      "url": "http://arxiv.org/abs/2308.13565",
+      "source": "openalex",
+      "citation_count": 33,
+      "pdf_url": null,
+      "full_text_excerpt": null
+    }
+  ],
+  "gaps": [
+    {
+      "description": "There is a significant gap in research on applying and evaluating parameter-efficient fine-tuning methods for mental health prediction tasks.",
+      "supporting_papers": [
+        "Machine Learning and Natural Language Processing in Mental Health: Systematic Review (2020)",
+        "Deep learning in mental health outcome research: a scoping review (2020)"
+      ],
+      "evidence_quotes": [
+        "the primary aim of this systematic review was to summarize and characterize, in methodological and technical terms, studies that used machine learning and NLP techniques for mental health.",
+        "Deep learning (DL), as one of the most recent generation of AI technologies, has demonstrated superior performance in many real-world applications ranging from computer vision to healthcare."
+      ],
+      "confidence": "high"
+    },
+    {
+      "description": "In continual learning, parameter-efficient tuning methods beyond prompt-based approaches (e.g., Adapter, LoRA, Prefix) remain largely unexplored, limiting applicability to Transformers only.",
+      "supporting_papers": [
+        "Continual Learning of Large Language Models: A Comprehensive Survey (2025)"
+      ],
+      "evidence_quotes": [
+        "The challenge of effectively and efficiently adapting statically pre-trained Large Language Models (LLMs) to ever-evolving data distributions remains predominant."
+      ],
+      "confidence": "low"
+    },
+    {
+      "description": "Prompt tuning methods suffer from reduced generalization to unseen domains when trained on domain-specific data, highlighting a need for techniques that preserve zero-shot capabilities.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "low"
+    },
+    {
+      "description": "Existing fine-tuning methods, including parameter-efficient ones, struggle with task variety and data imbalance in multi-task medical applications, leading to sub-optimal performance.",
+      "supporting_papers": [],
+      "evidence_quotes": [],
+      "confidence": "low"
+    }
+  ],
+  "conflicts": [],
+  "recalled_gaps": [],
+  "novelty_score": null,
+  "novelty_reasoning": null,
+  "overlapping_papers": [],
+  "report_markdown": "## Overview\nParameter-efficient fine-tuning (PEFT) has become essential for adapting large language models (LLMs) to downstream tasks while drastically reducing computational and storage overhead [13,36,41]. Despite rapid progress in PEFT methodologies, significant gaps persist in specialized domains, continual learning, and generalization, limiting the full potential of these techniques.\n\n## Landscape\nThe PEFT landscape encompasses a variety of methods that update only a small subset of parameters, such as adapters, LoRA, prefix tuning, prompt tuning, and BitFit [13,17,22,30,34,40,42]. Comprehensive surveys provide taxonomies, comparative analyses, and practical guidelines for selecting and applying these methods [36,41,45]. Tools like LlamaFactory and LLM-Adapters streamline the implementation of PEFT across many models [27,30]. Domain-specific adaptation is an active area, with efforts in medicine and mental health beginning to explore PEFT, though challenges like task variety and data imbalance remain [7,32,43]. Continual learning with PEFT is emerging, but current work is largely confined to prompt-based approaches [44,48]. Prompt tuning methods, while effective, often suffer from reduced zero-shot generalization when trained on domain-specific data [37,40]. Federated learning frameworks have also started to incorporate PEFT to enable privacy-preserving fine-tuning [38].\n\n## Research gaps\n- **Mental health prediction**: There is a significant gap in applying and evaluating PEFT methods for mental health tasks. Existing systematic reviews of NLP in mental health [20,24] and recent LLM evaluations [32] highlight the lack of PEFT-focused studies in this domain.\n- **Continual learning beyond prompts**: In continual learning, PEFT methods other than prompt tuning (e.g., Adapter, LoRA, Prefix) remain largely unexplored, restricting applicability to Transformer architectures only [44,48].\n- **Zero-shot generalization in prompt tuning**: Prompt tuning methods exhibit degraded generalization to unseen domains when trained on domain-specific data, underscoring the need for techniques that preserve zero-shot capabilities [37].\n- **Multi-task medical applications**: Existing fine-tuning methods, including PEFT, struggle with task variety and data imbalance in multi-task medical settings, leading to sub-optimal performance [43].\n\n## References\n\n[1] [Very Deep Convolutional Networks for Large-Scale Image Recognition (2014)](http://arxiv.org/abs/1409.1556) — Karen Simonyan, Andrew Zisserman  \n[2] [Review of deep learning: concepts, CNN architectures, challenges, applications, future directions (2021)](https://doi.org/10.1186/s40537-021-00444-8) — Laith Alzubaidi, Jinglan Zhang, Amjad J. Humaidi et al.  \n[3] [ChatGPT for good? On opportunities and challenges of large language models for education (2023)](http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3) — Enkelejda Kasneci, Kathrin Seßler, Stefan Küchemann et al.  \n[4] [Communication-Efficient Learning of Deep Networks from Decentralized Data (2016)](http://arxiv.org/abs/1602.05629) — H. Brendan McMahan, Eider Moore, Daniel Ramage et al.  \n[5] [Training language models to follow instructions with human feedback (2022)](http://arxiv.org/abs/2203.02155) — Long Ouyang, Jeff Wu, Xu Jiang et al.  \n[6] [LLaMA: Open and Efficient Foundation Language Models (2023)](http://arxiv.org/abs/2302.13971) — Hugo Touvron, Thibaut Lavril, Gautier Izacard et al.  \n[7] [Large language models encode clinical knowledge (2023)](https://doi.org/10.1038/s41586-023-06291-2) — Karan Singhal, Shekoofeh Azizi, Tao Tu et al.  \n[8] [Deep learning applications and challenges in big data analytics (2015)](https://doi.org/10.1186/s40537-014-0007-7) — Maryam M. Najafabadi, Flavio Villanustre, Taghi M. Khoshgoftaar et al.  \n[9] [Prefix-Tuning: Optimizing Continuous Prompts for Generation (2021)](https://doi.org/10.18653/v1/2021.acl-long.353) — Xiang Lisa Li, Percy Liang  \n[10] [Attention gated networks: Learning to leverage salient regions in medical images (2019)](https://doi.org/10.1016/j.media.2019.01.012) — Jo Schlemper, Ozan Oktay, Michiel Schaap et al.  \n[11] [The Sleep-Immune Crosstalk in Health and Disease (2019)](https://doi.org/10.1152/physrev.00010.2018) — Luciana Besedovsky, Tanja Lange, Monika Haack  \n[12] [Machine learning on big data: Opportunities and challenges (2017)](https://doi.org/10.1016/j.neucom.2017.01.026) — Lina Zhou, Shimei Pan, Jianwu Wang et al.  \n[13] [Parameter-efficient fine-tuning of large-scale pre-trained language models (2023)](https://doi.org/10.1038/s42256-023-00626-4) — Ning Ding, Yujia Qin, Guang Yang et al.  \n[14] [Deep Learning in Medical Ultrasound Analysis: A Review (2019)](https://doi.org/10.1016/j.eng.2018.11.020) — Shengfeng Liu, Yi Wang, Xin Yang et al.  \n[15] [Survey of the State of the Art in Natural Language Generation: Core tasks, applications and evaluation (2018)](https://doi.org/10.1613/jair.5477) — Albert Gatt, Emiel Krahmer  \n[16] [Adapted large language models can outperform medical experts in clinical text summarization (2024)](https://www.ncbi.nlm.nih.gov/pmc/articles/11479659) — Dave Van Veen, Cara Van Uden, Louis Blankemeier et al.  \n[17] [BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models (2022)](https://doi.org/10.18653/v1/2022.acl-short.1) — Elad Ben Zaken, Yoav Goldberg, Shauli Ravfogel  \n[18] [scBERT as a large-scale pretrained deep language model for cell type annotation of single-cell RNA-seq data (2022)](https://doi.org/10.1038/s42256-022-00534-z) — Fan Yang, Wenchuan Wang, Fang Wang et al.  \n[19] [The Power of Generative AI: A Review of Requirements, Models, Input–Output Formats, Evaluation Metrics, and Challenges (2023)](https://doi.org/10.3390/fi15080260) — Ajay Bandi, Pydi Venkata Satya Ramesh Adapa, Yudu Eswar Vinay Pratap Kumar Kuchi  \n[20] [Machine Learning and Natural Language Processing in Mental Health: Systematic Review (2020)](https://doi.org/10.2196/15708) — Aziliz Le Glaz, Yannis Haralambous, Deok-Hee Kim-Dufor et al.  \n[21] [BEHRT: Transformer for Electronic Health Records (2020)](https://doi.org/10.1038/s41598-020-62922-y) — Yikuan Li, Shishir Rao, José Roberto Ayala Solares et al.  \n[22] [QLoRA: Efficient Finetuning of Quantized LLMs (2023)](http://arxiv.org/abs/2305.14314) — Tim Dettmers, Artidoro Pagnoni, Ari Holtzman et al.  \n[23] [Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond (2024)](https://doi.org/10.1145/3649506) — Jingfeng Yang, Hongye Jin, Ruixiang Tang et al.  \n[24] [Deep learning in mental health outcome research: a scoping review (2020)](https://doi.org/10.1038/s41398-020-0780-3) — Chang Su, Zhenxing Xu, Jyotishman Pathak et al.  \n[25] [A Comprehensive Overview of Large Language Models (2023)](http://arxiv.org/abs/2307.06435) — Humza Naveed, Asad Ullah Khan, Shi Qiu et al.  \n[26] [Self-Supervised Speech Representation Learning: A Review (2022)](http://arxiv.org/abs/2205.10643) — Abdelrahman Mohamed, Hung-yi Lee, Lasse Borgholt et al.  \n[27] [LlamaFactory: Unified Efficient Fine-Tuning of 100+ Language Models (2024)](https://doi.org/10.18653/v1/2024.acl-demos.38) — Yaowei Zheng, Richong Zhang, Junhao Zhang et al.  \n[28] [Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks (2022)](https://doi.org/10.18653/v1/2022.emnlp-main.340) — Yizhong Wang, Swaroop Mishra, Pegah Alipoormolabashi et al.  \n[29] [A Fine-Tuned BERT-Based Transfer Learning Approach for Text Classification (2022)](https://doi.org/10.1155/2022/3498123) — Rukhma Qasim, Waqas Haider Bangyal, Mohammed Alqarni et al.  \n[30] [LLM-Adapters: An Adapter Family for Parameter-Efficient Fine-Tuning of Large Language Models (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.319) — Zhiqiang Hu, Lei Wang, Yihuai Lan et al.  \n[31] [MM-LLMs: Recent Advances in MultiModal Large Language Models (2024)](https://doi.org/10.18653/v1/2024.findings-acl.738) — Duzhen Zhang, Yahan Yu, Jiahua Dong et al.  \n[32] [Mental-LLM (2024)](https://www.ncbi.nlm.nih.gov/pmc/articles/11806945) — Xuhai Xu, Bingsheng Yao, Yuanzhe Dong et al.  \n[33] [When LLMs meet cybersecurity: a systematic literature review (2025)](https://doi.org/10.1186/s42400-025-00361-w) — Jie Zhang, H. Bu, Hui Wen et al.  \n[34] [LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention (2023)](http://arxiv.org/abs/2303.16199) — Renrui Zhang, Jiaming Han, Liu, Chris et al.  \n[35] [Unleashing the potential of prompt engineering for large language models (2023)](http://arxiv.org/abs/2310.14735) — B.‐C. CHEN, Zhaofeng Zhang, Nicolas Langrené et al.  \n[36] [Parameter-efficient fine-tuning in large language models: a survey of methodologies (2025)](https://doi.org/10.1007/s10462-025-11236-4) — Luping Wang, Sheng Chen, Linnan Jiang et al.  \n[37] [Test-Time Prompt Tuning for Zero-Shot Generalization in Vision-Language Models (2022)](http://arxiv.org/abs/2209.07511) — Manli Shu, Weili Nie, De-An Huang et al.  \n[38] [FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning (2024)](https://doi.org/10.1145/3637528.3671573) — Weirui Kuang, Bingchen Qian, Zitao Li et al.  \n[39] [Instruction Tuning for Large Language Models: A Survey (2023)](http://arxiv.org/abs/2308.10792) — Shengyu Zhang, Linfeng Dong, Xiaoya Li et al.  \n[40] [The Power of Scale for Parameter-Efficient Prompt Tuning (2021)](https://doi.org/10.18653/v1/2021.emnlp-main.243) — Brian Lester, Rami Al‐Rfou, Noah Constant  \n[41] [Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey (2024)](http://arxiv.org/abs/2403.14608) — Zeyu Han, Chao Gao, Jinyang Liu et al.  \n[42] [Towards Adaptive Prefix Tuning for Parameter-Efficient Language Model Fine-tuning (2023)](https://doi.org/10.18653/v1/2023.acl-short.107) — Zhen-Ru Zhang, Chuanqi Tan, Haiyang Xu et al.  \n[43] [When MOE Meets LLMs: Parameter Efficient Fine-tuning for Multi-task Medical Applications (2024)](https://doi.org/10.1145/3626772.3657722) — Qidong Liu, Xian Wu, Xiangyu Zhao et al.  \n[44] [A Unified Continual Learning Framework with General Parameter-Efficient Tuning (2023)](https://doi.org/10.1109/iccv51070.2023.01055) — Qiankun Gao, Chen Zhao, Yifan Sun et al.  \n[45] [LLM Fine-Tuning: Concepts, Opportunities, and Challenges (2025)](https://doi.org/10.3390/bdcc9040087) — Xiao-Kun Wu, Min Chen, Wanyi Li et al.  \n[46] [Domain Specialization as the Key to Make Large Language Models Disruptive: A Comprehensive Survey (2023)](http://arxiv.org/abs/2305.18703) — Chen Ling, Xujiang Zhao, Jiaying Lu et al.  \n[47] [A Systematic Survey of Prompt Engineering on Vision-Language Foundation Models (2023)](http://arxiv.org/abs/2307.12980) — Jindong Gu, Zhen Han, Shuo Chen et al.  \n[48] [Continual Learning of Large Language Models: A Comprehensive Survey (2025)](https://doi.org/10.1145/3735633) — Haizhou Shi, Zihao Xu, Hengyi Wang et al.  \n[49] [Survey on Factuality in Large Language Models: Knowledge, Retrieval and Domain-Specificity (2023)](http://arxiv.org/abs/2310.07521) — Cunxiang Wang, Xiaoze Liu, Yuanhao Yue et al.  \n[50] [DARWIN Series: Domain Specific Large Language Models for Natural Science (2023)](http://arxiv.org/abs/2308.13565) — Tong Xie, Yuwei Wan, Wei Huang et al.",
+  "iteration": 2,
+  "max_iterations": 2,
+  "timeout_seconds": null,
+  "seen_paper_ids": [
+    "http://arxiv.org/abs/1409.1556",
+    "http://nbn-resolving.de/urn:nbn:de:bvb:19-epub-125071-3",
+    "http://arxiv.org/abs/1602.05629",
+    "http://arxiv.org/abs/2203.02155",
+    "http://arxiv.org/abs/2302.13971",
+    "https://doi.org/10.1038/s41586-023-06291-2",
+    "https://doi.org/10.18653/v1/2021.acl-long.353",
+    "https://doi.org/10.1038/s42256-023-00626-4",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/11479659",
+    "https://doi.org/10.18653/v1/2022.acl-short.1",
+    "http://arxiv.org/abs/2305.14314",
+    "https://doi.org/10.1145/3649506",
+    "https://doi.org/10.18653/v1/2024.acl-demos.38",
+    "https://doi.org/10.18653/v1/2023.emnlp-main.319",
+    "https://doi.org/10.18653/v1/2024.findings-acl.738",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/11806945",
+    "https://doi.org/10.1186/s42400-025-00361-w",
+    "http://arxiv.org/abs/2303.16199",
+    "https://doi.org/10.1007/s10462-025-11236-4",
+    "http://arxiv.org/abs/2209.07511",
+    "https://doi.org/10.1145/3637528.3671573",
+    "https://doi.org/10.18653/v1/2021.emnlp-main.243",
+    "https://doi.org/10.18653/v1/2023.acl-short.107",
+    "https://doi.org/10.1145/3626772.3657722",
+    "https://doi.org/10.1109/iccv51070.2023.01055",
+    "https://doi.org/10.1186/s40537-021-00444-8",
+    "https://doi.org/10.1186/s40537-014-0007-7",
+    "https://doi.org/10.1016/j.media.2019.01.012",
+    "https://doi.org/10.1152/physrev.00010.2018",
+    "https://doi.org/10.1016/j.neucom.2017.01.026",
+    "https://doi.org/10.1016/j.eng.2018.11.020",
+    "https://doi.org/10.1613/jair.5477",
+    "https://doi.org/10.1038/s42256-022-00534-z",
+    "https://doi.org/10.3390/fi15080260",
+    "https://doi.org/10.2196/15708",
+    "https://doi.org/10.1038/s41598-020-62922-y",
+    "https://doi.org/10.1038/s41398-020-0780-3",
+    "http://arxiv.org/abs/2307.06435",
+    "http://arxiv.org/abs/2205.10643",
+    "https://doi.org/10.18653/v1/2022.emnlp-main.340",
+    "https://doi.org/10.1155/2022/3498123",
+    "http://arxiv.org/abs/2310.14735",
+    "http://arxiv.org/abs/2308.10792",
+    "http://arxiv.org/abs/2403.14608",
+    "https://doi.org/10.3390/bdcc9040087",
+    "http://arxiv.org/abs/2305.18703",
+    "http://arxiv.org/abs/2307.12980",
+    "https://doi.org/10.1145/3735633",
+    "http://arxiv.org/abs/2310.07521",
+    "http://arxiv.org/abs/2308.13565"
+  ],
+  "recent_paper_ids": [
+    "https://doi.org/10.1186/s40537-021-00444-8",
+    "https://doi.org/10.1186/s40537-014-0007-7",
+    "https://doi.org/10.1016/j.media.2019.01.012",
+    "https://doi.org/10.1152/physrev.00010.2018",
+    "https://doi.org/10.1016/j.neucom.2017.01.026",
+    "https://doi.org/10.1016/j.eng.2018.11.020",
+    "https://doi.org/10.1613/jair.5477",
+    "https://doi.org/10.1038/s42256-022-00534-z",
+    "https://doi.org/10.3390/fi15080260",
+    "https://doi.org/10.2196/15708",
+    "https://doi.org/10.1038/s41598-020-62922-y",
+    "https://doi.org/10.1038/s41398-020-0780-3",
+    "http://arxiv.org/abs/2307.06435",
+    "http://arxiv.org/abs/2205.10643",
+    "https://doi.org/10.18653/v1/2022.emnlp-main.340",
+    "https://doi.org/10.1155/2022/3498123",
+    "http://arxiv.org/abs/2310.14735",
+    "http://arxiv.org/abs/2308.10792",
+    "http://arxiv.org/abs/2403.14608",
+    "https://doi.org/10.3390/bdcc9040087",
+    "http://arxiv.org/abs/2305.18703",
+    "http://arxiv.org/abs/2307.12980",
+    "https://doi.org/10.1145/3735633",
+    "http://arxiv.org/abs/2310.07521",
+    "http://arxiv.org/abs/2308.13565"
+  ],
+  "open_gaps": [
+    "In continual learning, parameter-efficient tuning methods beyond prompt-based approaches (e.g., Adapter, LoRA, Prefix) remain largely unexplored, limiting applicability to Transformers only.",
+    "Prompt tuning methods suffer from reduced generalization to unseen domains when trained on domain-specific data, highlighting a need for techniques that preserve zero-shot capabilities.",
+    "Existing fine-tuning methods, including parameter-efficient ones, struggle with task variety and data imbalance in multi-task medical applications, leading to sub-optimal performance."
+  ],
+  "round_logs": [
+    {
+      "iteration": 1,
+      "queries": [
+        "parameter-efficient fine-tuning large language models",
+        "LoRA low-rank adaptation LLM fine-tuning",
+        "adapter tuning prefix tuning prompt tuning efficient",
+        "PEFT transfer learning few-shot LLM",
+        "evaluation parameter-efficient fine-tuning language models"
+      ],
+      "new_papers": 25,
+      "total_papers": 25,
+      "open_gaps": 4,
+      "closed_gaps": 0
+    },
+    {
+      "iteration": 2,
+      "queries": [
+        "continual learning adapter LoRA prefix tuning beyond prompt-based Transformers",
+        "prompt tuning generalization unseen domains zero-shot preservation domain-specific training",
+        "multi-task medical NLP parameter-efficient fine-tuning data imbalance task variety",
+        "parameter-efficient fine-tuning mental health prediction tasks evaluation"
+      ],
+      "new_papers": 25,
+      "total_papers": 50,
+      "open_gaps": 3,
+      "closed_gaps": 1
+    }
+  ],
+  "use_memory": false,
+  "use_llm_judge": true,
+  "coverage_sufficient": false,
+  "coverage_reasoning": "The user's idea is not provided, making it impossible to determine which gap is most relevant. While one gap is high confidence and supported by two papers, the other gaps remain low confidence with minimal support. Following the conservative approach of preferring another round when in doubt, and given that the missing user idea adds uncertainty, continued searching is advisable to strengthen the weaker gaps or clarify the user's focus.",
+  "use_tool_agent": true,
+  "read_full_text": true,
+  "errors": [],
+  "tool_call_count": 18
+}
